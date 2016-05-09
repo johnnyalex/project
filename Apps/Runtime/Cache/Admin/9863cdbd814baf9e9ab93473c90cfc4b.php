@@ -10,22 +10,22 @@
     <title>三人行 -- 42</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/Public/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="/Public/Admin/dist/css/timeline.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/dist/css/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/Public/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/Public/Admin/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/Public/Admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/AAA/project/Public/Admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -74,7 +74,7 @@
                          
                             </fieldset>
                         </form>
-                        <script type="text/javascript" src="/Public/Admin/js/jquery-1.8.3.min.js"></script>
+                        <script type="text/javascript" src="/AAA/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
                         <script type="text/javascript">
                             $('.btn-success').click(function(){
                                 // alert(123);

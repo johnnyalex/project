@@ -2,20 +2,20 @@
 <html class="jp-pc w1200">
     <head>
 
-        <title>卷皮官网-专注独家折扣,1折特卖,全场包邮 - 上卷皮 购便宜!</title>
+        <title><?php echo ($title); ?></title>
         <meta content="卷皮折扣,品牌折扣,折扣,特卖,打折,9.9元包邮,卷皮网" name="keywords">
         <meta content="卷皮折扣汇聚全网最优质折扣商品，每日精选千款超值折扣商品9.9元起全场包邮1折特卖，每天10点限时秒杀！上卷皮购便宜！" name="description">
         <meta charset="utf-8">
-    <link href="/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/AAA/project/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-    <link href="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/9245c5eeb79d45ea8fca9ffcd464f12f.css" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/41109579bcee494389f359ae0e914606.css" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/bb3e08540e584c09ac7578fd0213f369.css" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/add2.css" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/lunbo.css" />
+    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/9245c5eeb79d45ea8fca9ffcd464f12f.css" />
+    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/41109579bcee494389f359ae0e914606.css" />
+    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/bb3e08540e584c09ac7578fd0213f369.css" />
+    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/lunbo.css" />
     </head>
     <body>
         
@@ -38,7 +38,7 @@
                             &#12288;|
                             <a href="<?php echo U('Home/Center/index');?>">个人中心</a>&#12288;|
                             <a href="<?php echo U('Home/Login/outlogin');?>">退出登录</a>&#12288;|
-                            <a href="<?php echo U('Home/Order/index');?>" rel="nofollow" target="_blank">我的订单</a>&#12288;|
+                            <a href="<?php echo U('Home/Center/allOrder');?>" rel="nofollow" target="_blank">我的订单</a>&#12288;|
                         <?php }else{ ?>
                             <a href="" rel="nofollow">QQ登录</a>&#12288;|
                             <a href="" rel="nofollow">微博登录</a>&#12288;| 
@@ -69,7 +69,7 @@
             <input type="hidden" id="search_action" name="search_action" value="###/search">
             <input type="hidden" id="search_from"   name="search_from" value="1">
         </div>
-        <img class="banner-right-code" style="display:block;" src="/Public/Home/Picture/jp-app-index.png">
+        <img class="banner-right-code" style="display:block;" src="/AAA/project/Public/Home/Picture/jp-app-index.png">
     </div>
     <div class="mainNav">
         <div class="nav">
@@ -125,10 +125,10 @@
         <!-- 主体 -->
         <div class="banner">
           <ul class="img1">
-                <li><a href=""><img src="/Public/Home/Picture/mao1.png"></a></li>
-                <li><a href=""><img src="/Public/Home/Picture/kid2.png"></a></li>
-                <li><a href=""><img src="/Public/Home/Picture/biao3.png"></a></li>
-                <li><a href=""><img src="/Public/Home/Picture/bao4.png" ></a></li>
+                <li><a href=""><img src="/AAA/project/Public/Home/Picture/mao1.png"></a></li>
+                <li><a href=""><img src="/AAA/project/Public/Home/Picture/kid2.png"></a></li>
+                <li><a href=""><img src="/AAA/project/Public/Home/Picture/biao3.png"></a></li>
+                <li><a href=""><img src="/AAA/project/Public/Home/Picture/bao4.png" ></a></li>
             </ul>
               
             <div class="btn btn_l">&lt;</div>
@@ -141,8 +141,8 @@
             </ul>
         </div>
 <!-- </div> -->
-<script type="text/javascript" src="/Public/Home/Js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="/Public/Home/Js/lunbo.js"></script>
+<script type="text/javascript" src="/AAA/project/Public/Home/Js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/AAA/project/Public/Home/Js/lunbo.js"></script>
 <div class="top_wrap">
     <div class="top_box">
         
@@ -232,27 +232,27 @@
         <dl>
             <dd>
                 <a class="'right" data-value="ad_banner_right#1_1" data-ga="迈克·菲恩" target="_blank" href="">
-                    <img src="/Public/Home/Picture/a.jpg">
+                    <img src="/AAA/project/Public/Home/Picture/a.jpg">
                 </a>
             </dd>
             <dd>
                 <a class="'right" data-value="ad_banner_right#1_2" data-ga="迈克·菲恩" target="_blank" href="">
-                    <img src="/Public/Home/Picture/b.jpg">
+                    <img src="/AAA/project/Public/Home/Picture/b.jpg">
                 </a>
             </dd>
             <dd>
                 <a class="'right" data-value="ad_banner_right#1_3" data-ga="迈克·菲恩" target="_blank" href="">
-                    <img src="/Public/Home/Picture/c.jpg">
+                    <img src="/AAA/project/Public/Home/Picture/c.jpg">
                 </a>
             </dd>
             <dd>
                 <a class="'right" data-value="ad_banner_right#1_4" data-ga="迈克·菲恩" target="_blank" href="">
-                    <img src="/Public/Home/Picture/d.jpg">
+                    <img src="/AAA/project/Public/Home/Picture/d.jpg">
                 </a>
             </dd>
             <dd class="last">
                 <a class="'right" data-value="ad_banner_right#1_5" data-ga="迈克·菲恩" target="_blank" href="">
-                    <img src="/Public/Home/Picture/e.jpg">
+                    <img src="/AAA/project/Public/Home/Picture/e.jpg">
                 </a>
 
             </dd>
@@ -289,14 +289,14 @@
                 <li>
                     <div class="brand-status">
                         <a href="#xiangbao?id=1021608" class="link-box" target="_blank" data-value="brand#1_3">
-                            <div class="brand-pic"><img src="/Public/Home/Picture/5723187092be592b068b4580_680x280.jpg">
+                            <div class="brand-pic"><img src="/AAA/project/Public/Home/Picture/5723187092be592b068b4580_680x280.jpg">
                                 <div class="brand_time" data-etime="1462845600" style="display:none">
                                     <p><span class="icon_time"></span><span class="brand-days"><em>00</em><i>天</i></span><span class="brand-hours"><em>00</em><i>时</i></span><span class="brand-minutes"><em>00</em><i>分</i></span><span class="brand-seconds"><em>00</em><i>秒</i></span></p>
                                     <div class="brand_time_bg"></div>
                                 </div>
                             </div>
                             <div class="card">
-                                <img class="brand-logo" src="/Public/Home/Picture/5722cd0792be590e208b4581_180x90.png">
+                                <img class="brand-logo" src="/AAA/project/Public/Home/Picture/5722cd0792be590e208b4581_180x90.png">
                                 <span class="discount discount1">
                                 <span>马上抢</span>
                                 </span>                                    
@@ -308,14 +308,14 @@
                 <li>
                     <div class="brand-status">
                         <a href="#xiezi?id=1021642" class="link-box" target="_blank" data-value="brand#1_2">
-                            <div class="brand-pic"><img src="/Public/Home/Picture/5723385a92be59cc428b457c_680x280.jpg">
+                            <div class="brand-pic"><img src="/AAA/project/Public/Home/Picture/5723385a92be59cc428b457c_680x280.jpg">
                                 <div class="brand_time" data-etime="1462845600" style="display:none">
                                     <p><span class="icon_time"></span><span class="brand-days"><em>00</em><i>天</i></span><span class="brand-hours"><em>00</em><i>时</i></span><span class="brand-minutes"><em>00</em><i>分</i></span><span class="brand-seconds"><em>00</em><i>秒</i></span></p>
                                     <div class="brand_time_bg"></div>
                                 </div>
                             </div>
                             <div class="card">
-                            <img class="brand-logo" src="/Public/Home/Picture/56810ebe92be599b838b4579_180x90.png">
+                            <img class="brand-logo" src="/AAA/project/Public/Home/Picture/56810ebe92be599b838b4579_180x90.png">
                             <span class="discount discount1">
                             <span>马上抢</span>
                             </span>                                    
@@ -329,14 +329,14 @@
                 <li>
                     <div class="brand-status">
                         <a href="#xiangbao?id=1021608" class="link-box" target="_blank" data-value="brand#1_3">
-                            <div class="brand-pic"><img src="/Public/Home/Picture/5723187092be592b068b4580_680x280.jpg">
+                            <div class="brand-pic"><img src="/AAA/project/Public/Home/Picture/5723187092be592b068b4580_680x280.jpg">
                                 <div class="brand_time" data-etime="1462845600" style="display:none">
                                     <p><span class="icon_time"></span><span class="brand-days"><em>00</em><i>天</i></span><span class="brand-hours"><em>00</em><i>时</i></span><span class="brand-minutes"><em>00</em><i>分</i></span><span class="brand-seconds"><em>00</em><i>秒</i></span></p>
                                     <div class="brand_time_bg"></div>
                                 </div>
                             </div>
                             <div class="card">
-                                <img class="brand-logo" src="/Public/Home/Picture/5722cd0792be590e208b4581_180x90.png">
+                                <img class="brand-logo" src="/AAA/project/Public/Home/Picture/5722cd0792be590e208b4581_180x90.png">
                                 <span class="discount discount1">
                                 <span>马上抢</span>
                                 </span>                                    
@@ -348,14 +348,14 @@
             </ul>
         <ul class="brand_logo clear">
             <li class="first">更多品牌特卖：</li>
-            <li><a href="#nvzhuang?id=1311676" target="_blank" data-value="brand#1_4"><img src="/Public/Home/Picture/56d6978b92be5900468b4567_180x90.png"></a></li>
-            <li><a href="#nvzhuang?id=1511605" target="_blank" data-value="brand#1_5"><img src="/Public/Home/Picture/56c677d392be59bd9b8b456a_180x90.png"></a></li>
-            <li><a href="#nvzhuang?id=1701689" target="_blank" data-value="brand#1_6"><img src="/Public/Home/Picture/56e7cffb92be59657f8b4598_180x90.png"></a></li>
-            <li><a href="#nvzhuang?id=1601650" target="_blank" data-value="brand#1_7"><img src="/Public/Home/Picture/57189bc092be599b838b457a_180x90.png"></a></li>
-            <li><a href="#nvzhuang?id=1080606" target="_blank" data-value="brand#1_8"><img src="/Public/Home/Picture/571045c492be59326a8b456d_180x90.png"></a></li>
-            <li><a href="#xiezi?id=1931657" target="_blank" data-value="brand#1_9"><img src="/Public/Home/Picture/56fa338392be597e8d8b4567_180x90.png"></a></li>
-            <li><a href="#xiezi?id=1331694" target="_blank" data-value="brand#1_10"><img src="/Public/Home/Picture/568346da92be59bba88b456d_180x90.png"></a></li>
-            <li><a href="#xiezi?id=1441600" target="_blank" data-value="brand#1_11"><img src="/Public/Home/Picture/5673c20292be59860c8b4581_180x90.png"></a></li>
+            <li><a href="#nvzhuang?id=1311676" target="_blank" data-value="brand#1_4"><img src="/AAA/project/Public/Home/Picture/56d6978b92be5900468b4567_180x90.png"></a></li>
+            <li><a href="#nvzhuang?id=1511605" target="_blank" data-value="brand#1_5"><img src="/AAA/project/Public/Home/Picture/56c677d392be59bd9b8b456a_180x90.png"></a></li>
+            <li><a href="#nvzhuang?id=1701689" target="_blank" data-value="brand#1_6"><img src="/AAA/project/Public/Home/Picture/56e7cffb92be59657f8b4598_180x90.png"></a></li>
+            <li><a href="#nvzhuang?id=1601650" target="_blank" data-value="brand#1_7"><img src="/AAA/project/Public/Home/Picture/57189bc092be599b838b457a_180x90.png"></a></li>
+            <li><a href="#nvzhuang?id=1080606" target="_blank" data-value="brand#1_8"><img src="/AAA/project/Public/Home/Picture/571045c492be59326a8b456d_180x90.png"></a></li>
+            <li><a href="#xiezi?id=1931657" target="_blank" data-value="brand#1_9"><img src="/AAA/project/Public/Home/Picture/56fa338392be597e8d8b4567_180x90.png"></a></li>
+            <li><a href="#xiezi?id=1331694" target="_blank" data-value="brand#1_10"><img src="/AAA/project/Public/Home/Picture/568346da92be59bba88b456d_180x90.png"></a></li>
+            <li><a href="#xiezi?id=1441600" target="_blank" data-value="brand#1_11"><img src="/AAA/project/Public/Home/Picture/5673c20292be59860c8b4581_180x90.png"></a></li>
             <li class="last"><a href="http://brand.juanpi.com" target="_blank">查看全部》</a></li>
         </ul>
         </div>
@@ -367,8 +367,8 @@
             <i class="icon_new"></i>今日新品<span>每天10点上新</span>
         </div>
     </div>
-</div>    <div style="text-align:center;margin:30px 0;" class="list-loading"><img src="/Public/Home/Picture/loading.gif"/></div>
-    <div class="main pr mt25 clear" data-ugctag="C2" style="display: none;">
+</div>    
+    <div class="main pr mt25 clear" data-ugctag="C2" style="display:;">
         <input type="hidden" name="favken" value="">
         <div class="line-cate-nav-location hidden">
             <div class="line-cate-nav-wrapper">
@@ -397,15 +397,14 @@
                 <div class="list-good buy">
                     <div class="good-pic">
                         <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                            <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+                            <img alt="无痕冰丝抹胸(买3送1)" src="/AAA/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
                             <span class="new-icon">新品</span>                    
                         </a>
                     </div>
                     <h3 class="good-title">
                         [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                        <!--<div class="icon-all" style="display:none;">
-                                                                        </div>-->
-                        <span class="sold">剩4天</span>
+                        <div class="icon-all" style="display:none;">
+                    <span class="sold">剩4天</span>
                     </h3>
                     <div class="good-price">
                         <span class="price-current" ><em>￥</em>9.8</span>
@@ -432,6 +431,11 @@
     <em></em>
     <div><span class="pg-prev">上一页</span><span>1</span><a href="/?page=2">2</a><a href="/?page=3">3</a><i>...</i><a  href="/?page=5">5</a><a class="pg-next" href="/?page=2">下一页</a>
 </div>
+<!-- 广告 -->
+<!-- <div class="ad">
+    
+</div>
+ -->
 </div>
 </div>
     <!-- 举报 box start -->
@@ -556,17 +560,17 @@
                     <div class="logo">
                 <a rel="nofollow" target="_blank"
                    http="###.315online.com.cn/member/315150022.html"><img
-                        border="0" src="/Public/Home/Picture/r_315new.gif"></a>
+                        border="0" src="/AAA/project/Public/Home/Picture/r_315new.gif"></a>
                 <a rel="nofollow" target="_blank"
                    href="http://ss.knet.cn/verifyseal.dll?sn=e150601420100589448w7i000000&a=1&pa=0.9669571494560153"><img
-                        border="0" src="/Public/Home/Picture/r_cnnic.gif" /></a>
+                        border="0" src="/AAA/project/Public/Home/Picture/r_cnnic.gif" /></a>
                 <a rel="nofollow" target="_blank"
                    href="http://gssoso.whhd.gov.cn:8086/soso/detail?record=1&primarykeyvalue=%E5%86%85%E9%83%A8%E5%BA%8F%E5%8F%B7%3D4201992100000000027837&channelid=20228"><img
-                        border="0" src="/Public/Home/Picture/r_gongshang.gif"></a>
-        <a rel="nofollow" target="_blank" key ="5492626c3b05a3da0fbd05fe"  logo_size="124x47"  logo_type="realname"  http="###.anquan.org" ><script src="/Public/Home/Js/aq_auth.js"></script></a>      
+                        border="0" src="/AAA/project/Public/Home/Picture/r_gongshang.gif"></a>
+        <a rel="nofollow" target="_blank" key ="5492626c3b05a3da0fbd05fe"  logo_size="124x47"  logo_type="realname"  http="###.anquan.org" ><script src="/AAA/project/Public/Home/Js/aq_auth.js"></script></a>      
             </div>
             </div>
-    </div>
+</div>
 </div>
     <div id="J_sidebar" class="side_right">
 
@@ -579,7 +583,7 @@
                     <div id="side-login" class="tab-tips tab-login">
                         <div class="user-box">
                            <a class="head" href="//user.juanpi.com" target="_blank">
-                            <div class="pic"><img src="/Public/Home/Picture/default-60.jpg"></div>
+                            <div class="pic"><img src="/AAA/project/Public/Home/Picture/default-60.jpg"></div>
                             </a>
                             <p class="txt"></p>
                         </div>
@@ -607,13 +611,14 @@
                     </div>
                 </li>
                 <li class="normal side-love">
-                    <a class="links" id="J_love" target="_blank" href="//user.juanpi.com/favorite">
+                    <a class="links" id="J_love" target="_blank" href="
+                    <?php echo U('Home/Center/favorite');?>">
                         <i class="normal-icon i-love"></i>
                     </a>
                     <div class="tab-tips">我的收藏<div class="arr-icon">◆</div> </div>
                 </li>
                 <li class="normal side-quan">
-                    <a class="links" id="J_quan" target="_blank" href="//user.juanpi.com/coupon">
+                    <a class="links" id="J_quan" target="_blank" href="<?php echo U('Home/Center/coupon');?>">
                         <i class="normal-icon i-quan"></i>
                     </a>
                     <div class="tab-tips">我的优惠券<div class="arr-icon">◆</div> </div>
@@ -676,5 +681,21 @@
     </div>
     
     
+    <script type="text/javascript">
+        // $(function(){
+        //     $('.i-love').mouseover(function(e){
+        //         $(this).parent('.side-love').find('.tab-tips').addClass('display','block');
+        //         var x = e.clientX;
+        //         var y = e.clientY;
+        //         var p = $('<p class="addP">我的收藏</p>');
+        //         // p.show(1000);
+                
+        //     });
+        //     $('.i-love').mouseover(function(){
+        //         // alert(567);
+        //     });
+
+        // });
+    </script>
     </body>
 </html>

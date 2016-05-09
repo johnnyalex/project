@@ -10,22 +10,22 @@
     <title>三人行 -- 42</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/Public/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="/Public/Admin/dist/css/timeline.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/dist/css/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/Public/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/Public/Admin/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/Public/Admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/AAA/project/Public/Admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -400,20 +400,24 @@
                                 <tr role="row">
                                 	<th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 60px;" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">头像</th>
                                 	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 40px;" aria-label="Browser: activate to sort column ascending">ID</th>
-                                	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Platform(s): activate to sort column ascending">用户名</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Platform(s): activate to sort column ascending">用户名</th>
+                                	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Platform(s): activate to sort column ascending">性别</th>
                                 	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">邮箱</th>
-                                	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="CSS grade: activate to sort column ascending">类型</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="CSS grade: activate to sort column ascending">等级</th>
+                                	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="CSS grade: activate to sort column ascending">锁定</th>
                                 	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
                                 </tr>
                             </thead>
                             <tbody>
                             <!-- z这是用户列表的遍历 -->
                             <?php if(is_array($users)): foreach($users as $key=>$vo): ?><tr class="gradeA odd" role="row">
-	                                <td class="sorting_1"><img src="/Public/<?php echo ($vo["pic"]); ?>" height="30px"></td>
+	                                <td class="sorting_1"><img src="/AAA/project/Public/<?php echo ($vo["pic"]); ?>" height="30px"></td>
 	                                <td class="sid"><?php echo ($vo["id"]); ?></td>
-	                                <td class="susername"><?php echo ($vo["username"]); ?></td>
+                                    <td class="susername"><?php echo ($vo["username"]); ?></td>
+	                                <td class="susername"><?php echo ($vo["sex"]); ?></td>
 	                                <td class="center semail"><?php echo ($vo["email"]); ?></td>
-	                                <td class="center stype"><?php echo ($vo["type"]); ?></td>
+                                    <td class="center stype"><?php echo ($vo["type"]); ?></td>
+	                                <td class="center stype"><?php echo ($vo["status"]); ?></td>
 	                                <td class="center">
                                     <button class="btn btn-danger btn-del"  type="button"><i class="fa fa-times">删除</i></button>
                                     <a href=""><button class="btn btn-primary " type="button"><i class="fa fa-list">修改</i></button></a>
@@ -461,11 +465,18 @@
         </div>
         <!-- /.col-lg-12 -->
     </div>
+<script type="text/javascript" src="/AAA/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
     // alert($);
-    //加载完毕
+     //加载完毕
     $(function(){
+        //定义全局变量
+        var edit = true;
+
         $('.susername').dblclick(function(){
+            if(edit == false) 
+                return;
+            edit = false;
             //声明 td
             var td = $(this);
             //获取原有的值
@@ -479,6 +490,7 @@
             //文本失去焦点后 发ajax 改数据库中的文件
             ipt.blur(function(){
                 //提交ajax  url
+                edit = true;
                 var url = '<?php echo U("Admin/User/edit");?>';
                 //获取用户 id
                 var id = ipt.parents('.gradeA').find('.sid').html();
@@ -490,12 +502,12 @@
                     type:'post',
                     success:function(data){
                         if (data==0) {
-                            // alert('success');  
-                            // ipt.replaceWith(username).css('color','green');
                             td.empty().append(username).css('color','green');
+                            // edit = false;
                         }else{
-                            alert('修改失败');  
+                            // alert('修改失败');  
                             ipt.replaceWith(username);
+                            // edit = false;
                         }
                     },
                 });
@@ -504,6 +516,10 @@
 
         $('.semail').dblclick(function(){
             //声明 td
+            if(edit == false) 
+                return;
+            edit = false;
+
             var td = $(this);
             //获取原有的值
             var v = $(this).html();
@@ -538,6 +554,10 @@
         })
 
         $('.stype').dblclick(function(){
+            if(edit == false) 
+                return;
+            edit = false;
+
             //声明 td
             var td = $(this);
             //获取原有的值
@@ -586,7 +606,7 @@
                     }else{
                         alert('delete fail');
                     }
-                }
+                },
             })
         })
     })
@@ -602,18 +622,18 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/AAA/project/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/Public/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/AAA/project/Public/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="/AAA/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
 
     <!-- Custom Theme JavaScript -->
-    <script src="/Public/Admin/dist/js/sb-admin-2.js"></script>
+    <script src="/AAA/project/Public/Admin/dist/js/sb-admin-2.js"></script>
 
 </body>
 

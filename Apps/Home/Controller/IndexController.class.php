@@ -7,6 +7,7 @@ class IndexController extends Controller {
         // $user=M('user');
         // $res=$user->find($id);
         $this->assign('id',$id);
+        $this->assign('title','卷皮网首页');
         $this->display();
     }
     public function dologin(){

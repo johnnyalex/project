@@ -4,6 +4,7 @@ use Think\Controller;
 class CenterController extends Controller {
 	//个人订单后台 我的卷皮
 	public function index(){
+		$this->assign('title','用户中心-卷皮网');
 
 		$this->display();
 	}
@@ -18,22 +19,32 @@ class CenterController extends Controller {
 		$users['month'] = substr($time,4,2)['0'] == 0 ? substr($time,5,1) : substr($time,4,2);
 		$users['day'] = substr($time,6,2)['0'] == 0 ? substr($time,5,1) : substr($time,4,2);
 		$this->assign('user',$users);
+		$this->assign('title','账户设置-卷皮网');
+
 		$this->display();
 	}
 	//安全中心
 	public function security(){
+		$this->assign('title','安全中心-卷皮网');
+
 		$this->display();
 	}
 	//三方绑定
 	public function binding(){
+		$this->assign('title','绑定网站-卷皮网');
+
 		$this->display();
 	}
 	//兑现
 	public function bank(){
+		$this->assign('title','提现账户-卷皮网');
+
 		$this->display();
 	}
 	//收货地址
 	public function address(){
+		$this->assign('title','收货地址-卷皮网');
+
 		$this->display();
 	}
 	public function add_address(){
@@ -75,38 +86,56 @@ class CenterController extends Controller {
 	}
 	// 所有订单
 	public function allOrder(){
+		$this->assign('title','订单管理-卷皮网');
+
 		$this->display();
 	}
 	// 待付款订单
 	public function noPayOrder(){
+		$this->assign('title','订单管理-卷皮网');
+
 		$this->display();
 	}
 	// 运送订单
 	public function inWayOrder(){
+		$this->assign('title','订单管理-卷皮网');
+
 		$this->display();
 	}
 	// 我的售后
 	public function backList(){
+		$this->assign('title','售后管理-卷皮网');
+
 		$this->display();
 	}
 	// 我的积分
 	public function beans(){
+		$this->assign('title','积分管理-卷皮网');
+
 		$this->display();
 	}
 	// coupon 优惠券
  	public function coupon(){
+		$this->assign('title','优惠券-卷皮网');
+
 		$this->display();
 	}
 	// 修改密码
  	public function repass(){
+		$this->assign('title','修改密码-卷皮网');
+
 		$this->display();
 	}
 	// 修改邮箱
  	public function rephone(){
+		$this->assign('title','手机绑定-卷皮网');
+
 		$this->display();
 	}
 	// 修改手机号
  	public function reemail(){
+		$this->assign('title','邮箱管理-卷皮网');
+ 		
 		$this->display();
 	}
 	public function testMail(){

@@ -6,16 +6,16 @@
         <meta content="卷皮折扣,品牌折扣,折扣,特卖,打折,9.9元包邮,卷皮网" name="keywords">
         <meta content="卷皮折扣汇聚全网最优质折扣商品，每日精选千款超值折扣商品9.9元起全场包邮1折特卖，每天10点限时秒杀！上卷皮购便宜！" name="description">
         <meta charset="utf-8">
-    <link href="/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/AAA/project/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-    <link href="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/9245c5eeb79d45ea8fca9ffcd464f12f.css" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/41109579bcee494389f359ae0e914606.css" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/bb3e08540e584c09ac7578fd0213f369.css" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/add2.css" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/lunbo.css" />
+    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/9245c5eeb79d45ea8fca9ffcd464f12f.css" />
+    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/41109579bcee494389f359ae0e914606.css" />
+    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/bb3e08540e584c09ac7578fd0213f369.css" />
+    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/add2.css" />
+    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/lunbo.css" />
     </head>
     <body>
         
@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                         </form>
-                        <script type="text/javascript" src="/Public/Admin/js/jquery-1.8.3.min.js"></script>
+                        <script type="text/javascript" src="/AAA/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
                         <script type="text/javascript">
                             $('form').submit(function(){
                                 // alert(123);

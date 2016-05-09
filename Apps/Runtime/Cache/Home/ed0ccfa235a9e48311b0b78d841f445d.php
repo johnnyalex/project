@@ -1,20 +1,20 @@
 <?php if (!defined('THINK_PATH')) exit();?><html class="jp-pc w1200">
 <head>
-    <title>用户中心 - 卷皮网</title>
+    <title><?php echo ($title); ?></title>
     <meta content="卷皮折扣,独家,超值,品牌折扣,卷皮网" name="keywords">
     <meta content="卷皮网-专注独家折扣，汇聚全网最优质商品及促销活动，每日千款超值商品低至1折限量秒杀，天天更新，件件超值。商城优品超值买，优质大牌低价购，享折扣更享品质。" name="description">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
-    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
-    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/pg-myjuanpi.css" /> 
-    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/add.css" />
+    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
+    <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
+    <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/pg-myjuanpi.css" /> 
+    <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/add.css" />
 
-    <script type="text/javascript" src="/Public/Home/Js/d0516eb91e74494cbb77cf76d6c5cf9b.js"></script>
-    <script type="text/javascript" src="/Public/Home/Js/ab9affd4df7949768bc618ce97b36da9.js"></script>
-    <script type="text/javascript" src="/Public/Home/Js/81d25c7a32ce4311ad5cd9f69d225170.js"></script>
-    <script type="text/javascript" src="/Public/Home/Js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="/Public/Home/Js/center.js"></script>
+    <script type="text/javascript" src="/AAA/project/Public/Home/Js/d0516eb91e74494cbb77cf76d6c5cf9b.js"></script>
+    <script type="text/javascript" src="/AAA/project/Public/Home/Js/ab9affd4df7949768bc618ce97b36da9.js"></script>
+    <script type="text/javascript" src="/AAA/project/Public/Home/Js/81d25c7a32ce4311ad5cd9f69d225170.js"></script>
+    <script type="text/javascript" src="/AAA/project/Public/Home/Js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/AAA/project/Public/Home/Js/center.js"></script>
 </head>
     <body>
         
@@ -30,7 +30,7 @@
                 <div class="code-tips"><div class="code-box"><p class="code"></p><p class="txt">扫描下载二维码</p></div></div></li>
         </ul>
         <div class="right-show fr">
-            <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img src="/Public/Home/Picture/default.jpg"><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
+            <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img src="/AAA/project/Public/Home/Picture/default.jpg"><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
         <li><a href="<?php echo U('Home/Center/userinfo');?>"><span>账号设置</span></a></li><li><a href="http:####.juanpi.com/login/logout"><span>退出</span></a></li></ul></div></div><div class="personal-show"><a href="http:####.juanpi.com/order"><span>我的订单</span></a><a href="###.juanpi.com/jifen"><span>积分商城</span></a><a href="http:####.juanpi.com/message"><span>我的消息</span><em style="display: none;" class="count">0</em></a>&#12288;|</div><div class="bag-show"><a class="bag-a" target="_blank" href="http://cart.juanpi.com"><span class="icon-normal icon-bag fl empty"></span><span class="empty fl"><span class="fl empty">购物袋</span><em class="num cartnum" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%;">0</em></span></a><div style="" class="bag-tool bag-tool-empty"><div style="display:none;" id="loadingimg"></div><p><span class="icon-normal icon-bag-empty"></span>购物袋还是空荡荡的~</p></div>&#12288;|</div><div class="other-show"><a target="_blank" href="https://seller.juanpi.com/choice">卖家报名</a></div><div class="other-show other-show01"><a>客户服务</a><div class="normal-box01"><ul><li><a rel="nofollow" target="_blank" href="###.juanpi.com/help">帮助中心</a></li><li><a rel="nofollow" target="_blank" href="###.juanpi.com/about/service">联系客服</a></li></ul></div></div></div>
     </div>
 </div>
@@ -133,12 +133,12 @@
                        <div class="box_top">
                            <h3>基本资料</h3>
                        </div>
-                       <img src="/Public/Home/Picture/line_1.jpg">
+                       <img src="/AAA/project/Public/Home/Picture/line_1.jpg">
 
                        <div style="display:block;" class="per_content fl">
                            <form action="http://upload.juancdn.com/api/upload.image" method="post" class="user-info" enctype="multipart/form-data" id="addrform">
                                <div class="user-head fl">
-                                   <div class="head_b"><img src="/Public/Home/Picture/default_2.jpg"></div>
+                                   <div class="head_b"><img src="/AAA/project/Public/Home/Picture/default_2.jpg"></div>
                                    <div class="imgupload">
                                        <div class="smt_ceng">编辑头像</div>
                                        <input type="button" class="smt_file_fake" value="上传新头像" tabindex="2" data-sign="bh#d`1U@9`YL~Z8i" data-token="cee276f4059a9ff7f22a3a0cabf7539b">

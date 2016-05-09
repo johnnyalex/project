@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class UserController extends CommonController {
     public function index(){
-        // echo '后台的index';
+        //echo '后台的index';
         //实例化对象
         $user = M('user');
         //获取关键字
@@ -99,7 +99,6 @@ class UserController extends CommonController {
         // 接受id
         $id = I('get.id');
         //创建对象模型 
-
         $m = new \Think\Model();
         //开启事务
         $m -> startTrans();

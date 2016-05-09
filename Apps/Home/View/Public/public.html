@@ -2,7 +2,7 @@
 <html class="jp-pc w1200">
     <head>
 
-        <title>卷皮官网-专注独家折扣,1折特卖,全场包邮 - 上卷皮 购便宜!</title>
+        <title>{$title}</title>
         <meta content="卷皮折扣,品牌折扣,折扣,特卖,打折,9.9元包邮,卷皮网" name="keywords">
         <meta content="卷皮折扣汇聚全网最优质折扣商品，每日精选千款超值折扣商品9.9元起全场包邮1折特卖，每天10点限时秒杀！上卷皮购便宜！" name="description">
         <meta charset="utf-8">
@@ -10,11 +10,11 @@
 
     <link href="__PUBLIC__/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/9245c5eeb79d45ea8fca9ffcd464f12f.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/41109579bcee494389f359ae0e914606.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/bb3e08540e584c09ac7578fd0213f369.css" />
-    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/add2.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/lunbo.css" />
     </head>
     <body>
@@ -38,7 +38,7 @@
                             &#12288;|
                             <a href="{:U('Home/Center/index')}">个人中心</a>&#12288;|
                             <a href="{:U('Home/Login/outlogin')}">退出登录</a>&#12288;|
-                            <a href="{:U('Home/Order/index')}" rel="nofollow" target="_blank">我的订单</a>&#12288;|
+                            <a href="{:U('Home/Center/allOrder')}" rel="nofollow" target="_blank">我的订单</a>&#12288;|
                         <?php }else{ ?>
                             <a href="" rel="nofollow">QQ登录</a>&#12288;|
                             <a href="" rel="nofollow">微博登录</a>&#12288;| 
@@ -367,8 +367,8 @@
             <i class="icon_new"></i>今日新品<span>每天10点上新</span>
         </div>
     </div>
-</div>    <div style="text-align:center;margin:30px 0;" class="list-loading"><img src="__PUBLIC__/Home/Picture/loading.gif"/></div>
-    <div class="main pr mt25 clear" data-ugctag="C2" style="display: none;">
+</div>    
+    <div class="main pr mt25 clear" data-ugctag="C2" style="display:;">
         <input type="hidden" name="favken" value="">
         <div class="line-cate-nav-location hidden">
             <div class="line-cate-nav-wrapper">
@@ -403,9 +403,8 @@
                     </div>
                     <h3 class="good-title">
                         [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                        <!--<div class="icon-all" style="display:none;">
-                                                                        </div>-->
-                        <span class="sold">剩4天</span>
+                        <div class="icon-all" style="display:none;">
+                    <span class="sold">剩4天</span>
                     </h3>
                     <div class="good-price">
                         <span class="price-current" ><em>￥</em>9.8</span>
@@ -432,6 +431,11 @@
     <em></em>
     <div><span class="pg-prev">上一页</span><span>1</span><a href="/?page=2">2</a><a href="/?page=3">3</a><i>...</i><a  href="/?page=5">5</a><a class="pg-next" href="/?page=2">下一页</a>
 </div>
+<!-- 广告 -->
+<!-- <div class="ad">
+    
+</div>
+ -->
 </div>
 </div>
     <!-- 举报 box start -->
@@ -566,7 +570,7 @@
         <a rel="nofollow" target="_blank" key ="5492626c3b05a3da0fbd05fe"  logo_size="124x47"  logo_type="realname"  http="###.anquan.org" ><script src="__PUBLIC__/Home/Js/aq_auth.js"></script></a>      
             </div>
             </div>
-    </div>
+</div>
 </div>
     <div id="J_sidebar" class="side_right">
 
@@ -607,13 +611,14 @@
                     </div>
                 </li>
                 <li class="normal side-love">
-                    <a class="links" id="J_love" target="_blank" href="//user.juanpi.com/favorite">
+                    <a class="links" id="J_love" target="_blank" href="
+                    {:U('Home/Center/favorite')}">
                         <i class="normal-icon i-love"></i>
                     </a>
                     <div class="tab-tips">我的收藏<div class="arr-icon">◆</div> </div>
                 </li>
                 <li class="normal side-quan">
-                    <a class="links" id="J_quan" target="_blank" href="//user.juanpi.com/coupon">
+                    <a class="links" id="J_quan" target="_blank" href="{:U('Home/Center/coupon')}">
                         <i class="normal-icon i-quan"></i>
                     </a>
                     <div class="tab-tips">我的优惠券<div class="arr-icon">◆</div> </div>
@@ -676,5 +681,21 @@
     </div>
     </block>
     </block>
+    <script type="text/javascript">
+        // $(function(){
+        //     $('.i-love').mouseover(function(e){
+        //         $(this).parent('.side-love').find('.tab-tips').addClass('display','block');
+        //         var x = e.clientX;
+        //         var y = e.clientY;
+        //         var p = $('<p class="addP">我的收藏</p>');
+        //         // p.show(1000);
+                
+        //     });
+        //     $('.i-love').mouseover(function(){
+        //         // alert(567);
+        //     });
+
+        // });
+    </script>
     </body>
 </html>
