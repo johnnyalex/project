@@ -1,0 +1,288 @@
+<extend name="./Public/public" />
+<block name="title">
+    <h1 class="page-header">商品列表</h1>
+</block>
+
+<block name="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="dataTable_wrapper">
+                        <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form action="{:U(Admin/Goods/index)}" method="get">
+                                    <div class="dataTables_length" id="dataTables-example_length">
+                                        <label>显示 
+                                            <select name="show" aria-controls="dataTables-example" class="form-control input-sm">
+                                                <option value="5">5</option>
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                            </select> 
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div id="dataTables-example_filter" class="dataTables_filter">
+                                  
+                                        <label>Search:<input name = "name" type="search" class="form-control input-sm" placeholder="" aria-controls="dataTables-example"></label>
+                                        <button>搜索</button>
+                                         </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-sm-12">
+                            <table id="dataTables-example" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="dataTables-example_info">
+                            <thead>
+                             <!-- <form action="{:U(Admin/Goods/index)}" method="post"> -->
+                                <tr role="row">
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:85px;" aria-label="Browser: activate to sort column ascending">编号</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Platform(s): activate to sort column ascending">名称</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 85px;" aria-label="Engine version: activate to sort column ascending">分类</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 65px;" aria-label="Engine version: activate to sort column ascending">价格</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 65px;" aria-label="Engine version: activate to sort column ascending">图片</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">库存</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 145px;" aria-label="Engine version: activate to sort column ascending">是否上架</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 145px;" aria-label="Engine version: activate to sort column ascending">是否热销</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 145px;" aria-label="Engine version: activate to sort column ascending">是否精品</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 145px;" aria-label="Engine version: activate to sort column ascending">是否新品</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 210px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+                                </tr>
+                            <!-- </form> -->
+                            </thead>
+                            <tbody>
+                            <!-- z这是用户列表的遍历 -->
+                            <foreach name="goodlist" item="vo" >    
+                                <tr class="gradeA odd" role="row">
+                                    <td>{$vo.id}</td>
+                                    <td>{$vo.name}</td>
+                                    <td class="center">{$vo.cate_id}</td>
+                                    <td class="center">{$vo.price}</td>
+                                    <td class="sorting_1"><img src="__PUBLIC__/{$vo.pic}" width="50px"></td>
+                             
+                                    <td class="center">{$vo.stock}</td>
+                                    <td class="center"><button type="button" class="btn_status btn-info">
+                                    <switch name="vo.status">    
+                                    <case value="0">下架</case>    
+                                    <case value="1">上架</case>    
+                                    </switch>
+                                    </button>
+                                    </td>
+                                    <td class="center"><button type="button" class="btn_host btn-info">
+                                    <switch name="vo.is_host">    
+                                    <case value="0">热销</case>    
+                                    <case value="1">滞销</case>    
+                                    </switch>
+                                    </button>
+                                    </td>
+                                    <td class="center"><button type="button" class="btn_best btn-info">
+                                    <switch name="vo.is_best">    
+                                    <case value="0">不精</case>    
+                                    <case value="1">精品</case>    
+                                    </switch>
+                                    </button>
+                                    </td>
+                                    <td class="center"><button type="button" class="btn_new btn-info">
+                                    <switch name="vo.is_new">    
+                                    <case value="0">老款</case>    
+                                    <case value="1">新款</case>    
+                                    </switch>
+                                    </button>
+                                    </td>
+                                
+                                    <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;<a href="{:U('Admin/Goods/update',array('id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a></td>
+                                </tr>
+                            </foreach>
+                            </tbody>
+                        </table></div></div>
+
+                        <style type="text/css">
+                          #pages a,#pages span{
+                           background-color: #fff;
+                           border: 1px solid #ddd;
+                           color: #337ab7;
+                           float: left;
+                           line-height: 1.42857;
+                           margin-left: -1px;
+                           padding: 6px 12px;
+                           position: relative;
+                           text-decoration: none;
+                       }
+                       #pages span{
+                        /*background:#337ab7;
+                        color:white;*/
+                        background-color: #337ab7;
+                      border-color: #337ab7;
+                      color: #fff;
+                      cursor: default;
+                      z-index: 2;
+                    }
+                  </style>
+
+                            <div class="row">
+                                
+                                    <div class="col-sm-6">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
+                                        <div class="pagination">
+                                            <div id="pages">
+                                                 {$pages}
+                                             </div>
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- /.table-responsive -->
+                    
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+
+    
+
+
+    <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+    // alert($);
+    $(function(){
+        //上下架
+        $('.btn_status').bind("click",function(){
+            var display = $(this).text();
+            var id = $(this).parents('tr').find('td:first').html();
+            // alert(id);
+            var a = $(this);
+            display = display.trim();
+            // alert(display);
+            if(display == '上架'){
+                // alert('sss');
+                $.post('{:U("Admin/Goods/goods_status")}',
+                    {id:id,status:0},
+                    function(data){
+                        if(data)
+                            a.html('下架');
+                    })
+            }
+            else if(display == '下架'){
+                $.post('{:U("Admin/Goods/goods_status")}',
+                    {id:id,status:1},
+                    function(data){
+                        if(data)
+                            a.html('上架');
+                    })
+            } 
+        })
+
+
+          //热销与否
+        $('.btn_host').bind("click",function(){
+            var display = $(this).text();
+            var id = $(this).parents('tr').find('td:first').html();
+            // alert(id);
+            var a = $(this);
+            display = display.trim();
+            // alert(display);
+            if(display == '滞销'){
+                // alert('sss');
+                $.post('{:U("Admin/Goods/goods_host")}',
+                    {id:id,is_host:0},
+                    function(data){
+                        if(data)
+                            a.html('热销');
+                    })
+            }
+            else if(display == '热销'){
+                $.post('{:U("Admin/Goods/goods_host")}',
+                    {id:id,is_host:1},
+                    function(data){
+                        if(data)
+                            a.html('滞销');
+                    })
+            } 
+        })
+
+
+           //精品与否
+        $('.btn_best').bind("click",function(){
+            var display = $(this).text();
+            var id = $(this).parents('tr').find('td:first').html();
+            // alert(id);
+            var a = $(this);
+            display = display.trim();
+            // alert(display);
+            if(display == '精品'){
+                // alert('sss');
+                $.post('{:U("Admin/Goods/goods_best")}',
+                    {id:id,is_best:0},
+                    function(data){
+                        if(data)
+                            a.html('不精');
+                    })
+            }
+            else if(display == '不精'){
+                $.post('{:U("Admin/Goods/goods_best")}',
+                    {id:id,is_best:1},
+                    function(data){
+                        if(data)
+                            a.html('精品');
+                    })
+            } 
+        })
+
+   //新品与否
+        $('.btn_new').bind("click",function(){
+            var display = $(this).text();
+            var id = $(this).parents('tr').find('td:first').html();
+            // alert(id);
+            var a = $(this);
+            display = display.trim();
+            // alert(display);
+            if(display == '新款'){
+                // alert('sss');
+                $.post('{:U("Admin/Goods/goods_new")}',
+                    {id:id,is_new:0},
+                    function(data){
+                        if(data)
+                            a.html('老款');
+                    })
+            }
+            else if(display == '老款'){
+                $.post('{:U("Admin/Goods/goods_new")}',
+                    {id:id,is_new:1},
+                    function(data){
+                        if(data)
+                            a.html('新款');
+                    })
+            } 
+        })
+
+
+//删除商品
+        $('.delete').click(function(){
+            var id= $(this).parents('tr').find('td:first').html();
+            var tr = $(this);
+            $.get('{:U("Admin/Goods/delete")}',{id:id},function(data){
+                if(data)
+                    tr.parents('tr').remove();
+            })
+        }) 
+
+
+
+    })
+
+    </script>
+</block>

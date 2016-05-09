@@ -1,0 +1,50 @@
+    *{margin: 0;padding: 0;list-style:none;}
+    .brand_data li{border:none;}
+    /*宽高*/
+    .banner{width: 700px;height:360px;overflow: hidden;position: relative;margin-left:250px; }
+    /*底图*/
+    .banner .img1{width: 3500px;position: absolute;}
+    /*一排显示*/
+    .banner .img1 li{float: left;}
+    /*每次轮播宽度*/
+    .banner .img1 li img{width: 700px;}
+    /*箭头*/
+    .btn{width: 30px;height: 50px;position: absolute;top:50%;
+    background: rgba(0,0,0,0.5);text-align:center;margin-top: -25px;
+    line-height:50px;color:#fff;font-size:40px;font-family:'宋体';
+    cursor:pointer;
+    }
+    /*靠左*/
+    .btn_l{left:0px;}
+    /*靠右*/
+    .btn_r{right:0px;}
+    /*底部num*/
+    .num{
+        position: absolute;
+        width: 100%;
+        bottom:10px;
+        left: 0px;
+        text-align:center;
+    }
+    /*数字原样*/
+    .num li{
+        width: 20px;
+        height: 20px;
+        background: rgba(99,99,99,0.5);
+        border-radius:50%;
+        margin: 0 3px;
+        display:inline-block;
+        line-height: 20px;
+        text-align: center;
+    }
+    /*跳转改页面后的*/
+    .num .on{
+        background: rgba(255,90,0,0.5);
+        width: 25px;
+        height: 25px;
+        margin: 0 10px;
+        line-height: 25px;
+        color:blue;
+
+    }
+

@@ -1,0 +1,40 @@
+<extend name = "./Public/userinfo"/>
+<block name="address">
+<div class="confirm-order main-center main-zhanghu">
+    <div class="order-address clear">
+        <div class="box_top"><h3>收货地址</h3></div>
+        <img src="__PUBLIC__/Home/Picture/line_1.jpg">
+        <div class="capt pd_3">
+                <span class="logo_tips">
+                    <img src="__PUBLIC__/Home/Images/setted_addr.gif">
+                </span>
+                <span class="fz14">已经保存的收货地址</span>&nbsp;&nbsp;&nbsp;
+                <span class="s2">您已经创建&nbsp;<span id="addr_count" class="s3">2</span>&nbsp;个收货地址，最多可创建&nbsp;<span class="s3" id="addrnum">5</span>&nbsp;个</span>
+        </div>
+
+        <ul style="min-height: 224px;" data-flag="address" id="myAddress" class="list pd_3">
+            <li class="cur">
+            <input type="radio" style="display:none" townid="310108" cityid="310100" provinceid="310000" primary="1" value="835346" tel="" class="area-radio check" name="area">
+            <div class="fl"><div class="slice-border"><div class="area-sumary">
+            <em class="icons icons-user fl"></em><span class="area-name name">姚宁元</span>收</div></div>
+            <div class="mb10"><em class="icons icons-address fl"></em><span class="area-address street">
+            <i class="province">上海市 闸北区</i> <i class="jp_addr_street">少年村路415弄96号。梅奥菲斯公寓 2527室</i></span> 
+            <span class="area-postcode"></span></div><div><em class="icons icons-phone fl"></em>
+            <span class="area-mobile phone">185****8785</span><a class="addr-edit modify" href="javascript:void(0);">修改</a>
+            <a class="del"></a></div></div><div class="slt-icon"></div><div class="default-add">默认地址</div>
+            <div class="slt-icon"></div></li><li class="">
+            <input type="radio" style="display:none" townid="310117" cityid="310100" provinceid="310000" primary="0" value="282395" tel="021-57715030" class="area-radio check" name="area">
+            <div class="fl"><div class="slice-border">
+            <div class="area-sumary"><em class="icons icons-user fl"></em>
+            <span class="area-name name">姚宁元</span>收</div></div><div class="mb10">
+            <em class="icons icons-address fl"></em><span class="area-address street">
+            <i class="province">上海市 松江区</i> <i class="jp_addr_street">九亭镇沪松公路1399弄69号817（九号公馆）</i></span>
+             <span class="area-postcode">201601</span></div><div><em class="icons icons-phone fl"></em>
+             <span class="area-mobile phone">185****8785</span><a class="addr-edit modify" href="javascript:void(0);">修改</a>
+             <a class="del"></a></div></div><div class="slt-icon"></div></li><li class="add"><a class="add" href="javascript:;">
+             <em class="icons icons-add"></em>新增地址</a></li>
+        </ul>
+        
+        </div>
+    </div>
+</block>

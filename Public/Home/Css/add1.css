@@ -1,0 +1,325 @@
+﻿@charset "utf-8";
+/**
+* Dec: Base style 
+* Developers: ake <ake@juanpi.com>
+* Date: 2013-12-17;
+**/
+/*main-content start by ake*/
+.main .main-content i{ font-style:normal;}
+.main .main-message{ width:980px; text-align:center; height:40px; line-height:40px; background:#fff9e2; color:#555555; font-size:12px;}
+.main .main-content{ width:980px; overflow:hidden; margin: 10px auto; _margin-left: 15px;}
+.main .main-content .main-fanli{ width:280px; float:left;background:#fff;}
+/* bugfix 6031 by: fangfang, m by:xiaoxiao 2014/01/14 */
+
+.main .main-content .title{ height:30px; display:block; padding:13px 0 0 40px; color:#303030; font-weight:bold; font-size:14px;position: relative;}
+.main .time{color:#ABABAB; }
+.main .time01{ position:absolute; top:15px; left:105px;}
+.main .main-content .fan-box{ height:224px; border:1px solid #d4d4d4; border-top:none; position:relative;}
+.main .main-content .fan-box .btn:hover{ color: #fff; }
+/* bugfix 5996 by: fangfang, m by: xiaoxiao 2014/01/13 */
+.main .main-content .fan-box:hover{background: #F8FCF8;}
+.main .main-content .fan-balance{ height:74px; border-bottom:1px solid #f1f1f1;}
+.main .main-content .fan-bj{overflow:hidden;  height:6px;}
+.main .main-content .fan-balance .balance{ background:url(../images/user/fan.gif) no-repeat; float:left; display:inline; width:34px; height:53px; margin-left:40px;}
+.main .main-content .fan-balance .price{ display:block; margin:22px 0 0 9px; color:#555; float:left;}
+.main .main-content .fan-balance .price b{ font-weight:normal; color:#508422; font-size:20px; font-family:"微软雅黑"; vertical-align:-2px; margin-left:5px;}
+.main .main-content .main-fanli .fan-balance .price b i{ font-size:14px;}
+.main .main-content .fan-price{ padding:13px 30px 0 30px;border-bottom:1px solid #f1f1f1;}
+.main .main-content .main-fanli .fan-price .fan-all{ line-height:25px; color:#333333; font-weight:bold; font-size:14px;}
+.main .main-content .main-fanli .fan-price .fan-all .blue{ color:#0289cd; position:relative;}
+.main .main-content .main-fanli .fan-price .fan-all .blue i{ background:url(../images/user/fan.gif) no-repeat right -8px; width:6px; height:6px; position:absolute; top:0; right:-6px;}
+.main .main-content .main-fanli .fan-price .fan-all b{ font-family:"微软雅黑"; font-weight:normal; font-size:12px;}
+/* bugfix 5996 by: fangfang, m by: xiaoxiao 2014/01/13*/
+
+.main .main-content .main-fanli .fan-price .fan-all .look{ font-size:12px; font-weight:normal; margin-left:5px; vertical-align:1px;}
+
+
+.main .main-content .main-juandou{ width:690px; float:right; background:#fff;}
+/* bugfix 6031 by: fangfang, m by:xiaoxiao 2014/01/14 */
+.main .main-content .main-juandou .time{ color:#ababab; font-size:12px; font-weight:normal;}
+.main .main-content .main-juandou .fan-bj-red{ background:url(../images/bj/jd-bj.gif) repeat-x;}
+.main .main-content .main-juandou .main-income{ width:345px; float:left;}
+.main .main-content .main-juandou .main-income .fan-balance-zhuang{ background-position:-38px 0;}
+.main .main-content .juandou{ display:inline-block; margin-left:10px; vertical-align:-1px; background:url(../images/user/fan.gif) no-repeat right -20px; width:13px; height:15px;}
+.main .main-content .main-juandou .main-income .anniu{ width:34px; height:13px;  position:absolute; top:28px; right:36px; color: #0289CD;}
+.main .main-content .main-juandou .main-income .qiandao{ padding-bottom:6px;  color:#919191; padding-top:6px;}
+.main .main-content .main-juandou .main-income .qiandao li{ line-height:25px;}
+.main .main-content .main-juandou .main-income .qiandao li span{ float:right; display:block; display:inline; color:#c6c6c6;}
+.main .main-content .main-juandou .main-income .qiandao li .juan-num{ padding: 0 4px; color:#333;}
+/* bugfix 5994 by: fangfang, m by: xiaoxiao 2014/01/14 */
+.main .main-content .main-juandou .main-income .qiandao li a{ text-decoration:none; color:#5e5e5e;}
+.main .main-content .main-juandou .main-income .qiandao li a:hover{ text-decoration: underline; color:#ff6c01; }
+.main .main-content .main-juandou .main-income .zhuan-jd{ position:absolute; bottom:29px; left:40px;}
+.main .main-content .main-juandou .main-income .zhuan-jd a{ padding:4px 10px; color:#555555; margin-left:10px;  border:1px solid #e2e2e2; background:#f2f2f2;}
+.main .main-content .main-juandou .main-income .zhuan-jd a:hover{ text-decoration:none; color:#ff6600;}
+.main .main-content .main-juandou .main-spend{ float:left;}
+.main .main-content .main-juandou .main-spend .br{ border-left:none;}
+.main .main-content .main-juandou .fan-bj-blue{ background:url(../images/bj/jd-s-bj.gif) repeat-x;}
+.main .main-content .main-juandou .main-income .fan-balance-hua{ background-position:-76px 0;}
+/*main-content end by ake*/
+
+/*main-good-list start by ake*/
+.main .main-good-list{ width:980px; overflow:hidden;border:1px solid #d4d4d4; margin-top:10px; *margin-top:0px; background:#fff;}
+.main .main-good-list .block{ display:inline-block;}
+.main .main-good-list a{color:#555;}
+.main .main-good-list a:hover{ text-decoration:none; color:#555;}
+.main .main-good-list .good-active{ border-radius:4px; background:#f1f1f1;}
+.main .main-good-list .sale{ margin-left:20px; padding: 6px 10px; margin-right:22px;  }
+.main .main-good-list .good-list{width:934px; margin:13px auto 0; overflow:hidden;}
+.main .main-good-list .last{ margin-right:0 !important;}
+.main .main-good-list ul li{ float:left; width:218px; margin-right:18px; display:inline; margin-bottom:14px; border:1px solid #fff;}
+.main .main-good-list ul li .good-pic{ width:218px; height:145px; position:relative}
+.main .main-good-list ul li .good-pic a img{ width:218px; height:145px;}
+.main .main-good-list ul li .good-pic .start{ width:218px; text-align:center; line-height:18px; color:#303030; height:18px; position:absolute; bottom:0; background:#fff; opacity:0.7;filter: progid: DXImageTransform.Microsoft.Alpha( opacity=70 );-ms-filter : "progid:DXImageTransform.Microsoft.Alpha( opacity=70 )";}
+.main .main-good-list ul li .good-price{ height:30px; border:1px solid #fff; position:relative;}
+.main .main-good-list ul li .good-price i{ font-style:normal; font-size:12px; font-family:"微软雅黑"; color:#838383;}
+.main .main-good-list ul li .good-price .orange{ color:#ff6600;}
+.main .main-good-list ul li .good-price .green{ color:#64b61b;}
+.main .main-good-list ul li .good-price .over{ color:#777777;}
+.main .main-good-list ul li .good-price .price{ float:left; font-size:20px; margin-top:5px;}
+.main .main-good-list ul li .good-price .look{ float:right; margin-top:10px;}
+/*main-good-list end by ake*/
+
+
+/*my-like start by ake*/
+.main .main-good-list .good-border{ border-top:1px solid #e1e1e1; width:934px; margin:0 auto;}
+
+.main .main-good-list ul li .good-pic .icon-tl{ position:absolute; top:4px; right:4px; padding:3px 5px; background:#ff6600; display:block; color:#fff; border:1px solid #e25f07;}
+.main .main-good-list ul .like-boder{ border-color:#d4d4d4;}
+.main .main-good-list ul li .topbr{ border-top-color:#d4d4d4;}
+.main .main-good-list ul li .good-price .close{ width:14px; height:16px; margin-top:7px; margin-left:7px; background:url(../images/user/fan.gif) no-repeat right -56px; display:block; }
+.main .main-good-list ul li .good-price .del-c{ width:35px; height:31px;border-right:1px solid #d4d4d4;float:left; }
+.main .main-good-list ul li .good-price .old-price{ font-size:12px; float:left; margin-top:10px; text-decoration:line-through; margin-left:10px; color:#c6c6c6;}
+/*my-like end by ake*/
+
+/*main-banner start by ake*/
+.main-banner{ height:150px; margin-top:15px; background:url(../images/banner/banner01.jpg?20140306) no-repeat; position:relative;}
+.main-banner a{ width:106px; height:28px; display:block; position:absolute;  right:107px; border-radius:20px;}
+.main-banner .infomation{top:31px;}
+.main-banner .account { top:68px;}
+.main-banner .invite { top:104px;}
+/*main-banner end by ake*/
+
+/*mian-like start by ake*/
+.main .main-content .like-bj{ background:url(../images/bj/like-bj.gif) repeat-x; overflow:hidden;  height:6px;}
+.main .main-content .main-my-like{ width: 980px;padding:10px 0;}
+.main .main-content .main-my-like .title{ padding:0 0 0 40px;height: auto;}
+.main .main-content .main-my-like .title-n{  padding-left: 40px; display: block; padding-bottom: 5px;}
+.main .main-content .main-my-like .title .sale{ color: #333;}
+.main .main-content .main-my-like .title .number{ color: #afafaf; margin-left: 10px;}
+.main .main-content .main-my-like .title em{  font-size: 12px; font-weight: normal;}
+.main .main-content .main-my-like .title .dayu{ font-family: "宋体"; padding:  0 8px; color: #afafaf;}
+.main .main-content .main-my-like a{ padding: 0 10px; height: 20px; line-height: 20px;  display: inline-block; border: 1px solid #e2e2e2; color: #555555; border-radius: 2px; background: #f1f1f1; margin-right: 14px;}
+.main .main-content .main-my-like a:hover{ color: #ff464e;}
+.main .main-content .main-my-like .title .like-name{ color: #82a257; font-size: 14px; font-weight: 700;}
+.main .main-content .main-my-like .like-line{ height: 4px; background: #f4d0f5; display: block; border-top:1px solid #e098e2; margin-top: 12px; margin-bottom: 10px;  overflow: hidden;}
+.main .collect{ position: relative; text-align: center; height: 40px; line-height: 40px; background: #ffffcc; margin-bottom: 10px; color: #666;_margin-left:15px;  width: 100%;}
+.main .collect i{background: url(../images/user/fan.gif?20140702) no-repeat right -76px; width: 18px; height: 18px; vertical-align: -5px; *vertical-align: -2px;margin-right: 6px; display:inline-block;   _margin-top:10px; }
+.main .collect a{ color: #0289cd; text-decoration: underline;}
+.main .collect a:hover{ text-decoration: none;}
+
+
+/*20140507 new_like start by ake*/
+.item-like .l-actives{background: url(../images/zhe/my-like.png?20140523) no-repeat 0 -19px;_background: url(../images/zhe/my-like.gif?20140523) no-repeat 0 -19px;}
+.item-like .like-bigs{ width: 45px; height: 37px; background: url(../images/jiu/my-like.png?20140523) no-repeat -55px 0;_background: url(../images/jiu/my-like.png?20140523) no-repeat -55px 0;}
+.like-ceng{ height: 58px;background: rgba(0,0,0,.5);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);zoom:1;position: absolute;bottom: 103px;width: 270px;
+left: 9px; padding: 0 0 0 20px; display: none; z-index: 99;}
+:root #aaa{filter:none\9;}
+.like-ceng .iphone-ico{ width: 20px; height: 29px;background: url(../images/zhe/my-like.png?20140523) no-repeat 0 -37px; _background: url(../images/zhe/my-like.gif?20140523) no-repeat 0 -37px; display: block; float: left; margin: 15px 0;}
+.like-ceng .tips{ float: left; color: #fff; padding: 7px 0 7px 23px;}
+.like-ceng p{line-height: 22px;}
+.like-ceng .tips em{ background: #ff3838; padding: 0 1px; border-radius: 2px;}
+
+/*list-alert*/
+.list-alert{width: 310px;
+height: 310px;
+position: absolute;
+top: 0;
+left: 0;
+background-color: #ccc; 
+display: none;;
+}
+.alert-content{ display: none; padding: 20px 14px; background: #fff; position: absolute;top: 50%; left: 50%; margin-top: -41px; margin-left: -92px; z-index: 100001;}
+.alert-content p{ text-align: center; color: #555555; font-size: 14px;}
+.alert-content p a{ color: #ff3838;}
+.start-time-like{ position: absolute; bottom: 103px;  left: 9px; width: 290px; height: 30px;background: rgba(120,181,36,.9);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5000000,endColorstr=#e5000000);zoom:1;text-align: center;}
+.start-time-like .time-order{ line-height: 30px;color: #fff; font-size: 14px; }
+.start-time-like .time-order em{ font-size: 14px;  vertical-align: -1px;}
+
+/*like-tips start by ake*/
+
+.like-tips{margin-top: 13px; padding: 65px 125px 145px 125px;   border-top: 1px solid #e2e2e2; }
+.like-tips-img{ position: relative;  width: 730px; height: 355px;}
+.like-tips-img_1{background: url(../images/tips/tips-img06.gif?20140508) no-repeat;}
+.like-tips-img_2{background: url(../images/tips/tips-img07.gif?20140508) no-repeat;}
+.like-tips-img .like-con{ position: absolute; top: 80px; left: 256px}
+.like-tips-img .like-con p{ font-family: "微软雅黑"; font-size: 16px; color: #333; margin-bottom: 20px;}
+.like-tips-img .like-con .like-t{ font-size: 22px;}
+.like-tips-img .like-con .like-no{ color: #666;}
+.like-tips-img .like-con em{ display: inline-block; vertical-align: middle;  margin: -3px 4px 0 4px;}
+
+.two-iphone-n{width:84px; height:18px; background:url(../images/iphone-zx-n.gif) no-repeat; display:block; position:absolute; bottom:103px; right:8px;}
+
+/*nav-list start by ake*/
+.main .fan-box .btn{ position:absolute; bottom:21px; left:50%; margin-left:-37px; width:75px; height:27px; background:#F60;opacity: .9;*filter:alpha(opacity=90);color:#fff; border-radius:2px; display:block; text-align:center; line-height:27px; border:1px solid #e25f07;text-shadow: 1px 1px 0 rgba(0,0,0,.2);}
+.main .fan-box .btn:hover{ text-decoration:none;opacity: 1;*filter:alpha(opacity=100);}
+
+
+
+@charset "utf-8";
+/**
+* Dec: Base style 
+* Developers: ake <ake@juanpi.com>
+* Date: 2013-12-17;
+**/
+
+/*main-jd start by ake*/
+/* bugfix 6031 by: fangfang, m by:xiaoxiao 2014/01/14 */
+.main-content .main-jd{ background:#FFF;position: relative; border:1px solid #e2e2e2;}
+.main .main-content .main-jd .fan-balance{ border-bottom:none;}
+.main .main-content .main-jd .balance { background:url(../images/user/fan.gif) no-repeat -114px 0; width:34px; height:53px;}    
+.main .main-content .main-jd .fan-box-1{ overflow:hidden; border-top:1px solid #d4d4d4;}
+
+.main .main-content .main-jd .price{ line-height:25px;}
+.main .main-content .main-jd .font{ font-size:14px;}
+.main .main-content .main-jd .price p{ margin-left:-6px; color:#919191;}
+.main .main-content .main-jd .fan-balance{ width:360px; background:url(../images/bj/line.gif) no-repeat right center;}
+.main .main-content .main-jd .vip{ width:618px; margin-top:20px;}
+.main .main-content .main-jd .mf{ margin-right:53px; margin-left:32px; _padding:4px 10px;}
+.main .main-content .main-jd .z-jd{ margin-right:42px;_padding:4px 10px;}
+.main .main-content .main-jd .z-jd span{ display:block; margin-bottom:18px;}
+.main .main-content .main-jd .pu-a{padding: 4px 10px;color: #555; margin-left:10px;border: 1px solid #e2e2e2;background: #f2f2f2;
+};
+.main .main-content .main-jd .pu-b{ background:#FFF;}
+.main .main-content .main-jd .gd{ color:#c6c6c6; line-height:17px; float:left;}
+
+.main .main-content .main-jd a:hover{color: #ff6c01; text-decoration: none;}
+
+.main .main-content .main-jd .fan-zhuang{ width:488px; position:relative; border-right:1px solid #e2e2e2; padding-bottom:5px;}
+.main .main-content .main-jd .fan-zhuang .fan-bj-fen{ background:#ffd7d9;}
+.main .main-content .main-jd .fan-zhuang .balance,.main .main-content .main-jd .fan-zhuang .balance-hua{ float:left; background:url(../images/user/fan.gif) no-repeat 0 -205px; width:21px; height:33px; margin-left:48px;display:inline;}
+.main .main-content .main-jd .fan-zhuang .balance-zhuang{ background-position:0 -205px;}
+.main .main-content .main-jd .fan-zhuang .balance-hua{ background-position:-25px -205px;}
+.main .main-content .main-jd .fan-zhuang .price{ float:left; margin-left:14px;*float:none;  display:block; margin-top:15px;}
+/* bugfix 5994 by: fangfang, m by: xiaoxiao 2014/01/14 */
+.main .main-content .main-jd .fan-zhuang .price p .juan-num{color: #333;}
+.main .main-content .main-jd .fan-zhuang .anniu{  width:42px; height:13px; position:absolute; top:18px; right:40px;color: #08c}
+.main .main-content .main-jd .fan-zhuang .anniu:hover{ text-decoration:underline;}
+.main .main-content .main-jd .fan-zhuang .fan-bj-blue{ background:#d0ebff;}
+.main .main-content .main-jd .fan-zhuang  .timer{ float:right; display:inline; margin-top:45px; margin-right:40px; }
+
+/*main-jd end by ake*/
+
+/* content-duihuan by ake*/
+.main .main-content .content-duihuan{ margin-top:10px;border: 1px solid #e2e2e2;background: #fff;}
+.main .main-content .content-duihuan .duihuan-box{ width:978px;}
+.main .main-content .content-duihuan .duihuan-box ul{ line-height:34px;width: 977px;background: #fff;}
+.main .main-content .content-duihuan .duihuan-box li{ float:left;width: 116px;}
+.main .main-content .content-duihuan .duihuan-box li a{ color:#333; padding:8px 13px; border:1px solid #e2e2e2; border-bottom:none; display:block;}
+.main .main-content .content-duihuan .duihuan-box li a:hover{ text-decoration:none; color:#ff464e;}
+.main .main-content .content-duihuan .duihuan-box li .noboder{ border-left:none;border-top: none;text-align: center;}
+.main .main-content .content-duihuan .duihuan-box li .active{ background:#f2f2f2;color: #ff464e;}
+.main .main-content .content-duihuan .duihuan-nav{ height:38px; background:#f2f2f2; border-top:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;}
+.main .main-content .content-duihuan .duihuan-nav span{ line-height:38px; display:inline-block;}
+.main .main-content .content-duihuan .duihuan-nav .baby{ width:103px; text-align:center;}
+.main .main-content .content-duihuan .duihuan-nav .baby-xq-1{width: 290px}
+.main .main-content .content-duihuan .duihuan-nav .baby-add{width: 203px;}
+
+.main .main-content .content-duihuan .goods{ width:948px;padding:20px 10px 0 20px;background: #fff;}
+.main .main-content .content-duihuan .goods ul{ border-bottom:1px dashed #e2e2e2; overflow:hidden; margin-bottom:20px; padding-bottom:20px;}
+.main .main-content .content-duihuan .goods li{ float:left; width:110px;  display:inline;}
+.main .main-content .content-duihuan .goods li img{ width: 100px; height: 100px;}
+.main .main-content .content-duihuan .goods .mc{color:#555;}
+.main .main-content .content-duihuan .goods a:hover{ text-decoration:none;}
+.main .main-content .content-duihuan .goods li .jd{display:block; text-align:center; line-height:30px;font-size:12px;}
+.main .main-content .content-duihuan .goods li .time-d{display:block; text-align:center; line-height:60px;font-size:12px; }
+.main .main-content .content-duihuan .goods li .add-d{display:block; text-align:center; font-size:12px;width: 194px; overflow: hidden;display: table-cell;height: 60px;vertical-align: middle;}
+.main .main-content .content-duihuan .goods .last{ margin-right:0 !important;text-align:center;}
+.main .main-content .content-duihuan .goods .last-t{height: 60px;width: 150px;vertical-align:middle;}
+
+.main .main-content .content-duihuan .goods li .true{vertical-align:-3px; margin-right:4px; width:16px; height:16px; background:url(../images/user/fan.gif) no-repeat; display:inline-block;}
+.main .main-content .content-duihuan .goods li  .s1{ background-position: 0 -243px;}
+.main .main-content .content-duihuan .goods li  .s2{ background-position: 0 -264px;}
+.main .main-content .content-duihuan .goods li  .smt{ margin:9px auto 0; width:110px; height:22px; display:block; line-height:21px; color:#ffffff; text-align:center; background:url(../images/user/fan.gif) no-repeat 0 -151px;}
+.main .main-content .content-duihuan .goods li  .smt:hover{ text-decoration:none; background:url(../images/user/fan.gif) no-repeat 0 -179px;}
+.main .main-content .content-duihuan .goods li .tips{ position:relative; width:150px; overflow:visible; height:auto; border:1px solid #e2e2e2; border-radius:2px; margin:9px auto 0; background:#f2f2f2;}
+.main .main-content .content-duihuan .goods li .tips p{ line-height:13px; padding:8px;}
+.main .main-content .content-duihuan .goods li .tips .cur1{ width:10px; height:6px; background:url(../images/cur.gif) no-repeat; position:absolute; top:-6px; left:91px;}
+.main .main-content .content-duihuan .goods .wz{ text-align:center;margin-bottom: 20px;}
+/* content-duihuan by ake*/
+
+/*by adong 150605*/
+.fc_f36{color: #ff464e;}
+
+.main .main-content .main-jd .fan-zhuang.border_right{border-right: none;}
+.main .main-content .content-duihuan .goods li.goods_box{width: 270px;}
+.main .main-content .content-duihuan .goods li.add_box{width: 194px;height: 60px;}
+.main .main-content .content-duihuan .goods li .good_img{width: 60px;height: 60px;display:inline-block;float: left;}
+.main .main-content .content-duihuan .goods li .good_img img{width: 100%;height: 100%;}
+.main .main-content .content-duihuan .goods li .good_title{width: 185px;height: 60px; line-height: 60px; display:inline-block;overflow: hidden;float: left;}
+.main .main-content .content-duihuan .goods li .good_title p{width: 195px;line-height: 60px;;overflow: hidden;white-space:nowrap;text-overflow:ellipsis;padding-left: 5px;}
+.main .main-content .content-duihuan .goods .box_middle {display: table-cell;height: 60px;vertical-align: middle;text-align: center;width: 136px;}
+.main .main-content .content-duihuan .goods .box_middle span{display:inline-block;vertical-align: middle;font-weight: bold;color: #333;}
+.main .main-content .content-duihuan .goods .last-t a.edit-address{margin-top: 10px; display: inline-block;width: 74px;height: 30px;background: #ff464e;color: #fff;text-align: center;line-height: 28px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius: 3px;}
+.main .main-content .content-duihuan .goods .last-t a.edit-address:hover{background: #f66;}
+#tab_num{display:none;}
+#alert_exchange_new.jifen_address_alert .address{margin: 0;background: #fff;}
+#alert_exchange_new.jifen_address_alert .alert_content{padding-bottom: 20px;}
+.jifen_address_alert .address li .smt10{line-height: 23px;}
+.jifen_address_alert .address li .smt11{background: #ff464e;}
+.jifen_address_alert .address li .smt11:hover{background: #f66;}
+.jifen_address_alert .address li .smt12{border: 1px solid #e2e2e2;background: #f1f1f1;}
+.jifen_address_alert .address li .smt12:hover{background: #f9f9f9;}
+.jifen_address_alert .address_nav{background: #fff;width: 100%;height: 47px;}
+.jifen_address_alert .address_nav p{margin: 0 auto; width: 530px;height: 46px; border-bottom: 1px solid #e2e2e2;text-align: center;}
+.jifen_address_alert .address_nav a{display: inline-block;width: 125px; height: 36px;padding-top: 10px; line-height: 36px; display: inline-block;text-align: center;text-decoration: none;cursor: pointer;font-weight: bold;}
+.jifen_address_alert .address_nav a.mr{margin-right: 150px;}
+.jifen_address_alert .address_nav a.selected{color: #ff464e;border-bottom:2px solid #ff464e;}
+.jifen_address_alert .address_nav a:hover{color: #ff464e;border-bottom:2px solid #ff464e;}
+.jifen_address_alert .tips_jifen_alert{background: #fff;padding: 0 10px 20px;font-size: 12px;color: #666;}
+.jifen_address_alert .address_list{margin:10px auto 20px; width: 530px;background: #eee;}
+.jifen_address_alert .address_list ul{height: 170px;overflow-y:auto;}
+.jifen_address_alert .address_list ul li{width: 500px;height: 75px;overflow: hidden;margin: 0 auto;border-bottom: 1px dashed #e2e2e2;}
+.jifen_address_alert .address_list ul li input{height: 60px;vertical-align: middle;width: 13px;margin-right: 20px;margin-left: 15px;outline:none;}
+.jifen_address_alert .address_list ul li .address_box{height: 65px;margin-top:5px;border: 1px solid #eee;}
+.jifen_address_alert .address_list ul li .address_box.selectd{background: #fff;border: 1px solid #e2e2e2;}
+.jifen_address_alert .address_list ul li .address_box .address_con p{width: 434px;}
+.jifen_address_alert .address_list ul li .address_box .address_con p i{font-style: normal;font-weight: bold;font-size: 14px;margin-right: 20px;}
+.jifen_address_alert .confirm_btn{margin: 0 auto;display: block; cursor: pointer; width: 75px;height: 30px;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;background: #ff464e;color: #fff;text-align: center;line-height: 30px;text-decoration: none;}
+.jifen_address_alert .confirm_btn:hover{background: #f66;}
+#alert_exchange_new.jifen_address_alert .address li .text{line-height: 28px;}
+#alert_exchange_new.jifen_address_alert .address select{height: 30px;line-height: 30px;display: inline-block;padding:5px 0\9;+padding:5px 0;padding-right: 2px\9;+padding-right: 2px;*margin-top: 5px;*font-size: 14px;}
+.alert_bg .alert_box .alert_top a.go_other_page{color: #39c;display: inline-block;font-size: 12px;height: 45px;line-height:45px;float: none;background:none;width: auto;text-decoration: none;margin:1px 0 0 5px;text-align: left;text-indent:0;}
+
+/*150616 by adong jifen_page*/
+.main .main-content .title_2{font-weight: bold;font-size: 14px;position: relative;padding: 11px 0 12px 40px;display: block;background: #eee;color: #333;border-top: 1px solid #e2e2e2;}
+
+.main .main-content .title_2 a.jifen_rule_get,.main .main-content .title_2 a.jifen_rule_used{position: absolute;right: 30px;padding-top:2px;font-size: 12px;text-decoration:none;font-weight: normal;color: #666;display: inline-block;width: 90px;height: 18px;cursor: pointer;}
+.main .main-content .title_2 a.jifen_rule_get{right: 130px;}
+.main .main-content .title_2 a:hover{text-decoration: underline;}
+.main .main-content .title_2 i{font-size: 12px;color: #999;display: inline-block;margin-left: 4px;font-weight: normal;}
+.main .main-content .title_2 i a{font-weight: normal;color: #39c;cursor: pointer;text-decoration: none;}
+.main .main-content .title_2 i a:hover{color: #39c;}
+.main .main-content .main-jd .fan-box-1 .jifen_box{float: left; width: 325px;height: 140px;text-align: center;}
+.main .main-content .main-jd .fan-box-1 .jifen_box_border{border-left: 1px solid #e2e2e2;border-right:1px solid #e2e2e2;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .box_title{position: relative;width: 250px;margin: 20px auto 25px;text-align: center;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .box_title p{display:block; height: 1px;width: 100%;border-top: 1px solid #e2e2e2;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .box_title .titel_con{position: absolute;text-align: center;width: 100%;margin-top: -11px;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .box_title .titel_con span{background: #fff;padding: 0 10px;display: inline-block;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .jifen_num_box{display: inline-block;margin: 0 auto;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .jifen_num_box.now{margin-top: -10px;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .jifen_num_box .jifen_logo{background: url(../images/jifen_logo.jpg) no-repeat center; width: 16px;height: 17px;display: inline-block;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .jifen_num_box span{font-size: 30px;padding: 0 10px 0 10px;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .jifen_num_box span.old{font-size: 22px;color: #333;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .jifen_num_box a{color: #39c;vertical-align:5px;cursor: pointer;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .jifen_num_box a:hover{text-decoration: underline;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .bottom_box{display: inline-block;margin:10px auto 0;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .bottom_box.old{padding: 0 10px;display: block;margin-top: 15px;}
+.main .main-content .main-jd .fan-box-1 .jifen_box.jifen_box_border .bottom_box.old{padding: 0 10px;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .bottom_box a{width: 98px;height: 28px;border: 1px solid #e2e2e2;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;display: inline-block;background: #f1f1f1;line-height: 26px;color: #333;cursor: pointer;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .bottom_box a:hover{color: #ff464e;background: #f9f9f9;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .bottom_box a.fl{margin-right: 40px;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .bottom_box span{color: #666;display: inline-block;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .bottom_box span.time{color: #999;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .bottom_box a.c_link{color: #666;width: auto;height: auto;line-height: normal;border: 0;background: #fff;text-decoration: none;}
+.main .main-content .main-jd .fan-box-1 .jifen_box .bottom_box a.c_link:hover{text-decoration: underline;};

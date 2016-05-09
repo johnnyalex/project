@@ -1,0 +1,61 @@
+<extend name = "./Public/userinfo"/>
+<block name="rephone">
+<div class="main-center">                
+        <div class="box_top">
+            <h3>安全中心</h3>
+        </div>
+	   <img src="__PUBLIC__/Home/Picture/line_1.jpg">
+       <div class="per_content  fl safe_center">
+        <form id="resetphone" action="/setting/security" method="POST">
+            <ul>
+                <li>
+                    <label class="bold_phone">修改手机号</label>
+                    <span class="safe_phone">每月仅限修改一次，请慎重修改!</span>
+                    <a class="rose ml10" href="security?method=emailresetPhone">通过认证的邮箱修改手机 &gt;</a>
+                </li>
+
+                <li class="reset_one">
+                    <label>原手机号：</label>
+                    <input type="text" size="15" value="" name="oldphone" class="text oldphone" tabindex="1">
+                    <input type="hidden" value="resetphone" name="method">
+                     <input type="button" id="getCode" class="phone_fake" value="获取验证码" tabindex="2">
+                    <p style="display:none;" class="s13"></p>
+                </li>
+                <li class="reset_one">
+                    <label>验证码：</label>
+                    <input type="text" tabindex="4" size="10" value="" name="captchacode_1" class="text captchacode">
+                    <p style="display:none;" class="s13"></p>
+                </li>
+
+
+                <li class="reset_one">
+                    <label></label>
+                    <input type="button" class="smt" id="smt_resetphone_one" value="下一步" tabindex="5">
+                </li>
+
+
+                <li class="reset_two" style="display:none">
+                    <label>原手机号：</label>
+                      <span class="safe_phone">185******85</span>
+                    <p style="display:none;" class="s13"></p>
+                </li>
+                <li class="reset_two" style="display:none">
+                    <label>新手机号：</label>
+                    <input type="text" size="15" value="" name="newphone" class="text newphone" tabindex="1">
+                    <input type="hidden" value="resetphone" name="method">
+                     <input type="button" id="getCode2" class="phone_fake" value="获取验证码" tabindex="2">
+                    <p style="display:none;" class="s13"></p>
+                </li>
+                <li class="reset_two" style="display:none">
+                    <label>验证码：</label>
+                    <input type="text" tabindex="4" size="10" value="" name="captchacode_2" class="text captchacode">
+                    <p style="display:none;" class="s13"></p>
+                </li>
+                <li class="reset_two" style="display:none">
+                    <label></label>
+                    <input type="button" class="smt" id="smt_resetphone_two" value="提交" tabindex="5">
+                </li>
+            </ul>
+        </form></div>                                
+     </div>
+</block>
