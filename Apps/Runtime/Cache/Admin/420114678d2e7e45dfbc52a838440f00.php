@@ -405,7 +405,7 @@
                         <div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
                         <ul class="pagination">
                         <li class="paginate_button previous" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous"><a class="prev_page" href="alex">上一页</a></li>
-                        <?php $__FOR_START_16965__=1;$__FOR_END_16965__=$page_c+1;for($i=$__FOR_START_16965__;$i < $__FOR_END_16965__;$i+=1){ ?><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a class="page_a" href="index?p=<?php echo ($i); ?>&show=<?php echo ($shw); ?>&search=<?php echo ($seh); ?>"><?php echo ($i); ?></a></li><?php } ?>
+                        <?php $__FOR_START_30562__=1;$__FOR_END_30562__=$page_c+1;for($i=$__FOR_START_30562__;$i < $__FOR_END_30562__;$i+=1){ ?><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a class="page_a" href="index?p=<?php echo ($i); ?>&show=<?php echo ($shw); ?>&search=<?php echo ($seh); ?>"><?php echo ($i); ?></a></li><?php } ?>
                         <li class="paginate_button next" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next">
                         <a class="next_page" href="index?p=&show=<?php echo ($shw); ?>&search=<?php echo ($seh); ?>">下一页</a></li>
                         </ul></div></div>

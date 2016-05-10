@@ -398,11 +398,15 @@
     <script src="/AAA/project/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
     $(function(){    
+        //一级分类 就是select中的首选项
         $('select').change(function(){
             $('.select_add').remove();
+            //获取id
             var id = $(this).val();
+            //选择增加一级分类  直接跳出
             if(id == 0)
                 return;
+            // 发送
             var th = $(this);
             $.ajax({
                 url:"<?php echo U('Admin/Category/select');?>",
@@ -410,8 +414,11 @@
                 datetype:'json',
                 type:'post',
                 success:function(data){
+                    // 接受json格式的变js中的arr
                     var arr = eval(data);
+
                     console.log(arr);
+                    // 加select
                     var sel = '<div class="form-group select_add"><label>二级类别</label><select name="second" class="form-control"><option value="'+id+'" path="0,">二级分类</option>';
                     var inp = '';
                     if(arr != null)

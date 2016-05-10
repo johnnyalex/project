@@ -87,7 +87,6 @@ class CenterController extends Controller {
 	// 所有订单
 	public function allOrder(){
 		$this->assign('title','订单管理-卷皮网');
-
 		$this->display();
 	}
 	// 待付款订单
