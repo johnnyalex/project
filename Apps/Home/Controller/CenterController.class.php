@@ -45,7 +45,14 @@ class CenterController extends Controller {
 		// $re=$m->where("userId={$id}")->data($_POST)->save();
 		if(I('post.pri'))
 			$addr->where('pri=1')->data(['pri'=>0])->save();
-		// $_POST['addr'] = $_POST['pro'].$_POST['city'].$_POST['area']
+		$_POST['uid'] = $_POST['id'];
+		unset($_POST['id']);
+		$addr->create();
+		$res = $addr->add();
+		if($res)
+			$this->success('添加成功',U("Home/Center/address"));
+		else
+			$this->error('添加失败',U("Home/Center/address"));
 	}
 	// 个人基本信息
 	// public function setting(){
