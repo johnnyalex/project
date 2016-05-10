@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><html class="jp-pc w1200">
 <head>
-    <title>用户中心 - 卷皮网</title>
+    <title><?php echo ($title); ?></title>
     <meta content="卷皮折扣,独家,超值,品牌折扣,卷皮网" name="keywords">
     <meta content="卷皮网-专注独家折扣，汇聚全网最优质商品及促销活动，每日千款超值商品低至1折限量秒杀，天天更新，件件超值。商城优品超值买，优质大牌低价购，享折扣更享品质。" name="description">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -25,7 +25,6 @@
             <li class="first"><a class="active" target="_blank" href="###.juanpi.com">卷皮折扣</a></li>
             <li><a target="_blank" href="http://brand.juanpi.com">品牌折扣</a></li>
             <li><a class="red" target="_blank" href="###.jiukuaiyou.com">9.9包邮</a></li>
-            <!--<li><a href="http://fanli.juanpi.com" target="_blank">卷皮返利</a></li>-->
             <li class="phone-code"><a target="_blank" href="###.juanpi.com/apps"><em class="icon-normal icon-phone"></em>手机版</a>
                 <div class="code-tips"><div class="code-box"><p class="code"></p><p class="txt">扫描下载二维码</p></div></div></li>
         </ul>
@@ -110,7 +109,7 @@
                     <li class="noboder">账号设置</li>
                     <li class="sub-menu">
                         <ul>
-                            <li ><a href="<?php echo U('Home/Center/setting');?>">基本资料</a></li>
+                            <li ><a href="<?php echo U('Home/Center/userinfo');?>">基本资料</a></li>
                             <li ><a href="<?php echo U('Home/Center/address');?>">收货地址</a></li>
                             <li ><a href="<?php echo U('Home/Center/security');?>">安全中心</a></li>
                             <li ><a href="<?php echo U('Home/Center/bank');?>">提现账号</a></li>
@@ -122,11 +121,10 @@
             </div>
             <div class="main-center">                
             <div class="main-zhanghu" >
-                
-                
-                
-                
-                
+            
+            
+            
+            
     <div class="main-center">                
             <div class="box_top">
                 <h3>账号绑定</h3>
@@ -192,7 +190,6 @@
     </div>
     </div>
 
-            
             
             
             

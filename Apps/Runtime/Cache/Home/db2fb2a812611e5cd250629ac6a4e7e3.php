@@ -122,46 +122,69 @@
             <div class="main-center">                
             <div class="main-zhanghu" >
             
-            
-            
-<div class="main-center">
-    <div class="box_top">
-        <h3>提现账号</h3>
-    </div>
-    <img src="/Public/Home/Picture/line_1.jpg">
-        <div class="per_content payee_con">
-            <h3 class="title"><span class="zfb_bg">
-                <img src="/Public/Home/Images/zfb_logo.jpg"></span>
-                <span class="tips tips2">用于直接提现和兑换支付宝集分宝</span>
-            </h3>
-                <ul>
-                    <li>
-                        <label>收款人姓名：</label>
-                        <span class="right_modify"></span>
-                    </li>
-                    <li>
-                        <label>支付宝账号：</label>
-                        <span class="right_modify">185******85</span>
-                    </li>
-                                                            <li>
-                        <div class="modify_ways"><a href="/setting/bank?method=resetalipay">修改支付宝账号&gt;&gt;</a></div>
-                    </li>
-                </ul>
-            </div>
-        <div class="per_content payee_con no_border">
-            <h3 class="title card_title">
-                <span class="zfb_bg"><img src="/Public/Home/Images/bank_card.gif"></span>银行卡<span class="tips">用于直接提现</span>
-            </h3>
-            <div class="add_account">
-                <p>您还没有添加银行卡！</p>
-                <a class="mr10" href="/setting/bank?method=addbank">立即添加</a>
-                <span class="safe lh22 "><i class="icon-ts"></i>注意：添加当日不能对银行卡/支付宝信息进行修改</span>
+<div class="confirm-order main-center main-zhanghu">
+    <div class="order-address clear">
+        <div class="box_top"><h3>收货地址</h3></div>
+        <img src="/Public/Home/Picture/line_1.jpg">
+        <div class="capt pd_3">
+                <span class="logo_tips">
+                    <img src="/Public/Home/Images/setted_addr.gif">
+                </span>
+                <span class="fz14">已经保存的收货地址</span>&nbsp;&nbsp;&nbsp;
+        </div>
+        <form action="<?php echo U('Home/Center/do_change_address');?>" method="post">
+        <div uadid="0" class="new-address">
+            <input type="hidden" value="<?php echo ($res["id"]); ?>" name="id">
+            <div class="panel-box" style="">
+                <div id="addrform">
+                    <div class="adr" id="adr">
+                        <ul>
+                            <li>
+                                <label><!-- <span class="import">*</span> -->收货人：</label>
+                                <input value="<?php echo ($res["name"]); ?>" type="text" class="text" name="name" id="truename" size="16" maxlength="16" tabindex="1">
+                                <p style="display:none;" class="s13"></p>
+                                <p class="s12">只包含汉字、数字和字母,长度不超过16个字</p>
+                            </li>
+                            <li>
+                                <label><!-- <span class="import">*</span> -->手机：</label>
+                                <input type="text" value="<?php echo ($res["tel"]); ?>" name="tel" id="mobile" size="12" maxlength="11" tabindex="2" class="text">
+                                <p style="display:none;" class="s13"></p>
+                            </li>
+                            <li>
+                                <label> <!-- <span class="import">*</span> -->地区：</label>
+                                <input value="<?php echo ($res["pro"]); ?>" type="text" value="" name="pro" id="mobile" style="height:31px" size="12" maxlength="11" tabindex="2" class="text">
+                                <input value="<?php echo ($res["city"]); ?>" type="text" value="" name="city" id="mobile" style="height:31px" size="12" maxlength="11" tabindex="2" class="text">
+                                <input value="<?php echo ($res["area"]); ?>" type="text" value="" name="area" id="mobile" style="height:31px" size="12" maxlength="11" tabindex="2" class="text">
+                                <p style="display:none;" class="s13"></p>
+                            </li>
+                            <li>
+                                <label> <!-- <span class="import">*</span> -->地址：</label>
+                                <input type="text" value="<?php echo ($res["addr"]); ?>" name="addr" id="addr" size="45" maxlength="40" tabindex="6" class="text addr-long">
+                                <p style="display:none;" class="s13"></p>
+                                <!-- <p class="s12">请填写详细地址信息</p> -->
+                            </li>
+                        
+                            <li>
+                                <label></label>
+                                <input type="checkbox" value="1" id="J_SetDefault" name="pri" class="set-check" tabindex="8"
+
+                            <?php if($res["pri"] == 1): ?>checked<?php endif; ?>
+                                >
+                                <label for="J_SetDefault" class="set">设置为默认收货地址</label>
+                            </li>
+                            <li>
+                                <label></label>
+                                <input type="submit" class="smt smt1 baocun" value="修 改" tabindex="9">
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
-            
-            
         </div>
     </div>        
             <!-- 页脚 -->

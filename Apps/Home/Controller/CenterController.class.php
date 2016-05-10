@@ -43,17 +43,60 @@ class CenterController extends Controller {
 	}
 	//收货地址
 	public function address(){
+		$address = M('address');
+		$count = $address->count();
+		$id = $_SESSION['user']['id'];
+		$addr = $address->where(['uid'=>$id])->select();
+		foreach ($addr as $key => $value) {
+			$addr[$key]['address'] = $value['pro'].' '.$value['city'].' '.$value['area'].' '.$value['addr'];
+			$addr[$key]['tel'] = substr_replace($addr[$key]['tel'],'****',3,4);
+		}
+		$this->assign('addr',$addr);
+		$this->assign('count',$count);
 		$this->assign('title','收货地址-卷皮网');
-
 		$this->display();
+	}
+	public function do_change_addr(){
+		$id = I('get.id');
+		$address = M('address');
+		$res = $address->where('')->data(['pri'=>0])->save();
+		$res = $address->where(['id'=>$id])->data(['pri'=>1])->save();
+		if(!$res)
+			echo 1;		
+	}
+	public function do_delete_addr(){
+		$id = I('get.id');
+		$address = M('address');
+		$res = $address->where(['id'=>$id])->delete();
+		if($res)
+			echo 1;
 	}
 	public function add_address(){
 		$this->display();
 	}
+	public function change_address(){
+		$id = I('get.id');
+		$address = M('address');
+		$res = $address->where(['id'=>$id])->find();
+		$res['id'] = $id;
+		$this->assign('res',$res);
+		$this->display();
+	}
+	public function do_change_address(){
+		$address = M('address');
+		if($_POST['pri'] == 1)
+			$address->where('')->data(['pri'=>0])->save();
+		if(!$_POST['pri'])
+			$_POST['pri'] = 0;
+		$address->create();
+		$res = $address->save();
+		if($res)
+			$this->success('修改成功',U("Home/Center/address"));
+		else
+			$this->error('修改失败',U("Home/Center/address"));
+	}
 	public function do_add_addr(){
-		var_dump($_POST);
 		$addr = M('address');
-		// $re=$m->where("userId={$id}")->data($_POST)->save();
 		if(I('post.pri'))
 			$addr->where('pri=1')->data(['pri'=>0])->save();
 		$_POST['uid'] = $_POST['id'];
