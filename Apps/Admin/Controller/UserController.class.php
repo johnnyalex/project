@@ -42,6 +42,14 @@ class UserController extends CommonController {
         $this->display();
 
     }
+    // 锁定否
+    public function user_status(){
+        $uer = M('user');
+        $uer->create();
+        $res = $uer->save();
+        if($res)
+            echo 1;
+    }
     public function add(){
         // echo '后台用户的的添加';
         $this->display();

@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><html class="jp-pc w1200">
 <head>
-    <title>用户中心 - 卷皮网</title>
+    <title><?php echo ($title); ?></title>
     <meta content="卷皮折扣,独家,超值,品牌折扣,卷皮网" name="keywords">
     <meta content="卷皮网-专注独家折扣，汇聚全网最优质商品及促销活动，每日千款超值商品低至1折限量秒杀，天天更新，件件超值。商城优品超值买，优质大牌低价购，享折扣更享品质。" name="description">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -25,12 +25,14 @@
             <li class="first"><a class="active" target="_blank" href="###.juanpi.com">卷皮折扣</a></li>
             <li><a target="_blank" href="http://brand.juanpi.com">品牌折扣</a></li>
             <li><a class="red" target="_blank" href="###.jiukuaiyou.com">9.9包邮</a></li>
-            <!--<li><a href="http://fanli.juanpi.com" target="_blank">卷皮返利</a></li>-->
             <li class="phone-code"><a target="_blank" href="###.juanpi.com/apps"><em class="icon-normal icon-phone"></em>手机版</a>
                 <div class="code-tips"><div class="code-box"><p class="code"></p><p class="txt">扫描下载二维码</p></div></div></li>
         </ul>
         <div class="right-show fr">
-            <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img src="/AAA/project/Public/Home/Picture/default.jpg"><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
+            <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img 
+            src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
+            alt="头像" 
+            ><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
         <li><a href="<?php echo U('Home/Center/userinfo');?>"><span>账号设置</span></a></li><li><a href="http:####.juanpi.com/login/logout"><span>退出</span></a></li></ul></div></div><div class="personal-show"><a href="http:####.juanpi.com/order"><span>我的订单</span></a><a href="###.juanpi.com/jifen"><span>积分商城</span></a><a href="http:####.juanpi.com/message"><span>我的消息</span><em style="display: none;" class="count">0</em></a>&#12288;|</div><div class="bag-show"><a class="bag-a" target="_blank" href="http://cart.juanpi.com"><span class="icon-normal icon-bag fl empty"></span><span class="empty fl"><span class="fl empty">购物袋</span><em class="num cartnum" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%;">0</em></span></a><div style="" class="bag-tool bag-tool-empty"><div style="display:none;" id="loadingimg"></div><p><span class="icon-normal icon-bag-empty"></span>购物袋还是空荡荡的~</p></div>&#12288;|</div><div class="other-show"><a target="_blank" href="https://seller.juanpi.com/choice">卖家报名</a></div><div class="other-show other-show01"><a>客户服务</a><div class="normal-box01"><ul><li><a rel="nofollow" target="_blank" href="###.juanpi.com/help">帮助中心</a></li><li><a rel="nofollow" target="_blank" href="###.juanpi.com/about/service">联系客服</a></li></ul></div></div></div>
     </div>
 </div>
@@ -143,6 +145,10 @@
                         </div>
                     </li>
                     <li class="bb">
+                        <div class="detail"><span class="public anquan-d"></span><span class="risk_pasword">设置密保</span><span class="tips">为了您的账户安全请设置密保问题</span><a class="modify_pd" href="<?php echo U('Home/Center/question');?>">修改</a>
+                        </div>
+                    </li>
+                    <li class="bb">
                         <div class="detail">
                             <span class="risk_tit"><i class="ffz">邮箱认证</i></span>
                             <span class="tips01">当前认证的邮箱：89***@qq.com</span>
@@ -164,7 +170,15 @@
 
             
         </div>
-    </div>        
+    </div>  
+    <script type="text/javascript">
+    // $(function(){
+    //   $('.smt_file_fake').click(function(){
+        
+
+    //   })
+    // });
+    </script>      
             <!-- 页脚 -->
 <div class="foot">
     <div class="white_bg">

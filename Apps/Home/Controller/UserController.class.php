@@ -10,12 +10,10 @@ class UserController extends Controller {
         $count = $user->count();
         //实例化分页类
         $Page = new \Think\Page($count,10);
-
         //获取limit
         $limit = $Page->firstRow.','.$Page->listRows;
         //分页显示输出
         $pages = $Page->show();
-
         //查询
         $users = $user->limit($limit)->select();
         // var_dump($users);
@@ -23,7 +21,6 @@ class UserController extends Controller {
         //分配变量
         $this->assign('users',$users);
         $this->assign('pages',$pages);
-
         //解析模板
         $this->display();
 
@@ -38,10 +35,12 @@ class UserController extends Controller {
         $this->display();
 
     }
-    public function insert(){
-/*        var_dump($_POST);
+
+    public function addimage(){
+       var_dump($_POST);
         var_dump($_FILES);
-*/
+        die;
+
         $user = M('user');
         //处理图片上产
         if ($_FILES['pic']['error']==0) {
@@ -59,32 +58,16 @@ class UserController extends Controller {
                 //写入post
                 $_POST['pic'] = $str;
             }
-
         }
         //创建数据 去除非法字段
         $user->create();
         //执行添加
-        $uid = $user->add();
-
-        //添加附表
-        $userinfo = M('userinfo');
-        //添加用户id
-        $_POST['uid']=$uid;
-
-        //处理hobby 字段
-        if (!empty($_POST['hobby'])) {
-            $_POST['hobby'] = implode(',',$_POST['hobby']);
-        }
-
-        //再次执行 数据的插入
-
-        $userinfo->create();
-        $res = $userinfo->add();
+        $res = $user->add();
         //判断
         if ($res) {
-            $this->success('添加成功',U('Admin/User/index'));
+            $this->success('添加成功',U('Admin/Home/center'));
         }else{
-            $this->error('添加成功',U('Admin/User/index'));
+            $this->error('添加成功',U('Admin/Home/center'));
 
         }
 

@@ -376,6 +376,10 @@
         <input name="email" placeholder="请输入邮箱" class="form-control">
     </div>
     <div class="form-group">
+        <label>手机号:</label>
+        <input name="text" placeholder="手机号" class="form-control">
+    </div>
+    <div class="form-group">
         <label>上传头像</label>
         <input type="file" name="pic">
     </div>
@@ -410,10 +414,10 @@
     <div class="form-group">
         <label>类型:</label>
         <select name="type" class="form-control">
-            <option value="0">游客</option>
-            <option value="1">会员</option>
-            <option value="2">管理员</option>
-            <option value="3">超级管理员</option>
+            <option value="0">炮灰级</option>
+            <option value="1">入门级</option>
+            <option value="2">贵宾级</option>
+            <option value="3">骨灰级</option>
         </select>
     </div>
     <button class="btn btn-default" type="submit">提交</button>

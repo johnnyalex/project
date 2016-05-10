@@ -131,65 +131,102 @@
             
             
             
-               <div class="main-zhanghu" >
-                       <div class="box_top">
-                           <h3>基本资料</h3>
-                       </div>
-                       <img src="/AAA/project/Public/Home/Picture/line_1.jpg">
+<div class="main-center">                
+        <div class="box_top">
+            <h3>安全中心</h3>
+        </div>
+	   <img src="/AAA/project/Public/Home/Picture/line_1.jpg">
+       <div class="per_content  fl safe_center">
+        <form id="resetemail" action="" method="POST">
+            <ul>
+                <li>
+                    <label class="bold_phone">设置密保</label>
+                    <span class="safe_phone">每月仅限修改一次，请慎重修改!</span>
+                    <a class="rose ml10" href="security?method=emailresetPhone"></a>
+                </li>
+            <div class='question'>
+                <li class="reset_one">
+                    <label>问题一：</label>
+                    <select name="q1">
+                    <?php if(is_array($arr)): foreach($arr as $key=>$vo): ?><option value="<?php echo ($vo); ?>" ><?php echo ($vo); ?></option><?php endforeach; endif; ?>
 
-                       <div style="display:block;" class="per_content fl">
-                           <form action="<?php echo U('Home/Center/do_set');?>" method="post" class="user-info" id="userform" enctype="multipart/form-data">
+                </li>
+                <li>
+                    <input class="hidd" type="text" type="text" name='q1' style="display: none" placeholder="请输入问题">
+                </li>
+                <li class="reset_one">
+                    <label>回答一：</label>
+                    <input type="text" placeholder="请输入回答" size="15" value="" name="a1" class="text a1" tabindex="1">
+                </li>
+            </div>
+            <div class='question'>
+                <li class="reset_one">
+                    <label>问题二：</label>
+                    <select name="q2">
+                    <?php if(is_array($arr)): foreach($arr as $key=>$vo): ?><option value="<?php echo ($vo); ?>" ><?php echo ($vo); ?></option><?php endforeach; endif; ?>
 
-                               <div class="user-head fl">
-                                   <div class="head_b"><img class="img-responsive" src="/AAA/project/Public<?php echo ($user["pic"]); ?>"></div>
-                                   <div class="imgupload">
-                                       <div class="smt_ceng">编辑头像</div>
-                                       <input type="file" class="smt_file_fake" value="上传新头像" tabindex="2" data-sign="bh#d`1U@9`YL~Z8i" data-token="cee276f4059a9ff7f22a3a0cabf7539b">
-                                   </div>
-                               </div>
+                </li>
+                <li>
+                    <input class="hidd" type="text" name='q2' style="display: none" placeholder="请输入问题">
+                </li>
+                <li class="reset_one">
+                    <label>回答二：</label>
+                    <input type="text" placeholder="请输入回答" size="15" value="" name="a2" class="text a3" tabindex="1">
+                </li>
+            </div>
+            <div class='question'>
+                <li class="reset_one">
+                    <label>问题三：</label>
+                    <select name="q3">
+                    <?php if(is_array($arr)): foreach($arr as $key=>$vo): ?><option value="<?php echo ($vo); ?>" ><?php echo ($vo); ?></option><?php endforeach; endif; ?>
 
-                               <div class="pen"><div class="logo"></div></div>
+                </li>
+                <li>
+                    <input class="hidd" type="text" name='q3' style="display: none;" placeholder="请输入问题">
+                </li>
+                <li class="reset_one">
+                    <label>回答三：</label>
+                    <input type="text" placeholder="请输入回答" size="15" value="" name="a3" class="text a3" tabindex="1">
+                </li>
+            </div>
 
-                               <ul class="fl">
-                                   <li><label><span class="import"></span>用户名：</label>
-                                   <span class="right_modify"><?php echo ($user["username"]); ?></span>                                </li>
-                                   <li>
-                                       <label>性 别：</label>
-                                       <input type="radio"  id="male" name="sex" value="男" <?php if($user["sex"] == 1): ?>checked<?php endif; ?>/><label class="normal" for="male">男</label>
-                                       <input type="radio"  id="female" name="sex" value="女" <?php if($user["sex"] == 0): ?>checked<?php endif; ?>/><label for="female" class="normal">女</label>
-                                       <p class="s13"></p>
-                                   </li>
-                                   <li>
-                                     <label>修改头像：</label><input type="file" name="pic">
-                                   </li>
-                                   <li><label>生 日：</label>
-                                       <select id="year" name="year" size="1">
-                                           <?php for ($i=1970; $i <= date('Y',time())-1; $i++) { ?> 
-                                           <option value="<?php echo $i ?>" <?php if($user['year'] == $i) echo "selected"; ?>><?php echo $i ?></option>
-                                           <?php } ?>
-                                       </select><span class="right_modify">年</span>
-                                       <select id="month" name="month" size="1"> 
-                                           <?php for ($i=1; $i <= 12 ; $i++) { ?>
-                                           <option value="<?php echo $i ?>" <?php if($user['month'] == $i) echo "selected"; ?>><?php echo $i ?></option>
-                                           <?php } ?>
-                                       </select> <span class="right_modify">月</span>
-                                       <select id="day"  name="day" size="1">
-                                           <?php for ($i=1; $i <= 31 ; $i++) { ?>
-                                           <option value="<?php echo $i ?>" <?php if($user['day'] == $i) echo "selected"; ?>><?php echo $i ?></option>
-                                           <?php } ?>
-                                       </select> <span class="right_modify">日</span>
-                                       <p class="s14"></p>
-                                   </li>
-                                   <li class="mt10">
-                                       <input type="submit" tabindex="7" value="提 交" class=" smt smt10 smt11 baocun" id="addr-sbtn">
-                                   </li>
-                               </ul>
-                           </form>
-                       </div>
-                   </div>
-               </div>
-               </div>     
-            
+                <li class="reset_one">
+                    <label></label>
+                    <input type="button" class="smt" id="smt_resetphone_one" value="提交" tabindex="5">
+                </li>
+            </ul>
+        </form>
+        </div>                                
+     </div>
+     <script type="text/javascript">
+         $(function(){
+             //一级分类 就是select中的首选项
+             $('select').change(function(){
+                // select中的原来的值
+                var val = $(this).val();
+                // 绑定selelct
+                var select = $(this);
+                if (val!='自定义问题'){
+                    $('.add').remove();
+
+                    // 问题
+                    select.parents('.question').find('.hidd').css('display','none');
+                return;
+                }else{
+                 //显示
+                 select.parents('.question').find('.hidd').removeAttr('style');
+                };
+                var a1 = select.parents('.question1').find('.a1');
+                a1.blur(function(){
+                    // var a1val = a1.val();
+                    // var url = "<?php echo U('Home/Center/do_question');?>";
+                    console.log(q);
+                    console.log(a1val);
+                });
+             })
+         })
+     </script>
+
             
             
             

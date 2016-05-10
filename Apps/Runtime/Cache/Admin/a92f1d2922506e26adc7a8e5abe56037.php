@@ -402,7 +402,8 @@
                                 	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 40px;" aria-label="Browser: activate to sort column ascending">ID</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Platform(s): activate to sort column ascending">用户名</th>
                                 	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Platform(s): activate to sort column ascending">性别</th>
-                                	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">邮箱</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">邮箱</th>
+                                	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">手机号</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="CSS grade: activate to sort column ascending">等级</th>
                                 	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="CSS grade: activate to sort column ascending">锁定</th>
                                 	<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
@@ -414,10 +415,13 @@
 	                                <td class="sorting_1"><img src="/AAA/project/Public/<?php echo ($vo["pic"]); ?>" height="30px"></td>
 	                                <td class="sid"><?php echo ($vo["id"]); ?></td>
                                     <td class="susername"><?php echo ($vo["username"]); ?></td>
-	                                <td class="susername"><?php echo ($vo["sex"]); ?></td>
-	                                <td class="center semail"><?php echo ($vo["email"]); ?></td>
+	                                <td class="ssex"><?php echo ($vo["sex"]); ?></td>
+                                    <td class="center semail"><?php echo ($vo["email"]); ?></td>
+	                                <td class="center sphone"><?php echo ($vo["phone"]); ?></td>
                                     <td class="center stype"><?php echo ($vo["type"]); ?></td>
-	                                <td class="center stype"><?php echo ($vo["status"]); ?></td>
+                                    <td class="sstatus center">
+                                    <button class="btn_dis btn-info" type="button"><?php echo ($vo["status"]); ?></button>
+                                    </td>
 	                                <td class="center">
                                     <button class="btn btn-danger btn-del"  type="button"><i class="fa fa-times">删除</i></button>
                                     <a href=""><button class="btn btn-primary " type="button"><i class="fa fa-list">修改</i></button></a>
@@ -468,6 +472,29 @@
 <script type="text/javascript" src="/AAA/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
     // alert($);
+    $(function(){
+        $('.btn_dis').bind("click",function(){
+            var status = $(this).html();
+            var id = $(this).parents('tr').find('.sid').html();
+            var $this = $(this);
+            console.log(status);
+            if(status == '正常'){
+                $.post('<?php echo U("Admin/User/user_status");?>',
+                    {id:id,status:0},
+                    function(data){
+                        if(data)
+                            $this.html('锁定');
+                    })
+            }
+            else if(status == '锁定'){
+                $.post('<?php echo U("Admin/User/user_status");?>',
+                    {id:id,status:1},
+                    function(data){
+                        if(data)
+                            $this.html('正常');
+                    })
+            }
+        })
      //加载完毕
     $(function(){
         //定义全局变量
@@ -531,6 +558,8 @@
             ipt.select();
             //文本失去焦点后 发ajax 改数据库中的文件
             ipt.blur(function(){
+                edit = true;
+
                 //提交ajax  url
                 var url = '<?php echo U("Admin/User/edit");?>';
                 //获取用户 id
@@ -545,7 +574,7 @@
                         if (data==0) {
                             td.empty().append(email).css('color','green');
                         }else{
-                            alert('修改失败');  
+                            // alert('修改失败');  
                             td.empty().append(email);
                         }
                     },
@@ -568,6 +597,7 @@
             td.empty().append(ipt);
             //文本失去焦点后 发ajax 改数据库中的文件
             ipt.blur(function(){
+                edit = true;
                 //提交ajax  url
                 var url = '<?php echo U("Admin/User/edit");?>';
                 //获取用户 id
@@ -582,7 +612,7 @@
                         if (data==0) {
                             td.empty().append(type).css('color','green');
                         }else{
-                            alert('修改失败');  
+                            // alert('修改失败');  
                             td.empty().append(type);
                         }
                     },
@@ -591,7 +621,6 @@
         })
 
         $('.btn-del').click(function(){
-            // alert('222');
             var v = $(this).parents('.gradeA').find('.sid').html();
             // alert(v);
             var url = '<?php echo U("Admin/User/delete");?>';
@@ -610,6 +639,7 @@
             })
         })
     })
+})
 </script>
 
             <!-- /.row -->
