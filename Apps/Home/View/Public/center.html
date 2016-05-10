@@ -1,6 +1,6 @@
 <html class="jp-pc w1200">
 <head>
-    <title>用户中心 - 卷皮网</title>
+    <title>{$title}</title>
     <meta content="卷皮折扣,独家,超值,品牌折扣,卷皮网" name="keywords">
     <meta content="卷皮网-专注独家折扣，汇聚全网最优质商品及促销活动，每日千款超值商品低至1折限量秒杀，天天更新，件件超值。商城优品超值买，优质大牌低价购，享折扣更享品质。" name="description">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,6 +10,9 @@
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Css/add1.css" />
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Css/add2.css" />
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Css/pg-myjuanpi.css" />
+    <!-- desc 商品 -->
+        <link href="__PUBLIC__/Home/css/css.css" rel="stylesheet">
+
     <script type="text/javascript" src="__PUBLIC__/Home/Js/d0516eb91e74494cbb77cf76d6c5cf9b.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Home/Js/ab9affd4df7949768bc618ce97b36da9.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Home/Js/81d25c7a32ce4311ad5cd9f69d225170.js"></script>
@@ -73,34 +76,7 @@
         
             <!-- 右边导航 -->
             <!--右边导航 start-->        
-    <div class="orderLeftBar" id="orderLeftBar">
-        <dl>
-            <dd class="normal side-code">
-                <a class="links" id="J_code" href="javascript:;">
-                    <i class="normal-icon i-code"></i>
-                </a>
-                <div style="opacity: 0; display: none; right: 62px;" class="tab-tips">
-                    <div class="code-boxs">
-                        <p class="code"></p>
-                        <p class="txt" style="text-align:center;font-size: 14px">随时逛 及时抢</p>
-                    </div>
-                    <div class="arr-icon">◆</div>
-                </div>
-            </dd>
-            <dd class="normal side-help">
-                <a class="links" id="J_complain" target="_blank" href="###.juanpi.com/help">
-                    <i class="normal-icon i-help"></i>
-                </a>
-                <div style="opacity: 0; right: 62px; display: none;" class="tab-tips"><a target="_blank" class="gray_6" href="###.juanpi.com/help">帮助中心</a><div class="arr-icon">◆</div> </div>
-            </dd>
-            <dd class="normal side-backtop">
-                <a class="links" id="J_backtop" href="javascript:;">
-                    <i class="normal-icon i-backtop"></i>
-                </a>
-                <div style="opacity: 0; display: none; right: 62px;" class="tab-tips">返回顶部<div class="arr-icon">◆</div> </div>
-            </dd>
-        </dl>
-    </div>
+
 <!--右边导航 end-->
             <!-- /右边导航 -->
         
@@ -108,7 +84,9 @@
         <!-- 主体 -->
         
 <!--main start -->
-    <block name="favorite">  
+    <block name="favorite"> 
+    <block name="goods"> 
+
     <div class="main pr mt20 clear">
 
         <div class="my-juanpi">
@@ -234,6 +212,7 @@
         </dl>
     </div>
 </div></div></div>  
+</block>
 </block>
 </block>
 </block>

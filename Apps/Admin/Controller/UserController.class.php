@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class UserController extends CommonController {
     public function index(){
-        // echo '后台的index';
+        //echo '后台的index';
         //实例化对象
         $user = M('user');
         //获取关键字
@@ -27,7 +27,13 @@ class UserController extends CommonController {
         //查询
         $users = $user->limit($limit)->select();
         // var_dump($users);
-        // die;
+        for($i = 0;$i < count($users);$i++){
+            if($users[$i]['status'] == 1)
+                $users[$i]['status'] = '正常';
+            else if($users[$i]['status'] == 0)
+                $users[$i]['status'] = '锁定';
+        }
+        $this->assign('status',$status);
         //分配变量
         $this->assign('users',$users);
         $this->assign('pages',$pages);
@@ -99,7 +105,6 @@ class UserController extends CommonController {
         // 接受id
         $id = I('get.id');
         //创建对象模型 
-
         $m = new \Think\Model();
         //开启事务
         $m -> startTrans();

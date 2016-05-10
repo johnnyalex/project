@@ -3,12 +3,16 @@ namespace Admin\Controller;
 use Think\Controller;
 class CategoryController extends CommonController {
     public function index(){
+        //实例化
         $cate = M('category');
+        //接受值
         $name = $_POST['name'];
+        //判断是够查询
         if($name)
             $cates = $cate->where("name LIKE '%".$name."%'")->select();
         else
             $cates = $cate->where("path='0,'")->select();
+        //三元
         for($i = 0;$i < count($cates);$i++){
             if($cates[$i]['display'] == 1)
                 $cates[$i]['display'] = '显示';
@@ -47,9 +51,13 @@ class CategoryController extends CommonController {
         echo $res;
     }
     public function add(){
+        //实例化
         $cate = M('category');
+        //查询一级分类
         $res = $cate->where('pid=0')->select();
+        //分配
         $this->assign('res',$res);
+        //显示
         $this->display();
     }
     public function insert(){
@@ -82,11 +90,17 @@ class CategoryController extends CommonController {
         }
     }
     public function select(){
+        //接受id
         $id = I('post.id');
+        //实例化
         $cate = M('category');
+        // 查询
         $res = $cate->where('id='.$id)->find();
+        // 拼接ready path
         $path = $res['path'].$id.',';
+        // 拼接 path
         $res = $cate->where("path='".$path."'")->select();
+        // json_encode 形式返回str
         $res = json_encode($res);
         echo $res;
     }

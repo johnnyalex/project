@@ -10,22 +10,22 @@
     <title>三人行 -- 42</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/Public/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="/Public/Admin/dist/css/timeline.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/dist/css/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/Public/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/Public/Admin/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="/AAA/project/Public/Admin/bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/Public/Admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/AAA/project/Public/Admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -395,14 +395,18 @@
         </div>
         <!-- /.col-lg-12 -->
     </div>
-    <script src="/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/AAA/project/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
     $(function(){    
+        //一级分类 就是select中的首选项
         $('select').change(function(){
             $('.select_add').remove();
+            //获取id
             var id = $(this).val();
+            //选择增加一级分类  直接跳出
             if(id == 0)
                 return;
+            // 发送
             var th = $(this);
             $.ajax({
                 url:"<?php echo U('Admin/Category/select');?>",
@@ -410,8 +414,11 @@
                 datetype:'json',
                 type:'post',
                 success:function(data){
+                    // 接受json格式的变js中的arr
                     var arr = eval(data);
+
                     console.log(arr);
+                    // 加select
                     var sel = '<div class="form-group select_add"><label>二级类别</label><select name="second" class="form-control"><option value="'+id+'" path="0,">二级分类</option>';
                     var inp = '';
                     if(arr != null)
@@ -437,18 +444,18 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/AAA/project/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/Public/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/AAA/project/Public/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="/AAA/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
 
     <!-- Custom Theme JavaScript -->
-    <script src="/Public/Admin/dist/js/sb-admin-2.js"></script>
+    <script src="/AAA/project/Public/Admin/dist/js/sb-admin-2.js"></script>
 
 </body>
 

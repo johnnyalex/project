@@ -1,14 +1,17 @@
 <?php if (!defined('THINK_PATH')) exit();?><html class="jp-pc w1200">
 <head>
-    <title>用户中心 - 卷皮网</title>
+    <title><?php echo ($title); ?></title>
     <meta content="卷皮折扣,独家,超值,品牌折扣,卷皮网" name="keywords">
     <meta content="卷皮网-专注独家折扣，汇聚全网最优质商品及促销活动，每日千款超值商品低至1折限量秒杀，天天更新，件件超值。商城优品超值买，优质大牌低价购，享折扣更享品质。" name="description">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
     <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
     <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
-    <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/pg-myjuanpi.css" /> 
     <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/add.css" />
+    <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/add1.css" />
+    <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/add2.css" />
+    <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/pg-myjuanpi.css" />
+    <!-- desc 商品 -->
+        <link href="/AAA/project/Public/Home/css/css.css" rel="stylesheet">
 
     <script type="text/javascript" src="/AAA/project/Public/Home/Js/d0516eb91e74494cbb77cf76d6c5cf9b.js"></script>
     <script type="text/javascript" src="/AAA/project/Public/Home/Js/ab9affd4df7949768bc618ce97b36da9.js"></script>
@@ -54,151 +57,249 @@
         <a rel="nofollow" title="商品验货质检" class="check1" href="###.juanpi.com/help/xiaobao#consumer04" target="_blank"></a>
     </div>
 </div>
-    <div class="mainNav">
-                <div class="nav">
+    <div class="mainNav">    
+        <div class="nav">
             <ul class="navigation fl">
-                <li ><a href="<?php echo U('Home/Center/index');?>">我的卷皮</a></li>
-                <li class="current"><a href="<?php echo U('Home/Center/userinfo');?>">账号设置</a></li>
-                <li ><a href="<?php echo U('Home/Center/message');?>">消息中心</a></li>
+                <li class="current"><a href="<?php echo U('Home/Center/index');?>">我的卷皮</a></li>
+                <li><a href="<?php echo U('Home/Center/userinfo');?>">账号设置</a></li>
+                <li><a href="<?php echo U('Home/Center/message');?>">消息中心</a></li>
             </ul>
-            <div class="state-show fr"><a class="normal-h" href="<?php echo U('Home/Index/index');?>">卷皮首页>></a></div>
+            <div class="state-show fr"><a href="<?php echo U('Home/Index/index');?>" class="normal-h">卷皮首页&gt;&gt;</a></div>
         </div>
     </div>
 </div>
 <!--head end-->
 <!-- /导航 -->
+            <!-- /导航 -->
+        
     
-    <div id="orderLeftBar" class="orderLeftBar">
-        <dl>
-            <dd class="normal side-code">
-                <a href="javascript:;" id="J_code" class="links">
-                    <i class="normal-icon i-code"></i>
-                </a>
-                <div class="tab-tips" style="opacity: 0; display: none; right: 62px;">
-                    <div class="code-boxs">
-                        <p class="code"></p>
-                        <p style="text-align:center;font-size: 14px" class="txt">随时逛 及时抢</p>
-                    </div>
-                    <div class="arr-icon">◆</div>
-                </div>
-            </dd>
-            <dd class="normal side-help">
-                <a href="http://www.juanpi.com/help" target="_blank" id="J_complain" class="links">
-                    <i class="normal-icon i-help"></i>
-                </a>
-                <div class="tab-tips" style="opacity: 0; right: 62px; display: none;"><a href="http://www.juanpi.com/help" class="gray_6" target="_blank" >帮助中心</a><div class="arr-icon">◆</div> </div>
-            </dd>
-            <dd class="normal side-backtop">
-                <a href="javascript:;" id="J_backtop" class="links">
-                    <i class="normal-icon i-backtop"></i>
-                </a>
-                <div class="tab-tips" style="opacity: 0; display: none; right: 62px;">返回顶部<div class="arr-icon">◆</div> </div>
-            </dd>
-        </dl>
-    </div>
+        
+            <!-- 右边导航 -->
+            <!--右边导航 start-->        
+
 <!--右边导航 end-->
-<!-- /右边导航 -->
+            <!-- /右边导航 -->
+        
+    
         <!-- 主体 -->
         
-<div class="pg_bg_setting">
-    <div class="main zh_v2 clear"  style="margin-top: 20px;"> 
-        <div class="my-juanpi">
-            <!-- 左导航 -->
-            <div class="sider-bar">
-            <!-- 左导航 -->
-                <ul>
-                    <li class="noboder">账号设置</li>
-                    <li class="sub-menu">
-                        <ul>
-                            <li ><a href="<?php echo U('Home/Center/userinfo');?>">基本资料</a></li>
-                            <li ><a href="<?php echo U('Home/Center/address');?>">收货地址</a></li>
-                            <li ><a href="<?php echo U('Home/Center/security');?>">安全中心</a></li>
-                            <li ><a href="<?php echo U('Home/Center/bank');?>">提现账号</a></li>
-                            <li ><a href="<?php echo U('Home/Center/binding');?>">账号绑定</a></li>
-                        </ul>
-                    </li>
-                </ul>
-<!-- /左导航 -->
-            </div>
-            <div class="main-center">                
-            <div class="main-zhanghu" >
-            
-            
-            
-            
-            
-            
-            
-<div class="main-center">                
-        <div class="box_top">
-            <h3>安全中心</h3>
+<!--main start -->
+     
+    
+	<div id="bu">
+		<div class="goods-left fl">
+			<div class="goods-left-l fl">
+				<div class="goods-left-count" id="small">
+					<img id="simg" width="100%" src="/AAA/project/Public/Home/images/a.jpg">
+					<div id="move" style="background:url('/AAA/project/Public/Home/images/bg.png');"></div>
+				</div>
+				<div class="big" id="big"><img id="bimg" style="position: absolute;left:0px;top:0px"  src="/AAA/project/Public/Home/images/a.jpg"></div>
+				<div class="d">
+					<ul id="uimg">
+						<li class="small fl"><img width="100%" src="/AAA/project/Public/Home/images/a.jpg"></li>
+						<li class="small fl"><img width="100%" src="/AAA/project/Public/Home/images/2.jpg"></li>
+						<li class="small fl"><img width="100%" src="/AAA/project/Public/Home/images/b.jpg"></li>
+						<li class="small fl"><img width="100%" src="/AAA/project/Public/Home/images/c.jpg"></li>
+						<li class="small fl"><img width="100%" src="/AAA/project/Public/Home/images/2.jpg"></li>
+					</ul>
+				</div>	
+			</div>
+			
+			<div class="goods-right-r fr">
+				<div class="name">
+					<h1>name名字</h1><p></p>
+				</div>
+				<div class="price">
+					<p class="price-s">价格:&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					<em class="tm-yen"> ¥ </em>
+					<span class="tm-price"> 9.90 </span>
+					</p>
+				</div>
+
+				<div class="yunfei">
+					<span>运费:</span><span>sdf</span>
+				</div>
+				<div class="weight">
+					<span>重量:</span><span>1.0 </span>kg
+				</div>
+
+				<div class="ind">
+					<span>月销量:</span><span>10</span>&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
+					<span>累计评价:1111111111</span><a href=""></a> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;<span>赠送积分:</span>10  &nbsp;&nbsp;&nbsp;
+				</div>
+				<div class="jia">
+					<span ><b>购买数量:</b>&nbsp; 
+                    					<a href="">[-]</a>
+                        				<input type="text" style="width:50px;text-align:center" class="" value="1" name="qty" id="qty">
+                        				<a href="">[+]</a>
+                        			</span>
+				</div>
+				<div class="gwc">
+					<div class="style "><a href="">加入购物车</a></div>
+					<div class="style "><a href="">立即购买</a></div>
+				</div>
+
+				<div class="fanwei">
+					<p class="font">
+					<span>配送范围</span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<span>送货范围仅限上海地区(生鲜类别仅限部分地区)</span>
+					</p>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="goods-right fr">
+			<div class="goods-right-top"><span>--------大家都在买 --------</span></div>
+			<ul>
+				<li>         
+					<div class="img">
+						<a href=""> <img src="/AAA/project/Public/Home/images/d.jpg"alt="遍历图片"></a>                                                    
+						<p class="look_price ">26.00价格</p>  
+					</div>
+
+				<p class="look-title">
+					<a href=""> 【天猫超市】山东蓬莱精品红富士1kg 果径80-85mm 水果</a>
+				</p>       
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+	<!-- 上部分结束 -->
+
+
+<!-- 下半部分 -->
+<div id="footer">
+	<div class="footer-left">
+		<ul class="p fl">
+			<li><a>商品详情</a></li>
+			<li><a>累计评价</a></li>
+			<li><a>售后服务</a></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div class="footer-img">
+		<a href=""><img src=""></a>
+		</div>
+		
+		
+	</div>
+
+</div>
+
+
+
+
+<script type="text/javascript">
+	// 获取元素对象
+	var small = document.getElementById('small');
+	var move = document.getElementById('move');
+	var big = document.getElementById('big');
+	var bimg = document.getElementById('bimg');
+	var simg = document.getElementById('simg');
+	big.onclick = function(){
+		alert('111');
+	}
+	//绑定移动事件
+	small.onmousemove = function(e){
+		//显示小div和右侧的图
+		move.style.display = 'block';
+		big.style.display = 'block';
+		//获取鼠标的位置
+		var x = e.pageX;
+		var y = e.pageY;
+		//获取small的x  y
+		var _l = small.offsetLeft;
+		var _t = small.offsetTop;
+		//计算小div的宽高的一半
+		var _w = move.offsetWidth/2;
+		var _h = move.offsetHeight/2;
+		//计算新的lefe和top
+		var newL = x - _l - _w;
+		var newT = y - _t - _h;
+
+		//检测越界
+		if(newL <= 0){newL = 0;}
+		//检测越界
+		if(newT <= 0){newT =0;}
+		//获取最大的left
+		var maxLeft = small.offsetWidth - move.offsetWidth;
+		if(newL >= maxLeft){newL = maxLeft;}
+		//获取最大的top
+		var maxTop = small.offsetHeight - move.offsetHeight;
+		if(newT >= maxTop){newT = maxTop;}
+
+		//设置left和top
+		move.style.left = newL + 'px';
+		move.style.top = newT + 'px';
+
+
+		//计算移动比例
+		var xp = newL/small.offsetWidth;
+		var yp = newT/small.offsetHeight;
+
+		//计算右侧图片移动距离
+		var nl = bimg.offsetWidth * xp;
+		var nt = bimg.offsetHeight * yp;
+
+		//设置移动
+			bimg.style.left = -nl+'px';
+			bimg.style.top = -nt+'px';
+			
+			//计算小图的宽高
+			var bp = big.offsetWidth/bimg.offsetWidth;
+			var bpp = big.offsetHeight/bimg.offsetHeight;
+
+			//计算小图的宽度
+			var mW = small.offsetWidth * bp;
+			var mH = small.offsetHeight * bpp;
+			//设置小图的宽度
+			move.style.width = mW + 'px';
+			move.style.height = mH + 'px';
+		}
+
+		//绑定鼠标离开事件
+		small.onmouseout = function(){
+			//隐藏小div和右侧的图
+			move.style.display = 'none';
+			big.style.display = 'none';
+		}
+
+		//获取元素
+		var ul = document.getElementById('uimg');
+		//从ul标签中获取img
+		var limg = ul.getElementsByTagName('img');
+		//遍历
+		for (var i = 0; i < limg.length; i++) {
+			limg[i].onclick = function(){
+				//获取当前src属性
+				var src = this.getAttribute('src');
+				// alert(src);
+				//设置src属性
+				bimg.src = src;
+				simg.src = src;
+			}
+		};
+
+
+</script>
+
+
+
+
         </div>
-	   <img src="/AAA/project/Public/Home/Picture/line_1.jpg">
-       <div class="per_content  fl safe_center">
-        <form id="resetemail" action="" method="POST">
-            <ul>
-                <li>
-                    <label class="bold_phone">修改邮箱</label>
-                    <span class="safe_phone">每月仅限修改一次，请慎重修改!</span>
-                    <a class="rose ml10" href="security?method=emailresetPhone">通过认证的手机修改邮箱 &gt;</a>
-                </li>
 
-                <li class="reset_one">
-                    <label>原邮箱：</label>
-                    <input type="text" size="15" value="" name="oldphone" class="text oldphone" tabindex="1">
-                    <input type="hidden" value="resetphone" name="method">
-                    <input type="button" id="getCode" class="phone_fake" value="获取验证码" tabindex="2">
-                    <p style="display:none;" class="s13"></p>
-                </li>
-                <li class="reset_one">
-                    <label>验证码：</label>
-                    <input type="text" tabindex="4" size="10" value="" name="captchacode_1" class="text captchacode">
-                    <p style="display:none;" class="s13"></p>
-                </li>
-                <li class="reset_one">
-                    <label></label>
-                    <input type="button" class="smt" id="smt_resetphone_one" value="下一步" tabindex="5">
-                </li>
-                <script type="text/javascript">
-                    alert($);
-                </script>
-
-                <li class="reset_two" style="display:none">
-                    <label>原邮箱：</label>
-                      <span class="safe_phone">123@456.com</span>
-                    <p style="display:none;" class="s13"></p>
-                </li>
-                <li class="reset_two" style="display:none">
-                    <label>新邮箱：</label>
-                    <input type="text" size="15" value="" name="newphone" class="text newphone" tabindex="1">
-                    <input type="hidden" value="resetphone" name="method">
-                     <input type="button" id="getCode2" class="phone_fake" value="获取验证码" tabindex="2">
-                    <p style="display:none;" class="s13"></p>
-                </li>
-                <li class="reset_two" style="display:none">
-                    <label>验证码：</label>
-                    <input type="text" tabindex="4" size="10" value="" name="captchacode_2" class="text captchacode">
-                    <p style="display:none;" class="s13"></p>
-                </li>
-                <li class="reset_two" style="display:none">
-                    <label></label>
-                    <input type="button" class="smt" id="smt_resetphone_two" value="提交" tabindex="5">
-                </li>
-            </ul>
-        </form>
-        </div>                                
-     </div>
-
-            
-            
-            
-            
-            
-            
         </div>
-    </div>        
+    </div>
+
+
+
+        <!-- /主体 -->        
+
             <!-- 页脚 -->
-<div class="foot">
+            <div class="foot">
     <div class="white_bg">
     <div class="foot-con">
         <div class="con-box-n clear">
@@ -245,17 +346,22 @@
         </div>
         <p class="ft-company"><a target="_blank" href="###.juanpi.com">武汉奇米网络科技有限公司</a> 鄂ICP备10209250号 | ICP许可证号：鄂B1-20150109 | 食品流通许可证 SP4201991510041888&#12288;&#12288;Copyright &copy; 2010 - 2016 JuanPi.com All Rights Reserved</p>
             </div>
-    </div>
-    </div>
-    <div style="display:none;" class="tag_remind">
-        <p class="tips"><em class="icon-normal icon-clock" icon-normal="" icon-bag=""></em>有货啦！</p>
-        <p class="txt"><em class="remindnum"></em>件商品恢复有货！赶紧抢回来吧</p>
-        <p class="btn_all"><a href="###.juanpi.com/favorite" target="_blank">马上查看</a></p>
-        <a href="javascript:;" class="del">×</a>
-    </div>
-
-    <div style="display:none" class="alert_fullbg"></div>
-
-   </div>
-</body>
-</html>
+</div></div>
+<div style="display:none;" class="tag_remind">
+  <p class="tips"><em class="icon-normal icon-clock" icon-normal="" icon-bag=""></em>有货啦！</p>
+  <p class="txt"><em class="remindnum"></em>件商品恢复有货！赶紧抢回来吧</p>
+  <p class="btn_all"><a href="###.juanpi.com/favorite" target="_blank">马上查看</a></p>
+  <a href="javascript:;" class="del">×</a>
+</div>
+            <!-- /页脚 -->
+        
+        <!-- 脚本 -->
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="//s.juancdn.com/common/js/json2.min.js?ts=910f4f921c356d6f_1462362350"></script>
+        <![endif]-->
+        
+        
+        <div style="display:none" class="alert_fullbg"></div>
+        <!-- /脚本 -->
+    
+</body></html>

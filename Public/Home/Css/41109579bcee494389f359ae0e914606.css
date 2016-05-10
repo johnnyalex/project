@@ -69,9 +69,9 @@
 .goods-list li .good-price .des-other .price-old {color: #bbb; text-decoration: line-through;font-size:14px;}
 .goods-list li .good-price .des-other .price-old em{ font-family:"微软雅黑","verdana";font-size:12px;}
 .goods-list li .good-price .des-other .discount { color: #bbb; vertical-align:top;}
-.goods-list li .good-price .btn{position: absolute;top:11px;right:10px;}
-.goods-list li .good-price .btn a{ font-family:"宋体";display:block;text-align:center;font-size: 14px;cursor:pointer; color:#ff464e;width:70px;height:30px; line-height:30px;overflow:hidden;}
-.goods-list li .good-price .btn a em{display:inline;float:left;width:15px;height:15px;margin:8px -4px 0 12px;margin:7px -4px 0 12px \9;_margin:7px -4px 0 12px;vertical-align:-2px;}
+.goods-list li .good-price .btn{position: absolute;top:30px;right:18px; background: #fff; width:80px; height: 30px;}
+.goods-list li .good-price .btn a{ font-family:"宋体";display:block;text-align:center;font-size: 14px; cursor:pointer; color:#ff464e;width:70px;height:30px; display:block; line-height:30px;overflow:hidden;}
+.goods-list li .good-price .btn a em{display:inline;float:left;width:15px;height:15px;margin:8px -4px 0 12px;margin:7px -4px 0 12px ;margin:7px -4px 0 12px;vertical-align:-2px;}
 .goods-list li .good-price .btn a .m-icon{background-position:right -71px;}
 .goods-list li .good-price .btn a .b-icon{background-position:right -37px;}
 .goods-list li .good-price .btn a .j-icon{background-position:right -54px;}
@@ -487,9 +487,9 @@ left:0; padding: 0 0 0 20px; display: none; z-index: 99;}
 	-webkit-box-shadow: 1px 1px 0px rgba(204, 204, 204, 0.7);
 	box-shadow: 1px 1px 0px rgba(204, 204, 204, 0.7);
 }
-.page a.pg-next{width:60px; border-radius:0 20px 20px 0;box-shadow:1px 1px 3px rgba(204, 204, 204, 0.7);}
+.page a.pg-next{border-radius:0 20px 20px 0;box-shadow:1px 1px 3px rgba(204, 204, 204, 0.7);}
 .page a.pg-next:hover{cursor:pointer;}
-.page span.pg-prev{color:#bbb; font-weight:normal; background:#fff;width:60px; border-radius: 20px 0 0 20px;box-shadow:1px 1px 3px rgba(204, 204, 204, 0.7);}
+.page span.pg-prev{color:#bbb; font-weight:normal; background:#fff; border-radius: 20px 0 0 20px;box-shadow:1px 1px 3px rgba(204, 204, 204, 0.7);}
 .page span.pg-next{width:60px; border-radius:0 20px 20px 0;box-shadow: 2px 2px 3px #D0D0CD; background:#fff;  color:#bbb; font-weight:normal;}
 .page a.pg-prev{background:#FFFFFF;width:60px; border-radius: 20px 0 0 20px;box-shadow: 2px 2px 3px #D0D0CD;}
 .page span {
