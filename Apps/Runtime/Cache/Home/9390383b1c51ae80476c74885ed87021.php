@@ -148,7 +148,7 @@
                             </li>
                             <li>
                                 <label><!-- <span class="import">*</span> -->手机：</label>
-                                <input type="text" value="" name="mobile" id="mobile" size="12" maxlength="11" tabindex="2" class="text">
+                                <input type="text" value="" name="tel" id="mobile" size="12" maxlength="11" tabindex="2" class="text">
                                 <p style="display:none;" class="s13"></p>
                             </li>
                             <li>

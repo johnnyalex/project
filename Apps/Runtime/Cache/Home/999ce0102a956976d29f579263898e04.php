@@ -125,86 +125,91 @@
             <div class="main-center">                
             <div class="main-zhanghu" >
             
-<div class="confirm-order main-center main-zhanghu">
-    <div class="order-address clear">
-        <div class="box_top"><h3>收货地址</h3></div>
-        <img src="/AAA/project/Public/Home/Picture/line_1.jpg">
-        <div class="capt pd_3">
-                <span class="logo_tips">
-                    <img src="/AAA/project/Public/Home/Images/setted_addr.gif">
-                </span>
-                <span class="fz14">已经保存的收货地址</span>&nbsp;&nbsp;&nbsp;
-                <span class="s2">您已经创建&nbsp;<span id="addr_count" class="s3"><?php echo ($count); ?></span>&nbsp;个收货地址
-        </div>
-
-        <ul style="min-height: 224px;" data-flag="address" id="myAddress" class="list pd_3">
             
-            <?php if(is_array($addr)): foreach($addr as $key=>$vo): if($vo["pri"] == 1): ?><li class="lll cur">
-            <?php else: ?>
-            <li class="lll"><?php endif; ?>
             
-            <input class="dis" type="hidden" value="<?php echo ($vo["id"]); ?>">
-            <input type="radio" style="display:none" townid="310117" cityid="310100" provinceid="310000" primary="0" value="282395" tel="021-57715030" class="area-radio check" name="area">
-            <div class="fl"><div class="slice-border">
-            <div class="area-sumary"><em class="icons icons-user fl"></em>
-            <span class="area-name name"><?php echo ($vo["name"]); ?></span>收</div></div><div class="mb10">
-            <em class="icons icons-address fl"></em><span class="area-address street">
-            <i class="province"><?php echo ($vo["pro"]); ?> <?php echo ($vo["city"]); ?></i> <i class="jp_addr_street"><?php echo ($vo["area"]); echo ($vo["addr"]); ?></i></span>
-            </div><div><em class="icons icons-phone fl"></em>
-            <span class="area-mobile phone"><?php echo ($vo["tel"]); ?></span><a class="addr-edit modify" href="<?php echo U('Home/Center/change_address',array('id'=>$vo['id']));?>">修改</a>
-            <a class="del"></a></div></div><div class="slt-icon"></div>
             
-            <?php if($vo["pri"] == 1): ?><div class="slt-icon"></div>
-            <div class="default-add">默认地址</div>
-            <div class="slt-icon"></div>
-            <?php else: ?>
-            <div class="slt-icon" style="display:none"></div>
-            <div class="default-add" style="display:none">默认地址</div>
-            <div class="slt-icon" style="display:none"></div><?php endif; ?>
-
-            </li><?php endforeach; endif; ?>
             
-            <li class="add"><a class="add" href="<?php echo U('Home/Center/add_address');?>">
-            <em class="icons icons-add"></em>新增地址</a></li>
-        </ul>
-        
-        </div>
-    </div>
-    <script src="/AAA/project/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(function(){
-        $('.addr-edit').bind("click",function(event){
-            event.stopPropagation();
-        })
-        $('.del').bind("click",function(event){
-            event.stopPropagation();
-            var def = $(this).parents('li').attr('class');
-            if(def == 'lll cur')
-                return;
-            var id = $(this).parents('li').find('.dis').val();
-            var $this = $(this);
-            $.get('do_delete_addr',{id:id},function(data){
-                if(data)
-                    $this.parents('li').remove();
-                else
-                    alert('删除失败');
-            })
-        })
-        $('.lll').bind("click",function(){
-            $(this).parents('.order-address').find('.slt-icon,.default-add').hide();
-            $(this).parents('ul').find('.lll').removeClass('cur');
-            $(this).find('.slt-icon,.default-add').css('display','block');
-            $(this).addClass('cur');
-            var id = $(this).find('.dis').val();
-            $.get('do_change_addr',{id:id},function(data){
-                if(data)
-                    alert('修改失败');
-            })
-        })
+	<div class="main-center">                
+            <div class="box_top">
+                <h3>安全中心</h3>
+            </div>
+	    	<img src="/AAA/project/Public/Home/Picture/line_1.jpg">
+           <div class="per_content safe_center fl">
+		<div id="resetpwd">
+		<p class="check_title">
+		    <label>登录密码</label>
+		    <span class="safe_phone">建议密码由8位以上数字、字母和特殊字符组成，并定期修改。</span>
+		</p>
+<ul>
+    <li>
+        <label>原密码：</label>
+        <input type="password" size="30" name="oddpassword" class="text newpwd" tabindex="2">
+        <span class="error-box" id="new_pwd"></span>
+        <p class="s16">请输入原密码</p>
+        <dl class="ps_intensity" style="display:none;">
+            <dd></dd><dd></dd><dd></dd>
+        </dl>
+    </li>
+    <li>
+        <label>新改密码：</label>
+        <input type="password" size="30" name="password" class="text newpwd" tabindex="2">
+        <span class="error-box" id="new_pwd"></span>
+        <p class="s16">请输入新密码</p>
+        <dl class="ps_intensity" style="display:none;">
+            <dd></dd><dd></dd><dd></dd>
+        </dl>
+    </li>
+    <li>
+        <label>确认密码：</label>
+        <input type="password" size="30" name="npassword" class="text confirmpwd" tabindex="3">
+        <span class="error-box" id="new_pwdcheck"></span>
+        <p class="s16">请再次输入新密码</p>
+    </li>
 
-    })
-    </script>
 
+    <style>
+        .my-mobile{ width:257px; height:38px; line-height:38px; text-indent:5px; display:inline-block; background:#eee; border:1px solid #c6c6c6;}
+        .phone-verify{
+            background: #e2e2e2 none repeat scroll 0 0;
+            color: #666666;
+            cursor: pointer;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            width: 110px;
+            border:none;
+        }
+        .phone-verify:hover{
+            color:#f36;
+        }
+        p.msg_error{ color:#ff3838;}
+    </style>
+    <li>
+        <label>邮箱：</label>
+        <span class="my-mobile"></span><span style="padding-left:15px;" class="error-box" id="phone_error"></span>
+        <p class="s16">&nbsp;</p>
+    </li>
+
+    <li id="verify_display">
+        <label>验证码：</label>
+        <input type="text" tabindex="5" autocomplete="off" name="code" style="width:136px;" class="text">
+        <div class="verification-code"><input type="button" value="获取短信验证码" class="phone-verify"></div>
+        <div warn="请输入短信验证码" style="text-indent:82px; color:#ff3838" id="code_warn" class="error-box"></div>
+    </li>
+    <li>
+        <label></label>
+        <a class="smt" href="javascript:;">修&nbsp;改</a>
+    </li>
+</ul>
+</div>
+</div>                                
+	</div>
+
+            
+            
+            
+            
         </div>
     </div>  
     <script type="text/javascript">

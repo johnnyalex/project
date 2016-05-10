@@ -4,7 +4,19 @@ use Think\Controller;
 class CenterController extends Controller {
 	//个人订单后台 我的卷皮
 	public function index(){
+		// dump($_SESSION);
+		$id = $_SESSION['user']['id'];
+		// 实例化
+		$use=M('user');
+		// 查询
+		$user=$use->where(' id = '.$id)->find();
+		// user的pic 存session
+		$_SESSION['user']['pic']=$user['pic'];
+		//实例化
+		var_dump($_SESSION);
+		var_dump($user);
 		$this->assign('title','用户中心-卷皮网');
+		$this->assign('user',$user);
 
 		$this->display();
 	}
@@ -31,15 +43,28 @@ class CenterController extends Controller {
 		$this->display();
 	}
 	public function question (){
-		$arr=['您的母亲名字','您的父亲名字','您的爱人名字','您的孩子名字','您的小学名字','您的中学名字','您的大学名字','自定义问题'];
+		$arr2=['您的母亲名字','您的父亲名字','您的爱人名字','您的孩子名字','您的小学名字','您的中学名字','您的大学名字','自定义问题',];
+		$arr1=['您最喜欢的动物','您最喜欢的花','您最喜欢的食物','您最喜欢的地方','您最喜欢的季节','您最喜欢的颜色','你最喜欢的书','你最热爱的运动','自定义问题'];
+		$arr3=['您最喜欢的歌曲','您的偶像是谁','您最喜欢的电影','您最喜欢的电视剧','您最喜欢的餐厅','您最喜欢的车','您最喜欢的周几','自定义问题',];
 		// var_dump($arr);
-		$length=count($arr)-1;
-		$this->assign('arr',$arr);
+		$this->assign('arr1',$arr1);
+		$this->assign('arr2',$arr2);
+		$this->assign('arr3',$arr3);
 		$this->assign('title','密保问题-卷皮网');
 		$this->display();
 	}
 	public function do_question(){
-		var_dump($_POST);
+		$_POST['uid']=$_SESSION['user']['id'];
+		$q=M('question');
+		$aa=$q->create();
+		var_dump($aa);
+		// die();
+		$res=$q->add();
+		if ($res) 
+			$this->redirect('Center/question');
+		else
+			$this->redirect('Center/question');
+
 	}
 	//三方绑定
 	public function binding(){
@@ -55,17 +80,60 @@ class CenterController extends Controller {
 	}
 	//收货地址
 	public function address(){
+		$address = M('address');
+		$count = $address->count();
+		$id = $_SESSION['user']['id'];
+		$addr = $address->where(['uid'=>$id])->select();
+		foreach ($addr as $key => $value) {
+			$addr[$key]['address'] = $value['pro'].' '.$value['city'].' '.$value['area'].' '.$value['addr'];
+			$addr[$key]['tel'] = substr_replace($addr[$key]['tel'],'****',3,4);
+		}
+		$this->assign('addr',$addr);
+		$this->assign('count',$count);
 		$this->assign('title','收货地址-卷皮网');
-
 		$this->display();
+	}
+	public function do_change_addr(){
+		$id = I('get.id');
+		$address = M('address');
+		$res = $address->where('')->data(['pri'=>0])->save();
+		$res = $address->where(['id'=>$id])->data(['pri'=>1])->save();
+		if(!$res)
+			echo 1;		
+	}
+	public function do_delete_addr(){
+		$id = I('get.id');
+		$address = M('address');
+		$res = $address->where(['id'=>$id])->delete();
+		if($res)
+			echo 1;
 	}
 	public function add_address(){
 		$this->display();
 	}
+	public function change_address(){
+		$id = I('get.id');
+		$address = M('address');
+		$res = $address->where(['id'=>$id])->find();
+		$res['id'] = $id;
+		$this->assign('res',$res);
+		$this->display();
+	}
+	public function do_change_address(){
+		$address = M('address');
+		if($_POST['pri'] == 1)
+			$address->where('')->data(['pri'=>0])->save();
+		if(!$_POST['pri'])
+			$_POST['pri'] = 0;
+		$address->create();
+		$res = $address->save();
+		if($res)
+			$this->success('修改成功',U("Home/Center/address"));
+		else
+			$this->error('修改失败',U("Home/Center/address"));
+	}
 	public function do_add_addr(){
-		var_dump($_POST);
 		$addr = M('address');
-		// $re=$m->where("userId={$id}")->data($_POST)->save();
 		if(I('post.pri'))
 			$addr->where('pri=1')->data(['pri'=>0])->save();
 		$_POST['uid'] = $_POST['id'];
@@ -182,6 +250,7 @@ class CenterController extends Controller {
 	}
 	// 修改密码
  	public function repass(){
+ 		dump($_SESSION);
 		$this->assign('title','修改密码-卷皮网');
 
 		$this->display();

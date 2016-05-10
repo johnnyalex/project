@@ -5,16 +5,16 @@
     <meta content="卷皮网-专注独家折扣，汇聚全网最优质商品及促销活动，每日千款超值商品低至1折限量秒杀，天天更新，件件超值。商城优品超值买，优质大牌低价购，享折扣更享品质。" name="description">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
-    <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
-    <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
-    <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/pg-myjuanpi.css" /> 
-    <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/add.css" />
+    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
+    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
+    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/pg-myjuanpi.css" /> 
+    <link rel="stylesheet" type="text/css" href="/Public/Home/Css/add.css" />
 
-    <script type="text/javascript" src="/AAA/project/Public/Home/Js/d0516eb91e74494cbb77cf76d6c5cf9b.js"></script>
-    <script type="text/javascript" src="/AAA/project/Public/Home/Js/ab9affd4df7949768bc618ce97b36da9.js"></script>
-    <script type="text/javascript" src="/AAA/project/Public/Home/Js/81d25c7a32ce4311ad5cd9f69d225170.js"></script>
-    <script type="text/javascript" src="/AAA/project/Public/Home/Js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="/AAA/project/Public/Home/Js/center.js"></script>
+    <script type="text/javascript" src="/Public/Home/Js/d0516eb91e74494cbb77cf76d6c5cf9b.js"></script>
+    <script type="text/javascript" src="/Public/Home/Js/ab9affd4df7949768bc618ce97b36da9.js"></script>
+    <script type="text/javascript" src="/Public/Home/Js/81d25c7a32ce4311ad5cd9f69d225170.js"></script>
+    <script type="text/javascript" src="/Public/Home/Js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/Public/Home/Js/center.js"></script>
 </head>
     <body>
         
@@ -29,10 +29,7 @@
                 <div class="code-tips"><div class="code-box"><p class="code"></p><p class="txt">扫描下载二维码</p></div></div></li>
         </ul>
         <div class="right-show fr">
-            <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img 
-            src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
-            alt="头像" 
-            ><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
+            <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img src="/Public/Home/Picture/default.jpg"><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
         <li><a href="<?php echo U('Home/Center/userinfo');?>"><span>账号设置</span></a></li><li><a href="http:####.juanpi.com/login/logout"><span>退出</span></a></li></ul></div></div><div class="personal-show"><a href="http:####.juanpi.com/order"><span>我的订单</span></a><a href="###.juanpi.com/jifen"><span>积分商城</span></a><a href="http:####.juanpi.com/message"><span>我的消息</span><em style="display: none;" class="count">0</em></a>&#12288;|</div><div class="bag-show"><a class="bag-a" target="_blank" href="http://cart.juanpi.com"><span class="icon-normal icon-bag fl empty"></span><span class="empty fl"><span class="fl empty">购物袋</span><em class="num cartnum" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%;">0</em></span></a><div style="" class="bag-tool bag-tool-empty"><div style="display:none;" id="loadingimg"></div><p><span class="icon-normal icon-bag-empty"></span>购物袋还是空荡荡的~</p></div>&#12288;|</div><div class="other-show"><a target="_blank" href="https://seller.juanpi.com/choice">卖家报名</a></div><div class="other-show other-show01"><a>客户服务</a><div class="normal-box01"><ul><li><a rel="nofollow" target="_blank" href="###.juanpi.com/help">帮助中心</a></li><li><a rel="nofollow" target="_blank" href="###.juanpi.com/about/service">联系客服</a></li></ul></div></div></div>
     </div>
 </div>
@@ -128,93 +125,68 @@
 <div class="confirm-order main-center main-zhanghu">
     <div class="order-address clear">
         <div class="box_top"><h3>收货地址</h3></div>
-        <img src="/AAA/project/Public/Home/Picture/line_1.jpg">
+        <img src="/Public/Home/Picture/line_1.jpg">
         <div class="capt pd_3">
                 <span class="logo_tips">
-                    <img src="/AAA/project/Public/Home/Images/setted_addr.gif">
+                    <img src="/Public/Home/Images/setted_addr.gif">
                 </span>
                 <span class="fz14">已经保存的收货地址</span>&nbsp;&nbsp;&nbsp;
-                <span class="s2">您已经创建&nbsp;<span id="addr_count" class="s3"><?php echo ($count); ?></span>&nbsp;个收货地址
         </div>
+        <form action="<?php echo U('Home/Center/do_change_address');?>" method="post">
+        <div uadid="0" class="new-address">
+            <input type="hidden" value="<?php echo ($res["id"]); ?>" name="id">
+            <div class="panel-box" style="">
+                <div id="addrform">
+                    <div class="adr" id="adr">
+                        <ul>
+                            <li>
+                                <label><!-- <span class="import">*</span> -->收货人：</label>
+                                <input value="<?php echo ($res["name"]); ?>" type="text" class="text" name="name" id="truename" size="16" maxlength="16" tabindex="1">
+                                <p style="display:none;" class="s13"></p>
+                                <p class="s12">只包含汉字、数字和字母,长度不超过16个字</p>
+                            </li>
+                            <li>
+                                <label><!-- <span class="import">*</span> -->手机：</label>
+                                <input type="text" value="<?php echo ($res["tel"]); ?>" name="tel" id="mobile" size="12" maxlength="11" tabindex="2" class="text">
+                                <p style="display:none;" class="s13"></p>
+                            </li>
+                            <li>
+                                <label> <!-- <span class="import">*</span> -->地区：</label>
+                                <input value="<?php echo ($res["pro"]); ?>" type="text" value="" name="pro" id="mobile" style="height:31px" size="12" maxlength="11" tabindex="2" class="text">
+                                <input value="<?php echo ($res["city"]); ?>" type="text" value="" name="city" id="mobile" style="height:31px" size="12" maxlength="11" tabindex="2" class="text">
+                                <input value="<?php echo ($res["area"]); ?>" type="text" value="" name="area" id="mobile" style="height:31px" size="12" maxlength="11" tabindex="2" class="text">
+                                <p style="display:none;" class="s13"></p>
+                            </li>
+                            <li>
+                                <label> <!-- <span class="import">*</span> -->地址：</label>
+                                <input type="text" value="<?php echo ($res["addr"]); ?>" name="addr" id="addr" size="45" maxlength="40" tabindex="6" class="text addr-long">
+                                <p style="display:none;" class="s13"></p>
+                                <!-- <p class="s12">请填写详细地址信息</p> -->
+                            </li>
+                        
+                            <li>
+                                <label></label>
+                                <input type="checkbox" value="1" id="J_SetDefault" name="pri" class="set-check" tabindex="8"
 
-        <ul style="min-height: 224px;" data-flag="address" id="myAddress" class="list pd_3">
-            
-            <?php if(is_array($addr)): foreach($addr as $key=>$vo): if($vo["pri"] == 1): ?><li class="lll cur">
-            <?php else: ?>
-            <li class="lll"><?php endif; ?>
-            
-            <input class="dis" type="hidden" value="<?php echo ($vo["id"]); ?>">
-            <input type="radio" style="display:none" townid="310117" cityid="310100" provinceid="310000" primary="0" value="282395" tel="021-57715030" class="area-radio check" name="area">
-            <div class="fl"><div class="slice-border">
-            <div class="area-sumary"><em class="icons icons-user fl"></em>
-            <span class="area-name name"><?php echo ($vo["name"]); ?></span>收</div></div><div class="mb10">
-            <em class="icons icons-address fl"></em><span class="area-address street">
-            <i class="province"><?php echo ($vo["pro"]); ?> <?php echo ($vo["city"]); ?></i> <i class="jp_addr_street"><?php echo ($vo["area"]); echo ($vo["addr"]); ?></i></span>
-            </div><div><em class="icons icons-phone fl"></em>
-            <span class="area-mobile phone"><?php echo ($vo["tel"]); ?></span><a class="addr-edit modify" href="<?php echo U('Home/Center/change_address',array('id'=>$vo['id']));?>">修改</a>
-            <a class="del"></a></div></div><div class="slt-icon"></div>
-            
-            <?php if($vo["pri"] == 1): ?><div class="slt-icon"></div>
-            <div class="default-add">默认地址</div>
-            <div class="slt-icon"></div>
-            <?php else: ?>
-            <div class="slt-icon" style="display:none"></div>
-            <div class="default-add" style="display:none">默认地址</div>
-            <div class="slt-icon" style="display:none"></div><?php endif; ?>
-
-            </li><?php endforeach; endif; ?>
-            
-            <li class="add"><a class="add" href="<?php echo U('Home/Center/add_address');?>">
-            <em class="icons icons-add"></em>新增地址</a></li>
-        </ul>
-        
+                            <?php if($res["pri"] == 1): ?>checked<?php endif; ?>
+                                >
+                                <label for="J_SetDefault" class="set">设置为默认收货地址</label>
+                            </li>
+                            <li>
+                                <label></label>
+                                <input type="submit" class="smt smt1 baocun" value="修 改" tabindex="9">
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    <script src="/AAA/project/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(function(){
-        $('.addr-edit').bind("click",function(event){
-            event.stopPropagation();
-        })
-        $('.del').bind("click",function(event){
-            event.stopPropagation();
-            var def = $(this).parents('li').attr('class');
-            if(def == 'lll cur')
-                return;
-            var id = $(this).parents('li').find('.dis').val();
-            var $this = $(this);
-            $.get('do_delete_addr',{id:id},function(data){
-                if(data)
-                    $this.parents('li').remove();
-                else
-                    alert('删除失败');
-            })
-        })
-        $('.lll').bind("click",function(){
-            $(this).parents('.order-address').find('.slt-icon,.default-add').hide();
-            $(this).parents('ul').find('.lll').removeClass('cur');
-            $(this).find('.slt-icon,.default-add').css('display','block');
-            $(this).addClass('cur');
-            var id = $(this).find('.dis').val();
-            $.get('do_change_addr',{id:id},function(data){
-                if(data)
-                    alert('修改失败');
-            })
-        })
-
-    })
-    </script>
 
         </div>
-    </div>  
-    <script type="text/javascript">
-    // $(function(){
-    //   $('.smt_file_fake').click(function(){
-        
-
-    //   })
-    // });
-    </script>      
+    </div>        
             <!-- 页脚 -->
 <div class="foot">
     <div class="white_bg">

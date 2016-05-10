@@ -137,7 +137,7 @@
         </div>
 	   <img src="/AAA/project/Public/Home/Picture/line_1.jpg">
        <div class="per_content  fl safe_center">
-        <form id="resetemail" action="" method="POST">
+        <form id="" action="<?php echo U('Home/Center/do_question');?>" method="POST">
             <ul>
                 <li>
                     <label class="bold_phone">设置密保</label>
@@ -148,12 +148,13 @@
                 <li class="reset_one">
                     <label>问题一：</label>
                     <select name="q1">
-                    <?php if(is_array($arr)): foreach($arr as $key=>$vo): ?><option value="<?php echo ($vo); ?>" ><?php echo ($vo); ?></option><?php endforeach; endif; ?>
+                        <option value="">请选择问题</option>
+                    <?php if(is_array($arr1)): foreach($arr1 as $key=>$vo): ?><option value="<?php echo ($vo); ?>" ><?php echo ($vo); ?></option><?php endforeach; endif; ?>
+                    </select>
 
-                </li>
-                <li>
                     <input class="hidd" type="text" type="text" name='q1' style="display: none" placeholder="请输入问题">
                 </li>
+                
                 <li class="reset_one">
                     <label>回答一：</label>
                     <input type="text" placeholder="请输入回答" size="15" value="" name="a1" class="text a1" tabindex="1">
@@ -163,12 +164,13 @@
                 <li class="reset_one">
                     <label>问题二：</label>
                     <select name="q2">
-                    <?php if(is_array($arr)): foreach($arr as $key=>$vo): ?><option value="<?php echo ($vo); ?>" ><?php echo ($vo); ?></option><?php endforeach; endif; ?>
+                        <option value="">请选择问题</option>
+                    <?php if(is_array($arr2)): foreach($arr2 as $key=>$vo): ?><option value="<?php echo ($vo); ?>" ><?php echo ($vo); ?></option><?php endforeach; endif; ?>
+                    </select>
 
-                </li>
-                <li>
                     <input class="hidd" type="text" name='q2' style="display: none" placeholder="请输入问题">
                 </li>
+            
                 <li class="reset_one">
                     <label>回答二：</label>
                     <input type="text" placeholder="请输入回答" size="15" value="" name="a2" class="text a3" tabindex="1">
@@ -178,12 +180,13 @@
                 <li class="reset_one">
                     <label>问题三：</label>
                     <select name="q3">
-                    <?php if(is_array($arr)): foreach($arr as $key=>$vo): ?><option value="<?php echo ($vo); ?>" ><?php echo ($vo); ?></option><?php endforeach; endif; ?>
+                        <option value="">请选择问题</option>
+                    <?php if(is_array($arr3)): foreach($arr3 as $key=>$vo): ?><option value="<?php echo ($vo); ?>" ><?php echo ($vo); ?></option><?php endforeach; endif; ?>
+                    </select>
 
-                </li>
-                <li>
                     <input class="hidd" type="text" name='q3' style="display: none;" placeholder="请输入问题">
                 </li>
+                
                 <li class="reset_one">
                     <label>回答三：</label>
                     <input type="text" placeholder="请输入回答" size="15" value="" name="a3" class="text a3" tabindex="1">
@@ -192,7 +195,7 @@
 
                 <li class="reset_one">
                     <label></label>
-                    <input type="button" class="smt" id="smt_resetphone_one" value="提交" tabindex="5">
+                    <input type="submit" class="smt" id="smt_resetphone_one" value="提交" tabindex="5">
                 </li>
             </ul>
         </form>
@@ -201,29 +204,31 @@
      <script type="text/javascript">
          $(function(){
              //一级分类 就是select中的首选项
+             if ($('select').val()=='自定义问题') {
+                $('select').parents('.question').find('.hidd').removeAttr('style');
+             };
+             
              $('select').change(function(){
                 // select中的原来的值
-                var val = $(this).val();
+                var sq = $(this).val();
                 // 绑定selelct
                 var select = $(this);
-                if (val!='自定义问题'){
-                    $('.add').remove();
-
-                    // 问题
-                    select.parents('.question').find('.hidd').css('display','none');
+                if (sq!='自定义问题'){
+                    // 隐藏input
+                    select.parents('.question').find('.hidd').attr('value',sq).css('display','none');
+                    
                 return;
                 }else{
                  //显示
                  select.parents('.question').find('.hidd').removeAttr('style');
                 };
-                var a1 = select.parents('.question1').find('.a1');
-                a1.blur(function(){
-                    // var a1val = a1.val();
-                    // var url = "<?php echo U('Home/Center/do_question');?>";
-                    console.log(q);
-                    console.log(a1val);
-                });
              })
+             $('form').submit(function(){
+                $('input').trigger('blur',function(){
+
+                })
+             })
+
          })
      </script>
 
