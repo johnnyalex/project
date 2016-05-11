@@ -4,7 +4,6 @@ use Think\Controller;
 class GoodsController extends CommonController {
     public function index(){
     	$goods = M('goods');
-
             // var_dump($_GET);
             $name = $_GET['name'];
             // $where['name'] = array('like','%'.$_GET['name'].'%');
@@ -12,16 +11,11 @@ class GoodsController extends CommonController {
             $where = "name like '%".$_GET['name']."%'";
         else
             $where = '';
-
          //获取每页显示的数量
        $num = !empty($_GET['show']) ? $_GET['show'] : 10;
         $goodlist = $goods->select();
         // var_dump($goodlist);
-        // foreach($goodlist as $value){
-        //     $value['describe'] = htmlspecialchars_decode($value['describe']);
-        // }
-        // // $goodlist['describe'] = htmlspecialchars_decode($goodlist['describe']);
-        // var_dump($value['describe']);
+        
         //统计总数
         $count = $goods->where($where)->count();
         // 实例化分页类
@@ -31,13 +25,64 @@ class GoodsController extends CommonController {
         $pages = $Page->show();
         $goodlist = $goods->limit($limit)->where($where)->select();
 
-        // $goodlist['describe'] = htmlspecialchars_decode($goodlist['describe']);
-
-
           $this->assign('goodlist',$goodlist);
     	$this->assign('pages',$pages);
 
     	$this->display();
+    }
+//商品管理上传图片
+    public function img(){
+
+         var_dump($_POST);
+         echo '<hr>';
+        var_dump($_FILES);die;
+        $images = M('image');
+      
+        //处理图片上传
+        if($_FILES['name']['error'] == 0){
+            $upload = new \Think\Upload();// 实例化上传类    
+            $upload->maxSize   =   3145728 ;// 设置附件上传大小   
+            $upload->exts      =   array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型    
+            $upload->rootPath = './Public';//手动设置网站根目录
+            $upload->savePath  =   '/Uploads/'; // 设置附件上传目录    
+            $info   =   $upload->upload();    // 上传文件     
+            if(!$info) {// 上传错误提示错误信息        
+                $this->error($upload->getError());    
+            }else{// 上传成功       
+                // $this->success('上传成功！'); 
+                $str = $info['name']['savepath']. $info['name']['savename'];
+                // var_dump($str);
+                $_POST['name'] = $str;
+            }
+        }
+       
+        //创建数据
+        $images->create();
+        //执行添加
+        if($images->add()){
+             //添加成功
+            $this->success('添加成功',U('Admin/Goods/image'));
+        }else{
+            //失败
+            $this->error('添加失败',U('Admin/Goods/image'));
+        }
+
+    }
+
+
+    //商品图片管理
+    public function image(){
+        $images = M('image');   
+        $goods_id = I('get.id');
+        var_dump($goods_id);
+     
+        // var_dump($sql);
+       $imagelist = $images->select();
+        $this->assign('imagelist',$imagelist);
+        $this->assign('goods_id',$goods_id);
+
+        $this->display();
+
     }
 
     public function add(){
@@ -61,9 +106,7 @@ class GoodsController extends CommonController {
         var_dump($_POST);
     	// var_dump($_FILES);
         $goods = M('goods');
-        
-  
-       
+      
         //处理图片上传
         if($_FILES['pic']['error'] == 0){
             $upload = new \Think\Upload();// 实例化上传类    
@@ -94,6 +137,26 @@ class GoodsController extends CommonController {
             //失败
             $this->error('添加失败',U('Admin/Goods/index'));
         }
+    }
+//删除商品管理中图片
+  public function del(){
+    $id = I('get.id');
+    var_dump($id);
+    $images = M('image');
+    $sql = "SELECT A.goods_id,B.id FROM image A,goods B WHERE A.goods_id=B.id";
+    $res =  $images->delete($id);
+    if($res)
+    echo 1;
+  }  
+//显示处理是否是封面
+    public function is_face(){
+        $images = M('image');
+        $images->create();
+        $res = $images->save();
+        echo $goods->_sql();
+        // die;
+        if($res)
+            echo 1; 
     }
 
 //显示处理是否上架
@@ -146,7 +209,7 @@ class GoodsController extends CommonController {
 //删除商品
   public function delete(){
     $id = I('get.id');
-    // var_dump($id);
+    // var_dump($id);die;
     $goods = M('goods');
     $res =  $goods->delete($id);
     if($res)

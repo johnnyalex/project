@@ -364,7 +364,7 @@
             <div class="row">
                 <div class="col-lg-12">
                 
-    <h1 class="page-header">商品列表</h1>
+    <h1 class="page-header">商品图片管理</h1>
 
                 </div>
                 <!-- /.col-lg-12 -->
@@ -383,24 +383,20 @@
                         <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <form action="<?php echo U(Admin/Goods/index);?>" method="get">
+                                    <form role="form" method="post" action="<?php echo U('Admin/Goods/img');?>" enctype="multipart/form-data">
                                     <div class="dataTables_length" id="dataTables-example_length">
-                                        <label>显示 
-                                            <select name="show" aria-controls="dataTables-example" class="form-control input-sm">
-                                                <option value="5">5</option>
-                                                <option value="10">10</option>
-                                                <option value="15">15</option>
-                                                <option value="20">20</option>
-                                            </select> 
-                                        </label>
+                                        <div class="form-group">
+                                            <label>上传图片</label>
+                                            <input type="file" name="name">
+                                            <input type="hidden" name="id" value="<?php echo ($goods_id); ?>">     
+                                            <input type="submit" class="text-but" value="上传" name="">
+                                        </div>
                                     </div>
+                                    </form>
                                 </div>
                                 <div class="col-sm-6">
                                     <div id="dataTables-example_filter" class="dataTables_filter">
-                                  
-                                        <label>Search:<input name = "name" type="search" class="form-control input-sm" placeholder="" aria-controls="dataTables-example"></label>
-                                        <button>搜索</button>
-                                         </form>
+                                        <td width="60%" valign="middle" align="center" style="text-align:right; width:150px;">你正在管理的是<font size="4" color="green">商品name名字</font>的图片</td>
                                     </div>
                                 </div>
                             </div>
@@ -410,56 +406,24 @@
                             <thead>
                              <!-- <form action="<?php echo U(Admin/Goods/index);?>" method="post"> -->
                                 <tr role="row">
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:85px;" aria-label="Browser: activate to sort column ascending">编号</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Platform(s): activate to sort column ascending">名称</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 85px;" aria-label="Engine version: activate to sort column ascending">分类</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 65px;" aria-label="Engine version: activate to sort column ascending">价格</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 65px;" aria-label="Engine version: activate to sort column ascending">运费</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 65px;" aria-label="Engine version: activate to sort column ascending">图片</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">库存</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 145px;" aria-label="Engine version: activate to sort column ascending">是否上架</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 145px;" aria-label="Engine version: activate to sort column ascending">是否热销</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 145px;" aria-label="Engine version: activate to sort column ascending">是否精品</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 145px;" aria-label="Engine version: activate to sort column ascending">是否新品</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 210px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:70px;text-align: center;" aria-label="Browser: activate to sort column ascending">编号</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 150px;text-align: center;" aria-label="Engine version: activate to sort column ascending">图片</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;text-align: center;" aria-label="Engine version: activate to sort column ascending">是否是封面</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 140px;text-align: center;" aria-label="CSS grade: activate to sort column ascending">操作</th>
                                 </tr>
                             <!-- </form> -->
                             </thead>
                             <tbody>
                             <!-- z这是用户列表的遍历 -->
-                            <?php if(is_array($goodlist)): foreach($goodlist as $key=>$vo): ?><tr class="gradeA odd" role="row">
-                                    <td><?php echo ($vo["id"]); ?></td>
-                                    <td><?php echo ($vo["name"]); ?></td>
-                                    <td class="center"><?php echo ($vo["cate_id"]); ?></td>
-                                    <td class="center"><?php echo ($vo["price"]); ?></td>
-                                    <td class="center"><?php echo ($vo["freight"]); ?></td>
-                                    <td class="sorting_1"><img src="/Public/<?php echo ($vo["pic"]); ?>" width="50px"></td>
-                             
-                                    <td class="center"><?php echo ($vo["stock"]); ?></td>
-                                    <td class="center"><button type="button" class="btn_status btn-info">
-                                    <?php switch($vo["status"]): case "0": ?>下架<?php break;?>    
-                                    <?php case "1": ?>上架<?php break; endswitch;?>
+                            <?php if(is_array($imagelist)): foreach($imagelist as $key=>$vo): ?><tr class="gradeA odd" role="row">
+                                    <td><?php echo ($vo["goods_id"]); ?></td>
+                                    <td class="sorting_1"><img src="/Public/<?php echo ($vo["name"]); ?>" width="70px"></td>
+                                    <td class="center"><button type="button" class="btn_isface btn-info">
+                                    <?php switch($vo["is_face"]): case "0": ?>是<?php break;?>    
+                                    <?php case "1": ?>否<?php break; endswitch;?>
                                     </button>
                                     </td>
-                                    <td class="center"><button type="button" class="btn_host btn-info">
-                                    <?php switch($vo["is_host"]): case "0": ?>热销<?php break;?>    
-                                    <?php case "1": ?>滞销<?php break; endswitch;?>
-                                    </button>
-                                    </td>
-                                    <td class="center"><button type="button" class="btn_best btn-info">
-                                    <?php switch($vo["is_best"]): case "0": ?>不精<?php break;?>    
-                                    <?php case "1": ?>精品<?php break; endswitch;?>
-                                    </button>
-                                    </td>
-                                    <td class="center"><button type="button" class="btn_new btn-info">
-                                    <?php switch($vo["is_new"]): case "0": ?>老款<?php break;?>    
-                                    <?php case "1": ?>新款<?php break; endswitch;?>
-                                    </button>
-                                    </td>
-                                
-                                    <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;
-                                    <a href="<?php echo U('Admin/Goods/update',array('id'=>$vo['id']));?>"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a>
-                                    <a href="<?php echo U('Admin/Goods/image',array('id'=>$vo['id']));?>"><button class="update btn-update btn-sm btn-del" type="button">图片管理</button></a></td>
+                                    <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;</td>
                                 </tr><?php endforeach; endif; ?>
                             </tbody>
                         </table></div></div>
@@ -521,127 +485,42 @@
     // alert($);
     $(function(){
         //上下架
-        $('.btn_status').bind("click",function(){
+        $('.btn_isface').bind("click",function(){
             var display = $(this).text();
             var id = $(this).parents('tr').find('td:first').html();
             // alert(id);
             var a = $(this);
             display = display.trim();
             // alert(display);
-            if(display == '上架'){
+            if(display == '是'){
                 // alert('sss');
-                $.post('<?php echo U("Admin/Goods/goods_status");?>',
+                $.post('<?php echo U("Admin/Goods/is_face");?>',
                     {id:id,status:0},
                     function(data){
                         if(data)
-                            a.html('下架');
+                            a.html('否');
                     })
             }
-            else if(display == '下架'){
-                $.post('<?php echo U("Admin/Goods/goods_status");?>',
+            else if(display == '否'){
+                $.post('<?php echo U("Admin/Goods/is_face");?>',
                     {id:id,status:1},
                     function(data){
                         if(data)
-                            a.html('上架');
+                            a.html('是');
                     })
             } 
         })
-
-
-          //热销与否
-        $('.btn_host').bind("click",function(){
-            var display = $(this).text();
-            var id = $(this).parents('tr').find('td:first').html();
-            // alert(id);
-            var a = $(this);
-            display = display.trim();
-            // alert(display);
-            if(display == '滞销'){
-                // alert('sss');
-                $.post('<?php echo U("Admin/Goods/goods_host");?>',
-                    {id:id,is_host:0},
-                    function(data){
-                        if(data)
-                            a.html('热销');
-                    })
-            }
-            else if(display == '热销'){
-                $.post('<?php echo U("Admin/Goods/goods_host");?>',
-                    {id:id,is_host:1},
-                    function(data){
-                        if(data)
-                            a.html('滞销');
-                    })
-            } 
-        })
-
-
-           //精品与否
-        $('.btn_best').bind("click",function(){
-            var display = $(this).text();
-            var id = $(this).parents('tr').find('td:first').html();
-            // alert(id);
-            var a = $(this);
-            display = display.trim();
-            // alert(display);
-            if(display == '精品'){
-                // alert('sss');
-                $.post('<?php echo U("Admin/Goods/goods_best");?>',
-                    {id:id,is_best:0},
-                    function(data){
-                        if(data)
-                            a.html('不精');
-                    })
-            }
-            else if(display == '不精'){
-                $.post('<?php echo U("Admin/Goods/goods_best");?>',
-                    {id:id,is_best:1},
-                    function(data){
-                        if(data)
-                            a.html('精品');
-                    })
-            } 
-        })
-
-   //新品与否
-        $('.btn_new').bind("click",function(){
-            var display = $(this).text();
-            var id = $(this).parents('tr').find('td:first').html();
-            // alert(id);
-            var a = $(this);
-            display = display.trim();
-            // alert(display);
-            if(display == '新款'){
-                // alert('sss');
-                $.post('<?php echo U("Admin/Goods/goods_new");?>',
-                    {id:id,is_new:0},
-                    function(data){
-                        if(data)
-                            a.html('老款');
-                    })
-            }
-            else if(display == '老款'){
-                $.post('<?php echo U("Admin/Goods/goods_new");?>',
-                    {id:id,is_new:1},
-                    function(data){
-                        if(data)
-                            a.html('新款');
-                    })
-            } 
-        })
-
 
 //删除商品
         $('.delete').click(function(){
             var id= $(this).parents('tr').find('td:first').html();
             var tr = $(this);
-            $.get('<?php echo U("Admin/Goods/delete");?>',{id:id},function(data){
+            alert(id);
+            $.get('<?php echo U("Admin/Goods/del");?>',{id:id},function(data){
                 if(data)
                     tr.parents('tr').remove();
             })
         }) 
-
-
 
     })
 

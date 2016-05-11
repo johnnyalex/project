@@ -99,7 +99,9 @@
                                     </button>
                                     </td>
                                 
-                                    <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;<a href="{:U('Admin/Goods/update',array('id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a></td>
+                                    <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;
+                                    <a href="{:U('Admin/Goods/update',array('id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a>
+                                    <a href="{:U('Admin/Goods/image',array('id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">图片管理</button></a></td>
                                 </tr>
                             </foreach>
                             </tbody>
