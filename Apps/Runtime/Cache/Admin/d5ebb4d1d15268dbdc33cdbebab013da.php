@@ -364,16 +364,14 @@
             <div class="row">
                 <div class="col-lg-12">
                 
-    <h1 class="page-header">商品修改</h1>
+    <h1 class="page-header">订单修改</h1>
 
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/ueditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/ueditor.all.min.js"> </script>
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/lang/zh-cn/zh-cn.js"></script>
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -383,43 +381,20 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-6">
-                            <form role="form" method="post" action="<?php echo U('Admin/Goods/change');?>" enctype="multipart/form-data">
-                                 <input type="hidden" name="id" value="<?php echo ($info['id']); ?>">
+                            <form role="form" method="post" action="<?php echo U('Admin/Order/change');?>" enctype="multipart/form-data">
+                                 <input type="hidden" name="id" value="<?php echo ($id); ?>">
                                 <div class="form-group">
-                                    <label>商品名称</label>
-                                    <input name="name" value="<?php echo ($info['name']); ?>" class="form-control">
-                                </div>
-                               <div class="form-group">
-                                    <label>商品分类</label>
-                                    <select name="cate_id" class="form-control">
-                                        <option value="0">请选择分类</option>
-                                        <option value="<?php echo ($vo["id"]); ?>" ><?php echo ($info[cate_id]); ?></option>
-                                    </select>
-                                </div>
+                                    <label>请选择</label>
+                                    
+                                    <?php if(is_array($address)): foreach($address as $key=>$vo): ?><div class="radio">
+                                        <label>
+                                            <input type="radio" name="address_id" id="optionsRadios1" value="<?php echo ($vo["id"]); ?>">
+                                            <?php echo ($vo["name"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($vo["tel"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($vo["pro"]); ?> <?php echo ($vo["city"]); ?> <?php echo ($vo["area"]); ?> <?php echo ($vo["addr"]); ?>
+                                        </label>
+                                    </div><?php endforeach; endif; ?>
 
-                                <div class="form-group">
-                                    <label>商品图片</label>
-                                    <tr><td class="sorting_1"><img src="/Public/<?php echo ($info[pic]); ?>" width="50px"></td></tr>
-                                    <input type="file" name="pic">
                                 </div>
-                                <div class="form-group">
-                                    <label>商品价格</label>
-                                    <input name="price" value="<?php echo ($info['price']); ?>" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>商品库存</label>
-                                    <input name="stock" value="<?php echo ($info['stock']); ?>"  class="form-control">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label>商品详情</label>
-                                <script type="text/javascript">
-                                            var ue = UE.getEditor('editor');
-                                </script>
-                                    <script id="editor" name="describe" type="text/plain" style="width:750px;height:300px;"><?php echo ($info['describe']); ?></script>
-                                <!-- <textarea name="describe" rows="5" cols="50"><?php echo ($info['describe']); ?></textarea> -->
-                                </div>
-                                <button class="btn btn-primary btn-lg btn-block" >确认修改</button>
+                               <button class="btn btn-primary btn-lg btn-block" >确认修改</button>
                             </form>
                         </div>
                        

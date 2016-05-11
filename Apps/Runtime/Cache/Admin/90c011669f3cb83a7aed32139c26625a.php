@@ -364,69 +364,70 @@
             <div class="row">
                 <div class="col-lg-12">
                 
-    <h1 class="page-header">商品修改</h1>
+    <h1 class="page-header">订单修改</h1>
 
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/ueditor.all.min.js"> </script>
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/lang/zh-cn/zh-cn.js"></script>
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                   
+                    
                 </div>
+                <!-- /.panel-heading -->
                 <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <form role="form" method="post" action="<?php echo U('Admin/Goods/change');?>" enctype="multipart/form-data">
-                                 <input type="hidden" name="id" value="<?php echo ($info['id']); ?>">
-                                <div class="form-group">
-                                    <label>商品名称</label>
-                                    <input name="name" value="<?php echo ($info['name']); ?>" class="form-control">
-                                </div>
-                               <div class="form-group">
-                                    <label>商品分类</label>
-                                    <select name="cate_id" class="form-control">
-                                        <option value="0">请选择分类</option>
-                                        <option value="<?php echo ($vo["id"]); ?>" ><?php echo ($info[cate_id]); ?></option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>商品图片</label>
-                                    <tr><td class="sorting_1"><img src="/Public/<?php echo ($info[pic]); ?>" width="50px"></td></tr>
-                                    <input type="file" name="pic">
-                                </div>
-                                <div class="form-group">
-                                    <label>商品价格</label>
-                                    <input name="price" value="<?php echo ($info['price']); ?>" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>商品库存</label>
-                                    <input name="stock" value="<?php echo ($info['stock']); ?>"  class="form-control">
-                                </div>
+                    <div class="dataTable_wrapper">
+                        <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                            <div class="row">
+                            <div class="col-sm-12">
+                            <table id="dataTables-example" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="dataTables-example_info">
+                            <thead>
+                            <tr role="row">
+                                   
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 110px;" aria-label="Browser: activate to sort column ascending">商品图片</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 110px;" aria-label="Platform(s): activate to sort column ascending">商品名称</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 120px;" aria-label="Engine version: activate to sort column ascending">剩余库存</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">单价</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 90px;" aria-label="Engine version: activate to sort column ascending">个数</th><!-- 
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">买家</th>
+                                    <th tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 110px;" aria-label="Engine version: activate to sort column ascending">交易状态</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">评价</th> -->
+       <!--                              <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 130px;" aria-label="Engine version: activate to sort column ascending">下单时间</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 155px;" aria-label="Engine version: activate to sort column ascending">订单状态</th> -->
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 70px;" aria-label="CSS grade: activate to sort column ascending">小计</th>
+                                </tr>
+                            <!-- </form> -->
+                            </thead>
+                            <tbody>
+                            <!-- z这是用户列表的遍历 -->
+                            <?php if(is_array($goods)): foreach($goods as $key=>$vo): ?><tr class="gradeA odd" role="row">
+                                    <td class="center"><img src="/Public<?php echo ($vo["pic"]); ?>"></td>
+                                    <td class="center"><?php echo ($vo["name"]); ?></td>
+                                    <td class="center"><?php echo ($vo["stock"]); ?></td>
+                                    <td class="center"><?php echo ($vo["price"]); ?></td>
+                                    <td class="center"><?php echo ($vo["qty"]); ?></td>
+                                    <td class="center"><?php echo ($vo['qty']*$vo["price"]); ?></td>
+                                </tr><?php endforeach; endif; ?>
+                            </tbody>
+                        </table></div></div>
+                            <div class="row">
                                 
-                                <div class="form-group">
-                                    <label>商品详情</label>
-                                <script type="text/javascript">
-                                            var ue = UE.getEditor('editor');
-                                </script>
-                                    <script id="editor" name="describe" type="text/plain" style="width:750px;height:300px;"><?php echo ($info['describe']); ?></script>
-                                <!-- <textarea name="describe" rows="5" cols="50"><?php echo ($info['describe']); ?></textarea> -->
+                                    <div class="col-sm-6">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
+                                        <div class="pagination">
+                                            <?php echo ($pages); ?>
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <button class="btn btn-primary btn-lg btn-block" >确认修改</button>
-                            </form>
-                        </div>
-                       
-                        
-                        <!-- /.col-lg-6 (nested) -->
+                            </div>
                     </div>
-                    <!-- /.row (nested) -->
+                    <!-- /.table-responsive -->
+                    
                 </div>
                 <!-- /.panel-body -->
             </div>
@@ -434,7 +435,26 @@
         </div>
         <!-- /.col-lg-12 -->
     </div>
+<script src="/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+    // alert($);
+    $(function(){
+   //删除订单
+        $('.delete').click(function(){
+            var id= $(this).parents('tr').find('td:first').html();
+            // alert(id);
+            var $this = $(this);
+            $.get('<?php echo U("Admin/Order/delete");?>',{id:id},function(data){
+                if(data)
+                    $this.parents('tr').remove();
+            })
+        }) 
 
+
+
+    })
+
+    </script>
 
             <!-- /.row -->
            
