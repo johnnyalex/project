@@ -4,17 +4,10 @@ use Think\Controller;
 class OrderController extends Controller {
 
     public function index(){
-        $orders = M('order');
-        $sql = "SELECT A.*,B.goods_id,B.price,B.qty FROM `order` A LEFT JOIN order_goods B ON A.id=B.order_id ORDER BY A.id";
-        $orders_list = $orders->query($sql);
-        var_dump($orders_list);
-        $arr = array();
-        $goods = M('goods');
-        foreach ($orders_list as $key => $value) {
-            $arr[] = $goods->field('name,pic')->where(['id'=>$value['goods_id']])->find();
-        }
-        var_dump($arr);
-        // $this->display();
+        $order_list = M()->table(array('order'=>'A','user'=>'B'))->field('A.*,B.username')->where('A.uid=B.id')->select();
+        var_dump($order_list);
+        $this->assign('order_sel',$order_list);
+        $this->display();
     }
 //删除商品
   public function delete(){
@@ -34,7 +27,7 @@ class OrderController extends Controller {
 
         $info = $orders->find($id);
         // echo $goods->_sql();
-        var_dump($info);
+        // var_dump($info);
        
         $this->assign('info',$info);
         $this->display();
