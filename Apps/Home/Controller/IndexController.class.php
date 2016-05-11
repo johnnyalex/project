@@ -10,6 +10,9 @@ class IndexController extends Controller {
         $this->assign('title','卷皮网首页');
         $this->display();
     }
+    public function jifen(){
+        $this->display();
+    }
     public function dologin(){
     	$username = $_POST['username'];
     	$password = $_POST['password'];
