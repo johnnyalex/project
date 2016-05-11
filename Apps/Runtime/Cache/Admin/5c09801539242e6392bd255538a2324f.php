@@ -364,16 +364,14 @@
             <div class="row">
                 <div class="col-lg-12">
                 
-    <h1 class="page-header">商品修改</h1>
+    <h1 class="page-header">订单修改</h1>
 
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/ueditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/ueditor.all.min.js"> </script>
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/lang/zh-cn/zh-cn.js"></script>
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -386,39 +384,28 @@
                             <form role="form" method="post" action="<?php echo U('Admin/Goods/change');?>" enctype="multipart/form-data">
                                  <input type="hidden" name="id" value="<?php echo ($info['id']); ?>">
                                 <div class="form-group">
-                                    <label>商品名称</label>
-                                    <input name="name" value="<?php echo ($info['name']); ?>" class="form-control">
+                                <div class="form-group">
+                                    <label>商品</label>
+                                    <!-- <tr><td class="sorting_1"><img src="/Public/<?php echo ($info['pic']); ?>" width="50px"></td></tr> -->
+                                 <td class="sorting_1"><img src="/Public/<?php echo ($info["pic"]); ?>" width="50px"></td>
                                 </div>
-                               <div class="form-group">
-                                    <label>商品分类</label>
-                                    <select name="cate_id" class="form-control">
-                                        <option value="0">请选择分类</option>
-                                        <option value="<?php echo ($vo["id"]); ?>" ><?php echo ($info[cate_id]); ?></option>
-                                    </select>
+                                    <label>收货人</label>
+                                    <input name="name" value="<?php echo ($info["receiver"]); ?>" class="form-control">
                                 </div>
+                               
 
-                                <div class="form-group">
-                                    <label>商品图片</label>
-                                    <tr><td class="sorting_1"><img src="/Public/<?php echo ($info[pic]); ?>" width="50px"></td></tr>
-                                    <input type="file" name="pic">
-                                </div>
-                                <div class="form-group">
-                                    <label>商品价格</label>
-                                    <input name="price" value="<?php echo ($info['price']); ?>" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>商品库存</label>
-                                    <input name="stock" value="<?php echo ($info['stock']); ?>"  class="form-control">
-                                </div>
                                 
                                 <div class="form-group">
-                                    <label>商品详情</label>
-                                <script type="text/javascript">
-                                            var ue = UE.getEditor('editor');
-                                </script>
-                                    <script id="editor" name="describe" type="text/plain" style="width:750px;height:300px;"><?php echo ($info['describe']); ?></script>
-                                <!-- <textarea name="describe" rows="5" cols="50"><?php echo ($info['describe']); ?></textarea> -->
+                                    <label>地址</label>
+                                    <input name="address" value="<?php echo ($info['address']); ?>" class="form-control">
                                 </div>
+                                <div class="form-group">
+                                    <label>电话</label>
+                                    <input name="tel" value="<?php echo ($info['tel']); ?>"  class="form-control">
+                                </div>
+                            
+                                
+                        
                                 <button class="btn btn-primary btn-lg btn-block" >确认修改</button>
                             </form>
                         </div>
