@@ -382,21 +382,24 @@
                     <div class="dataTable_wrapper">
                         <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                             <div class="row">
+
+                             <form action="<?php echo U(Admin/Order/index);?>" method="get">
+
                                 <div class="col-sm-6">
                                     <div class="dataTables_length" id="dataTables-example_length">
                                         <label>Show 
-                                            <select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm">
+                                            <select name="num" aria-controls="dataTables-example" class="form-control input-sm">
+                                                <option value="5">5</option>
                                                 <option value="10">10</option>
-                                                <option value="25">25</option>
-                                                <option value="50">50</option>
-                                                <option value="100">100</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
                                             </select> entries
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div id="dataTables-example_filter" class="dataTables_filter">
-                                        <label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="dataTables-example"></label>
+                                        <label><button type="submit" class="btn btn-primary">查询:</button><input name="keyword" type="search" class="form-control input-sm" placeholder="" aria-controls="dataTables-example"></label>
                                     </div>
                                 </div>
                             </div>
@@ -406,56 +409,78 @@
                             <thead>
                             <tr role="row">
                                    
-                             <!-- <form action="<?php echo U(Admin/Goods/index);?>" method="post"> -->
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:75px;" aria-label="Browser: activate to sort column ascending">宝贝</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 130px;" aria-label="Platform(s): activate to sort column ascending">单价</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 155px;" aria-label="Engine version: activate to sort column ascending">数量</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">售后</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 90px;" aria-label="Browser: activate to sort column ascending">收件人</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 225px;" aria-label="Platform(s): activate to sort column ascending">地址</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 120px;" aria-label="Engine version: activate to sort column ascending">电话</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">总价</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 90px;" aria-label="Engine version: activate to sort column ascending">实收款</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">买家</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">交易状态</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 95px;" aria-label="Engine version: activate to sort column ascending">实收款</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">评价</th>
-<!--                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 130px;" aria-label="Engine version: activate to sort column ascending">下单时间</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 155px;" aria-label="Engine version: activate to sort column ascending">订单状态</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 190px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
- -->                                </tr>
+                                    <th tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 110px;" aria-label="Engine version: activate to sort column ascending">交易状态</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">评价</th>
+       <!--                              <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 130px;" aria-label="Engine version: activate to sort column ascending">下单时间</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 155px;" aria-label="Engine version: activate to sort column ascending">订单状态</th> -->
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 70px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+                                </tr>
                             <!-- </form> -->
                             </thead>
                             <tbody>
                             <!-- z这是用户列表的遍历 -->
                             <?php if(is_array($order_sel)): foreach($order_sel as $key=>$vo): ?><tr class="gradeA odd" role="row">
-                                    
-                                    <td colspan="3">订单号:<?php echo ($vo["id"]); ?></td>
-                                    <td colspan="5">成交时间:<?php echo ($vo["time"]); ?></td>
-
+                                    <input type="hidden" value="<?php echo ($vo["id"]); ?>">
+                                    <td colspan="10">订单号: <?php echo ($vo["order_num"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    成交时间: <?php echo ($vo["time"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="<?php echo U('Admin/Order/select',array('id'=>$vo['id']));?>"><button class="update btn-update btn-sm btn-del" type="button">查看商品</button></a></td>
                                 </tr>
-                                <?php if(is_array($vo['goods'])): foreach($vo['goods'] as $key=>$vi): ?><tr class="gradeA odd" role="row">
-                                    <td></td>
-                                    <td>3</td>
-                                    <td class="sorting_1"><img src="/Public/<?php echo ($vo["pic"]); ?>" width="50px"></td>
-                                     <td class="center"><?php echo ($vo["qty"]); ?></td>
+                                
+                                <tr class="gradeA odd" role="row">
+                                    <td class="center"><?php echo ($vo["name"]); ?></td>
+                                    <td class="center"><?php echo ($vo["address"]); ?></td>
+                                    <td class="center"><?php echo ($vo["tel"]); ?></td>
                                     <td class="center"><?php echo ($vo["price_total"]); ?></td>
-                                    <td class="center"><?php echo ($vo["user"]); ?></td>
+                                    <td class="center"><?php echo ($vo["price_true"]); ?></td>
+                                    <td class="center"><?php echo ($vo["username"]); ?></td>
+                                    <td class="center"><?php echo ($vo["status"]); ?></td>
                                    
-                                    <td class="center"><button type="button" class="btn_status btn-info">
-                                    <?php switch($vo["status"]): case "0": ?>已评<?php break;?>    
-                                    <?php case "1": ?>未评<?php break; endswitch;?>
-                                    </button>
+                                    <td class="center">
+                                    <?php switch($vo["status"]): case "1": ?><button type="button" class="btn btn-success disabled">已评</button><?php break;?>    
+                                    <?php case "0": ?><button type="button" class="btn btn-info disabled">未评</button><?php break; endswitch;?>
+                                    
                                     </td>
-                                    <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;<a href="<?php echo U('Admin/Order/edit',array('id'=>$vo['id']));?>"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a></td>
-                                </tr><?php endforeach; endif; endforeach; endif; ?>
+                                    <td class="center"><a href="<?php echo U('Admin/Order/update',array('oid'=>$vo['id'],'uid'=>$vo['uid']));?>"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a></td>
+                                </tr><?php endforeach; endif; ?>
                             </tbody>
                         </table></div></div>
                             <div class="row">
                                 
-                                    <div class="col-sm-6">
-                                        <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
-                                        <div class="pagination">
-                                            <?php echo ($pages); ?>
-                                            
-                                        </div>
-                                        </div>
-                                    </div>
+ <style type="text/css">
+      #pages a,#pages span{
+       background-color: #fff;
+       border: 1px solid #ddd;
+       color: #337ab7;
+       float: left;
+       line-height: 1.42857;
+       margin-left: -1px;
+       padding: 6px 12px;
+       position: relative;
+       text-decoration: none;
+   }
+   #pages span{
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: #fff;
+  cursor: default;
+  z-index: 2;
+}
+  </style>
+
+<div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
+   
+    <div class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers" id="DataTables_Table_0_paginate">
+      <div id="pages">
+        <?php echo ($pages); ?>
+      </div>
+    </div>
+  </div>
                                 </div>
                             </div>
                     </div>

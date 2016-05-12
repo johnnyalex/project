@@ -17,8 +17,13 @@
     <link type="text/css" rel="stylesheet" href="/BBBB/project/Public/Home/Css/fix.css" />
     <link type="text/css" rel="stylesheet" href="/BBBB/project/Public/Home/Css/lunbo.css" />
     <script type="text/javascript" src="/BBBB/project/Public/Home/Js/jquery-1.8.3.min.js"></script>
+<<<<<<< HEAD
 
 
+=======
+    <script type="text/javascript" src="/BBBB/project/Public/Home/Js/lunbo.js"></script>
+    </head>
+>>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
     <body>
         
         
@@ -173,7 +178,11 @@
             </ul>
         </div>
 <!-- </div> -->
+<<<<<<< HEAD
 <script type="text/javascript" src="/BBBB/project/Public/Home/Js/lunbo.js"></script>
+=======
+
+>>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
 <div class="top_wrap">
     <div class="top_box">
         <div class="banner_l">
@@ -1109,8 +1118,13 @@
       <a class="del" href="javascript:;">×</a>
     </div>
     
+<<<<<<< HEAD
 
 <script type="text/javascript">
+=======
+    </block>
+    <script type="text/javascript">
+>>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
     // 侧边
         // $(function(){
         //     $('.i-love').mouseover(function(e){
@@ -1127,6 +1141,7 @@
 
         // });
     //top nav
+<<<<<<< HEAD
     // alert($);
 // 积分
 
@@ -1144,6 +1159,17 @@
         }
     })
         
+=======
+    // $(function(){
+    //     var top = $(document).scrollTop();
+    //     if (top>600) {
+    //         $('.top_box').css('display','block');
+    //     } else {
+    //         $('.top_box').css('display','none');
+    //     }
+        
+    // })
+>>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
 
     </script>
     </body>

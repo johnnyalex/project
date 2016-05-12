@@ -10,22 +10,22 @@
     <title>三人行 -- 42</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/AAA/project/Public/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Public/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="/AAA/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="/AAA/project/Public/Admin/dist/css/timeline.css" rel="stylesheet">
+    <link href="/Public/Admin/dist/css/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/AAA/project/Public/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="/Public/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/AAA/project/Public/Admin/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="/Public/Admin/bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/AAA/project/Public/Admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/Public/Admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -340,6 +340,16 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> 订单管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="<?php echo U('Admin/Order/index');?>">订单列表</a>
+                                </li>
+                                
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                         
                         
                         
@@ -404,6 +414,7 @@
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Platform(s): activate to sort column ascending">名称</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 85px;" aria-label="Engine version: activate to sort column ascending">分类</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 65px;" aria-label="Engine version: activate to sort column ascending">价格</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 65px;" aria-label="Engine version: activate to sort column ascending">运费</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 65px;" aria-label="Engine version: activate to sort column ascending">图片</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">库存</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 145px;" aria-label="Engine version: activate to sort column ascending">是否上架</th>
@@ -421,7 +432,8 @@
                                     <td><?php echo ($vo["name"]); ?></td>
                                     <td class="center"><?php echo ($vo["cate_id"]); ?></td>
                                     <td class="center"><?php echo ($vo["price"]); ?></td>
-                                    <td class="sorting_1"><img src="/AAA/project/Public/<?php echo ($vo["pic"]); ?>" width="50px"></td>
+                                    <td class="center"><?php echo ($vo["freight"]); ?></td>
+                                    <td class="sorting_1"><img src="/Public/<?php echo ($vo["pic"]); ?>" width="50px"></td>
                              
                                     <td class="center"><?php echo ($vo["stock"]); ?></td>
                                     <td class="center"><button type="button" class="btn_status btn-info">
@@ -445,7 +457,9 @@
                                     </button>
                                     </td>
                                 
-                                    <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;<a href="<?php echo U('Admin/Goods/update',array('id'=>$vo['id']));?>"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a></td>
+                                    <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;
+                                    <a href="<?php echo U('Admin/Goods/update',array('id'=>$vo['id']));?>"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a>
+                                    <a href="<?php echo U('Admin/Goods/image',array('id'=>$vo['id']));?>"><button class="update btn-update btn-sm btn-del" type="button">图片管理</button></a></td>
                                 </tr><?php endforeach; endif; ?>
                             </tbody>
                         </table></div></div>
@@ -502,7 +516,7 @@
     
 
 
-    <script src="/AAA/project/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
     // alert($);
     $(function(){
@@ -643,18 +657,18 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="/AAA/project/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/AAA/project/Public/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/Public/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="/AAA/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
 
     <!-- Custom Theme JavaScript -->
-    <script src="/AAA/project/Public/Admin/dist/js/sb-admin-2.js"></script>
+    <script src="/Public/Admin/dist/js/sb-admin-2.js"></script>
 
 </body>
 

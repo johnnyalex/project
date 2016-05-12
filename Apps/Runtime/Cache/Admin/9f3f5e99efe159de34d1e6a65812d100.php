@@ -364,69 +364,110 @@
             <div class="row">
                 <div class="col-lg-12">
                 
-    <h1 class="page-header">商品修改</h1>
+    <h1 class="page-header">商品图片管理</h1>
 
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/ueditor.all.min.js"> </script>
-    <script type="text/javascript" charset="utf-8" src="/Public/Admin/ueditor/lang/zh-cn/zh-cn.js"></script>
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                   
+                    
                 </div>
+                <!-- /.panel-heading -->
                 <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <form role="form" method="post" action="<?php echo U('Admin/Goods/change');?>" enctype="multipart/form-data">
-                                 <input type="hidden" name="id" value="<?php echo ($info['id']); ?>">
-                                <div class="form-group">
-                                    <label>商品名称</label>
-                                    <input name="name" value="<?php echo ($info['name']); ?>" class="form-control">
+                    <div class="dataTable_wrapper">
+                        <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form role="form" method="post" action="<?php echo U('Admin/Goods/img');?>" enctype="multipart/form-data">
+                                    <div class="dataTables_length" id="dataTables-example_length">
+                                        <div class="form-group">
+                                            <label>上传图片</label>
+                                            <input type="file" name="name">
+                                            <input type="hidden" name="id" value="<?php echo ($goods_id); ?>">     
+                                            <input type="submit" class="text-but" value="上传" name="">
+                                        </div>
+                                    </div>
+                                    </form>
                                 </div>
-                               <div class="form-group">
-                                    <label>商品分类</label>
-                                    <select name="cate_id" class="form-control">
-                                        <option value="0">请选择分类</option>
-                                        <option value="<?php echo ($vo["id"]); ?>" ><?php echo ($info[cate_id]); ?></option>
-                                    </select>
+                                <div class="col-sm-6">
+                                    <div id="dataTables-example_filter" class="dataTables_filter">
+                                        <td width="60%" valign="middle" align="center" style="text-align:right; width:150px;">你正在管理的是<font size="4" color="green">商品name名字</font>的图片</td>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-sm-12">
+                            <table id="dataTables-example" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="dataTables-example_info">
+                            <thead>
+                             <!-- <form action="<?php echo U(Admin/Goods/index);?>" method="post"> -->
+                                <tr role="row">
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:70px;text-align: center;" aria-label="Browser: activate to sort column ascending">编号</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 150px;text-align: center;" aria-label="Engine version: activate to sort column ascending">图片</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;text-align: center;" aria-label="Engine version: activate to sort column ascending">是否是封面</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 140px;text-align: center;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+                                </tr>
+                            <!-- </form> -->
+                            </thead>
+                            <tbody>
+                            <!-- z这是用户列表的遍历 -->
+                            <?php if(is_array($imagelist)): foreach($imagelist as $key=>$vo): ?><tr class="gradeA odd" role="row">
+                                    <td><?php echo ($vo["goods_id"]); ?></td>
+                                    <td class="sorting_1"><img src="/Public/<?php echo ($vo["name"]); ?>" width="70px"></td>
+                                    <td class="center"><button type="button" class="btn_isface btn-info">
+                                    <?php switch($vo["is_face"]): case "0": ?>是<?php break;?>    
+                                    <?php case "1": ?>否<?php break; endswitch;?>
+                                    </button>
+                                    </td>
+                                    <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;</td>
+                                </tr><?php endforeach; endif; ?>
+                            </tbody>
+                        </table></div></div>
 
-                                <div class="form-group">
-                                    <label>商品图片</label>
-                                    <tr><td class="sorting_1"><img src="/Public/<?php echo ($info[pic]); ?>" width="50px"></td></tr>
-                                    <input type="file" name="pic">
-                                </div>
-                                <div class="form-group">
-                                    <label>商品价格</label>
-                                    <input name="price" value="<?php echo ($info['price']); ?>" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>商品库存</label>
-                                    <input name="stock" value="<?php echo ($info['stock']); ?>"  class="form-control">
-                                </div>
+                        <style type="text/css">
+                          #pages a,#pages span{
+                           background-color: #fff;
+                           border: 1px solid #ddd;
+                           color: #337ab7;
+                           float: left;
+                           line-height: 1.42857;
+                           margin-left: -1px;
+                           padding: 6px 12px;
+                           position: relative;
+                           text-decoration: none;
+                       }
+                       #pages span{
+                        /*background:#337ab7;
+                        color:white;*/
+                        background-color: #337ab7;
+                      border-color: #337ab7;
+                      color: #fff;
+                      cursor: default;
+                      z-index: 2;
+                    }
+                  </style>
+
+                            <div class="row">
                                 
-                                <div class="form-group">
-                                    <label>商品详情</label>
-                                <script type="text/javascript">
-                                            var ue = UE.getEditor('editor');
-                                </script>
-                                    <script id="editor" name="describe" type="text/plain" style="width:750px;height:300px;"><?php echo ($info['describe']); ?></script>
-                                <!-- <textarea name="describe" rows="5" cols="50"><?php echo ($info['describe']); ?></textarea> -->
+                                    <div class="col-sm-6">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
+                                        <div class="pagination">
+                                            <div id="pages">
+                                                 <?php echo ($pages); ?>
+                                             </div>
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <button class="btn btn-primary btn-lg btn-block" >确认修改</button>
-                            </form>
-                        </div>
-                       
-                        
-                        <!-- /.col-lg-6 (nested) -->
+                            </div>
                     </div>
-                    <!-- /.row (nested) -->
+                    <!-- /.table-responsive -->
+                    
                 </div>
                 <!-- /.panel-body -->
             </div>
@@ -435,6 +476,55 @@
         <!-- /.col-lg-12 -->
     </div>
 
+
+    
+
+
+    <script src="/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+    // alert($);
+    $(function(){
+        //上下架
+        $('.btn_isface').bind("click",function(){
+            var display = $(this).text();
+            var id = $(this).parents('tr').find('td:first').html();
+            // alert(id);
+            var a = $(this);
+            display = display.trim();
+            // alert(display);
+            if(display == '是'){
+                // alert('sss');
+                $.post('<?php echo U("Admin/Goods/is_face");?>',
+                    {id:id,status:0},
+                    function(data){
+                        if(data)
+                            a.html('否');
+                    })
+            }
+            else if(display == '否'){
+                $.post('<?php echo U("Admin/Goods/is_face");?>',
+                    {id:id,status:1},
+                    function(data){
+                        if(data)
+                            a.html('是');
+                    })
+            } 
+        })
+
+//删除商品
+        $('.delete').click(function(){
+            var id= $(this).parents('tr').find('td:first').html();
+            var tr = $(this);
+            alert(id);
+            $.get('<?php echo U("Admin/Goods/del");?>',{id:id},function(data){
+                if(data)
+                    tr.parents('tr').remove();
+            })
+        }) 
+
+    })
+
+    </script>
 
             <!-- /.row -->
            

@@ -27,27 +27,3 @@
     right:0px; 
 }
 
-/*每日领取积分*/
-.window{ 
-    width:350px; 
-    background-color:#ff436e;
-    position:absolute; 
-    padding:2px; 
-    margin:5px; 
-    display:none; 
-    } 
-.content{ 
-    height:250px; 
-    background-color:#FFF; 
-    font-size:14px; 
-    overflow:auto; 
-    } 
-.title{ 
-        padding:2px; 
-        color:#0CF; 
-        font-size:14px; 
-        } 
-.title img{ 
-        float:right; 
-        } 
-        
