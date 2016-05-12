@@ -5,13 +5,13 @@
         <meta name="keywords" content="卷皮折扣,独家,超值,品牌折扣,卷皮网">
         <meta name="description" content="卷皮网-专注独家折扣，汇聚全网最优质商品及促销活动，每日千款超值商品低至1折限量秒杀，天天更新，件件超值。商城优品超值买，优质大牌低价购，享折扣更享品质。">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <link type="text/css" rel="stylesheet" href="/BBB/project/Public/Home/Css/bcc77f96b59e451a90126576a3adaa36.css"/>
-        <link type="text/css" rel="stylesheet" href="/BBB/project/Public/Home/Css/cba61daea9b048948a8664228eeacaaf.css"/>
-        <link rel="stylesheet" type="text/css" href="/BBB/project/Public/Home/Css/7db4aa4f3fc14b20b5596232dc0beb98.css" />
-        <script type="text/javascript" src="/BBB/project/Public/Home/Js/fab07fe9cc274d98a7f17c92471b3e72.js"></script>
-        <script type="text/javascript" src="/BBB/project/Public/Home/Js/lightbox.js"></script>
-        <script type="text/javascript" src="/BBB/project/Public/Home/Js/17a2a6866205462e86f5388e7f51b531.js"></script>
-        <script type="text/javascript" src="/BBB/project/Public/Home/Js/117b9bcb1db54fd58776097dca087edb.js"></script>
+        <link type="text/css" rel="stylesheet" href="/Public/Home/Css/bcc77f96b59e451a90126576a3adaa36.css"/>
+        <link type="text/css" rel="stylesheet" href="/Public/Home/Css/cba61daea9b048948a8664228eeacaaf.css"/>
+        <link rel="stylesheet" type="text/css" href="/Public/Home/Css/7db4aa4f3fc14b20b5596232dc0beb98.css" />
+        <script type="text/javascript" src="/Public/Home/Js/fab07fe9cc274d98a7f17c92471b3e72.js"></script>
+        <script type="text/javascript" src="/Public/Home/Js/lightbox.js"></script>
+        <script type="text/javascript" src="/Public/Home/Js/17a2a6866205462e86f5388e7f51b531.js"></script>
+        <script type="text/javascript" src="/Public/Home/Js/117b9bcb1db54fd58776097dca087edb.js"></script>
 
     </head>
     <body>
@@ -64,8 +64,8 @@
     </div>
 </div>
 <!--head end-->
-<script type="text/javascript" src="/BBB/project/Public/Home/Js/jp.header.js" id="cart_only_id"></script>
-<script type="text/javascript" src="/BBB/project/Public/Home/Js/jp.cart.js"></script>
+<script type="text/javascript" src="/Public/Home/Js/jp.header.js" id="cart_only_id"></script>
+<script type="text/javascript" src="/Public/Home/Js/jp.cart.js"></script>
 
             <!-- /页头 -->
         
@@ -157,12 +157,12 @@
             <!-- /页脚 -->
         
         <!--百分点-->
-        <script src="/BBB/project/Public/Home/Js/jp.hotpop.js" type="text/javascript"></script>
-        <script src="/BBB/project/Public/Home/Js/bfd.js" type="text/javascript"></script>
+        <script src="/Public/Home/Js/jp.hotpop.js" type="text/javascript"></script>
+        <script src="/Public/Home/Js/bfd.js" type="text/javascript"></script>
         <!-- 脚本 -->
         
-<script type="text/javascript" src="/BBB/project/Public/Home/Js/d326afae1a8a43c8beb1ef8eb2114770.js"></script>
-<script src="/BBB/project/Public/Home/Js/95099dd9923f4b8dad10c7f3e327755a.js" type="text/javascript"></script>
+<script type="text/javascript" src="/Public/Home/Js/d326afae1a8a43c8beb1ef8eb2114770.js"></script>
+<script src="/Public/Home/Js/95099dd9923f4b8dad10c7f3e327755a.js" type="text/javascript"></script>
     <script>
         (function($) {
             var p_id="empty_cart";
@@ -180,9 +180,9 @@
 
         <!-- /脚本 -->
         <!--[if lt IE 9]>
-        <script type="text/javascript" src="/BBB/project/Public/Home/Js/d43707703cdd4ecb9b3081dd4e078355.js"></script>
+        <script type="text/javascript" src="/Public/Home/Js/d43707703cdd4ecb9b3081dd4e078355.js"></script>
 
         <![endif]-->
-		<script src="/BBB/project/Public/Home/Js/b33014a589c2407d9b0f94561e91219e.js" language="javascript"></script>
+		<script src="/Public/Home/Js/b33014a589c2407d9b0f94561e91219e.js" language="javascript"></script>
     </body>
 </html>

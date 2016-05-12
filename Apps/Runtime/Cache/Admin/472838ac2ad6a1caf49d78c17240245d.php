@@ -407,6 +407,10 @@
                                     <input name="price" value="<?php echo ($info['price']); ?>" class="form-control">
                                 </div>
                                 <div class="form-group">
+                                    <label>运费</label>
+                                    <input name="freight" value="<?php echo ($info['freight']); ?>" class="form-control">
+                                </div>
+                                <div class="form-group">
                                     <label>商品库存</label>
                                     <input name="stock" value="<?php echo ($info['stock']); ?>"  class="form-control">
                                 </div>
