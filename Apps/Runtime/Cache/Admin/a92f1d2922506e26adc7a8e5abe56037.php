@@ -10,22 +10,22 @@
     <title>三人行 -- 42</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/Public/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/BBBB/project/Public/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="/BBBB/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="/Public/Admin/dist/css/timeline.css" rel="stylesheet">
+    <link href="/BBBB/project/Public/Admin/dist/css/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/Public/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="/BBBB/project/Public/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/Public/Admin/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="/BBBB/project/Public/Admin/bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/Public/Admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/BBBB/project/Public/Admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -340,6 +340,16 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> 订单管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="<?php echo U('Admin/Order/index');?>">订单列表</a>
+                                </li>
+                                
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                         
                         
                         
@@ -412,7 +422,7 @@
                             <tbody>
                             <!-- z这是用户列表的遍历 -->
                             <?php if(is_array($users)): foreach($users as $key=>$vo): ?><tr class="gradeA odd" role="row">
-	                                <td class="sorting_1"><img src="/Public/<?php echo ($vo["pic"]); ?>" height="30px"></td>
+	                                <td class="sorting_1"><img src="/BBBB/project/Public/<?php echo ($vo["pic"]); ?>" height="30px"></td>
 	                                <td class="sid"><?php echo ($vo["id"]); ?></td>
                                     <td class="susername"><?php echo ($vo["username"]); ?></td>
 	                                <td class="ssex"><?php echo ($vo["sex"]); ?></td>
@@ -469,7 +479,7 @@
         </div>
         <!-- /.col-lg-12 -->
     </div>
-<script type="text/javascript" src="/Public/Admin/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/BBBB/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
     // alert($);
     $(function(){
@@ -652,18 +662,18 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/BBBB/project/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/Public/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/BBBB/project/Public/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="/BBBB/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
 
     <!-- Custom Theme JavaScript -->
-    <script src="/Public/Admin/dist/js/sb-admin-2.js"></script>
+    <script src="/BBBB/project/Public/Admin/dist/js/sb-admin-2.js"></script>
 
 </body>
 

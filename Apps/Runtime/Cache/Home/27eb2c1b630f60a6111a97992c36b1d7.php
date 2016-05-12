@@ -6,15 +6,15 @@
         <meta content="" name="description">
         <meta name="mobile-agent" content="format=html5;url=http://m.juanpi.com/shop/9519108"/>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <link type="text/css" rel="stylesheet" href="/BBB/project/Public/Home/Css/680005b70b7b4c55b3971b8e37687505.css" />
-    <link type="text/css" rel="stylesheet" href="/BBB/project/Public/Home/Css/09cbb6c851054bfd9d404c535089078d.css" />
-    <link type="text/css" rel="stylesheet" href="/BBB/project/Public/Home/Css/41c422485c044ea79e03976147b975e9.css" />
-    <link type="text/css" rel="stylesheet" href="/BBB/project/Public/Home/Css/css" />
+        <link type="text/css" rel="stylesheet" href="/BBBB/project/Public/Home/Css/680005b70b7b4c55b3971b8e37687505.css" />
+    <link type="text/css" rel="stylesheet" href="/BBBB/project/Public/Home/Css/09cbb6c851054bfd9d404c535089078d.css" />
+    <link type="text/css" rel="stylesheet" href="/BBBB/project/Public/Home/Css/41c422485c044ea79e03976147b975e9.css" />
+    <link type="text/css" rel="stylesheet" href="/BBBB/project/Public/Home/Css/css" />
 
-        <script type="text/javascript" src="/BBB/project/Public/Home/Js/18094c1e7dbc42ffbe3095951a2995f8.js"></script>
-        <script type="text/javascript" src="/BBB/project/Public/Home/Js/63249140693941eab7c2cd8e55ba49b4.js"></script>
+        <script type="text/javascript" src="/BBBB/project/Public/Home/Js/18094c1e7dbc42ffbe3095951a2995f8.js"></script>
+        <script type="text/javascript" src="/BBBB/project/Public/Home/Js/63249140693941eab7c2cd8e55ba49b4.js"></script>
         <!-- H5 -->
-        <script src="/BBB/project/Public/Home/Script/md-h5joa.js"></script>
+        <script src="/BBBB/project/Public/Home/Script/md-h5joa.js"></script>
     </head>
     <body>
     
@@ -46,7 +46,7 @@
             <input type="hidden" id="search_action" name="search_action" value="http://www.juanpi.com/search">
             <input type="hidden" id="search_from"   name="search_from" value="1">
         </div>
-        <!--<img class="banner-right-code" src="/BBB/project/Public/Home/Picture/jp-app-index.png">-->
+        <!--<img class="banner-right-code" src="/BBBB/project/Public/Home/Picture/jp-app-index.png">-->
     </div>
     <div class="mainNav">
         <div class="nav">
@@ -104,8 +104,8 @@ $("#show-qcodes").hover(function(){
     $("#new-qcodes").css('display','none');
 })
 </script>
-<script type="text/javascript" src="/BBB/project/Public/Home/Script/jp.header.js"></script>
-<script type="text/javascript" src="/BBB/project/Public/Home/Script/jp.cart.js"></script>
+<script type="text/javascript" src="/BBBB/project/Public/Home/Script/jp.header.js"></script>
+<script type="text/javascript" src="/BBBB/project/Public/Home/Script/jp.cart.js"></script>
 
                 <!-- /页头 -->
         <!-- 主体 -->
@@ -145,23 +145,23 @@ $("#show-qcodes").hover(function(){
 			</div>
 
       <!--  <div class="pic">
-            <img src="/BBB/project/Public/Home/Picture/56f3538c92be59a57d8b4577_800x800.jpg" />
+            <img src="/BBBB/project/Public/Home/Picture/56f3538c92be59a57d8b4577_800x800.jpg" />
         </div>	-->
         <ul>
                                             <li class="cur">
-                                <a href="javascript:;"><img src="/BBB/project/Public/Home/Picture/56f3538c92be59a57d8b4577_800x800.jpg" /></a>
+                                <a href="javascript:;"><img src="/BBBB/project/Public/Home/Picture/56f3538c92be59a57d8b4577_800x800.jpg" /></a>
                 </li>
                                             <li>
-                                <a href="javascript:;"><img src="/BBB/project/Public/Home/Picture/56e625b892be59da1c8b457b_800x800.jpg" /></a>
+                                <a href="javascript:;"><img src="/BBBB/project/Public/Home/Picture/56e625b892be59da1c8b457b_800x800.jpg" /></a>
                 </li>
                                             <li>
-                                <a href="javascript:;"><img src="/BBB/project/Public/Home/Picture/56e629c992be598e318b4572_800x800.jpg" /></a>
+                                <a href="javascript:;"><img src="/BBBB/project/Public/Home/Picture/56e629c992be598e318b4572_800x800.jpg" /></a>
                 </li>
                                             <li>
-                                <a href="javascript:;"><img src="/BBB/project/Public/Home/Picture/56f4d7af92be590ebd8b4567_800x800.jpg" /></a>
+                                <a href="javascript:;"><img src="/BBBB/project/Public/Home/Picture/56f4d7af92be590ebd8b4567_800x800.jpg" /></a>
                 </li>
                                             <li class="mr0">
-                                <a href="javascript:;"><img src="/BBB/project/Public/Home/Picture/56f4d7ac92be597bba8b456c_800x800.jpg" /></a>
+                                <a href="javascript:;"><img src="/BBBB/project/Public/Home/Picture/56f4d7ac92be597bba8b456c_800x800.jpg" /></a>
                 </li>
                     </ul>
     </div>
@@ -237,7 +237,7 @@ $("#show-qcodes").hover(function(){
             </div>
             <div class="J-other">
                 <p class="J-title"></p>
-                <div class="loadingsku" style="display:none;"><img src="/BBB/project/Public/Home/Picture/loading.gif"></div>
+                <div class="loadingsku" style="display:none;"><img src="/BBBB/project/Public/Home/Picture/loading.gif"></div>
                 <form action="https://cart.juanpi.com" id="confirm" method="post">
                     <input type="hidden" name="pid" value="9519108">
                     <input type="hidden" name="zid" value="0">
@@ -293,7 +293,7 @@ $("#show-qcodes").hover(function(){
                                 }]
                             };
                         </script>
-                        <script type="text/javascript" src="/BBB/project/Public/Home/Script/bd-share.js"></script>
+                        <script type="text/javascript" src="/BBBB/project/Public/Home/Script/bd-share.js"></script>
                     </div>
     
                 </div>
@@ -330,7 +330,7 @@ $("#show-qcodes").hover(function(){
                     <div class="seller" class="fl">
                                         <div>
                     售前客服：                                        <a title="点击这里给我发消息" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=452590869&amp;site=qq&amp;menu=yes">
-                    <img border="0" style="display: inline-block;" src="/BBB/project/Public/Home/Picture/qq-icon.gif"></a>
+                    <img border="0" style="display: inline-block;" src="/BBBB/project/Public/Home/Picture/qq-icon.gif"></a>
                                         </div>
                                         </div>
                 </div>
@@ -383,10 +383,10 @@ $("#show-qcodes").hover(function(){
                         
                                                             <div class="info-title" _tagname="产品展示"><span class="single-style">产品展示</span></div>
                     <div class="details-info">
-                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628ac92be590b358b4567_750x465.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628ad92be59b21b8b4586_750x1437.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628b592be591d2e8b4570_750x599.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628b492be59521c8b458a_750x640.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628b392be59381f8b458c_750x1229.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628b292be59d21b8b4588_750x799.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628b192be597c1e8b459c_750x604.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
+                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628ac92be590b358b4567_750x465.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628ad92be59b21b8b4586_750x1437.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628b592be591d2e8b4570_750x599.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628b492be59521c8b458a_750x640.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628b392be59381f8b458c_750x1229.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628b292be59d21b8b4588_750x799.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628b192be597c1e8b459c_750x604.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
                                                                                         <div class="info-title" _tagname="产品细节"><span class="single-style">产品细节</span></div>
                     <div class="details-info">
-                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628b192be59391c8b4589_750x890.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628b092be5920198b4580_750x638.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628af92be59661d8b459f_750x657.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628ae92be5926208b4594_750x297.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628ab92be59cb268b4580_750x758.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628ab92be599f308b4571_750x643.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628a992be595c1e8b459b_750x650.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628a892be59bd1c8b4584_750x658.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628a792be59b01d8b4592_750x688.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628a692be59c0228b4583_750x566.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628a592be59ff198b4593_750x615.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628a592be599d348b4567_750x623.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBB/project/Public/Home/Picture/56e628a492be59e2238b4588_750x750.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
+                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628b192be59391c8b4589_750x890.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628b092be5920198b4580_750x638.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628af92be59661d8b459f_750x657.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628ae92be5926208b4594_750x297.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628ab92be59cb268b4580_750x758.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628ab92be599f308b4571_750x643.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628a992be595c1e8b459b_750x650.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628a892be59bd1c8b4584_750x658.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628a792be59b01d8b4592_750x688.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628a692be59c0228b4583_750x566.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628a592be59ff198b4593_750x615.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628a592be599d348b4567_750x623.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/BBBB/project/Public/Home/Picture/56e628a492be59e2238b4588_750x750.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
                                                     <div class="info-title"><span class="buy-guidelines">物流与售后</span></div>
             <div class="details-info guidelines-con">
                 <p><b>发货物流：</b>韵达快递，百世汇通，快捷快递</p>
@@ -442,7 +442,7 @@ $("#show-qcodes").hover(function(){
 </div>
 </div>
 <div id="J-mini-cart" class="cart-flyinto">
-    <img src="/BBB/project/Public/Home/Picture/56f3538c92be59a57d8b4577_800x800.jpg" style="height:40px;!important">
+    <img src="/BBBB/project/Public/Home/Picture/56f3538c92be59a57d8b4577_800x800.jpg" style="height:40px;!important">
 </div>
 <!-- 举报 box start -->
 <div class="alert_bg" id="alert_report" style="left: 539px; top: 182.5px; position: fixed; display: none;">
@@ -550,7 +550,7 @@ $("#show-qcodes").hover(function(){
                 <div id="side-login" class="tab-tips tab-login">
                     <a href="//user.juanpi.com" target="_blank">
                     <div class="user-box">
-                        <div class="pic"><img src="/BBB/project/Public/Home/Picture/default-60.jpg"></div>
+                        <div class="pic"><img src="/BBBB/project/Public/Home/Picture/default-60.jpg"></div>
                         <p class="txt"></p>
                     </div>
                     </a>
@@ -636,7 +636,7 @@ $("#show-qcodes").hover(function(){
         <!-- 脚本 -->
         <!-- 脚本 -->
         <!--[if lt IE 9]>
-        <script type="text/javascript" src="/BBB/project/Public/Home/Script/json2.min.js"></script>
+        <script type="text/javascript" src="/BBBB/project/Public/Home/Script/json2.min.js"></script>
         <![endif]-->
 
 
@@ -738,14 +738,14 @@ $("#show-qcodes").hover(function(){
 
 
 
-        <script type="text/javascript" src="/BBB/project/Public/Home/Script/c737c8391d0a4d85a9eb0283609752de.js"></script>
-        <script src="/BBB/project/Public/Home/Script/33f71845edff47f19513a1f005cc3d18.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/BBBB/project/Public/Home/Script/c737c8391d0a4d85a9eb0283609752de.js"></script>
+        <script src="/BBBB/project/Public/Home/Script/33f71845edff47f19513a1f005cc3d18.js" type="text/javascript"></script>
         <!--有些页面不要到顶部图标 -->
-                    <!--<script src="/BBB/project/Public/Home/Script/d4e32944ba7842a4996532cd3d5506c0.js" type="text/javascript"></script>-->
-                <script src="/BBB/project/Public/Home/Script/08761ab6ca984ef9ac7fb380c4d887c6.js" type="text/javascript"></script>
+                    <!--<script src="/BBBB/project/Public/Home/Script/d4e32944ba7842a4996532cd3d5506c0.js" type="text/javascript"></script>-->
+                <script src="/BBBB/project/Public/Home/Script/08761ab6ca984ef9ac7fb380c4d887c6.js" type="text/javascript"></script>
         
-    <script type="text/javascript" src="/BBB/project/Public/Home/Script/40a7e2ef46fb4a45b238916f9c8eeaf1.js"></script>
-    <script type="text/javascript" src="/BBB/project/Public/Home/Script/f0fe5244d5d541e49d460e627f16eeaa.js"></script>
+    <script type="text/javascript" src="/BBBB/project/Public/Home/Script/40a7e2ef46fb4a45b238916f9c8eeaf1.js"></script>
+    <script type="text/javascript" src="/BBBB/project/Public/Home/Script/f0fe5244d5d541e49d460e627f16eeaa.js"></script>
     <script type="text/javascript">
         var bfd_pid = 'goods_detail';
         var bfd_info = {"id":"9519108","name":"u65c5u884cu9694u810fu9632u810fu6210u4ebau7761u888b u6237u5916u4fbfu643au5f0fu8212u9002u536bu751fu7761u888b","link":"http://shop.juanpi.com/deal/9519108","image_link":"//s2.juancdn.com/bao/160324/b/5/56f3538c92be59a57d8b4577_800x800.jpg?iopcmd=thumbnail&type=8&width=400&height=400%7Ciopcmd=convert&Q=88&dst=jpg","simage_link":"//s2.juancdn.com/bao/160324/b/5/56f3538c92be59a57d8b4577_800x800.jpg?iopcmd=thumbnail&type=8&width=58&height=58%7Ciopcmd=convert&Q=88&dst=jpg","price":"28.80","market_price":"234.00","dis":"1.2","category":[["u5377u76aeu6298u6263","http://www.juanpi.com"],["u7279u5356u7cbeu9009","http://shop.juanpi.com"],["u65c5u884cu9694u810fu9632u810fu6210u4ebau7761u888b","http://shop.juanpi.com//deal/9519108"]],"brand":"u957fu6c34u4e4bu5bb6u767eu8d27u751fu6d3bu9986","onsale":true,"stock":"600","page_type":"detail","online":1,"etm":"1463277600","gender":0};
@@ -1105,7 +1105,7 @@ $("#show-qcodes").hover(function(){
                             tbhtml+='        <span class="limit-down fr">';
                             tbhtml+='           去手机购买<i class="phone"></i><i class="arrow"></i>';
                             tbhtml+='           <div class="dimension-code">';
-                            tbhtml+='               <img src="/BBB/project/Public/Home/Picture/jp-app-90-new.png">';
+                            tbhtml+='               <img src="/BBBB/project/Public/Home/Picture/jp-app-90-new.png">';
                             tbhtml+='           </div>';
                             tbhtml+='        </span>';
                         }
@@ -1242,7 +1242,7 @@ $("#show-qcodes").hover(function(){
    })
     </script>
 
-        <script src="/BBB/project/Public/Home/Script/dd2d55acfd4b4d75a9c0e17d93feec81.js" language="javascript"></script>
+        <script src="/BBBB/project/Public/Home/Script/dd2d55acfd4b4d75a9c0e17d93feec81.js" language="javascript"></script>
         <!-- /脚本 -->
     </body>
 </html>
