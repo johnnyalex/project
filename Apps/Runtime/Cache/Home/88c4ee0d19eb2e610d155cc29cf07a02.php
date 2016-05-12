@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <title><?php echo ($title); ?></title>
 =======
     <title>用户中心 - 卷皮网</title>
@@ -18,6 +19,9 @@
 =======
     <title>用户中心 - 卷皮网</title>
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+    <title>用户中心 - 卷皮网</title>
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
     <title>用户中心 - 卷皮网</title>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
@@ -35,6 +39,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <!-- desc 商品 -->
         <link href="/Public/Home/css/css.css" rel="stylesheet">
 
@@ -46,6 +51,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     <script type="text/javascript" src="/Public/Home/Js/d0516eb91e74494cbb77cf76d6c5cf9b.js"></script>
@@ -73,6 +80,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img 
             src="/Public<?php echo ($user["pic"]); ?>"
             alt="头像" 
@@ -89,6 +97,9 @@
 =======
             <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img src="/Public/Home/Picture/default.jpg"><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+            <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img src="/Public/Home/Picture/default.jpg"><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
             <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img src="/Public/Home/Picture/default.jpg"><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
@@ -139,6 +150,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -147,6 +159,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     <div class="orderLeftBar" id="orderLeftBar">
@@ -181,6 +195,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
@@ -190,6 +205,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 <!--右边导航 end-->
             <!-- /右边导航 -->
         
@@ -197,6 +214,7 @@
         <!-- 主体 -->
         
 <!--main start -->
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,6 +235,9 @@
 =======
       
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+      
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
       
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
@@ -267,6 +288,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
@@ -276,6 +298,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
         </div>

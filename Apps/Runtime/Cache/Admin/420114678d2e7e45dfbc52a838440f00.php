@@ -271,6 +271,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
@@ -278,6 +279,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
                         <li class="sidebar-search">
@@ -295,6 +298,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
@@ -302,6 +306,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
                         <li>
@@ -396,6 +402,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <h3 class="page-header">权限列表</h3>
 =======
     <h1 class="page-header">权限列表</h1>
@@ -409,6 +416,9 @@
 =======
     <h1 class="page-header">权限列表</h1>
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+    <h1 class="page-header">权限列表</h1>
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
     <h1 class="page-header">权限列表</h1>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
@@ -467,6 +477,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< 761bcba9d1054be4bf2041fbb48f942a13e0aa9d
                         <?php $__FOR_START_71__=1;$__FOR_END_71__=$page_c+1;for($i=$__FOR_START_71__;$i < $__FOR_END_71__;$i+=1){ ?><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a class="page_a" href="index?p=<?php echo ($i); ?>&show=<?php echo ($shw); ?>&search=<?php echo ($seh); ?>"><?php echo ($i); ?></a></li><?php } ?>
 =======
@@ -484,6 +495,9 @@
 =======
                         <?php $__FOR_START_71__=1;$__FOR_END_71__=$page_c+1;for($i=$__FOR_START_71__;$i < $__FOR_END_71__;$i+=1){ ?><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a class="page_a" href="index?p=<?php echo ($i); ?>&show=<?php echo ($shw); ?>&search=<?php echo ($seh); ?>"><?php echo ($i); ?></a></li><?php } ?>
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+                        <?php $__FOR_START_71__=1;$__FOR_END_71__=$page_c+1;for($i=$__FOR_START_71__;$i < $__FOR_END_71__;$i+=1){ ?><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a class="page_a" href="index?p=<?php echo ($i); ?>&show=<?php echo ($shw); ?>&search=<?php echo ($seh); ?>"><?php echo ($i); ?></a></li><?php } ?>
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
                         <?php $__FOR_START_71__=1;$__FOR_END_71__=$page_c+1;for($i=$__FOR_START_71__;$i < $__FOR_END_71__;$i+=1){ ?><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a class="page_a" href="index?p=<?php echo ($i); ?>&show=<?php echo ($shw); ?>&search=<?php echo ($seh); ?>"><?php echo ($i); ?></a></li><?php } ?>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec

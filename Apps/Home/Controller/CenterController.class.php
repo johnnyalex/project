@@ -18,6 +18,7 @@ class CenterController extends Controller {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$this->assign('title','用户中心-卷皮网');
 		$this->assign('user',$user);
 =======
@@ -43,11 +44,16 @@ class CenterController extends Controller {
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 		// var_dump($_SESSION);
 		// var_dump($user);
 		$this->assign('title','用户中心-卷皮网');
 		$this->assign('user',$user);
 
+<<<<<<< HEAD
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 		$this->display();
 	}
@@ -65,6 +71,7 @@ class CenterController extends Controller {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$users['day'] = substr($time,6,2)['0'] == 0 ? substr($time,7,1) : substr($time,6,2);
 		$this->assign('user',$users);
 		$this->assign('title','账户设置-卷皮网');
@@ -77,11 +84,14 @@ class CenterController extends Controller {
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 		$users['day'] = substr($time,6,2)['0'] == 0 ? substr($time,5,1) : substr($time,4,2);
 		$this->assign('user',$users);
 		var_dump($users);
 		$this->assign('title','账户设置-卷皮网');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +103,8 @@ class CenterController extends Controller {
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 		$this->display();
@@ -316,6 +328,7 @@ class CenterController extends Controller {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  		dump($_SESSION);
 >>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
@@ -328,6 +341,9 @@ class CenterController extends Controller {
 =======
  		dump($_SESSION);
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+ 		dump($_SESSION);
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
  		dump($_SESSION);
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
@@ -356,6 +372,7 @@ class CenterController extends Controller {
 	//     echo '完成注册';
 	// }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -401,6 +418,9 @@ class CenterController extends Controller {
 =======
 
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec

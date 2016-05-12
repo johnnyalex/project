@@ -34,6 +34,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img 
             src="/Public<?php echo ($user["pic"]); ?>"
             alt="头像" 
@@ -50,6 +51,9 @@
 =======
             <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img src="/Public/Home/Picture/default.jpg"><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+            <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img src="/Public/Home/Picture/default.jpg"><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
             <div class="logined-show"><a class="normal-a" href="http:####.juanpi.com"><img src="/Public/Home/Picture/default.jpg"><span class="user">用户名</span><em class="cur"></em></a><div class="normal-box login-box"><ul><li><a href="http:####.juanpi.com/order"><span>我的订单</span></a></li><li><a href="http:####.juanpi.com/favorite"><span>我的收藏</span></a></li><li><a href="http:####.juanpi.com/beans"><span>我的积分</span></a></li><li><a href="http:####.juanpi.com/coupon"><span>我的优惠券</span></a></li>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
@@ -191,6 +195,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>  
     <script type="text/javascript">
     // $(function(){
@@ -212,6 +217,9 @@
 =======
     </div>        
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+    </div>        
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
     </div>        
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec

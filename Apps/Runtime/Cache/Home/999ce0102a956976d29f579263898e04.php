@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link type="text/css" rel="stylesheet" href="/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
     <link rel="stylesheet" type="text/css" href="/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
     <link rel="stylesheet" type="text/css" href="/Public/Home/Css/pg-myjuanpi.css" /> 
@@ -29,6 +30,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
     <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
     <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/pg-myjuanpi.css" /> 
@@ -43,6 +46,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
@@ -50,6 +54,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 </head>
@@ -72,6 +78,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             src="/Public<?php echo ($user["pic"]); ?>"
 =======
             src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
@@ -85,6 +92,9 @@
 =======
             src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+            src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
             src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
@@ -195,6 +205,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    	<img src="/Public/Home/Picture/line_1.jpg">
 =======
 	    	<img src="/AAA/project/Public/Home/Picture/line_1.jpg">
@@ -211,12 +222,16 @@
 =======
 	    	<img src="/AAA/project/Public/Home/Picture/line_1.jpg">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+	    	<img src="/AAA/project/Public/Home/Picture/line_1.jpg">
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
            <div class="per_content safe_center fl">
 		<div id="resetpwd">
 		<p class="check_title">
 		    <label>登录密码</label>
 		    <span class="safe_phone">建议密码由8位以上数字、字母和特殊字符组成，并定期修改。</span>
 		</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,6 +249,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 <ul>
     <li>
         <label>原密码：</label>
@@ -249,6 +266,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
@@ -256,6 +274,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
         <label>新改密码：</label>
@@ -277,6 +297,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -293,6 +314,10 @@
 
 
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+
+
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 
 
@@ -334,6 +359,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <input type="submit" class="smt" id="smt_resetphone_one" value="修改" tabindex="5">
         
     </li>
@@ -360,6 +386,11 @@
     </li>
 </ul>
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+        <a class="smt" href="javascript:;">修&nbsp;改</a>
+    </li>
+</ul>
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
         <a class="smt" href="javascript:;">修&nbsp;改</a>
     </li>

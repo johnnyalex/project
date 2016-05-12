@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link type="text/css" rel="stylesheet" href="/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
     <link rel="stylesheet" type="text/css" href="/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
     <link rel="stylesheet" type="text/css" href="/Public/Home/Css/add.css" />
@@ -32,6 +33,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     <link type="text/css" rel="stylesheet" href="/AAA/project/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
     <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
     <link rel="stylesheet" type="text/css" href="/AAA/project/Public/Home/Css/add.css" />
@@ -50,6 +53,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
@@ -57,6 +61,8 @@
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 </head>
@@ -80,6 +86,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             src="/Public<?php echo ($user["pic"]); ?>"
 =======
             src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
@@ -93,6 +100,9 @@
 =======
             src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+            src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
             src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec

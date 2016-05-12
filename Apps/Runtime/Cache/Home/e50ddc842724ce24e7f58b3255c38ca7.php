@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link href="/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <link href="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -48,6 +49,8 @@
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     <link href="/BBBB/project/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <link href="/BBBB/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -62,6 +65,9 @@
 
         </head>
         <body>
+<<<<<<< HEAD
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
         
         
@@ -118,6 +124,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <script type="text/javascript" src="/Public/Admin/js/jquery-1.8.3.min.js"></script>
 =======
                         <script type="text/javascript" src="/AAA/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
@@ -128,6 +135,9 @@
 =======
                         <script type="text/javascript" src="/AAA/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+                        <script type="text/javascript" src="/BBBB/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
                         <script type="text/javascript" src="/BBBB/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
@@ -157,6 +167,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 
@@ -164,6 +177,7 @@
 <script type="text/javascript">
 
     // 侧边
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
@@ -177,6 +191,8 @@
     
     <script type="text/javascript">
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
         // $(function(){
@@ -197,6 +213,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     //top nav
@@ -226,12 +245,15 @@
     //     }      
     // })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     </script>

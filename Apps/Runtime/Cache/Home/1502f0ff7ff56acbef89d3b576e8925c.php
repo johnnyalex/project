@@ -7,6 +7,7 @@
         <meta content="卷皮折扣汇聚全网最优质折扣商品，每日精选千款超值折扣商品9.9元起全场包邮1折特卖，每天10点限时秒杀！上卷皮购便宜！" name="description">
         <meta charset="utf-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link href="/AAA/project/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <link href="/AAA/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -19,6 +20,8 @@
     </head>
     <body>
 =======
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     <link href="/BBBB/project/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <link href="/BBBB/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -33,6 +36,9 @@
 
         </head>
         <body>
+<<<<<<< HEAD
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
         
         
@@ -139,7 +145,11 @@
                             </fieldset>
                         </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <script type="text/javascript" src="/AAA/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
+=======
+                        <script type="text/javascript" src="/BBBB/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
                         <script type="text/javascript" src="/BBBB/project/Public/Admin/js/jquery-1.8.3.min.js"></script>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
@@ -275,7 +285,13 @@
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <script type="text/javascript">
+=======
+<script type="text/javascript">
+
+    // 侧边
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 <script type="text/javascript">
 
@@ -296,7 +312,10 @@
 
         // });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     //top nav
     // alert($);
 // 积分
@@ -323,6 +342,9 @@
     //         $('.top_box').css('display','none');
     //     }      
     // })
+<<<<<<< HEAD
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     </script>
     </body>

@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link type="text/css" rel="stylesheet" href="/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
     <link rel="stylesheet" type="text/css" href="/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
     <link rel="stylesheet" type="text/css" href="/Public/Home/Css/pg-myjuanpi.css" /> 
@@ -48,6 +49,8 @@
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
 =======
+=======
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     <link type="text/css" rel="stylesheet" href="/BBBB/project/Public/Home/Css/ca86f9c5132c449e9316c4725cd2de64.css"/>
     <link rel="stylesheet" type="text/css" href="/BBBB/project/Public/Home/Css/5f1f45b0b2d043d7a3984530144e9f6d.css" />
     <link rel="stylesheet" type="text/css" href="/BBBB/project/Public/Home/Css/pg-myjuanpi.css" /> 
@@ -58,6 +61,9 @@
     <script type="text/javascript" src="/BBBB/project/Public/Home/Js/81d25c7a32ce4311ad5cd9f69d225170.js"></script>
     <script type="text/javascript" src="/BBBB/project/Public/Home/Js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="/BBBB/project/Public/Home/Js/center.js"></script>
+<<<<<<< HEAD
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 </head>
     <body>
@@ -79,6 +85,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             src="/Public<?php echo ($user["pic"]); ?>"
 =======
             src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
@@ -92,6 +99,9 @@
 =======
             src="/AAA/project/Public<?php echo ($user["pic"]); ?>"
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+            src="/BBBB/project/Public<?php echo ($user["pic"]); ?>"
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
             src="/BBBB/project/Public<?php echo ($user["pic"]); ?>"
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
@@ -204,6 +214,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                        <img src="/Public/Home/Picture/line_1.jpg">
 =======
                        <img src="/AAA/project/Public/Home/Picture/line_1.jpg">
@@ -220,11 +231,15 @@
 =======
                        <img src="/BBBB/project/Public/Home/Picture/line_1.jpg">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                       <img src="/BBBB/project/Public/Home/Picture/line_1.jpg">
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 
                        <div style="display:block;" class="per_content fl">
                            <form action="<?php echo U('Home/Center/do_set');?>" method="post" class="user-info" id="userform" enctype="multipart/form-data">
 
                                <div class="user-head fl">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -243,6 +258,9 @@
 =======
                                    <div class="head_b"><img class="img-responsive" src="/AAA/project/Public<?php echo ($user["pic"]); ?>"></div>
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
+=======
+                                   <div class="head_b"><img class="img-responsive" src="/BBBB/project/Public<?php echo ($user["pic"]); ?>"></div>
+>>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
                                    <div class="head_b"><img class="img-responsive" src="/BBBB/project/Public<?php echo ($user["pic"]); ?>"></div>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
