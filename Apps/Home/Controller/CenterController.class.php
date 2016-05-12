@@ -13,11 +13,8 @@ class CenterController extends Controller {
 		// user的pic 存session
 		$_SESSION['user']['pic']=$user['pic'];
 		//实例化
-		var_dump($_SESSION);
-		var_dump($user);
 		$this->assign('title','用户中心-卷皮网');
 		$this->assign('user',$user);
-
 		$this->display();
 	}
 	//个人信息后台 账户设置
@@ -29,11 +26,9 @@ class CenterController extends Controller {
 		$time = $users['birthday'];
 		$users['year'] = substr($time,0,4);
 		$users['month'] = substr($time,4,2)['0'] == 0 ? substr($time,5,1) : substr($time,4,2);
-		$users['day'] = substr($time,6,2)['0'] == 0 ? substr($time,5,1) : substr($time,4,2);
+		$users['day'] = substr($time,6,2)['0'] == 0 ? substr($time,7,1) : substr($time,6,2);
 		$this->assign('user',$users);
-		var_dump($users);
 		$this->assign('title','账户设置-卷皮网');
-
 		$this->display();
 	}
 	//安全中心
@@ -250,7 +245,6 @@ class CenterController extends Controller {
 	}
 	// 修改密码
  	public function repass(){
- 		dump($_SESSION);
 		$this->assign('title','修改密码-卷皮网');
 
 		$this->display();
@@ -276,8 +270,35 @@ class CenterController extends Controller {
 	//     echo '完成注册';
 	// }
 
+	public function check_question(){
+		$id = $_SESSION['user']['id'];
+		$res = M('question')->find($id);
+		$this->assign('res',$res);
+		$this->display();
+	}
 
+	public function do_check_question(){
+		$id = $_SESSION['user']['id'];
+		$res = M('question')->find($id);
+		if($_POST['a1'] == $res['a1'] && $_POST['a2'] == $res['a2'] && $_POST['a3'] == $res['a3'])
+			$this->success('验证成功',U('Home/Center/repass'));
+		else
+			$this->success('密保错误',U('Home/Center/check_question'));
+	}
+	
 
+	public function do_repass(){
+		if($_POST['npassword'] != $_POST['password'])
+			$this->error('两次密码不一致',U('Home/Center/repass'));
+		$_POST['id'] = $_SESSION['user']['id'];
+		unset($_POST['npassword'],$_POST['code']);
+		M('user')->create();
+		$res = M('user')->save();
+		if($res)
+			$this->success('修改成功',U('Home/Center/userinfo'));
+		else
+			$this->error('修改失败',U('Home/Center/repass'));
+	}
 }
 
 

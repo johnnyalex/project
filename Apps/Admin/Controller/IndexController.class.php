@@ -60,6 +60,9 @@ class IndexController extends CommonController {
     	$this->display();
     }
     public function insert(){
+        $res = M('admin')->where(['username'=>$_POST['username']])->find();
+        if($res)
+            $this->error('用户名已存在',U('Admin/Index/add'));
     	$admin = M('admin');
         $_POST['password'] = md5($_POST['password']);
     	$res = $admin->add($_POST);

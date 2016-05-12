@@ -11,16 +11,8 @@
 		    <label>登录密码</label>
 		    <span class="safe_phone">建议密码由8位以上数字、字母和特殊字符组成，并定期修改。</span>
 		</p>
+        <form action="{:U('Home/Center/do_repass')}" method="post">
 <ul>
-    <li>
-        <label>原密码：</label>
-        <input type="password" size="30" name="oddpassword" class="text newpwd" tabindex="2">
-        <span class="error-box" id="new_pwd"></span>
-        <p class="s16">请输入原密码</p>
-        <dl class="ps_intensity" style="display:none;">
-            <dd></dd><dd></dd><dd></dd>
-        </dl>
-    </li>
     <li>
         <label>新改密码：</label>
         <input type="password" size="30" name="password" class="text newpwd" tabindex="2">
@@ -36,8 +28,6 @@
         <span class="error-box" id="new_pwdcheck"></span>
         <p class="s16">请再次输入新密码</p>
     </li>
-
-
     <style>
         .my-mobile{ width:257px; height:38px; line-height:38px; text-indent:5px; display:inline-block; background:#eee; border:1px solid #c6c6c6;}
         .phone-verify{
@@ -70,9 +60,12 @@
     </li>
     <li>
         <label></label>
-        <a class="smt" href="javascript:;">修&nbsp;改</a>
+        <input type="submit" class="smt" id="smt_resetphone_one" value="修改" tabindex="5">
+        
     </li>
+   
 </ul>
+     </form>
 </div>
 </div>                                
 	</div>

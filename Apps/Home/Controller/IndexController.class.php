@@ -3,10 +3,17 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-        $id = $_SESSION['user']['id'];
-        // $user=M('user');
-        // $res=$user->find($id);
-        $this->assign('id',$id);
+        $uid = $_SESSION['user']['id'];//用户id
+
+        $goods = M('goods');//实例化商品
+        $goodsList=$goods->where(['is_new'=>1])->select();//查
+        $sql = $goods->_sql();
+        // var_dump($sql);
+        // var_dump($goodsList);
+        // die();
+
+        $this->assign('goodsList',$goodsList);
+        $this->assign('id',$uid);
         $this->assign('title','卷皮网首页');
         $this->display();
     }

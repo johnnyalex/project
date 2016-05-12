@@ -14,12 +14,17 @@ class RegistController extends Controller{
 		if (!$result) {
 			$this->error('验证码错误',U('Home/Regist/index'));
 		}
-
+		//用戶表
 		$user = M('user');
 		$a=$user->create();
-		$a['password']=md5($a['password']);
+		$a['password']=md5($a['password']);//加密
 		$res=$user->add($a);
-		if ($res) {
+
+		$userinfo= M('userinfo');//实例化
+		$b = $userinfo->create();
+		$b['uid']=$res;//存uid
+		$res1 = $userinfo->add($b);//创建空userinfo表
+		if ($res1) {
 			$_SESSION['user']['id']=$res['id'];
 			$_SESSION['user']['username']=$res['username'];
 			$this->success('注册成功',U('Home/Login/index'));
