@@ -13,8 +13,8 @@ class CenterController extends Controller {
 		// user的pic 存session
 		$_SESSION['user']['pic']=$user['pic'];
 		//实例化
-		var_dump($_SESSION);
-		var_dump($user);
+		// var_dump($_SESSION);
+		// var_dump($user);
 		$this->assign('title','用户中心-卷皮网');
 		$this->assign('user',$user);
 
