@@ -1,0 +1,51 @@
+<extend name = "./Public/center"/>
+
+<block name="favorite">
+<div class="main pr mt20 clear">
+	    	    <div class="favorite-hd">
+	       <h3>我的收藏</h3>
+	       <em class="number">(共{$num}件商品)</em>
+	       		       		   <a target="_blank" class="active" href="http://www.juanpi.com/group/1782424">枣</a>
+		       		           <a target="_blank" class="active" href="http://www.juanpi.com/group/1375411">阿胶糕</a>
+		       		           <a target="_blank" class="active" href="http://www.juanpi.com/group/1975485">手串</a>
+		       		           <a target="_blank" class="active" href="http://www.juanpi.com/group/1795475">固元糕</a>
+		       		           <a target="_blank" class="active" href="http://www.juanpi.com/group/1386483">佛珠手串</a>
+		       	       	    </div>
+        <ul class="goods-list clear ">
+        	<foreach name='goodslike' item="vo" >
+            <li gtype="3" g_type="3" re="" id="{$vo.id}" class="">
+			    <div class="list-good buy">
+			        <div class="good-pic">
+			            <a class="pic-img" target="_blank" href="{:U('Home/goods/show',['gid'=>$vo['id']])}">
+			                <img class="lazy good-pic" src="__PUBLIC__{$vo.pic}" style="display: inline;" alt="{$vo.name}">
+	                        	 <span class="new-icon">新品</span>
+	                      		</a>
+                    		</div>
+			        <h3 class="good-title">
+                        【包邮】<a target="_blank" href="{:U('Home/goods/show',['gid'=>$vo['id']])}">{$vo.name}</a>
+                        <div style="display:none;" class="icon-all">
+                          </div>
+			            <!-- <span class="sold">已售<em>0</em></span> -->
+			            <span class="sold">新品上架</span>
+			        </h3>
+			        <div class="good-price">
+			            <span class="price-current"><em>￥</em>{$vo['price']}</span>
+			            <span class="des-other"><strong></strong>
+                            <span class="price-old"><em>￥</em>{$vo['price']}</span>
+                            <span class="discount">(<em></em>折)</span>
+			            </span>
+			               <div class="btn buy j-buy">
+	                            <a target="_blank" href="{:U('Home/goods/show',['gid'=>$vo['id']])}"><em class="j-icon"></em><span>特卖</span></a>
+	                        </div>
+                    </div>
+                    <a class="my-like" href="javascript:void(0)">
+                        <i data="9670015" g_type="3" class="del-ico"></i>
+                    </a>
+			        
+			    </div>
+			</li>
+			</foreach>         
+         </ul>
+	    <div class="al_center"></div>
+	</div>
+</block>

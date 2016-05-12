@@ -1,0 +1,38 @@
+<extend name = "./Public/userinfo"/>
+<block name="bank">
+<div class="main-center">
+    <div class="box_top">
+        <h3>提现账号</h3>
+    </div>
+    <img src="__PUBLIC__/Home/Picture/line_1.jpg">
+        <div class="per_content payee_con">
+            <h3 class="title"><span class="zfb_bg">
+                <img src="__PUBLIC__/Home/Images/zfb_logo.jpg"></span>
+                <span class="tips tips2">用于直接提现和兑换支付宝集分宝</span>
+            </h3>
+                <ul>
+                    <li>
+                        <label>收款人姓名：</label>
+                        <span class="right_modify"></span>
+                    </li>
+                    <li>
+                        <label>支付宝账号：</label>
+                        <span class="right_modify">185******85</span>
+                    </li>
+                                                            <li>
+                        <div class="modify_ways"><a href="/setting/bank?method=resetalipay">修改支付宝账号&gt;&gt;</a></div>
+                    </li>
+                </ul>
+            </div>
+        <div class="per_content payee_con no_border">
+            <h3 class="title card_title">
+                <span class="zfb_bg"><img src="__PUBLIC__/Home/Images/bank_card.gif"></span>银行卡<span class="tips">用于直接提现</span>
+            </h3>
+            <div class="add_account">
+                <p>您还没有添加银行卡！</p>
+                <a class="mr10" href="/setting/bank?method=addbank">立即添加</a>
+                <span class="safe lh22 "><i class="icon-ts"></i>注意：添加当日不能对银行卡/支付宝信息进行修改</span>
+            </div>
+        </div>
+    </div>
+</block>

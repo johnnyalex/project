@@ -1,0 +1,38 @@
+<extend name = "./Public/center"/>
+<block name="allOrder">
+<div class="order-lists">
+    <div class="all-orders">
+        <div class="all-orders-top">
+            <input type="hidden" value="0" id="wxCuponFlag">
+            <input type="hidden" value="0" id="ogAlterTipFlag">
+            <span><strong>全部订单</strong>(近三个月订单)</span>
+            <span class="order_t">
+               <select id="orderStatus" name="status" class="state-select">
+                   <option data-msg="订单状态" value="all">订单状态</option>
+                   <option data-msg="待付款" selected="selected" value="1">待付款</option>
+                   <option data-msg="待发货" value="3">待发货</option>
+                   <option data-msg="备货中" value="7">备货中</option>
+                   <option data-msg="运送中" value="4">运送中</option>
+                   <option data-msg="已送达" value="5">已送达</option>
+                   <option data-msg="已关闭" value="6">已关闭</option>
+                   <!-- <option value="20"  data-msg="售后处理中">售后处理中</option>-->
+               </select>
+           </span>
+                  <a href="//user.juanpi.com/order/index/flag/2">查看历史订单&gt;&gt;</a>
+                              </div>
+        <!-- 防诈骗BANNER图片BEGIN -->
+                                <div class="fraud-banner">
+                 <span> </span>
+            </div>
+                            <!-- 防诈骗BANNER图片END -->
+    </div>
+    <!-- 只有第一次进入显示 -->
+    <div style="display: block;" class="tips_once">温馨提示：当订单状态变成“已送达”时，如果您还未收到货，请耐心等候送货通知或主动联系物流公司哦~<i id="tips_remove">X</i></div>
+    <!-- 只有第一次进入显示 -->
+    <div class="no-cv"><span>没有找到符合条件的订单哦~</span></div>
+        <div class="page">
+                    <div>
+                </div>
+            </div>
+        </div>
+</block>
