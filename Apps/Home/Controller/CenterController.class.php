@@ -285,6 +285,7 @@ class CenterController extends Controller {
 		else
 			$this->success('密保错误',U('Home/Center/check_question'));
 	}
+	
 
 	public function do_repass(){
 		if($_POST['npassword'] != $_POST['password'])

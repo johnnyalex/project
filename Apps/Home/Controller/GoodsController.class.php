@@ -7,7 +7,16 @@ class GoodsController extends Controller {
     	$this->display();
     }
     public function show(){
+    	$gid = I('get.gid');
+    	// dump($a);
+    	$this->assign('gid',$gid);
     	$this->display();
+    }
+    public function like(){
+    	$gid = I('get.gid');
+    	dump($gid);
+    	die();
+    	// $this->display();
     }
 
 
