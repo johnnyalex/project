@@ -1,0 +1,67 @@
+<extend name = "./Public/userinfo"/>
+<block name="address">
+<div class="confirm-order main-center main-zhanghu">
+    <div class="order-address clear">
+        <div class="box_top"><h3>收货地址</h3></div>
+        <img src="__PUBLIC__/Home/Picture/line_1.jpg">
+        <div class="capt pd_3">
+                <span class="logo_tips">
+                    <img src="__PUBLIC__/Home/Images/setted_addr.gif">
+                </span>
+                <span class="fz14">已经保存的收货地址</span>&nbsp;&nbsp;&nbsp;
+        </div>
+        <form action="{:U('Home/Center/do_change_address')}" method="post">
+        <div uadid="0" class="new-address">
+            <input type="hidden" value="{$res.id}" name="id">
+            <div class="panel-box" style="">
+                <div id="addrform">
+                    <div class="adr" id="adr">
+                        <ul>
+                            <li>
+                                <label><!-- <span class="import">*</span> -->收货人：</label>
+                                <input value="{$res.name}" type="text" class="text" name="name" id="truename" size="16" maxlength="16" tabindex="1">
+                                <p style="display:none;" class="s13"></p>
+                                <p class="s12">只包含汉字、数字和字母,长度不超过16个字</p>
+                            </li>
+                            <li>
+                                <label><!-- <span class="import">*</span> -->手机：</label>
+                                <input type="text" value="{$res.tel}" name="tel" id="mobile" size="12" maxlength="11" tabindex="2" class="text">
+                                <p style="display:none;" class="s13"></p>
+                            </li>
+                            <li>
+                                <label> <!-- <span class="import">*</span> -->地区：</label>
+                                <input value="{$res.pro}" type="text" value="" name="pro" id="mobile" style="height:31px" size="12" maxlength="11" tabindex="2" class="text">
+                                <input value="{$res.city}" type="text" value="" name="city" id="mobile" style="height:31px" size="12" maxlength="11" tabindex="2" class="text">
+                                <input value="{$res.area}" type="text" value="" name="area" id="mobile" style="height:31px" size="12" maxlength="11" tabindex="2" class="text">
+                                <p style="display:none;" class="s13"></p>
+                            </li>
+                            <li>
+                                <label> <!-- <span class="import">*</span> -->地址：</label>
+                                <input type="text" value="{$res.addr}" name="addr" id="addr" size="45" maxlength="40" tabindex="6" class="text addr-long">
+                                <p style="display:none;" class="s13"></p>
+                                <!-- <p class="s12">请填写详细地址信息</p> -->
+                            </li>
+                        
+                            <li>
+                                <label></label>
+                                <input type="checkbox" value="1" id="J_SetDefault" name="pri" class="set-check" tabindex="8"
+
+                            <if condition="$res.pri eq 1">
+                            checked
+                            </if>
+                                >
+                                <label for="J_SetDefault" class="set">设置为默认收货地址</label>
+                            </li>
+                            <li>
+                                <label></label>
+                                <input type="submit" class="smt smt1 baocun" value="修 改" tabindex="9">
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

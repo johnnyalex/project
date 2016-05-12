@@ -1,0 +1,202 @@
+<extend name="./Public/center" />
+<block name="goods">
+	<div id="bu">
+		<div class="goods-left fl">
+			<div class="goods-left-l fl">
+				<div class="goods-left-count" id="small">
+					<img id="simg" width="100%" src="__PUBLIC__/Home/images/a.jpg">
+					<div id="move" style="background:url('__PUBLIC__/Home/images/bg.png');"></div>
+				</div>
+				<div class="big" id="big"><img id="bimg" style="position: absolute;left:0px;top:0px"  src="__PUBLIC__/Home/images/a.jpg"></div>
+				<div class="d">
+					<ul id="uimg">
+						<li class="small fl"><img width="100%" src="__PUBLIC__/Home/images/a.jpg"></li>
+						<li class="small fl"><img width="100%" src="__PUBLIC__/Home/images/2.jpg"></li>
+						<li class="small fl"><img width="100%" src="__PUBLIC__/Home/images/b.jpg"></li>
+						<li class="small fl"><img width="100%" src="__PUBLIC__/Home/images/c.jpg"></li>
+						<li class="small fl"><img width="100%" src="__PUBLIC__/Home/images/2.jpg"></li>
+					</ul>
+				</div>	
+			</div>
+			
+			<div class="goods-right-r fr">
+				<div class="name">
+					<h1>name名字</h1><p></p>
+				</div>
+				<div class="price">
+					<p class="price-s">价格:&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					<em class="tm-yen"> ¥ </em>
+					<span class="tm-price"> 9.90 </span>
+					</p>
+				</div>
+
+				<div class="yunfei">
+					<span>运费:</span><span>sdf</span>
+				</div>
+				<div class="weight">
+					<span>重量:</span><span>1.0 </span>kg
+				</div>
+
+				<div class="ind">
+					<span>月销量:</span><span>10</span>&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
+					<span>累计评价:1111111111</span><a href=""></a> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;<span>赠送积分:</span>10  &nbsp;&nbsp;&nbsp;
+				</div>
+				<div class="jia">
+					<span ><b>购买数量:</b>&nbsp; 
+                    					<a href="">[-]</a>
+                        				<input type="text" style="width:50px;text-align:center" class="" value="1" name="qty" id="qty">
+                        				<a href="">[+]</a>
+                        			</span>
+				</div>
+				<div class="gwc">
+					<div class="style "><a href="">加入购物车</a></div>
+					<div class="style "><a href="">立即购买</a></div>
+				</div>
+
+				<div class="fanwei">
+					<p class="font">
+					<span>配送范围</span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<span>送货范围仅限上海地区(生鲜类别仅限部分地区)</span>
+					</p>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="goods-right fr">
+			<div class="goods-right-top"><span>--------大家都在买 --------</span></div>
+			<ul>
+				<li>         
+					<div class="img">
+						<a href=""> <img src="__PUBLIC__/Home/images/d.jpg"alt="遍历图片"></a>                                                    
+						<p class="look_price ">26.00价格</p>  
+					</div>
+
+				<p class="look-title">
+					<a href=""> 【天猫超市】山东蓬莱精品红富士1kg 果径80-85mm 水果</a>
+				</p>       
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+	<!-- 上部分结束 -->
+
+
+<!-- 下半部分 -->
+<div id="footer">
+	<div class="footer-left">
+		<ul class="p fl">
+			<li><a>商品详情</a></li>
+			<li><a>累计评价</a></li>
+			<li><a>售后服务</a></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div class="footer-img">
+		<a href=""><img src=""></a>
+		</div>
+		
+		
+	</div>
+
+</div>
+
+
+
+
+<script type="text/javascript">
+	// 获取元素对象
+	var small = document.getElementById('small');
+	var move = document.getElementById('move');
+	var big = document.getElementById('big');
+	var bimg = document.getElementById('bimg');
+	var simg = document.getElementById('simg');
+	big.onclick = function(){
+		alert('111');
+	}
+	//绑定移动事件
+	small.onmousemove = function(e){
+		//显示小div和右侧的图
+		move.style.display = 'block';
+		big.style.display = 'block';
+		//获取鼠标的位置
+		var x = e.pageX;
+		var y = e.pageY;
+		//获取small的x  y
+		var _l = small.offsetLeft;
+		var _t = small.offsetTop;
+		//计算小div的宽高的一半
+		var _w = move.offsetWidth/2;
+		var _h = move.offsetHeight/2;
+		//计算新的lefe和top
+		var newL = x - _l - _w;
+		var newT = y - _t - _h;
+
+		//检测越界
+		if(newL <= 0){newL = 0;}
+		//检测越界
+		if(newT <= 0){newT =0;}
+		//获取最大的left
+		var maxLeft = small.offsetWidth - move.offsetWidth;
+		if(newL >= maxLeft){newL = maxLeft;}
+		//获取最大的top
+		var maxTop = small.offsetHeight - move.offsetHeight;
+		if(newT >= maxTop){newT = maxTop;}
+
+		//设置left和top
+		move.style.left = newL + 'px';
+		move.style.top = newT + 'px';
+
+
+		//计算移动比例
+		var xp = newL/small.offsetWidth;
+		var yp = newT/small.offsetHeight;
+
+		//计算右侧图片移动距离
+		var nl = bimg.offsetWidth * xp;
+		var nt = bimg.offsetHeight * yp;
+
+		//设置移动
+			bimg.style.left = -nl+'px';
+			bimg.style.top = -nt+'px';
+			
+			//计算小图的宽高
+			var bp = big.offsetWidth/bimg.offsetWidth;
+			var bpp = big.offsetHeight/bimg.offsetHeight;
+
+			//计算小图的宽度
+			var mW = small.offsetWidth * bp;
+			var mH = small.offsetHeight * bpp;
+			//设置小图的宽度
+			move.style.width = mW + 'px';
+			move.style.height = mH + 'px';
+		}
+
+		//绑定鼠标离开事件
+		small.onmouseout = function(){
+			//隐藏小div和右侧的图
+			move.style.display = 'none';
+			big.style.display = 'none';
+		}
+
+		//获取元素
+		var ul = document.getElementById('uimg');
+		//从ul标签中获取img
+		var limg = ul.getElementsByTagName('img');
+		//遍历
+		for (var i = 0; i < limg.length; i++) {
+			limg[i].onclick = function(){
+				//获取当前src属性
+				var src = this.getAttribute('src');
+				// alert(src);
+				//设置src属性
+				bimg.src = src;
+				simg.src = src;
+			}
+		};
+
+
+</script>
+</block>
