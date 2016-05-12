@@ -1,0 +1,90 @@
+<extend name = "./Public/userinfo"/>
+<block name="address">
+<div class="confirm-order main-center main-zhanghu">
+    <div class="order-address clear">
+        <div class="box_top"><h3>收货地址</h3></div>
+        <img src="__PUBLIC__/Home/Picture/line_1.jpg">
+        <div class="capt pd_3">
+                <span class="logo_tips">
+                    <img src="__PUBLIC__/Home/Images/setted_addr.gif">
+                </span>
+                <span class="fz14">已经保存的收货地址</span>&nbsp;&nbsp;&nbsp;
+                <span class="s2">您已经创建&nbsp;<span id="addr_count" class="s3">{$count}</span>&nbsp;个收货地址
+        </div>
+
+        <ul style="min-height: 224px;" data-flag="address" id="myAddress" class="list pd_3">
+            
+            <foreach name="addr" item="vo">
+            
+            <if condition="$vo.pri eq 1">
+            <li class="lll cur">
+            <else/>
+            <li class="lll">
+            </if>
+            
+            <input class="dis" type="hidden" value="{$vo.id}">
+            <input type="radio" style="display:none" townid="310117" cityid="310100" provinceid="310000" primary="0" value="282395" tel="021-57715030" class="area-radio check" name="area">
+            <div class="fl"><div class="slice-border">
+            <div class="area-sumary"><em class="icons icons-user fl"></em>
+            <span class="area-name name">{$vo.name}</span>收</div></div><div class="mb10">
+            <em class="icons icons-address fl"></em><span class="area-address street">
+            <i class="province">{$vo.pro} {$vo.city}</i> <i class="jp_addr_street">{$vo.area}{$vo.addr}</i></span>
+            </div><div><em class="icons icons-phone fl"></em>
+            <span class="area-mobile phone">{$vo.tel}</span><a class="addr-edit modify" href="{:U('Home/Center/change_address',array('id'=>$vo['id']))}">修改</a>
+            <a class="del"></a></div></div><div class="slt-icon"></div>
+            
+            <if condition="$vo.pri eq 1">
+            <div class="slt-icon"></div>
+            <div class="default-add">默认地址</div>
+            <div class="slt-icon"></div>
+            <else/>
+            <div class="slt-icon" style="display:none"></div>
+            <div class="default-add" style="display:none">默认地址</div>
+            <div class="slt-icon" style="display:none"></div>
+            </if>
+
+            </li>
+
+            </foreach>
+            
+            <li class="add"><a class="add" href="{:U('Home/Center/add_address')}">
+            <em class="icons icons-add"></em>新增地址</a></li>
+        </ul>
+        
+        </div>
+    </div>
+    <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $('.addr-edit').bind("click",function(event){
+            event.stopPropagation();
+        })
+        $('.del').bind("click",function(event){
+            event.stopPropagation();
+            var def = $(this).parents('li').attr('class');
+            if(def == 'lll cur')
+                return;
+            var id = $(this).parents('li').find('.dis').val();
+            var $this = $(this);
+            $.get('do_delete_addr',{id:id},function(data){
+                if(data)
+                    $this.parents('li').remove();
+                else
+                    alert('删除失败');
+            })
+        })
+        $('.lll').bind("click",function(){
+            $(this).parents('.order-address').find('.slt-icon,.default-add').hide();
+            $(this).parents('ul').find('.lll').removeClass('cur');
+            $(this).find('.slt-icon,.default-add').css('display','block');
+            $(this).addClass('cur');
+            var id = $(this).find('.dis').val();
+            $.get('do_change_addr',{id:id},function(data){
+                if(data)
+                    alert('修改失败');
+            })
+        })
+
+    })
+    </script>
+</block>
