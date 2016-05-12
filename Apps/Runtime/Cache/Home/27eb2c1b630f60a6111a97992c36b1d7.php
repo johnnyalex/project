@@ -6,20 +6,16 @@
         <meta content="" name="description">
         <meta name="mobile-agent" content="format=html5;url=http://m.juanpi.com/shop/9519108"/>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <script type="text/javascript" src="/Public/Home/Js/jquery-1.8.3.min.js"></script>
         <link type="text/css" rel="stylesheet" href="/Public/Home/Css/680005b70b7b4c55b3971b8e37687505.css" />
     <link type="text/css" rel="stylesheet" href="/Public/Home/Css/09cbb6c851054bfd9d404c535089078d.css" />
     <link type="text/css" rel="stylesheet" href="/Public/Home/Css/41c422485c044ea79e03976147b975e9.css" />
-    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/css" />
+    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/css." />
 
-        <script type="text/javascript" src="/Public/Home/Js/18094c1e7dbc42ffbe3095951a2995f8.js"></script>
-        <script type="text/javascript" src="/Public/Home/Js/63249140693941eab7c2cd8e55ba49b4.js"></script>
-        <!-- H5 -->
-        <script src="/Public/Home/Script/md-h5joa.js"></script>
     </head>
     <body>
-    
         <!-- 页头 -->
-                    <div id="toolbar">
+<div id="toolbar">
     <div class="bar-con">
         <div class="right-show fr">
             <div class="union-login"> <a href="" rel="nofollow">QQ登录</a><a href="" rel="nofollow">微博登录</a>&#12288;| </div>
@@ -31,12 +27,12 @@
 <div class="header">
     <div class="area">
         <div class="logo juan-temai">
-            <div class="fl"><a class="juan-logo fl" href="http://www.juanpi.com" title="卷皮首页">卷皮</a><span class="juan-txt fl"></span></div>
+            <div class="fl"><a class="juan-logo fl" href="####.juanpi.com" title="卷皮首页">卷皮</a><span class="juan-txt fl"></span></div>
         </div>
         <div class="protection">
-            <a title="每天10点开抢" class="update" href="http://www.juanpi.com/help/xiaobao" target="_blank" rel="nofollow"></a>
-            <a title="职业买手砍价" class="lowest" href="http://www.juanpi.com/help/xiaobao#consumer03" target="_blank" rel="nofollow"></a>
-            <a title="商品验货质检" class="check1" href="http://www.juanpi.com/help/xiaobao#consumer04" target="_blank" rel="nofollow"></a>
+            <a title="每天10点开抢" class="update" href="####.juanpi.com/help/xiaobao" target="_blank" rel="nofollow"></a>
+            <a title="职业买手砍价" class="lowest" href="####.juanpi.com/help/xiaobao#consumer03" target="_blank" rel="nofollow"></a>
+            <a title="商品验货质检" class="check1" href="####.juanpi.com/help/xiaobao#consumer04" target="_blank" rel="nofollow"></a>
         </div>
         <div class="search">
             <span class="search-area fl">
@@ -46,13 +42,13 @@
             <input type="hidden" id="search_action" name="search_action" value="http://www.juanpi.com/search">
             <input type="hidden" id="search_from"   name="search_from" value="1">
         </div>
-        <!--<img class="banner-right-code" src="/Public/Home/Picture/jp-app-index.png">-->
+
     </div>
     <div class="mainNav">
         <div class="nav">
             <ul class="navigation fl">
                 <li  channel="1">
-                    <a href="http://www.juanpi.com" target="_blank">最新折扣</a>
+                    <a href="####.juanpi.com" target="_blank">最新折扣</a>
                 </li>
                 <li >
                     <a href="http://brand.juanpi.com" target="_blank">品牌折扣</a>
@@ -64,10 +60,10 @@
                     <a href="http://jkj.juanpi.com" target="_blank">9.9包邮</a>
                 </li>
                 <li class="last">
-                    <a href="http://www.juanpi.com/yugao" target="_blank">明日预告</a>
+                    <a href="####.juanpi.com/yugao" target="_blank">明日预告</a>
                 </li>
                 <li>
-                    <a href="http://www.juanpi.com/apps" target="_blank" id="show-qcodes">
+                    <a href="####.juanpi.com/apps" target="_blank" id="show-qcodes">
                         <em class="icon-normal icon-phone" id="new-phone"></em>
                         手机版
                     </a>
@@ -87,9 +83,9 @@
                 <div style="display:none;" class="normal-side-box" id="top-side-box">
                     <div class="box-tips">
                         <p class="text">每天最多可赚：<b>100</b> 积分<br>
-                            <a target="_blank" href="http://www.juanpi.com/jifen/task">赚积分攻略</a></p>
-                        <p class="other"> <a target="_blank" href="//user.juanpi.com/beans">我的积分</a>&#12288;｜&#12288;<a target="_blank" href="http://www.juanpi.com/jifen">积分商城</a><br>
-                            <a target="_blank" href="http://www.juanpi.com/jifen/sns">新手任务，轻松起步！</a><br>
+                            <a target="_blank" href="####.juanpi.com/jifen/task">赚积分攻略</a></p>
+                        <p class="other"> <a target="_blank" href="//user.juanpi.com/beans">我的积分</a>&#12288;｜&#12288;<a target="_blank" href="####.juanpi.com/jifen">积分商城</a><br>
+                            <a target="_blank" href="####.juanpi.com/jifen/sns">新手任务，轻松起步！</a><br>
                             QQ特享群：<b>390623218</b> </p>
                     </div>
                 </div>
@@ -109,16 +105,18 @@ $("#show-qcodes").hover(function(){
 
                 <!-- /页头 -->
         <!-- 主体 -->
+        
+
     <!-- 新版 -->
 <div class="main pr mt20 clear">
 <div class="mall_item_info">
 <div class="place-show">
     <div class="place-explain fl">
-                        <a href="http://www.juanpi.com">卷皮折扣</a>
+                        <a href="####.juanpi.com">卷皮折扣</a>
             &gt;
                                     <a href="http://shop.juanpi.com">特卖精选</a>
             &gt;
-                                    <a class="bady-xx-seo" href="http://shop.juanpi.com/deal/9519108">旅行隔脏防脏成人睡袋</a>
+                                                    <a class="bady-xx-seo" href="http://shop.juanpi.com/deal/9519108">旅行隔脏防脏成人睡袋</a>
                             </div>
     <div class="djs" style="right:20px;">剩余：<span><em id="d"></em>天<em id="h"></em>时<em id="m"></em>分<em id="s"></em>秒</span></div>
 </div>
@@ -126,21 +124,42 @@ $("#show-qcodes").hover(function(){
     <div class="deal-pic fl">
 
 <div class="goods-left-l fl">
-	<div id="small" class="goods-left-count">
-		<img width="100%" src="/Public/Home/images/y.jpg" id="simg">
-		<div style="background: transparent url(&quot;/BBB/project/Public/Home/images/bg.png&quot;) repeat scroll 0% 0%; display: none; left: 244px; top: 0px; width: 176.4px; height: 176.4px;" id="move"></div>
-	</div>
-	<div id="big" class="big" style="display: none;"><img src="/BBB/project/Public/Home/images/a.jpg" style="position: absolute; left: -580.952px; top: 0px;" id="bimg"></div>
-	<div class="d">
-		<ul id="uimg">
-			<li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/a.jpg"></li>
-			<li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/2.jpg"></li>
-			<li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/b.jpg"></li>
-			<li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/c.jpg"></li>
-			<li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/2.jpg"></li>
-		</ul>
-	</div>	
-</div>
+                <div id="small" class="goods-left-count">
+                    <img width="100%" src="/BBB/project/Public/Home/images/a.jpg" id="simg">
+                    <div style="background: transparent url(&quot;/BBB/project/Public/Home/images/bg.png&quot;) repeat scroll 0% 0%; display: none; left: 244px; top: 0px; width: 176.4px; height: 176.4px;" id="move"></div>
+                </div>
+                <div id="big" class="big" style="display: none;"><img src="/BBB/project/Public/Home/images/a.jpg" style="position: absolute; left: -580.952px; top: 0px;" id="bimg"></div>
+                <div class="d">
+                    <ul id="uimg">
+                        <li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/a.jpg"></li>
+                        <li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/2.jpg"></li>
+                        <li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/b.jpg"></li>
+                        <li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/c.jpg"></li>
+                        <li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/2.jpg"></li>
+                    </ul>
+                </div>  
+            </div>
+
+      <!--  <div class="pic">
+            <img src="/Public/Home/Picture/56f3538c92be59a57d8b4577_800x800.jpg" />
+        </div>  -->
+        <ul>
+                                            <li class="cur">
+                                <a href="javascript:;"><img src="/Public/Home/Picture/56f3538c92be59a57d8b4577_800x800.jpg" /></a>
+                </li>
+                                            <li>
+                                <a href="javascript:;"><img src="/Public/Home/Picture/56e625b892be59da1c8b457b_800x800.jpg" /></a>
+                </li>
+                                            <li>
+                                <a href="javascript:;"><img src="/Public/Home/Picture/56e629c992be598e318b4572_800x800.jpg" /></a>
+                </li>
+                                            <li>
+                                <a href="javascript:;"><img src="/Public/Home/Picture/56f4d7af92be590ebd8b4567_800x800.jpg" /></a>
+                </li>
+                                            <li class="mr0">
+                                <a href="javascript:;"><img src="/Public/Home/Picture/56f4d7ac92be597bba8b456c_800x800.jpg" /></a>
+                </li>
+                    </ul>
     </div>
     <div class="deal-wrap fr">
         <h1>旅行隔脏防脏成人睡袋 户外便携式舒适卫生睡袋</h1>
@@ -153,6 +172,8 @@ $("#show-qcodes").hover(function(){
                         <span class="discount fl"><em>1.2</em>折</span>
                         <span class="old fl"><em class="u-yen">￥</em><span>234</span></span></dd>
                 </dl>
+
+
                 <!-- 限时购信息-->
                 <dl class="limit-time clear">
 
@@ -166,16 +187,9 @@ $("#show-qcodes").hover(function(){
 
                 <!-- 活动信息 insert in here -->
                 <dl class="freight clear">
-                    <dt>运费：</dt>
-                    <dd>浙江省 金华市 <span class="addr_to">至</span>
-                        <div class="address"> <em attr-id="420000"></em><i></i>
-                            <div class="city">
-                                <ul>
-                                    <li><a attr-id="110000" href="javascript:;" data-delivery="1">北京市</a></li>
-                                    <li><a attr-id="120000" href="javascript:;" data-delivery="1">天津市</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <dt>库存：</dt>
+                    <dd><?php echo ($goods["stock"]); ?>&nbsp;&nbsp;&nbsp;
+
                         <em class="by" data-post="0">包邮</em>
                         <em class="delivery">该地区不支持配送</em>
                     </dd>
@@ -198,7 +212,7 @@ $("#show-qcodes").hover(function(){
                 <dl class="number clear">
                     <dt>数量：</dt>
                     <dd _limit="0" _realbuy="" _sku_limit_buy="">
-                        <p>
+                        <p class="j_j_p">
                             <i class="decrease">-</i>
                             <input type="text" name="amount" value="1" autocomplete="off" />
                             <i class="increase">+</i>
@@ -210,9 +224,8 @@ $("#show-qcodes").hover(function(){
                 <div id="J-mini-btn" class="submit-go clear">
                 <a  data-tip="" class="btn " href="javascript:void(0);">加入购物袋</a>
                                 </div>
-        
             <div class="sector-other">
-                <div class="collect"><a href="javascript:void(0);"><i></i>收藏</a></div>
+                <div class="collect"><a href="<?php echo U('Home/goods/like',['gid'=>$gid]);?>"><i></i>收藏</a></div>
                 <div class="share-box"> <a class="txt" href="javascript:void(0);"><i></i>分享</a>
                 
                     <div class="share" style="display:none;">
@@ -221,7 +234,27 @@ $("#show-qcodes").hover(function(){
                             <a class="bds_tsina" data-cmd="tsina"></a>
                             <a class="bds_tqq" data-cmd="tqq"></a>
                         </div>
+                        <script>
+                        var s_title = [
+                                  {'title':'旅行隔脏防脏成人睡袋 户外便携式舒适卫生睡袋', 'desc':'【折扣价：28.80元/包邮】 旅行隔脏防脏成人睡袋 户外便携式舒适卫生睡袋-上卷皮，购便宜！http://shop.juanpi.com/deal/9519108/?utm=102922'},
+                                  {'title':'旅行隔脏防脏成人睡袋', 'desc':'【折扣价：28.80元/包邮】旅行隔脏防脏成人睡袋-卷皮【淘宝天猫1折特卖！】更多商品>>http://www.juanpi.com/?utm=102923'}
+                            ];
+                        var n = Math.floor(Math.random()*s_title.length);
+                        window._bd_share_config = {
+                                common : {
+                                    bdText :s_title[n].title ,     
+                                    bdDesc : s_title[n].desc,
+                                    bdUrl : location.href,
+                                    bdPic : $(".goods_show figure img").attr("src")
+                                },
+                                share : [{
+                                    "bdSize" : 16
+                                }]
+                            };
+                        </script>
+                        <script type="text/javascript" src="/Public/Home/Script/bd-share.js"></script>
                     </div>
+    
                 </div>
                 <div style="margin-left:30px;"><a title="旅行隔脏防脏成人睡袋"  re="9519108" class="report" onclick="XD.JUBAO(this)" href="javascript:;">举报</a></div>
             </div>
@@ -246,7 +279,7 @@ $("#show-qcodes").hover(function(){
                         <li><a href="javascript:;">物流与售后</a></span></li>
                         <li><a href="javascript:;">消费保障</a></span></li>
                         <li style="position: relative;z-index: 10">
-                            <em class="icon-normal icon-phone-fen" style="margin-top: 12px;margin-left: 40px"></em><a id="show-qcode" style="padding-left:0 " href="http://www.juanpi.com/apps">手机购买</a></span>
+                            <em class="icon-normal icon-phone-fen" style="margin-top: 12px;margin-left: 40px"></em><a id="show-qcode" style="padding-left:0 " href="####.juanpi.com/apps">手机购买</a></span>
                            <div id="new-qcode" class="code-tips"><div class="code-box"><p class="code"></p><p class="txt" style="text-align:center;font-size: 14px">随时逛 及时抢</p></div></div>
                         </li>
                     </ul>
@@ -267,52 +300,43 @@ $("#show-qcodes").hover(function(){
                 </div>
             </div>
             <div class="slide-box-tab">
-                <ul>
-                                                                                        <li><a href="javascript:;" _tagname="产品展示">产品展示</a></li>
-                                                                                                                                    <li><a href="javascript:;" _tagname="产品细节">产品细节</a></li>
-                                                                            </ul>
+                <ul> 
+                    <li><a href="javascript:;" _tagname="产品展示">产品展示</a></li>
+                    <li><a href="javascript:;" _tagname="产品细节">产品细节</a></li>
+                </ul>
             </div>
         </div>
 
     </div>
-
-
         <div class="tm-goodsinfo">
-                            <div class="info-title"><a name="sbtggcs"></a><span class="param">参数规格</span></div>
-
-                
+            <div class="info-title"><a name="sbtggcs"></a><span class="param">参数规格</span></div>
                 <div class="details-info">
                     <table cellpadding="0" cellspacing="0" class="tb-param">
-                                                                                                       <tr>
-                                                        <td width="33%">里料材质：纯棉</td>
-                                                                                                            <td width="33%">户外面料：纯棉</td>
-                                                                                                            <td width="33%">睡袋分类：棉睡袋</td>
-                                                        </tr>
-                                                                                                            <td width="33%">填充物：羽棉混合(底部为棉，顶部为羽绒)</td>
-                                                                                                            <td width="33%">适用对象：成人</td>
-                                                                                                            <td width="33%">适用人数：单人</td>
-                                                        </tr>
-                                                                                                            <td width="33%">商品系列：AVVU-B15</td>
-                                                                                                            <td width="33%">总重量：580g</td>
-                                                                                                            <td width="33%">颜色分类：苹果绿 蔷薇紫 火焰橙</td>
-                                                        </tr>
-                                                                                                            <td width="33%">极限温标：40</td>
-                                                                                                            <td width="33%">适用季节：夏季</td>
-                                                                                                            <td width="33%">舒适温标：15℃以上</td>
-                                                        </tr>
-                                                                                                            <td width="33%">款式：混合式/半长方形</td>
-                                                                                                            <td width="33%">货号：6931611006881</td>
-                                                                                               </table>
-                    <table cellpadding="0" cellspacing="0" class="tb-param tb-nb">
-                                            </table>
+                        <tr>
+                            <td width="33%">里料材质：纯棉</td><td width="33%">户外面料：纯棉</td>
+                                <td width="33%">睡袋分类：棉睡袋</td></tr>
+                                <td width="33%">填充物：羽棉混合(底部为棉，顶部为羽绒)</td>
+                                <td width="33%">适用对象：成人</td>
+                                <td width="33%">适用人数：单人</td></tr><td width="33%">商品系列：AVVU-B15</td> 
+                                <td width="33%">总重量：580g</td>
+                                <td width="33%">颜色分类：苹果绿 蔷薇紫 火焰橙</td>
+                            </tr>
+                                <td width="33%">极限温标：40</td> 
+                                <td width="33%">适用季节：夏季</td>
+                                <td width="33%">舒适温标：15℃以上</td>
+                            </tr>
+                                <td width="33%">款式：混合式/半长方形</td>
+                                <td width="33%">货号：6931611006881</td> 
+                        <table cellpadding="0" cellspacing="0" class="tb-param tb-nb">
+                    </table>
                 </div>
                         
-                                                            <div class="info-title" _tagname="产品展示"><span class="single-style">产品展示</span></div>
+                    <div class="info-title" _tagname="产品展示"><span class="single-style">产品展示</span></div>
                     <div class="details-info">
-                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628ac92be590b358b4567_750x465.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
-                                                                                        <div class="info-title" _tagname="产品细节"><span class="single-style">产品细节</span></div>
+                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628ac92be590b358b4567_750x465.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628ad92be59b21b8b4586_750x1437.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628b592be591d2e8b4570_750x599.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628b492be59521c8b458a_750x640.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628b392be59381f8b458c_750x1229.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628b292be59d21b8b4588_750x799.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628b192be597c1e8b459c_750x604.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
+                        <div class="info-title" _tagname="产品细节"><span class="single-style">产品细节</span></div>
                     <div class="details-info">
-                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628b192be59391c8b4589_750x890.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
+                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628b192be59391c8b4589_750x890.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628b092be5920198b4580_750x638.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628af92be59661d8b459f_750x657.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628ae92be5926208b4594_750x297.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628ab92be59cb268b4580_750x758.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628ab92be599f308b4571_750x643.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628a992be595c1e8b459b_750x650.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628a892be59bd1c8b4584_750x658.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628a792be59b01d8b4592_750x688.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628a692be59c0228b4583_750x566.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628a592be59ff198b4593_750x615.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628a592be599d348b4567_750x623.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="/Public/Home/Picture/56e628a492be59e2238b4588_750x750.jpg" src="/Public/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
                                                     <div class="info-title"><span class="buy-guidelines">物流与售后</span></div>
             <div class="details-info guidelines-con">
                 <p><b>发货物流：</b>韵达快递，百世汇通，快捷快递</p>
@@ -323,12 +347,12 @@ $("#show-qcodes").hover(function(){
                 <div class="return-process"></div>
                                         <p><b>售后服务承诺</b><br>
                             收到货后，如果因为主观原因不喜欢/不想要了，在不影响二次销售的情况下，签收后7天内，卷皮网为您提供七天无理由退货服务。如果未收到货或收到商品有质量问题，您可以在签收后15天内申请售后。
-                            <a href="http://www.juanpi.com/help/temai/1701451" target="_blank">售后服务说明&gt;&gt;</a>
+                            <a href="####.juanpi.com/help/temai/1701451" target="_blank">售后服务说明&gt;&gt;</a>
                         </p>
                     
                 <p class="mt10"><b>运费补贴政策</b><br>
                     当您的退货商品单价≥30元，卷皮将提供价值10元的退货运费补贴。（每个订单仅补贴一次优惠劵）
-                    <a href="http://www.juanpi.com/help/view/1511456" target="_blank">退货运费补贴说明&gt;&gt;</a>
+                    <a href="####.juanpi.com/help/view/1511456" target="_blank">退货运费补贴说明&gt;&gt;</a>
                 </p>
             </div>
             <div class="info-title"><span class="consumer-protection">消费保障</span></div>
@@ -412,7 +436,6 @@ $("#show-qcodes").hover(function(){
 
     <!-- 新版 -->
     <!--main end-->
-    
 
         <!-- /主体 -->
         <!-- 页脚 -->
@@ -427,41 +450,41 @@ $("#show-qcodes").hover(function(){
             <div class="con-left-info fl">
                 <dl class="update">
                     <dt>获取更新</dt>
-                    <dd><a href="http://www.juanpi.com/apps" target="_blank" rel="nofollow"><i></i>iPhone/Android</a></dd>
+                    <dd><a href="####.juanpi.com/apps" target="_blank" rel="nofollow"><i></i>iPhone/Android</a></dd>
                     <dd><a href="http://user.qzone.qq.com/474171717" target="_blank" rel="nofollow"><i></i>卷皮QQ空间</a></dd>
                     <dd><a href="http://weibo.com/juanpicom" target="_blank" rel="nofollow"><i></i>卷皮新浪微博</a></dd>
-                    <dd><a href="http://www.juanpi.com/about/api" target="_blank" rel="nofollow"><i></i>开放API</a></dd>
+                    <dd><a href="####.juanpi.com/about/api" target="_blank" rel="nofollow"><i></i>开放API</a></dd>
                 </dl>
                 <dl class="cooperation">
                     <dt>商务合作</dt>
                     <dd><a href="https://seller.juanpi.com/choice" target="_blank"><i></i>卖家免费报名</a></dd>
-                    <dd><a href="http://www.juanpi.com/about/partner" target="_blank" rel="nofollow"><i></i>商务合作</a></dd>
+                    <dd><a href="####.juanpi.com/about/partner" target="_blank" rel="nofollow"><i></i>商务合作</a></dd>
                     <dd><a onclick="if (window.confirm('本邮箱仅接收合作商家对卷皮员工违规行为的举报。不接受用户咨询、投诉或商务合作申请。')) { window.location = 'mailto:' + 'moc.ipnauj@gnehznail'.split('').reverse().join(''); }" href="javascript:void(0)"><i></i>廉政邮箱<br><span class="revEmail">lianzheng@juanpi.com</span></a></dd>
                 </dl>
                 <dl class="cor-info">
                     <dt>公司信息</dt>
-                    <dd><a href="http://www.juanpi.com/about/juanpi" target="_blank" rel="nofollow"><i></i>关于卷皮</a></dd>
-                    <dd><a href="http://www.juanpi.com/about/media" target="_blank" rel="nofollow"><i></i>媒体报道</a></dd>
-                    <dd class="school"><a href="http://www.juanpi.com/about/job" target="_blank" rel="nofollow"><i></i>诚聘英才</a><a href="http://www.juanpi.com/about/job_2015campus" target="_blank"><em></em></a></dd>
-                    <dd><a href="http://www.juanpi.com/event/xiaoyuan_zhaomu" target="_blank" rel="nofollow"><i></i>校园大使招募</a></dd>
+                    <dd><a href="####.juanpi.com/about/juanpi" target="_blank" rel="nofollow"><i></i>关于卷皮</a></dd>
+                    <dd><a href="####.juanpi.com/about/media" target="_blank" rel="nofollow"><i></i>媒体报道</a></dd>
+                    <dd class="school"><a href="####.juanpi.com/about/job" target="_blank" rel="nofollow"><i></i>诚聘英才</a><a href="####.juanpi.com/about/job_2015campus" target="_blank"><em></em></a></dd>
+                    <dd><a href="####.juanpi.com/event/xiaoyuan_zhaomu" target="_blank" rel="nofollow"><i></i>校园大使招募</a></dd>
                 </dl>
                 <dl class="help-info">
                     <dt>帮助中心</dt>
-                    <dd><a href="http://www.juanpi.com/help" target="_blank" rel="nofollow"><i></i>新手上路</a></dd>
-                   <!--  <dd><a href="http://www.juanpi.com/help/101036" target="_blank" rel="nofollow"><i></i>抢购小技巧</a></dd> -->
-                    <dd><a href="http://www.juanpi.com/jifen/task" target="_blank" rel="nofollow"><i></i>积分攻略</a></dd>
-                    <dd><a href="http://www.juanpi.com/about/map" target="_blank"><i></i>网站地图</a></dd>
+                    <dd><a href="####.juanpi.com/help" target="_blank" rel="nofollow"><i></i>新手上路</a></dd>
+                   <!--  <dd><a href="####.juanpi.com/help/101036" target="_blank" rel="nofollow"><i></i>抢购小技巧</a></dd> -->
+                    <dd><a href="####.juanpi.com/jifen/task" target="_blank" rel="nofollow"><i></i>积分攻略</a></dd>
+                    <dd><a href="####.juanpi.com/about/map" target="_blank"><i></i>网站地图</a></dd>
                 </dl>
             </div>
             <div class="con-menu fr">
-                <a href="http://www.juanpi.com/about/service" class="service-add fl" target="_blank" rel="nofollow"></a>
+                <a href="####.juanpi.com/about/service" class="service-add fl" target="_blank" rel="nofollow"></a>
             <span class="service-time fl">
                 <p>周一至周日</p>
                 <p>9:00-21:00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
             </span>
             </div>
         </div>
-        <p class="ft-company"><a href="http://www.juanpi.com" target="_blank" rel="nofollow">武汉奇米网络科技有限公司</a> 鄂ICP备10209250号 | ICP许可证号：鄂B1-20150109 | 食品流通许可证 SP4201991510041888&#12288;&#12288;Copyright &copy; 2010 - 2016 JuanPi.com All Rights Reserved</p>
+        <p class="ft-company"><a href="####.juanpi.com" target="_blank" rel="nofollow">武汉奇米网络科技有限公司</a> 鄂ICP备10209250号 | ICP许可证号：鄂B1-20150109 | 食品流通许可证 SP4201991510041888&#12288;&#12288;Copyright &copy; 2010 - 2016 JuanPi.com All Rights Reserved</p>
             </div>
     </div>
 </div>
@@ -559,105 +582,22 @@ $("#show-qcodes").hover(function(){
   <a class="del" href="javascript:;">×</a>
 </div>
         <!-- /页脚 -->
-        <!-- 脚本 -->
-        <!-- 脚本 -->
-        <!--[if lt IE 9]>
-        <script type="text/javascript" src="/Public/Home/Script/json2.min.js"></script>
-        <![endif]-->
-
-
-// <script type="text/javascript">
-// 	// 获取元素对象
-// 	var small = document.getElementById('small');
-// 	var move = document.getElementById('move');
-// 	var big = document.getElementById('big');
-// 	var bimg = document.getElementById('bimg');
-// 	var simg = document.getElementById('simg');
-// 	big.onclick = function(){
-// 		alert('111');
-// 	}
-// 	//绑定移动事件
-// 	small.onmousemove = function(e){
-// 		//显示小div和右侧的图
-// 		move.style.display = 'block';
-// 		big.style.display = 'block';
-// 		//获取鼠标的位置
-// 		var x = e.pageX;
-// 		var y = e.pageY;
-// 		//获取small的x  y
-// 		var _l = small.offsetLeft;
-// 		var _t = small.offsetTop;
-// 		//计算小div的宽高的一半
-// 		var _w = move.offsetWidth/2;
-// 		var _h = move.offsetHeight/2;
-// 		//计算新的lefe和top
-// 		var newL = x - _l - _w;
-// 		var newT = y - _t - _h;
-
-// 		//检测越界
-// 		if(newL <= 0){newL = 0;}
-// 		//检测越界
-// 		if(newT <= 0){newT =0;}
-// 		//获取最大的left
-// 		var maxLeft = small.offsetWidth - move.offsetWidth;
-// 		if(newL >= maxLeft){newL = maxLeft;}
-// 		//获取最大的top
-// 		var maxTop = small.offsetHeight - move.offsetHeight;
-// 		if(newT >= maxTop){newT = maxTop;}
-
-// 		//设置left和top
-// 		move.style.left = newL + 'px';
-// 		move.style.top = newT + 'px';
-
-
-// 		//计算移动比例
-// 		var xp = newL/small.offsetWidth;
-// 		var yp = newT/small.offsetHeight;
-
-// 		//计算右侧图片移动距离
-// 		var nl = bimg.offsetWidth * xp;
-// 		var nt = bimg.offsetHeight * yp;
-
-// 		//设置移动
-// 			bimg.style.left = -nl+'px';
-// 			bimg.style.top = -nt+'px';
-			
-// 			//计算小图的宽高
-// 			var bp = big.offsetWidth/bimg.offsetWidth;
-// 			var bpp = big.offsetHeight/bimg.offsetHeight;
-
-// 			//计算小图的宽度
-// 			var mW = small.offsetWidth * bp;
-// 			var mH = small.offsetHeight * bpp;
-// 			//设置小图的宽度
-// 			move.style.width = mW + 'px';
-// 			move.style.height = mH + 'px';
-// 		}
-
-// 		//绑定鼠标离开事件
-// 		small.onmouseout = function(){
-// 			//隐藏小div和右侧的图
-// 			move.style.display = 'none';
-// 			big.style.display = 'none';
-// 		}
-
-// 		//获取元素
-// 		var ul = document.getElementById('uimg');
-// 		//从ul标签中获取img
-// 		var limg = ul.getElementsByTagName('img');
-// 		//遍历
-// 		for (var i = 0; i < limg.length; i++) {
-// 			limg[i].onclick = function(){
-// 				//获取当前src属性
-// 				var src = this.getAttribute('src');
-// 				// alert(src);
-// 				//设置src属性
-// 				bimg.src = src;
-// 				simg.src = src;
-// 			}
-// 		};
-
-
-// </script>
+<script src="/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.decrease').bind("click",function(){
+            var val = $(this).parents('.j_j_p').find('input').val();
+            val--;
+            if(val == 0)
+                val = 1;
+            $(this).parents('.j_j_p').find('input').val(val);
+        })
+        $('.increase').bind("click",function(){
+            var val = $(this).parents('.j_j_p').find('input').val();
+            val++;
+            $(this).parents('.j_j_p').find('input').val(val);
+        })
+    })    
+</script>
     </body>
 </html>

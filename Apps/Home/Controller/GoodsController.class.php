@@ -19,7 +19,7 @@ class GoodsController extends Controller {
     	// $this->display();
     }
 
-
+  
 
 
 

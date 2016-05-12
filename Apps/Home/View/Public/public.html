@@ -397,10 +397,10 @@
             </div>
         </div>
 <ul class="goods-list clear">
-
 <foreach name='goodsList' item='vo'>
     <li gtype="1" g_type="1"  re="" id="{$vo.id}" >
         <div class="list-good buy">
+        
             <div class="good-pic">
                 <a href="{:U('Home/Goods/show',array('gid'=>$vo[id]))}" class="pic-img" target="_blank" data-value="goods#1_1">
                     <img alt="{$vo.name}" src="__PUBLIC__{$vo.pic}" class="lazy" d-src="" width="285px" />

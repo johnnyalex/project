@@ -6,7 +6,7 @@ return array(
 
 	'DB_HOST'   => '192.168.50.22', // 服务器地址
 	'DB_NAME'   => 'project', // 数据库名
-	'DB_USER'   => 'yy', // 用户名
+	'DB_USER'   => 'st', // 用户名
 
 
 	'DB_PWD'    => '333', // 密码

@@ -17,14 +17,9 @@
     <link type="text/css" rel="stylesheet" href="/Public/Home/Css/fix.css" />
     <link type="text/css" rel="stylesheet" href="/Public/Home/Css/lunbo.css" />
     <script type="text/javascript" src="/Public/Home/Js/jquery-1.8.3.min.js"></script>
-<<<<<<< HEAD
 
-
-=======
-    <script type="text/javascript" src="/Public/Home/Js/lunbo.js"></script>
-    </head>
->>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
-    <body>
+        </head>
+        <body>
         
         
         
@@ -115,36 +110,9 @@
                     <em class="icon-normal icon-nosign"></em>
                     <em class="text">签到领积分</em>
                 </a>
+                <!-- 积分 ?? -->
                 <div id ='addjifen' style="width: 300px;height: 300px;background: #ff436e; position:absolute;display:none"></div>
 
-                <script type="text/javascript">
-                   
-                        //获取窗口的高度 
-                    //     var windowHeight; 
-                    //     //获取窗口的宽度 
-                    //     var windowWidth; 
-                    //     var top;
-                    //     var left;
-                    //     // 获取 宽高
-                    //     function init(){ 
-                    //        windowHeight=$(window).height(); 
-                    //        windowWidth=$(window).width(); 
-                    //         top = (windowWidth-300)/2;
-                    //         left = (windowHeight-300)/2;
-                    //     } 
-                    // $(function(){
-                    //     $('#jifen').click(function(){
-                    //         $('.box_tips').css('',)
-                    //         // init();
-                    //         // $('#addjifen').css('top',top).css('left',left).css('display','block'); 
-                    //     })
-                    // })
-
-                </script>
-                <script type="text/javascript">
-                </script>
-
-                <!-- <div style="display:none;" class="normal-side-box" id="top-side-box"> -->
                     <div class="box-tips" style="display: none;">
                         <p class="text">每天最多可赚：<b>100</b> 积分<br>
                             <a target="_blank" href="###/jifen/task">赚积分攻略</a></p>
@@ -178,11 +146,8 @@
             </ul>
         </div>
 <!-- </div> -->
-<<<<<<< HEAD
-<script type="text/javascript" src="/Public/Home/Js/lunbo.js"></script>
-=======
 
->>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
+<script type="text/javascript" src="/Public/Home/Js/lunbo.js"></script>
 <div class="top_wrap">
     <div class="top_box">
         <div class="banner_l">
@@ -432,28 +397,30 @@
             </div>
         </div>
 <ul class="goods-list clear">
-    <li gtype="1" g_type="1"  re="" id="77432594" >
+<?php if(is_array($goodsList)): foreach($goodsList as $key=>$vo): ?><li gtype="1" g_type="1"  re="" id="<?php echo ($vo["id"]); ?>" >
         <div class="list-good buy">
+        
             <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+                <a href="<?php echo U('Home/Goods/show',array('gid'=>$vo[id]));?>" class="pic-img" target="_blank" data-value="goods#1_1">
+                    <img alt="<?php echo ($vo["name"]); ?>" src="/Public<?php echo ($vo["pic"]); ?>" class="lazy" d-src="" width="285px" />
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
             <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
+
+                [包邮]<a href="<?php echo U('Home/Goods/show',array('gid'=>$vo[id]));?>" target="_blank"><?php echo ($vo["name"]); ?></a>
                 <div class="icon-all" style="display:none;">
             <span class="sold">剩4天</span>
             </h3>
             <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
+                <span class="price-current" ><em>￥</em><?php echo ($vo["price"]); ?></span>
                 <span class="des-other">
                     <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
+                    <span class="price-old"><em>￥</em></span>
+                    <span class="discount">(<em>1</em>折)</span>
                 </span>
                 <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
+                    <a href="<?php echo U('Home/Goods/show',array('gid'=>$vo[id]));?>" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
                 </div>
             </div>
             <!-- like -->
@@ -464,403 +431,10 @@
             <div class="box-hd" style="display:block;clear:both;">
             </div>
         </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
-    <li gtype="1" g_type="1"  re="" id="77432594" >
-        <div class="list-good buy">
-            <div class="good-pic">
-                <a href="###/click/?id=77432594" class="pic-img" target="_blank" data-value="goods#1_1">
-                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
-                    <span class="new-icon">新品</span>                    
-                </a>
-            </div>
-            <h3 class="good-title">
-                [包邮]<a href="###/click/?id=77432594" target="_blank">无痕冰丝抹胸(买3送1)</a>
-                <div class="icon-all" style="display:none;">
-            <span class="sold">剩4天</span>
-            </h3>
-            <div class="good-price">
-                <span class="price-current" ><em>￥</em>9.8</span>
-                <span class="des-other">
-                    <strong></strong>
-                    <span class="price-old"><em>￥</em>29.8</span>
-                    <span class="discount">(<em>3.3</em>折)</span>
-                </span>
-                <div class="btn buy t-buy">
-                    <a href="###/click/?id=77432594" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
-                </div>
-            </div>
-            <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
-                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
-            </a>
-            <!-- end like -->
-            <div class="box-hd" style="display:block;clear:both;">
-            </div>
-        </div>
-    </li>
+    </li><?php endforeach; endif; ?>
+
+ 
+
 </ul>
 <div class="page">
     <em></em>
@@ -1118,13 +692,10 @@
       <a class="del" href="javascript:;">×</a>
     </div>
     
-<<<<<<< HEAD
+
 
 <script type="text/javascript">
-=======
-    </block>
-    <script type="text/javascript">
->>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
+
     // 侧边
         // $(function(){
         //     $('.i-love').mouseover(function(e){
@@ -1141,7 +712,6 @@
 
         // });
     //top nav
-<<<<<<< HEAD
     // alert($);
 // 积分
 
@@ -1158,19 +728,15 @@
             $('#navv').addClass('hidden');
         }
     })
-        
-=======
+
     // $(function(){
     //     var top = $(document).scrollTop();
     //     if (top>600) {
     //         $('.top_box').css('display','block');
     //     } else {
     //         $('.top_box').css('display','none');
-    //     }
-        
+    //     }      
     // })
->>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
-
     </script>
     </body>
 </html>
