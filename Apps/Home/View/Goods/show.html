@@ -272,6 +272,9 @@ $("#show-qcodes").hover(function(){
                             var uid = $(this).attr('uid');
                             var gid = $(this).attr('gid');
                             var like = $(this);
+                            if (uid=="") {
+                                location.href='{:U("Home/Login/index")}';
+                            }
                             $.ajax({
                                 url:url,
                                 type:'post',

@@ -28,6 +28,7 @@ class CenterController extends Controller {
 		$users['month'] = substr($time,4,2)['0'] == 0 ? substr($time,5,1) : substr($time,4,2);
 		$users['day'] = substr($time,6,2)['0'] == 0 ? substr($time,7,1) : substr($time,6,2);
 		$this->assign('user',$users);
+		// var_dump($users);
 		$this->assign('title','账户设置-卷皮网');
 		$this->display();
 	}
@@ -160,7 +161,6 @@ class CenterController extends Controller {
 		// var_dump($_FILES);
 		// var_dump($_POST);
 		// die();
-		//
 		$arr = array();
 		// id
 		$arr['uid'] = $_SESSION['user']['id'];
@@ -299,6 +299,12 @@ class CenterController extends Controller {
 	}
 	public function favorite(){
 		$uid = $_SESSION['user']['id'];
+		// 实例化
+		$use=M('user');
+		// 查询
+		$user=$use->where(' id = '.$uid)->find();
+		// user的pic 存session
+		$_SESSION['user']['pic']=$user['pic'];
 		// var_dump($uid);
 		$info = M('userinfo');//
 		$res = $info->where(['uid'=>$uid])->find();
@@ -312,6 +318,7 @@ class CenterController extends Controller {
 		$this->assign('user',$user);
 		$this->assign('title','个人收藏-卷皮网');
 		$this->assign('num',$num);
+		$this->assign('user',$user);
 		$this->assign('goodslike',$goodslike);
 		$this->display();
 

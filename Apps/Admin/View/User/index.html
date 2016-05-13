@@ -143,7 +143,7 @@
     $(function(){
         //定义全局变量
         var edit = true;
-
+        //修改名字
         $('.susername').dblclick(function(){
             if(edit == false) 
                 return;
@@ -178,6 +178,48 @@
                         }else{
                             // alert('修改失败');  
                             ipt.replaceWith(username);
+                            // edit = false;
+                        }
+                    },
+                });
+            })
+        })
+
+        //修改手机
+        $('.sphone').dblclick(function(){
+            if(edit == false) 
+                return;
+            edit = false;
+            //声明 td
+            var td = $(this);
+            //获取原有的值
+            var v = $(this).html();
+            //新建input
+            var ipt = $('<input type="text" name="phone" size="12" value="'+v+'">');
+            //清空input 后 在添加input
+            td.empty().append(ipt);
+            //设置文本选中
+            ipt.select();
+            //文本失去焦点后 发ajax 改数据库中的文件
+            ipt.blur(function(){
+                //提交ajax  url
+                edit = true;
+                var url = '{:U("Admin/User/edit")}';
+                //获取用户 id
+                var id = ipt.parents('.gradeA').find('.sid').html();
+                //获取新的值
+                var phone = ipt.val();
+                $.ajax({
+                    url:url,
+                    data:{'id':id,'phone':phone,},
+                    type:'post',
+                    success:function(data){
+                        if (data==0) {
+                            td.empty().append(phone).css('color','green');
+                            // edit = false;
+                        }else{
+                            // alert('修改失败');  
+                            ipt.replaceWith(phone);
                             // edit = false;
                         }
                     },
