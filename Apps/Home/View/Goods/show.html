@@ -105,6 +105,8 @@ $("#show-qcodes").hover(function(){
 
                 <!-- /页头 -->
         <!-- 主体 -->
+        
+
     <!-- 新版 -->
 <div class="main pr mt20 clear">
 <div class="mall_item_info">
@@ -114,7 +116,7 @@ $("#show-qcodes").hover(function(){
             &gt;
                                     <a href="http://shop.juanpi.com">特卖精选</a>
             &gt;
-                                    <a class="bady-xx-seo" href="http://shop.juanpi.com/deal/9519108">旅行隔脏防脏成人睡袋</a>
+                                                    <a class="bady-xx-seo" href="http://shop.juanpi.com/deal/9519108">旅行隔脏防脏成人睡袋</a>
                             </div>
     <div class="djs" style="right:20px;">剩余：<span><em id="d"></em>天<em id="h"></em>时<em id="m"></em>分<em id="s"></em>秒</span></div>
 </div>
@@ -123,6 +125,7 @@ $("#show-qcodes").hover(function(){
 
 <div class="goods-left-l fl">
                 <div id="small" class="goods-left-count">
+    <!-- 遍历商品主图 -->
                     <img width="100%" src="__PUBLIC__{$goods.pic}" id="simg">
                     <div style="background: transparent url(&quot;/BBB/project/Public/Home/images/bg.png&quot;) repeat scroll 0% 0%; display: none; left: 244px; top: 0px; width: 176.4px; height: 176.4px;" id="move"></div>
                 </div>
@@ -130,6 +133,7 @@ $("#show-qcodes").hover(function(){
                 <div class="d">
                     <ul id="uimg">
                     <foreach name="goods_images" item="vo">
+    <!-- 遍历商品小图 -->
                         <li class="small fl"><img width="100%" src="__PUBLIC__{$vo.name}"></li>
                     </foreach>
                     </ul>
@@ -145,6 +149,8 @@ $("#show-qcodes").hover(function(){
                         <span class="current fl">
                             <i class="symbols">￥</i>28.8                        </span>
                 </dl>
+
+
                 <!-- 限时购信息-->
                 <dl class="limit-time clear">
 
@@ -159,7 +165,8 @@ $("#show-qcodes").hover(function(){
                 <!-- 活动信息 insert in here -->
                 <dl class="freight clear">
                     <dt>库存：</dt>
-                    <dd>{$goods.stock}&nbsp;&nbsp;&nbsp;
+                    <dd>{$goods.stock}&nbsp;&nbsp;&nbsp;件
+
                         <em class="by" data-post="0">包邮</em>
                         <em class="delivery">该地区不支持配送</em>
                     </dd>
@@ -199,7 +206,27 @@ $("#show-qcodes").hover(function(){
                             <a class="bds_tsina" data-cmd="tsina"></a>
                             <a class="bds_tqq" data-cmd="tqq"></a>
                         </div>
+                        <script>
+                        var s_title = [
+                                  {'title':'旅行隔脏防脏成人睡袋 户外便携式舒适卫生睡袋', 'desc':'【折扣价：28.80元/包邮】 旅行隔脏防脏成人睡袋 户外便携式舒适卫生睡袋-上卷皮，购便宜！http://shop.juanpi.com/deal/9519108/?utm=102922'},
+                                  {'title':'旅行隔脏防脏成人睡袋', 'desc':'【折扣价：28.80元/包邮】旅行隔脏防脏成人睡袋-卷皮【淘宝天猫1折特卖！】更多商品>>http://www.juanpi.com/?utm=102923'}
+                            ];
+                        var n = Math.floor(Math.random()*s_title.length);
+                        window._bd_share_config = {
+                                common : {
+                                    bdText :s_title[n].title ,     
+                                    bdDesc : s_title[n].desc,
+                                    bdUrl : location.href,
+                                    bdPic : $(".goods_show figure img").attr("src")
+                                },
+                                share : [{
+                                    "bdSize" : 16
+                                }]
+                            };
+                        </script>
+                        <script type="text/javascript" src="__PUBLIC__/Home/Script/bd-share.js"></script>
                     </div>
+    
                 </div>
                 <div style="margin-left:30px;"><a title="旅行隔脏防脏成人睡袋"  re="9519108" class="report" onclick="XD.JUBAO(this)" href="javascript:;">举报</a></div>
             </div>
@@ -278,17 +305,10 @@ $("#show-qcodes").hover(function(){
                         
                     <div class="info-title" _tagname="产品展示"><span class="single-style">产品展示</span></div>
                     <div class="details-info">
-
-                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ac92be590b358b4567_750x465.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
-                                                                                        <div class="info-title" _tagname="产品细节"><span class="single-style">产品细节</span></div>
-                    <div class="details-info">
-                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b192be59391c8b4589_750x890.jpg" src="//s.juancdn.com/juanpi/img/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
-
-                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ac92be590b358b4567_750x465.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
+                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ac92be590b358b4567_750x465.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ad92be59b21b8b4586_750x1437.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b592be591d2e8b4570_750x599.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b492be59521c8b458a_750x640.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b392be59381f8b458c_750x1229.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b292be59d21b8b4588_750x799.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b192be597c1e8b459c_750x604.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
                         <div class="info-title" _tagname="产品细节"><span class="single-style">产品细节</span></div>
                     <div class="details-info">
-                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b192be59391c8b4589_750x890.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
-
+                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b192be59391c8b4589_750x890.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b092be5920198b4580_750x638.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628af92be59661d8b459f_750x657.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ae92be5926208b4594_750x297.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ab92be59cb268b4580_750x758.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ab92be599f308b4571_750x643.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a992be595c1e8b459b_750x650.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a892be59bd1c8b4584_750x658.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a792be59b01d8b4592_750x688.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a692be59c0228b4583_750x566.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a592be59ff198b4593_750x615.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a592be599d348b4567_750x623.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a492be59e2238b4588_750x750.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
                                                     <div class="info-title"><span class="buy-guidelines">物流与售后</span></div>
             <div class="details-info guidelines-con">
                 <p><b>发货物流：</b>韵达快递，百世汇通，快捷快递</p>
