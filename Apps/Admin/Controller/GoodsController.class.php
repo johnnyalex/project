@@ -33,9 +33,17 @@ class GoodsController extends CommonController {
 //商品管理上传图片
     public function img(){
 
-         var_dump($_POST);
-         echo '<hr>';
-        var_dump($_FILES);die;
+         // var_dump($_POST);
+         // echo '<hr>';
+        // var_dump($_FILES);die;
+
+        $goods_id = I('post.goods_id');
+        // var_dump($_POST);
+        // die;
+         // var_dump($goods_id);
+         // echo '<hr>';
+        // var_dump($_FILES);die;
+
         $images = M('image');
       
         //处理图片上传
@@ -55,13 +63,19 @@ class GoodsController extends CommonController {
                 $_POST['name'] = $str;
             }
         }
+
        
+
+       $_POST['goods_id'] = $_POST['id'];
+       unset($_POST['id']);
+
         //创建数据
         $images->create();
         //执行添加
         if($images->add()){
              //添加成功
             $this->success('添加成功',U('Admin/Goods/image'));
+            $this->success('添加成功',U('Admin/Goods/index'));
         }else{
             //失败
             $this->error('添加失败',U('Admin/Goods/image'));
@@ -74,10 +88,15 @@ class GoodsController extends CommonController {
     public function image(){
         $images = M('image');   
         $goods_id = I('get.id');
-        var_dump($goods_id);
-     
+        var_dump($goods_id);   
         // var_dump($sql);
        $imagelist = $images->select();
+        $goods_id = I('get.id');
+        // var_dump($goods_id);     
+        $images = M('image'); 
+        $sql = "SELECT A.*,B.id gid FROM image A,goods B WHERE A.goods_id=B.id AND A.goods_id=".$goods_id;
+      
+       $imagelist = $images->query($sql);
         $this->assign('imagelist',$imagelist);
         $this->assign('goods_id',$goods_id);
 
@@ -104,6 +123,7 @@ class GoodsController extends CommonController {
 
     public function insert(){
         var_dump($_POST);
+        // var_dump($_POST);
     	// var_dump($_FILES);
         $goods = M('goods');
       
@@ -125,6 +145,8 @@ class GoodsController extends CommonController {
             }
         }
         if($_POST['price']<=0){$_POST['price']=0;}
+        if($_POST['freight']<=0){$_POST['freight']=0;}
+        if($_POST['stock']<=0){$_POST['stock']=0;}
         if(empty($_POST['name']))
             $this->error('商品名称不能为空',U('Admin/Goods/index'));
         //创建数据
@@ -153,8 +175,11 @@ class GoodsController extends CommonController {
         $images = M('image');
         $images->create();
         $res = $images->save();
-        echo $goods->_sql();
-        // die;
+        // echo $goods->_sql();
+        $images->where('id!='.$_POST['id'])->data('is_face=0')->save();
+        // echo $images->_sql();
+        $images->create();
+        $res = $images->save();
         if($res)
             echo 1; 
     }
@@ -263,6 +288,8 @@ class GoodsController extends CommonController {
         // var_dump($_POST);die;
 
         if($_POST['price']<=0){$_POST['price']=0;}
+        if($_POST['freight']<=0){$_POST['freight']=0;}
+        if($_POST['stock']<=0){$_POST['stock']=0;}
          // 创建数据
         $a=$goods->create();
         // dump($a);

@@ -51,10 +51,55 @@
 <div class="confirm-order">
 <!-- 收货信息 -->
 <div class="order-address clear">
+<<<<<<< HEAD
         <input type="hidden" value="5" name="addrnum">
     <h2><span class="fl">选择收货地址</span><a style="display:none" href="javascript:void(0)" class="manage_links write_links fl"><i class="icons icons-tips fl"></i><span class="fl">请填写收货地址</span></a></h2>
     <ul data-flag="confirm" id="myAddress" class="list">
     <li class="cur"><input type="radio" style="display:none" townid="310108" cityid="310100" provinceid="310000" primary="1" value="835346" tel="" class="area-radio check" name="area"><div class="fl"><div class="slice-border"><div class="area-sumary"><em class="icons icons-user fl"></em><span class="area-name name">姚宁元</span>收</div></div><div class="mb10"><em class="icons icons-address fl"></em><span class="area-address street"><i class="province">上海市 闸北区</i> <i class="jp_addr_street">少年村路415弄96号。梅奥菲斯公寓 2527室</i></span> <span class="area-postcode"></span></div><div><em class="icons icons-phone fl"></em><span class="area-mobile phone">185****8785</span><a class="addr-edit modify" href="javascript:void(0);">修改</a></div></div><div class="slt-icon"></div><div class="addr-primary">[默认地址]</div><div class="default-add">默认地址</div><div class="slt-icon"></div></li><li class=""><input type="radio" style="display:none" townid="310117" cityid="310100" provinceid="310000" primary="0" value="282395" tel="021-57715030" class="area-radio check" name="area"><div class="fl"><div class="slice-border"><div class="area-sumary"><em class="icons icons-user fl"></em><span class="area-name name">姚宁元</span>收</div></div><div class="mb10"><em class="icons icons-address fl"></em><span class="area-address street"><i class="province">上海市 松江区</i> <i class="jp_addr_street">九亭镇沪松公路1399弄69号817（九号公馆）</i></span> <span class="area-postcode">201601</span></div><div><em class="icons icons-phone fl"></em><span class="area-mobile phone">185****8785</span><a class="addr-edit modify" href="javascript:void(0);">修改</a></div></div><div class="slt-icon"></div><div class="addr-primary" style="display: none;">设置默认</div></li><li class="add"><a class="add" href="javascript:;"><em class="icons icons-add"></em>新增地址</a></li></ul>
+=======
+        <input class="addrnum" type="hidden" value="" name="addrnum">
+    <h2><span class="fl">选择收货地址</span><a style="display:none" href="javascript:void(0)" class="manage_links write_links fl"><i class="icons icons-tips fl"></i><span class="fl">请填写收货地址</span></a></h2>
+
+        <ul style="min-height: 224px;" data-flag="address" id="myAddress" class="list pd_3">
+            
+            <foreach name="addr" item="vo">
+            
+            <if condition="$vo.pri eq 1">
+            <li class="lll cur">
+            <else/>
+            <li class="lll">
+            </if>
+            
+            <input class="dis" type="hidden" value="{$vo.id}">
+            <input type="radio" style="display:none" townid="310117" cityid="310100" provinceid="310000" primary="0" value="282395" tel="021-57715030" class="area-radio check" name="area">
+            <div class="fl"><div class="slice-border">
+            <div class="area-sumary"><em class="icons icons-user fl"></em>
+            <span class="area-name name">{$vo.name}</span>收</div></div><div class="mb10">
+            <em class="icons icons-address fl"></em><span class="area-address street">
+            <i class="province">{$vo.pro} {$vo.city}</i> <i class="jp_addr_street">{$vo.area}{$vo.addr}</i></span>
+            </div><div><em class="icons icons-phone fl"></em>
+            <span class="area-mobile phone">{$vo.tel}</span><a class="addr-edit modify" href="{:U('Home/Center/change_address',array('id'=>$vo['id']))}" target="_blank">修改</a>
+            
+            <if condition="$vo.pri eq 1">
+            <div class="slt-icon"></div>
+            <div class="default-add">默认地址</div>
+            <div class="slt-icon"></div>
+            <else/>
+            <div class="slt-icon" style="display:none"></div>
+            <div class="default-add" style="display:none">默认地址</div>
+            <div class="slt-icon" style="display:none"></div>
+            </if>
+
+            </li>
+
+            </foreach>
+            
+            <li class="add"><a class="add" href="{:U('Home/Center/add_address')}" target="_blank">
+            <em class="icons icons-add"></em>新增地址</a></li>
+        </ul>
+   
+
+>>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
     <div uadid="0" style="display: none;" id="addrform" class="new-address">
         <div class="panel-box" style="">
             <div class="adr" id="adr">
@@ -204,7 +249,11 @@
     <div class="m-orders-detail clear">
         <div class="site fl">
             <div class="re_address">
+<<<<<<< HEAD
                 <label class="fl">收货信息：</label><span class="fl">上海市 闸北区 少年村路415弄96号。梅奥菲斯公寓 2527室<br>姚宁元 185****8785</span>
+=======
+                <label class="fl">收货信息：</label><span class="address_info fl">{$addr_t.pro} {$addr_t.city} {$addr_t.area} {$addr_t.addr}<br>{$addr_t.name} {$addr_t.tel}</span>
+>>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
             </div>
         </div>
         <div class="other fr">
@@ -321,5 +370,33 @@
   <a class="del" href="javascript:;">×</a>
 </div>
 
+<<<<<<< HEAD
+=======
+<script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    
+$(function(){
+
+
+
+    $('.addr-edit').bind("click",function(event){
+        event.stopPropagation();
+    })
+
+    $('.lll').bind("click",function(){
+        // alert($(this).find('.dis').val());
+        $('.addrnum').val($(this).find('.dis').val());
+        $(this).parents('.order-address').find('.slt-icon,.default-add').hide();
+        $(this).parents('ul').find('.lll').removeClass('cur');
+        $('.default-add').html('已选中');
+        $(this).find('.slt-icon,.default-add').css('display','block');
+        $(this).addClass('cur');
+        $('.address_info').html($('.province').html()+' '+$('.jp_addr_street').html()+'<br />'+$('.area-name').html()+' 收 '+$('.area-mobile').html());
+    })
+
+})
+
+</script>
+>>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
     </body>
 </html>

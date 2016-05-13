@@ -7,6 +7,7 @@ class GoodsController extends Controller {
     	$this->display();
     }
     public function show(){
+<<<<<<< HEAD
     	// 商品id
     	$gid = I('get.gid');
     	// 用户id
@@ -65,6 +66,21 @@ class GoodsController extends Controller {
 	    $like_id = str_replace($lid, '', $like_id);
 	    $res = $info -> where(['uid'=>$uid])->save(['like_id'=>$like_id]);
 	    echo $res;
+=======
+    	$gid = I('get.gid');
+        $goods = M('goods')->find($gid);
+        $goods_images = M('image')->where('goods_id='.$gid)->limit(5)->select();
+    	$this->assign('gid',$gid);
+        $this->assign('goods',$goods);
+        $this->assign('goods_images',$goods_images);
+    	$this->display();
+    }
+    public function like(){
+    	$gid = I('get.gid');
+    	dump($gid);
+    	die();
+    	// $this->display();
+>>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
     }
 
 
