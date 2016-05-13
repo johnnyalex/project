@@ -3,7 +3,7 @@ return array(
 	//'配置项'=>'配置值'
 	//数据库配置信息
 	'DB_TYPE'   => 'mysql', // 数据库类型
-	'DB_HOST'   => '127.0.0.1', // 服务器地址
+	'DB_HOST'   => '12.0.0.1', // 服务器地址
 	'DB_NAME'   => 'project', // 数据库名
 	'DB_USER'   => 'root', // 用户名
 	'DB_PWD'    => '333', // 密码
@@ -13,5 +13,6 @@ return array(
 	'DEFAULT_MODULE' => 'Index',//默认模板
 	'URl_MODEL'=>'2',//url模板
 	'SESSION_AUTO_START'=>true,//是否开启session
+	'SHOW_PAGE_TRACE' => true,
 );
 ?>
