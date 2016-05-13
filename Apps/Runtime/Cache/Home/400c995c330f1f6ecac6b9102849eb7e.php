@@ -397,9 +397,9 @@
             </div>
         </div>
 <ul class="goods-list clear">
+
 <?php if(is_array($goodsList)): foreach($goodsList as $key=>$vo): ?><li gtype="1" g_type="1"  re="" id="<?php echo ($vo["id"]); ?>" >
         <div class="list-good buy">
-        
             <div class="good-pic">
                 <a href="<?php echo U('Home/Goods/show',array('gid'=>$vo[id]));?>" class="pic-img" target="_blank" data-value="goods#1_1">
                     <img alt="<?php echo ($vo["name"]); ?>" src="/Public<?php echo ($vo["pic"]); ?>" class="lazy" d-src="" width="285px" />

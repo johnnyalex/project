@@ -125,52 +125,27 @@ $("#show-qcodes").hover(function(){
 
 <div class="goods-left-l fl">
                 <div id="small" class="goods-left-count">
-                    <img width="100%" src="/BBB/project/Public/Home/images/a.jpg" id="simg">
+    <!-- 遍历商品主图 -->
+                    <img width="100%" src="/Public<?php echo ($goods["pic"]); ?>" id="simg">
                     <div style="background: transparent url(&quot;/BBB/project/Public/Home/images/bg.png&quot;) repeat scroll 0% 0%; display: none; left: 244px; top: 0px; width: 176.4px; height: 176.4px;" id="move"></div>
                 </div>
                 <div id="big" class="big" style="display: none;"><img src="/BBB/project/Public/Home/images/a.jpg" style="position: absolute; left: -580.952px; top: 0px;" id="bimg"></div>
                 <div class="d">
                     <ul id="uimg">
-                        <li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/a.jpg"></li>
-                        <li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/2.jpg"></li>
-                        <li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/b.jpg"></li>
-                        <li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/c.jpg"></li>
-                        <li class="small fl"><img width="100%" src="/BBB/project/Public/Home/images/2.jpg"></li>
+                    <?php if(is_array($goods_images)): foreach($goods_images as $key=>$vo): ?><!-- 遍历商品小图 -->
+                        <li class="small fl"><img width="100%" src="/Public<?php echo ($vo["name"]); ?>"></li><?php endforeach; endif; ?>
                     </ul>
                 </div>  
             </div>
-
-      <!--  <div class="pic">
-            <img src="/Public/Home/Picture/56f3538c92be59a57d8b4577_800x800.jpg" />
-        </div>  -->
-        <ul>
-                                            <li class="cur">
-                                <a href="javascript:;"><img src="/Public/Home/Picture/56f3538c92be59a57d8b4577_800x800.jpg" /></a>
-                </li>
-                                            <li>
-                                <a href="javascript:;"><img src="/Public/Home/Picture/56e625b892be59da1c8b457b_800x800.jpg" /></a>
-                </li>
-                                            <li>
-                                <a href="javascript:;"><img src="/Public/Home/Picture/56e629c992be598e318b4572_800x800.jpg" /></a>
-                </li>
-                                            <li>
-                                <a href="javascript:;"><img src="/Public/Home/Picture/56f4d7af92be590ebd8b4567_800x800.jpg" /></a>
-                </li>
-                                            <li class="mr0">
-                                <a href="javascript:;"><img src="/Public/Home/Picture/56f4d7ac92be597bba8b456c_800x800.jpg" /></a>
-                </li>
-                    </ul>
     </div>
     <div class="deal-wrap fr">
-        <h1>旅行隔脏防脏成人睡袋 户外便携式舒适卫生睡袋</h1>
+        <h1><?php echo ($goods["name"]); ?></h1>
         <div class="sector-info">
             <div class="J-basic">          
                 <dl class="tm-price clear">
                     <dd class="price">
                         <span class="current fl">
                             <i class="symbols">￥</i>28.8                        </span>
-                        <span class="discount fl"><em>1.2</em>折</span>
-                        <span class="old fl"><em class="u-yen">￥</em><span>234</span></span></dd>
                 </dl>
 
 
@@ -188,7 +163,7 @@ $("#show-qcodes").hover(function(){
                 <!-- 活动信息 insert in here -->
                 <dl class="freight clear">
                     <dt>库存：</dt>
-                    <dd><?php echo ($goods["stock"]); ?>&nbsp;&nbsp;&nbsp;
+                    <dd><?php echo ($goods["stock"]); ?>&nbsp;&nbsp;&nbsp;件
 
                         <em class="by" data-post="0">包邮</em>
                         <em class="delivery">该地区不支持配送</em>
@@ -198,23 +173,16 @@ $("#show-qcodes").hover(function(){
             <div class="J-other">
                 <p class="J-title"></p>
                 <div class="loadingsku" style="display:none;"><img src="/Public/Home/Picture/loading.gif"></div>
-                <form action="https://cart.juanpi.com" id="confirm" method="post">
-                    <input type="hidden" name="pid" value="9519108">
-                    <input type="hidden" name="zid" value="0">
-                    <input type="hidden" name="fid" value="0">
-                    <input type="hidden" name="num" value="1">
-                    <input type="hidden" name="sid" value="0">
-                    <input type="hidden" name="token" value="">
-                    <input type="hidden" name="favken" value="">
-                </form>
+                <form action="<?php echo U('Home/Car/car');?>" method="post">
                 <p class="tips" style="display:none;"><i class="icons icons-warn fl" ></i>请选择尺码</p>
               </div>
+              <input type="hidden" name="goods_id" value="<?php echo ($gid); ?>">
                 <dl class="number clear">
                     <dt>数量：</dt>
                     <dd _limit="0" _realbuy="" _sku_limit_buy="">
                         <p class="j_j_p">
                             <i class="decrease">-</i>
-                            <input type="text" name="amount" value="1" autocomplete="off" />
+                            <input type="text" name="amount" value="1" autocomplete="off" readonly/>
                             <i class="increase">+</i>
                         </p>
                         <span class="skulimitbuy" style="display:none;"></span>
@@ -222,7 +190,9 @@ $("#show-qcodes").hover(function(){
                     </dd>
                 </dl>
                 <div id="J-mini-btn" class="submit-go clear">
-                <a  data-tip="" class="btn " href="javascript:void(0);">加入购物袋</a>
+                <input type="submit"  value="加入购物袋" style="font-size:20px; color:white; width:180px; height:50px; border:0px; background:#ff464E; border-radius:5px">
+                
+                </form>
                                 </div>
             <div class="sector-other">
                 <div class="collect"><a href="<?php echo U('Home/goods/like',['gid'=>$gid]);?>"><i></i>收藏</a></div>
@@ -404,9 +374,9 @@ $("#show-qcodes").hover(function(){
         </div>
         <div class="alert_content">
             <div class="l_c_l">
-                <form method="post" target="_self" id="inform" name="inform">
+                <!-- <form method="post" target="_self" id="inform" name="inform"> -->
                     商品名称：<font class="bloak" re="" id="report_title">这里没什么用，内容会在前面通过js获取</font><br> 举报原因：
-                    <select class="selectClass" id="reportAn" name="reportAn">
+<!--                     <select class="selectClass" id="reportAn" name="reportAn">
                         <option value="0">请选择</option>
                         <option value="1">宝贝价格与活动价格不符合</option>
                         <option value="2">宝贝不包邮或只包平邮</option>
@@ -416,7 +386,7 @@ $("#show-qcodes").hover(function(){
                         <option value="6">宝贝分类错误</option>
                         <option value="7">主图宝贝与实际出售宝贝不符</option>
                         <option value="8">其他原因</option>
-                    </select> 
+                    </select>  -->
                     <br> 
                     <label style="display: none" class="other">其他原因：
                         <input type="text" id="otherReasons" class="text" name="otherReasons">
@@ -426,7 +396,7 @@ $("#show-qcodes").hover(function(){
                     <!-- 表示举报商品属于卷皮特卖类型：shop -->
                     <input type="hidden" id="jubao_9519108" gtype="shop" />
                     <input type="button" onclick="XD.JUBAO_SMT()" value="提 交" tabindex="3" class="smt">
-                </form>
+                <!-- </form> -->
             </div>
         </div>
         <div class="bottom">注：为保证您的合法权益，请如实填写您所遇到的情况。</div>
@@ -595,6 +565,8 @@ $("#show-qcodes").hover(function(){
         $('.increase').bind("click",function(){
             var val = $(this).parents('.j_j_p').find('input').val();
             val++;
+            if(val >= <?php echo ($goods["stock"]); ?>)
+                val = <?php echo ($goods["stock"]); ?>;
             $(this).parents('.j_j_p').find('input').val(val);
         })
     })    
