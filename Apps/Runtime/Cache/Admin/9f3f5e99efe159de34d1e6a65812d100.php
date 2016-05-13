@@ -385,28 +385,29 @@
                                 <div class="col-sm-6">
                                     <form role="form" method="post" action="<?php echo U('Admin/Goods/img');?>" enctype="multipart/form-data">
                                     <div class="dataTables_length" id="dataTables-example_length">
-                                        <div class="form-group">
+                                        <div class="form-group" style="border:1px solid #dddddd">
                                             <label>上传图片</label>
                                             <input type="file" name="name">
-                                            <input type="hidden" name="id" value="<?php echo ($goods_id); ?>">     
-                                            <input type="submit" class="text-but" value="上传" name="">
+                                            <input class="inp_id" type="hidden" name="id" value="<?php echo ($goods_id); ?>">     
+                                            <input class="btn-info" type="submit" class="text-but" value="上传" name="">
                                         </div>
                                     </div>
                                     </form>
                                 </div>
                                 <div class="col-sm-6">
                                     <div id="dataTables-example_filter" class="dataTables_filter">
-                                        <td width="60%" valign="middle" align="center" style="text-align:right; width:150px;">你正在管理的是<font size="4" color="green">商品name名字</font>的图片</td>
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-12" style="margin-top:5px;">
                             <table id="dataTables-example" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="dataTables-example_info">
                             <thead>
                              <!-- <form action="<?php echo U(Admin/Goods/index);?>" method="post"> -->
                                 <tr role="row">
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:70px;text-align: center;" aria-label="Browser: activate to sort column ascending">编号</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:70px;text-align: center;" aria-label="Browser: activate to sort column ascending">goods_id</th>
+                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:70px;text-align: center;" aria-label="Browser: activate to sort column ascending">ID</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 150px;text-align: center;" aria-label="Engine version: activate to sort column ascending">图片</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;text-align: center;" aria-label="Engine version: activate to sort column ascending">是否是封面</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 140px;text-align: center;" aria-label="CSS grade: activate to sort column ascending">操作</th>
@@ -416,11 +417,12 @@
                             <tbody>
                             <!-- z这是用户列表的遍历 -->
                             <?php if(is_array($imagelist)): foreach($imagelist as $key=>$vo): ?><tr class="gradeA odd" role="row">
-                                    <td><?php echo ($vo["goods_id"]); ?></td>
+                                    <td class="goods_id"><?php echo ($vo["goods_id"]); ?></td>
+                                    <td><?php echo ($vo["id"]); ?></td>
                                     <td class="sorting_1"><img src="/Public/<?php echo ($vo["name"]); ?>" width="70px"></td>
                                     <td class="center"><button type="button" class="btn_isface btn-info">
-                                    <?php switch($vo["is_face"]): case "0": ?>是<?php break;?>    
-                                    <?php case "1": ?>否<?php break; endswitch;?>
+                                    <?php switch($vo["is_face"]): case "1": ?>是<?php break;?>    
+                                    <?php case "0": ?>否<?php break; endswitch;?>
                                     </button>
                                     </td>
                                     <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;</td>
@@ -476,18 +478,22 @@
         <!-- /.col-lg-12 -->
     </div>
 
-
-    
-
-
     <script src="/Public/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
     // alert($);
     $(function(){
+        // alert($('.goods_id').html());
+        // if($('.inp_id').val() == <?php echo ($goods_id); ?>)
+        // alert($('.inp_id').val());
+        // alert(<?php echo ($goods_id); ?>);    
+        // if($('.inp.id').val != <?php echo ($goods_id); ?>){
+        //     $('.inp_id').val($('.goods_id').html());
+        // }
+
         //上下架
         $('.btn_isface').bind("click",function(){
             var display = $(this).text();
-            var id = $(this).parents('tr').find('td:first').html();
+            var id = $(this).parents('tr').find('td:eq(1)').html();
             // alert(id);
             var a = $(this);
             display = display.trim();
@@ -495,7 +501,7 @@
             if(display == '是'){
                 // alert('sss');
                 $.post('<?php echo U("Admin/Goods/is_face");?>',
-                    {id:id,status:0},
+                    {id:id,is_face:0},
                     function(data){
                         if(data)
                             a.html('否');
@@ -503,19 +509,20 @@
             }
             else if(display == '否'){
                 $.post('<?php echo U("Admin/Goods/is_face");?>',
-                    {id:id,status:1},
+                    {id:id,is_face:1},
                     function(data){
-                        if(data)
+                        if(data){
+                            $('.btn_isface').text('否');                            
                             a.html('是');
+                        }
                     })
             } 
         })
 
 //删除商品
         $('.delete').click(function(){
-            var id= $(this).parents('tr').find('td:first').html();
+            var id= $(this).parents('tr').find('td:eq(1)').html();
             var tr = $(this);
-            alert(id);
             $.get('<?php echo U("Admin/Goods/del");?>',{id:id},function(data){
                 if(data)
                     tr.parents('tr').remove();

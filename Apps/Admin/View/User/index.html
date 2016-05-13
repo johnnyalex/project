@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <h3 class="page-header">用户列表</h3>
 =======
     <h1 class="page-header">用户列表</h1>
@@ -25,6 +26,9 @@
 =======
     <h1 class="page-header">用户列表</h1>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+    <h3 class="page-header">用户列表</h3>
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
 </block>
 
 <block name="content">
@@ -92,7 +96,6 @@
                                     </td>
 	                                <td class="center">
                                     <button class="btn btn-danger btn-del"  type="button"><i class="fa fa-times">删除</i></button>
-                                    <a href=""><button class="btn btn-primary " type="button"><i class="fa fa-list">修改</i></button></a>
                                     </td>
 	                            </tr>
                             </foreach>
@@ -140,7 +143,7 @@
     </div>
 <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
-    // alert($);
+    // alert($);锁定否
     $(function(){
         $('.btn_dis').bind("click",function(){
             var status = $(this).html();
@@ -164,7 +167,7 @@
                     })
             }
         })
-     //加载完毕
+     //加载完毕 修改
     $(function(){
         //定义全局变量
         var edit = true;
@@ -288,7 +291,7 @@
                 });
             })
         })
-
+        //删除
         $('.btn-del').click(function(){
             var v = $(this).parents('.gradeA').find('.sid').html();
             // alert(v);

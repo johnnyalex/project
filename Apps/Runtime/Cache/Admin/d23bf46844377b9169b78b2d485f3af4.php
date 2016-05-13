@@ -407,6 +407,10 @@
                                     <label>商品价格</label>
                                     <input name="price"  class="form-control">
                                 </div>
+                                 <div class="form-group">
+                                    <label>运费</label>
+                                    <input name="freight"  class="form-control">
+                                </div>
                                 <div class="form-group">
                                     <label>商品库存 </label>
                                     <input name="stock"  class="form-control">

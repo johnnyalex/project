@@ -60,27 +60,9 @@ class IndexController extends CommonController {
     	$this->display();
     }
     public function insert(){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         $res = M('admin')->where(['username'=>$_POST['username']])->find();
         if($res)
             $this->error('用户名已存在',U('Admin/Index/add'));
-=======
->>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-=======
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     	$admin = M('admin');
         $_POST['password'] = md5($_POST['password']);
     	$res = $admin->add($_POST);

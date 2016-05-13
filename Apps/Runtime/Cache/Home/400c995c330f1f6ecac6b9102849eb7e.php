@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link href="/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <link href="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -32,10 +33,14 @@
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
     <link href="/BBBB/project/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
+=======
+    <link href="/Public/Home/Css/bootstrap.min.css" rel="stylesheet" media="screen">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
 
-    <link href="/BBBB/project/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="/Public/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<<<<<<< HEAD
     <link type="text/css" rel="stylesheet" href="/BBBB/project/Public/Home/Css/9245c5eeb79d45ea8fca9ffcd464f12f.css" />
     <link type="text/css" rel="stylesheet" href="/BBBB/project/Public/Home/Css/41109579bcee494389f359ae0e914606.css" />
     <link type="text/css" rel="stylesheet" href="/BBBB/project/Public/Home/Css/bb3e08540e584c09ac7578fd0213f369.css" />
@@ -55,9 +60,22 @@
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/9245c5eeb79d45ea8fca9ffcd464f12f.css" />
+    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/41109579bcee494389f359ae0e914606.css" />
+    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/bb3e08540e584c09ac7578fd0213f369.css" />
+    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/fix.css" />
+    <link type="text/css" rel="stylesheet" href="/Public/Home/Css/lunbo.css" />
+    <script type="text/javascript" src="/Public/Home/Js/jquery-1.8.3.min.js"></script>
+<<<<<<< HEAD
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
 
-        </head>
-        <body>
+
+=======
+    <script type="text/javascript" src="/Public/Home/Js/lunbo.js"></script>
+    </head>
+>>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
+    <body>
         
         
         
@@ -115,6 +133,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <img class="banner-right-code" style="display:block;" src="/Public/Home/Picture/jp-app-index.png">
 =======
         <img class="banner-right-code" style="display:block;" src="/BBBB/project/Public/Home/Picture/jp-app-index.png">
@@ -131,6 +150,9 @@
 =======
         <img class="banner-right-code" style="display:block;" src="/BBBB/project/Public/Home/Picture/jp-app-index.png">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+        <img class="banner-right-code" style="display:block;" src="/Public/Home/Picture/jp-app-index.png">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
     </div>
     <div class="mainNav">
         <div class="nav">
@@ -220,10 +242,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                 <li><a href=""><img src="/Public/Home/Picture/mao1.png"></a></li>
                 <li><a href=""><img src="/Public/Home/Picture/kid2.png"></a></li>
                 <li><a href=""><img src="/Public/Home/Picture/biao3.png"></a></li>
                 <li><a href=""><img src="/Public/Home/Picture/bao4.png" ></a></li>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
@@ -250,6 +276,8 @@
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
             </ul>
               
             <div class="btn btn_l">&lt;</div>
@@ -262,7 +290,11 @@
             </ul>
         </div>
 <!-- </div> -->
+<<<<<<< HEAD
+<script type="text/javascript" src="/Public/Home/Js/lunbo.js"></script>
+=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -284,6 +316,9 @@
 =======
 <script type="text/javascript" src="/BBBB/project/Public/Home/Js/lunbo.js"></script>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+>>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
 <div class="top_wrap">
     <div class="top_box">
         <div class="banner_l">
@@ -377,6 +412,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img src="/Public/Home/Picture/a.jpg">
 =======
                     <img src="/BBBB/project/Public/Home/Picture/a.jpg">
@@ -393,10 +429,14 @@
 =======
                     <img src="/BBBB/project/Public/Home/Picture/a.jpg">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img src="/Public/Home/Picture/a.jpg">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                 </a>
             </dd>
             <dd>
                 <a class="'right" data-value="ad_banner_right#1_2" data-ga="迈克·菲恩" target="_blank" href="">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -418,10 +458,14 @@
 =======
                     <img src="/BBBB/project/Public/Home/Picture/b.jpg">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img src="/Public/Home/Picture/b.jpg">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                 </a>
             </dd>
             <dd>
                 <a class="'right" data-value="ad_banner_right#1_3" data-ga="迈克·菲恩" target="_blank" href="">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -443,10 +487,14 @@
 =======
                     <img src="/BBBB/project/Public/Home/Picture/c.jpg">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img src="/Public/Home/Picture/c.jpg">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                 </a>
             </dd>
             <dd>
                 <a class="'right" data-value="ad_banner_right#1_4" data-ga="迈克·菲恩" target="_blank" href="">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -468,10 +516,14 @@
 =======
                     <img src="/BBBB/project/Public/Home/Picture/d.jpg">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img src="/Public/Home/Picture/d.jpg">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                 </a>
             </dd>
             <dd class="last">
                 <a class="'right" data-value="ad_banner_right#1_5" data-ga="迈克·菲恩" target="_blank" href="">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -493,6 +545,9 @@
 =======
                     <img src="/BBBB/project/Public/Home/Picture/e.jpg">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img src="/Public/Home/Picture/e.jpg">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                 </a>
 
             </dd>
@@ -534,6 +589,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <div class="brand-pic"><img src="/Public/Home/Picture/5723187092be592b068b4580_680x280.jpg">
 =======
                             <div class="brand-pic"><img src="/BBBB/project/Public/Home/Picture/5723187092be592b068b4580_680x280.jpg">
@@ -550,12 +606,16 @@
 =======
                             <div class="brand-pic"><img src="/BBBB/project/Public/Home/Picture/5723187092be592b068b4580_680x280.jpg">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                            <div class="brand-pic"><img src="/Public/Home/Picture/5723187092be592b068b4580_680x280.jpg">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                                 <div class="brand_time" data-etime="1462845600" style="display:none">
                                     <p><span class="icon_time"></span><span class="brand-days"><em>00</em><i>天</i></span><span class="brand-hours"><em>00</em><i>时</i></span><span class="brand-minutes"><em>00</em><i>分</i></span><span class="brand-seconds"><em>00</em><i>秒</i></span></p>
                                     <div class="brand_time_bg"></div>
                                 </div>
                             </div>
                             <div class="card">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -577,6 +637,9 @@
 =======
                                 <img class="brand-logo" src="/BBBB/project/Public/Home/Picture/5722cd0792be590e208b4581_180x90.png">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                                <img class="brand-logo" src="/Public/Home/Picture/5722cd0792be590e208b4581_180x90.png">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                                 <span class="discount discount1">
                                 <span>马上抢</span>
                                 </span>                                    
@@ -588,6 +651,7 @@
                 <li>
                     <div class="brand-status">
                         <a href="#xiezi?id=1021642" class="link-box" target="_blank" data-value="brand#1_2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -609,12 +673,16 @@
 =======
                             <div class="brand-pic"><img src="/BBBB/project/Public/Home/Picture/5723385a92be59cc428b457c_680x280.jpg">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                            <div class="brand-pic"><img src="/Public/Home/Picture/5723385a92be59cc428b457c_680x280.jpg">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                                 <div class="brand_time" data-etime="1462845600" style="display:none">
                                     <p><span class="icon_time"></span><span class="brand-days"><em>00</em><i>天</i></span><span class="brand-hours"><em>00</em><i>时</i></span><span class="brand-minutes"><em>00</em><i>分</i></span><span class="brand-seconds"><em>00</em><i>秒</i></span></p>
                                     <div class="brand_time_bg"></div>
                                 </div>
                             </div>
                             <div class="card">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -636,6 +704,9 @@
 =======
                             <img class="brand-logo" src="/BBBB/project/Public/Home/Picture/56810ebe92be599b838b4579_180x90.png">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                            <img class="brand-logo" src="/Public/Home/Picture/56810ebe92be599b838b4579_180x90.png">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                             <span class="discount discount1">
                             <span>马上抢</span>
                             </span>                                    
@@ -649,6 +720,7 @@
                 <li>
                     <div class="brand-status">
                         <a href="#xiangbao?id=1021608" class="link-box" target="_blank" data-value="brand#1_3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -670,12 +742,16 @@
 =======
                             <div class="brand-pic"><img src="/BBBB/project/Public/Home/Picture/5723187092be592b068b4580_680x280.jpg">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                            <div class="brand-pic"><img src="/Public/Home/Picture/5723187092be592b068b4580_680x280.jpg">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                                 <div class="brand_time" data-etime="1462845600" style="display:none">
                                     <p><span class="icon_time"></span><span class="brand-days"><em>00</em><i>天</i></span><span class="brand-hours"><em>00</em><i>时</i></span><span class="brand-minutes"><em>00</em><i>分</i></span><span class="brand-seconds"><em>00</em><i>秒</i></span></p>
                                     <div class="brand_time_bg"></div>
                                 </div>
                             </div>
                             <div class="card">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -697,6 +773,9 @@
 =======
                                 <img class="brand-logo" src="/BBBB/project/Public/Home/Picture/5722cd0792be590e208b4581_180x90.png">
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                                <img class="brand-logo" src="/Public/Home/Picture/5722cd0792be590e208b4581_180x90.png">
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                                 <span class="discount discount1">
                                 <span>马上抢</span>
                                 </span>                                    
@@ -713,6 +792,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
             <li><a href="#nvzhuang?id=1311676" target="_blank" data-value="brand#1_4"><img src="/Public/Home/Picture/56d6978b92be5900468b4567_180x90.png"></a></li>
             <li><a href="#nvzhuang?id=1511605" target="_blank" data-value="brand#1_5"><img src="/Public/Home/Picture/56c677d392be59bd9b8b456a_180x90.png"></a></li>
             <li><a href="#nvzhuang?id=1701689" target="_blank" data-value="brand#1_6"><img src="/Public/Home/Picture/56e7cffb92be59657f8b4598_180x90.png"></a></li>
@@ -721,6 +803,7 @@
             <li><a href="#xiezi?id=1931657" target="_blank" data-value="brand#1_9"><img src="/Public/Home/Picture/56fa338392be597e8d8b4567_180x90.png"></a></li>
             <li><a href="#xiezi?id=1331694" target="_blank" data-value="brand#1_10"><img src="/Public/Home/Picture/568346da92be59bba88b456d_180x90.png"></a></li>
             <li><a href="#xiezi?id=1441600" target="_blank" data-value="brand#1_11"><img src="/Public/Home/Picture/5673c20292be59860c8b4581_180x90.png"></a></li>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
@@ -751,6 +834,8 @@
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
             <li class="last"><a href="http://brand.juanpi.com" target="_blank">查看全部》</a></li>
         </ul>
         </div>
@@ -797,6 +882,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -813,6 +899,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -850,6 +939,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -866,6 +956,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -903,6 +996,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -919,6 +1013,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -956,6 +1053,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -972,6 +1070,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -1009,6 +1110,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -1025,6 +1127,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -1062,6 +1167,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -1078,6 +1184,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -1115,6 +1224,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -1131,6 +1241,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -1168,6 +1281,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -1184,6 +1298,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -1221,6 +1338,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -1237,6 +1355,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -1274,6 +1395,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -1290,6 +1412,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -1327,6 +1452,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -1343,6 +1469,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>
                 </a>
             </div>
@@ -1380,6 +1509,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -1396,6 +1526,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -1433,6 +1566,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
@@ -1449,6 +1583,9 @@
 =======
                     <img alt="无痕冰丝抹胸(买3送1)" src="/BBBB/project/Public/Home/Picture/blank.png" class="lazy" d-src="" />
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                    <img alt="无痕冰丝抹胸(买3送1)" src="/Public/Home/Picture/blank.png" class="lazy" d-src="" />
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                     <span class="new-icon">新品</span>                    
                 </a>
             </div>
@@ -1619,6 +1756,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         border="0" src="/Public/Home/Picture/r_315new.gif"></a>
                 <a rel="nofollow" target="_blank"
                    href="http://ss.knet.cn/verifyseal.dll?sn=e150601420100589448w7i000000&a=1&pa=0.9669571494560153"><img
@@ -1637,11 +1775,15 @@
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
                         border="0" src="/BBBB/project/Public/Home/Picture/r_315new.gif"></a>
+=======
+                        border="0" src="/Public/Home/Picture/r_315new.gif"></a>
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                 <a rel="nofollow" target="_blank"
                    href="http://ss.knet.cn/verifyseal.dll?sn=e150601420100589448w7i000000&a=1&pa=0.9669571494560153"><img
-                        border="0" src="/BBBB/project/Public/Home/Picture/r_cnnic.gif" /></a>
+                        border="0" src="/Public/Home/Picture/r_cnnic.gif" /></a>
                 <a rel="nofollow" target="_blank"
                    href="http://gssoso.whhd.gov.cn:8086/soso/detail?record=1&primarykeyvalue=%E5%86%85%E9%83%A8%E5%BA%8F%E5%8F%B7%3D4201992100000000027837&channelid=20228"><img
+<<<<<<< HEAD
                         border="0" src="/BBBB/project/Public/Home/Picture/r_gongshang.gif"></a>
         <a rel="nofollow" target="_blank" key ="5492626c3b05a3da0fbd05fe"  logo_size="124x47"  logo_type="realname"  http="###.anquan.org" ><script src="/BBBB/project/Public/Home/Js/aq_auth.js"></script></a>      
 <<<<<<< HEAD
@@ -1657,6 +1799,10 @@
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
 =======
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                        border="0" src="/Public/Home/Picture/r_gongshang.gif"></a>
+        <a rel="nofollow" target="_blank" key ="5492626c3b05a3da0fbd05fe"  logo_size="124x47"  logo_type="realname"  http="###.anquan.org" ><script src="/Public/Home/Js/aq_auth.js"></script></a>      
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
             </div>
             </div>
 </div>
@@ -1672,6 +1818,7 @@
                     <div id="side-login" class="tab-tips tab-login">
                         <div class="user-box">
                            <a class="head" href="//user.juanpi.com" target="_blank">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1693,6 +1840,9 @@
 =======
                             <div class="pic"><img src="/BBBB/project/Public/Home/Picture/default-60.jpg"></div>
 >>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
+=======
+                            <div class="pic"><img src="/Public/Home/Picture/default-60.jpg"></div>
+>>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
                             </a>
                             <p class="txt"></p>
                         </div>
@@ -1789,10 +1939,13 @@
       <a class="del" href="javascript:;">×</a>
     </div>
     
-
+<<<<<<< HEAD
 
 <script type="text/javascript">
-
+=======
+    </block>
+    <script type="text/javascript">
+>>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
     // 侧边
         // $(function(){
         //     $('.i-love').mouseover(function(e){
@@ -1809,6 +1962,7 @@
 
         // });
     //top nav
+<<<<<<< HEAD
     // alert($);
 // 积分
 
@@ -1825,15 +1979,19 @@
             $('#navv').addClass('hidden');
         }
     })
-
+        
+=======
     // $(function(){
     //     var top = $(document).scrollTop();
     //     if (top>600) {
     //         $('.top_box').css('display','block');
     //     } else {
     //         $('.top_box').css('display','none');
-    //     }      
+    //     }
+        
     // })
+>>>>>>> 16aab2d22540f889481d41765598b0fc986e80ba
+
     </script>
     </body>
 </html>
