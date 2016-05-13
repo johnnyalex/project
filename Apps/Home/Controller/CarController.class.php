@@ -33,5 +33,8 @@ class CarController extends Controller {
        	$this->assign('count',$count);
         $this->display();
     }
+    public function del(){
+    	$res = M('car')->delete($_GET['id']);
+    }
 
 }

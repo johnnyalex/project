@@ -91,12 +91,14 @@
             <div class="order-list">
                 <div class="orders-bd normal activity no">
                     <table class="tbl-main">
-                        <tbody>
        
 <foreach name="goods" item="vo">
 
-<input type="hidden" value="{vo.id}">
-                            <tr class="no">
+                        <tbody>
+
+                            <tr class="for_tr">
+<input class="car_id" type="hidden" value="{$vo.id}">
+
                                 <td class="product-item sku-item" data-skuid="24025325">
                                     <div class="pic">
                                         <a href="{:U('Home/Goods/show',array('gid'=>$vo['gid']))}" target="_blank">
@@ -142,10 +144,10 @@
                                     </p>
                                 </td>
                             </tr>
+                        </tbody>
 
 </foreach>
 
-                        </tbody>
                     </table>
                 </div>
             </div>
@@ -329,7 +331,14 @@
     <script type="text/javascript">
     $(function(){
         $('.del').bind("click",function(){
-            $(this).parents('.no').remove();
+            var id = $(this).parents('.for_tr').find('.car_id').val();
+            var $this = $(this);
+            var all = $('#totalPrice').html();
+            var total = $(this).parents('tr').find('.to_tal').html();
+            $.get("{:U('Home/Car/del')}",{id:id},function(){
+                $this.parents('.for_tr').remove();
+                $('#totalPrice').html(all-total);
+            })
         })
         $('#totalPrice').html({$count});
         $('.decrease').bind("click",function(){
