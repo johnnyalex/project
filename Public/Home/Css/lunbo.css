@@ -3,7 +3,11 @@
     /*宽高*/
     .banner{width: 700px;height:360px;overflow: hidden;position: relative;margin-left:250px; }
     /*底图*/
+<<<<<<< HEAD
     .banner .img1{width: 3500px; position: absolute;}
+=======
+    .banner .img1{width: 3500px;position: absolute;}
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
     /*一排显示*/
     .banner .img1 li{float: left;}
     /*每次轮播宽度*/
@@ -47,7 +51,10 @@
         color:blue;
 
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
     /*top nav*/
     .topnav{
         position:fixed;

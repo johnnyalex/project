@@ -51,6 +51,12 @@
 <div class="confirm-order">
 <!-- 收货信息 -->
 <div class="order-address clear">
+<<<<<<< HEAD
+=======
+ 
+<form action="{:U('Home/Pay/">
+
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
         <input class="addrnum" type="hidden" value="" name="addrnum">
     <h2><span class="fl">选择收货地址</span><a style="display:none" href="javascript:void(0)" class="manage_links write_links fl"><i class="icons icons-tips fl"></i><span class="fl">请填写收货地址</span></a></h2>
 
@@ -91,6 +97,7 @@
             <li class="add"><a class="add" href="{:U('Home/Center/add_address')}" target="_blank">
             <em class="icons icons-add"></em>新增地址</a></li>
         </ul>
+<<<<<<< HEAD
     <div uadid="0" style="display: none;" id="addrform" class="new-address">
         <div class="panel-box" style="">
             <div class="adr" id="adr">
@@ -147,26 +154,44 @@
 </div>
 <div class="order-payment">
     <!--选择支付方式-->
+=======
+   
+
+</div>
+<div class="order-payment">
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
     <h2>选择支付方式</h2>
     <div class="pay-method">
         <ul>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
+<<<<<<< HEAD
                             <input type="radio" checked="" data-type="支付宝支付" class="check" name="choose_pay" value="2" autocomplete="off">
+=======
+                            <input type="radio" checked="" data-type="支付宝支付" class="zhifubao check" name="choose_pay" value="2" autocomplete="off">
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
                             <p class="img"><img src="__PUBLIC__/Home/Images/Alipay.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl"></span>
                     </li>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
+<<<<<<< HEAD
                             <input type="radio" data-type="微信支付" class="check" name="choose_pay" value="9" autocomplete="off">
+=======
+                            <input type="radio" data-type="微信支付" class="weixin check" name="choose_pay" value="9" autocomplete="off">
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
                             <p class="img"><img src="__PUBLIC__/Home/Images/weixin.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl">（推荐）</span>
                     </li>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
+<<<<<<< HEAD
                             <input type="radio" data-type="银联支付" class="check" name="choose_pay" value="3" autocomplete="off">
+=======
+                            <input type="radio" data-type="银联支付" class="yinlian check" name="choose_pay" value="3" autocomplete="off">
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
                             <p class="img"><img src="__PUBLIC__/Home/Images/yinlian.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl"></span>
@@ -181,8 +206,12 @@
     <div class="orders clear">
         <div class="orders-hd">
             <ul>
+<<<<<<< HEAD
                 <li data-goodsnums="1" class="product-item"><span>共（1）件商品</span></li>
                 <li class="price-item"><span class="text">规格</span></li>
+=======
+                <li data-goodsnums="1" class="product-item"><span>共（{$count}）件商品</span></li>
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
                 <li class="quantity-item"><span class="text">单价</span></li>
                 <li class="subtotal-item"><span class="text">数量</span></li>
                 <li class="actions-item"><span class="text">小计</span></li>
@@ -190,6 +219,7 @@
         </div>
 
                     <div class="order-list other-list">
+<<<<<<< HEAD
                 <div class="table-box"><span class="name">店铺：</span><span>博来美居日用专营店</span></div>
                 <div class="orders-bd">
                     <table class="tbl-main">
@@ -217,6 +247,35 @@
                                     <p class="count"><em class="u-yen">¥</em><span>15.90</span></p>
                                 </td>
                             </tr>
+=======
+                <!-- <div class="table-box"><span class="name">店铺：</span><span>博来美居日用专营店</span></div> -->
+                <div class="orders-bd">
+                    <table class="tbl-main">
+                        <tbody>
+
+                    <foreach name="goods" item="vo">
+
+                            <tr data-goodid="23202797" data-undeliveryarea="" class="posttr no mz_padding1" ispost="0">
+                                <td class="product-item">
+                                    <div class="pic"><img src="__PUBLIC__{$vo.pic}" style="display: inline;"></div>
+                                    <div class="detail">
+                                        <div class="title"><a target="_blank" href="{:U('Home/Goods/show',array('gid'=>$vo['gid']))}">{$vo.name}</a></div>
+                                    </div>
+                                </td>
+                                <td class="quantity-item cell-center">
+                                    <p class="price"><em class="u-yen">¥</em><span>{$vo.price}</span></p>
+                                </td>
+                                <td class="subtotal-item cell-center">
+                                    <p class="number">{$vo.qty}</p>
+                                </td>
+                                <td class="actions-item cell-center">
+                                    <p class="count"><em class="u-yen">¥</em><span>{$vo.count}</span></p>
+                                </td>
+                            </tr>
+
+                    </foreach>
+
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
                         </tbody>
                         <tfoot>
                         <tr>
@@ -226,7 +285,11 @@
                                     </div></div>
                             </td>
                             <td class="bgc" colspan="2">
+<<<<<<< HEAD
                                 <p><span>合计：</span><span class="fr postage"><em class="u-yen">¥</em><i>15.90</i></span></p>
+=======
+                                <p><span>合计：</span><span class="fr postage"><em class="u-yen">¥</em><i>{$total}</i></span></p>
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
                             </td>
                         </tr>
                         </tfoot>
@@ -245,13 +308,21 @@
         </div>
         <div class="other fr">
             <div class="detail">
+<<<<<<< HEAD
                 <p><label>商品金额：</label><span class="normal"> <em class="u-yen">¥</em><span class="confirm_order_spje">15.90</span></span></p>
+=======
+                <p><label>商品金额：</label><span class="normal"> <em class="u-yen">¥</em><span class="confirm_order_spje">{$total}</span></span></p>
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
                 <p><label>合计运费：</label><span class="normal"> <em class="u-yen">¥</em><span class="confirm_order_yun">0.00</span></span></p>
                 <p><label>活动优惠：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_hdyh">0.00</span></span></p>
                 <p><label>优惠券抵扣：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_liquan">0.00</span></span></p>
             </div>
             <div class="pay-all">
+<<<<<<< HEAD
                 <span class="wait_pay"><b>待支付：</b><span><em>￥</em><label class="confirm_order_waitpay">15.90</label></span></span>
+=======
+                <span class="wait_pay"><b>待支付：</b><span><em>￥</em><label class="confirm_order_waitpay">{$total}</label></span></span>
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
             </div>
             <em class="line-cur cur-top"></em>
             <em class="line-cur cur-bottom"></em>
@@ -284,6 +355,7 @@
 <div class="orders-pay-fixed">
     <div class="orders-total-pay">
         <div class="pay-type fl">
+<<<<<<< HEAD
             <p> 支付方式：<label id="ck">支付宝支付</label></p>
         </div>
         <a class="go_pay fr" href="javascript:;">
@@ -295,6 +367,14 @@
         <p data-curtime="1463022000" data-time="1463023189" id="counDown" class="fr tips">
             请在 <em id="countm">08</em><span class="org_1">分</span><em id="counts">36</em><span class="org_1">秒</span>内提交订单，下单后您会另有<em>30</em>分钟的支付时间
         </p>
+=======
+            <p> 支付方式：<label class="zffs" id="ck">支付宝支付</label></p>
+        </div>
+        <input type="button" class="fr" value="去结算" style="font-size:25px; margin-top:5px; margin-right:5px; color:white; width:130px; height:60px; border:0px; background:#ff464E; border-radius:5px">
+
+</form>
+
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
         <em class="pay-bg bg_l"></em>
         <em class="pay-bg bg_r"></em>
     </div>
@@ -361,22 +441,43 @@
 <script type="text/javascript">
     
 $(function(){
+<<<<<<< HEAD
 
 
+=======
+    $('.zhifubao').bind("click",function(){
+        $('.zffs').html('支付宝支付');
+    })
+
+    $('.weixin').bind("click",function(){
+        $('.zffs').html('微信支付');
+    })
+
+    $('.yinlian').bind("click",function(){
+        $('.zffs').html('银联在线支付');
+    })
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
 
     $('.addr-edit').bind("click",function(event){
         event.stopPropagation();
     })
 
     $('.lll').bind("click",function(){
+<<<<<<< HEAD
         // alert($(this).find('.dis').val());
+=======
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
         $('.addrnum').val($(this).find('.dis').val());
         $(this).parents('.order-address').find('.slt-icon,.default-add').hide();
         $(this).parents('ul').find('.lll').removeClass('cur');
         $('.default-add').html('已选中');
         $(this).find('.slt-icon,.default-add').css('display','block');
         $(this).addClass('cur');
+<<<<<<< HEAD
         $('.address_info').html($('.province').html()+' '+$('.jp_addr_street').html()+'<br />'+$('.area-name').html()+' 收 '+$('.area-mobile').html());
+=======
+        $('.address_info').html($(this).find('.province').html()+' '+$(this).find('.jp_addr_street').html()+'<br />'+$(this).find('.area-name').html()+' 收 '+$(this).find('.area-mobile').html());
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
     })
 
 })

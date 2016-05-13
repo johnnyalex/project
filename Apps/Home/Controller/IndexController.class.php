@@ -7,6 +7,7 @@ class IndexController extends Controller {
 
         $goods = M('goods');//实例化商品
         $goodsList=$goods->where(['is_new'=>1])->select();//查
+<<<<<<< HEAD
         $lunbo = M('lunbo');//  实例化 轮播
         $lunbos = $lunbo->where(['status'=>'1'])->select(); 
         // var_dump($lunbos);
@@ -15,6 +16,15 @@ class IndexController extends Controller {
         $this->assign('uid',$uid);
         $this->assign('lunbos',$lunbos);
         $this->assign('lunbo_width',$lunbo_width);
+=======
+        $sql = $goods->_sql();
+        // var_dump($sql);
+        // var_dump($goodsList);
+        // die();
+
+        $this->assign('goodsList',$goodsList);
+        $this->assign('id',$uid);
+>>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
         $this->assign('title','卷皮网首页');
         $this->display();
     }
