@@ -28,35 +28,22 @@ class CenterController extends Controller {
 		$users['month'] = substr($time,4,2)['0'] == 0 ? substr($time,5,1) : substr($time,4,2);
 		$users['day'] = substr($time,6,2)['0'] == 0 ? substr($time,7,1) : substr($time,6,2);
 		$this->assign('user',$users);
-<<<<<<< HEAD
-		// var_dump($users);
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','账户设置-卷皮网');
 		$this->display();
 	}
 	//安全中心
 	public function security(){
-<<<<<<< HEAD
 		$user['pic']=$_SESSION['user']['pic'];
 		$this->assign('user',$user);
 		$this->assign('title','安全中心-卷皮网');
-=======
-		$this->assign('title','安全中心-卷皮网');
-
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->display();
 	}
 	public function question (){
 		$arr2=['您的母亲名字','您的父亲名字','您的爱人名字','您的孩子名字','您的小学名字','您的中学名字','您的大学名字','自定义问题',];
 		$arr1=['您最喜欢的动物','您最喜欢的花','您最喜欢的食物','您最喜欢的地方','您最喜欢的季节','您最喜欢的颜色','你最喜欢的书','你最热爱的运动','自定义问题'];
 		$arr3=['您最喜欢的歌曲','您的偶像是谁','您最喜欢的电影','您最喜欢的电视剧','您最喜欢的餐厅','您最喜欢的车','您最喜欢的周几','自定义问题',];
-		// var_dump($arr);
-<<<<<<< HEAD
 		$user['pic']=$_SESSION['user']['pic'];
 		$this->assign('user',$user);
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('arr1',$arr1);
 		$this->assign('arr2',$arr2);
 		$this->assign('arr3',$arr3);
@@ -78,26 +65,17 @@ class CenterController extends Controller {
 	}
 	//三方绑定
 	public function binding(){
-<<<<<<< HEAD
-
 		$user['pic']=$_SESSION['user']['pic'];
 		$this->assign('user',$user);
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','绑定网站-卷皮网');
 
 		$this->display();
 	}
 	//兑现
 	public function bank(){
-<<<<<<< HEAD
 		$user['pic']=$_SESSION['user']['pic'];
 		$this->assign('user',$user);
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','提现账户-卷皮网');
-
 		$this->display();
 	}
 	//收货地址
@@ -110,11 +88,8 @@ class CenterController extends Controller {
 			$addr[$key]['address'] = $value['pro'].' '.$value['city'].' '.$value['area'].' '.$value['addr'];
 			$addr[$key]['tel'] = substr_replace($addr[$key]['tel'],'****',3,4);
 		}
-<<<<<<< HEAD
 		$user['pic']=$_SESSION['user']['pic'];
 		$this->assign('user',$user);
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('addr',$addr);
 		$this->assign('count',$count);
 		$this->assign('title','收货地址-卷皮网');
@@ -172,19 +147,8 @@ class CenterController extends Controller {
 		else
 			$this->error('添加失败',U("Home/Center/address"));
 	}
-	// 个人基本信息
-	// public function setting(){
-		// $this->display();
 
-	// }
 	public function do_set(){
-		// var_dump($_FILES);
-		// var_dump($_POST);
-		// die();
-<<<<<<< HEAD
-=======
-		//
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$arr = array();
 		// id
 		$arr['uid'] = $_SESSION['user']['id'];
@@ -245,112 +209,73 @@ class CenterController extends Controller {
 	}
 	// 所有订单
 	public function allOrder(){
-<<<<<<< HEAD
 		$user['pic']=$_SESSION['user']['pic'];
 		$this->assign('user',$user);
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','订单管理-卷皮网');
 		$this->display();
 	}
 	// 待付款订单
 	public function noPayOrder(){
-<<<<<<< HEAD
 		$user['pic']=$_SESSION['user']['pic'];
 		$this->assign('user',$user);
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','订单管理-卷皮网');
-
 		$this->display();
 	}
 	// 运送订单
 	public function inWayOrder(){
-<<<<<<< HEAD
 		$user['pic']=$_SESSION['user']['pic'];
 		$this->assign('user',$user);
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','订单管理-卷皮网');
 
 		$this->display();
 	}
 	// 我的售后
 	public function backList(){
-<<<<<<< HEAD
 		$user['pic']=$_SESSION['user']['pic'];
 		$this->assign('user',$user);
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','售后管理-卷皮网');
-
 		$this->display();
 	}
 	// 我的积分
 	public function beans(){
-<<<<<<< HEAD
 		$user['pic']=$_SESSION['user']['pic'];
 		$this->assign('user',$user);
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','积分管理-卷皮网');
-
 		$this->display();
 	}
 	// coupon 优惠券
  	public function coupon(){
-<<<<<<< HEAD
  		$user['pic']=$_SESSION['user']['pic'];
  		$this->assign('user',$user);
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','优惠券-卷皮网');
-
 		$this->display();
 	}
 	// 修改密码
  	public function repass(){
-<<<<<<< HEAD
  		$user['pic']=$_SESSION['user']['pic'];
  		$this->assign('user',$user);
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','修改密码-卷皮网');
-
 		$this->display();
 	}
 	// 修改邮箱
  	public function rephone(){
-<<<<<<< HEAD
  		$user['pic']=$_SESSION['user']['pic'];
  		$this->assign('user',$user);
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		$this->assign('title','手机绑定-卷皮网');
-
 		$this->display();
 	}
 	// 修改手机号
  	public function reemail(){
-<<<<<<< HEAD
  		$user['pic']=$_SESSION['user']['pic'];
  		$this->assign('user',$user);
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
-		$this->assign('title','邮箱管理-卷皮网');
- 		
+		$this->assign('title','邮箱管理-卷皮网');		
 		$this->display();
 	}
-<<<<<<< HEAD
 	public function favorite(){
 		$uid = $_SESSION['user']['id'];
+		if ($uid=='') {
+			$this->display('Home/Login/index');
+		}
 		// 实例化
 		$use=M('user');
 		// 查询
@@ -375,30 +300,16 @@ class CenterController extends Controller {
 		$this->display();
 
 	}
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 	public function testMail(){
 	    // sendMail('13701383017@139.com','这是一个神奇的网站','您的验证码lamp123');
 	    sendMail('yetyao@sina.com','这是一个神奇的网站','点击以下链接完成注册<a href="http://yny.cn/Home/Index/index">点击完成验证</a>');
 	}
-<<<<<<< HEAD
-	// public function verify(){
-	//     var_dump($_GET);
-	//     echo '完成注册';
-	// }
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 	public function check_question(){
 		$id = $_SESSION['user']['id'];
 		$res = M('question')->find($id);
 		$this->assign('res',$res);
 		$this->display();
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 	public function do_check_question(){
 		$id = $_SESSION['user']['id'];
 		$res = M('question')->find($id);
@@ -407,11 +318,6 @@ class CenterController extends Controller {
 		else
 			$this->success('密保错误',U('Home/Center/check_question'));
 	}
-<<<<<<< HEAD
-	
-
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 	public function do_repass(){
 		if($_POST['npassword'] != $_POST['password'])
 			$this->error('两次密码不一致',U('Home/Center/repass'));
@@ -425,12 +331,5 @@ class CenterController extends Controller {
 			$this->error('修改失败',U('Home/Center/repass'));
 	}
 }
-<<<<<<< HEAD
+?>
 
-
-
-
-  ?>
-=======
-  ?>
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a

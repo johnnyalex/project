@@ -136,12 +136,6 @@ class UserController extends CommonController {
         //保存
         $user->create();
         $res = $user->save();
-<<<<<<< HEAD
-        // $a = $user->_sql();
-=======
-        $a = $user->_sql();
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
-        // var_dump($a);
         if ($res) {
             echo 0;     
             die;

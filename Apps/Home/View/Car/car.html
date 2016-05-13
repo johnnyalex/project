@@ -28,29 +28,6 @@
     </div>
  </div>
 </div>
-<<<<<<< HEAD
-<!-- 
-<div id="toolbar">
-    <div class="bar-con">
-        <ul class="topNav fl">
-            <li class="first"><a href="http://www.juanpi.com" class="active">卷皮折扣</a></li>
-            <li><a href="http://brand.juanpi.com" target="_blank">品牌折扣</a></li>
-            <li><a href="http://www.jiukuaiyou.com" target="_blank" class="red">9.9包邮</a></li>
-            <li><a href="http://fanli.juanpi.com" target="_blank">卷皮返利</a></li>
-            <li><a href="http://www.juanpi.com/apps" target="_blank"><em class="icon-normal icon-phone"></em>手机版</a></li>
-        </ul>
-        <div class="right-show fr">
-            <div class="union-login"> <a href="" rel="nofollow">QQ登录</a><a href="" rel="nofollow">微博登录</a>&#12288;| </div>
-            <div class="login-show"><a href="" rel="nofollow">登录</a><a href="" rel="nofollow">免费注册</a>&#12288;|</div>
-            <div class="other-show"><a href="" rel="nofollow">联系客服</a><a href="">卖家报名</a></div>
-        </div>
-    </div>
-</div>
--->
-
-<!--head start-->
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 <div class="header header_shop">
     <div class="area">
         <div class="logo shopping">
@@ -93,11 +70,7 @@
             <div class="orders-hd other clear">
                 <ul>
                     <li class="product-item">
-<<<<<<< HEAD
-                        <span>共（<em id="totalNum">1</em>）件商品</span>
-=======
                         <span>共（<em id="totalNum">{$all}</em>）件商品</span>
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
                     </li>
                     <li class="price-item">
                         <span class="text">单价</span>
@@ -112,27 +85,10 @@
                         <span class="text">操作</span>
                     </li>
                 </ul>
-<<<<<<< HEAD
-=======
-
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
             </div>
 
             <div class="order-list">
                 <div class="orders-bd normal activity no">
-<<<<<<< HEAD
-                    <div class="table-box-other">
-                        <span class="activity a2 no"> 满 件 减</span>
-                            <a href="/1414567" target="_blank"> 再凑1件,可减6元  >></a>
-                    </div>
-                    <table class="tbl-main">
-                        <tbody>
-                            <tr class="no">
-                                <td class="product-item sku-item" data-skuid="24025325">
-                                    <div class="pic">
-                                        <a href="http://shop.juanpi.com/deal/8188612 " target="_blank">
-                                            <img src="__PUBLIC__/Home/images/cardemo.jpg">
-=======
                     <table class="tbl-main">
        
 <foreach name="goods" item="vo">
@@ -146,45 +102,20 @@
                                     <div class="pic">
                                         <a href="{:U('Home/Goods/show',array('gid'=>$vo['gid']))}" target="_blank">
                                             <img src="__PUBLIC__{$vo.pic}">
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
                                         </a>
                                     </div>
                                     <div class="detail">
                                         <div class="title">
-<<<<<<< HEAD
-                                            <a target="_blank" href="http://shop.juanpi.com/deal/8188612">OL小香风阔腿裤套装</a>
-                                        </div>
-                                        <div class="other">
-                                            <p>颜色分类：白色上衣+黑色裤子</p>
-                                            <p>尺码：S（小码）</p>
-=======
                                         </div>
                                         <div class="other">
                                             <p>{$vo.name}</p>
                                             <p></p>
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
                                         </div>
                                     </div>
                                 </td>
                                 <td class="price-item cell-center">
                                     <p class="price">
                                         <em class="u-yen">¥</em>
-<<<<<<< HEAD
-                                        <span>39.00</span>
-                                    </p>
-                                    <p class="old_p">
-                                        <em class="u-yen">¥</em>
-                                        <span>399.00</span>
-                                    </p>
-                                </td>
-                                <td class="quantity-item cell-center">
-                                    <div class="normal">
-                                        <img class="ct-loading" src="__PUBLIC__/Home/Images/loading.gif">
-                                        <p class="num sku_24025325" data-ioldnum="1" skuid="24025325">
-                                            <i class="decrease no">-</i>
-                                            <input type="text" name="amount" value="1">
-                                            <i class="increase">+</i>
-=======
                                         <span class="pr_ice">{$vo.price}</span>
                                     </p>
                              
@@ -196,7 +127,6 @@
                                             <input class="in_pu" type="text" name="amount" value="{$vo.qty}">
                                             <i class="increase">+</i>
                                             <input class="st_ock" type="hidden" value="{$vo.stock}">
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
                                         </p>
                                         <p class="tips" style="display: none;"></p>
                                     </div>
@@ -204,36 +134,18 @@
                                 <td class="subtotal-item cell-center">
                                     <p class="count">
                                         <em class="u-yen">¥</em>
-<<<<<<< HEAD
-                                        <span>39.00</span>
-=======
                                         <span class="to_tal">{$vo.total}</span>
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
                                     </p>
                                 </td>
                                 <td class="actions-item cell-center">
                                     <p>
                                         <a class="del" href="javascript:;">删"除</a>
                                     </p>
-<<<<<<< HEAD
-                                    <div class="confirm_box ">
-                                        <p class="txt">宝贝库存有限，确定要删除吗？</p>
-                                        <p class="btn_all">
-                                            <a class="btn btn_01" href="javascript:;">删除</a>
-                                            <a class="btn btn_02" href="javascript:;">保留</a>
-                                        </p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-=======
                                 </td>
                             </tr>
                         </tbody>
 
 </foreach>
-
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
                     </table>
                 </div>
             </div>
@@ -277,20 +189,6 @@
                         <span>以下为APP专享券，仅可在APP使用</span>
                         </h5>
                     </div>
-<<<<<<< HEAD
-                    <div class="cash-voucher appCouponList">
-                        <div class="cv-list">
-                            <div class="hdttl" style="display:block;">
-                                <div class="rdslt">描述</div>
-                                <div class="cv-adv">使用范围</div>
-                                <div class="cv-time">有效期</div>
-                                <div class="cv-status">操作</div>
-                            </div>
-                            <ul class="coupon_ul clear"> </ul>
-                        </div>
-                    </div>
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
                 </div>
             </div>
             <div class="orders-pay-fixed">
@@ -324,11 +222,7 @@
                         总计（不含运费）
                         <span>
                         <i>￥</i>
-<<<<<<< HEAD
-                        <span id="totalPrice">39.00</span>
-=======
                         <span id="totalPrice"></span>
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
                         </span>
                         </p>
                     <!-- 下架  -->
@@ -377,27 +271,6 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-
-        <!-- 空购物车 -->
-<!--     <div class="main pr mt20 clear">
-        <div class="orders order_empty">
-		        <div class="empty_img fl"></div>
-		            <div class="empty_detail fr">
-		                <p class="txt">购物袋还是空荡荡哒~快去抢购宝贝吧！</p>
-		                <p class="btn_all"><a href="http://www.juanpi.com" class="btn_normal btn_normal_01">去抢购</a></p>
-		      </div>
-		  </div>
-    </div> -->
-            <!-- 历史失效商品区 -->
-            
-            <!-- 历史失效商品区 /-->
-
-        <!-- /主体 -->
-        
-            <!-- 页脚 -->
-=======
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
             <div class="foot">
     <div class="white_bg">
     <div class="foot-con">
@@ -450,23 +323,7 @@
   <p class="tips"><em icon-bag="" icon-normal="" class="icon-normal icon-clock"></em>有货啦！</p>
   <p class="txt"><em class="remindnum"></em>件商品恢复有货！赶紧抢回来吧</p>
   <p class="btn_all"><a target="_blank" href="//user.juanpi.com/favorite">马上查看</a></p>
-  <a class="del" href="javascript:;">×</a>
-<<<<<<< HEAD
-</div>
-<script type="text/javascript">
-    (function($) {
-        if (XDPROFILE.uid != '') {
-            $.getJSON("//user.juanpi.com/Public/message?callback=?", function (data) {
-                if (typeof(data) != "undefined " && data != 0) {
-                    $('.personal-show .count ').show();
-                    $('.personal-show .count ').html('<i>' + data + '</i>');
-                }
-            });
-        }
-    })(jQuery);
-</script>
-=======
-    
+  <a class="del" href="javascript:;">×</a>    
     <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
     $(function(){
@@ -512,8 +369,6 @@
         })
     })
     </script>
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
-
             <!-- /页脚 -->
         
         <!--百分点-->
@@ -523,31 +378,6 @@
         
 <script type="text/javascript" src="__PUBLIC__/Home/Js/d326afae1a8a43c8beb1ef8eb2114770.js"></script>
 <script src="__PUBLIC__/Home/Js/95099dd9923f4b8dad10c7f3e327755a.js" type="text/javascript"></script>
-    <script>
-<<<<<<< HEAD
-        (function($) {
-            var p_id="empty_cart";
-            bfdStatis.bfdFun(p_id);
-            bfdStatis.setBfdInfoFun({
-                        "p_id":p_id,
-                        "cart_items" : '',
-                    //"user_id" : XDPROFILE.uid,
-                    "page_type" : "shopcart"
-        });
-        p_id=null;
-        bfdStatis.isBiOrBfdFun(12,'goods-list',1,'sc_noRecVAV');
-        })(jQuery);
-    </script>
-
-        <!-- /脚本 -->
-        <!--[if lt IE 9]>
-        <script type="text/javascript" src="__PUBLIC__/Home/Js/d43707703cdd4ecb9b3081dd4e078355.js"></script>
-
-        <![endif]-->
-=======
-
-    </script>
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 		<script src="__PUBLIC__/Home/Js/b33014a589c2407d9b0f94561e91219e.js" language="javascript"></script>
     </body>
 </html>

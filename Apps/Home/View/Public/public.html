@@ -14,6 +14,11 @@
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/9245c5eeb79d45ea8fca9ffcd464f12f.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/41109579bcee494389f359ae0e914606.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/bb3e08540e584c09ac7578fd0213f369.css" />
+
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/680005b70b7b4c55b3971b8e37687505.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/09cbb6c851054bfd9d404c535089078d.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/41c422485c044ea79e03976147b975e9.css" />
+
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/fix.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/lunbo.css" />
     <script type="text/javascript" src="__PUBLIC__/Home/Js/jquery-1.8.3.min.js"></script>
@@ -126,23 +131,21 @@
     </div>
 </div>
                 <!-- /页头 -->
-
+<block name="show">
         <!-- 主体 -->
         <div class="banner">
           <ul class="img1">
-                <li><a href=""><img src="__PUBLIC__/Home/Picture/mao1.png"></a></li>
-                <li><a href=""><img src="__PUBLIC__/Home/Picture/kid2.png"></a></li>
-                <li><a href=""><img src="__PUBLIC__/Home/Picture/biao3.png"></a></li>
-                <li><a href=""><img src="__PUBLIC__/Home/Picture/bao4.png" ></a></li>
+                <foreach name="lunbos" item="vo" >
+                <li><a href="{$vo['web']}"><img src="__PUBLIC__{$vo['pic']}"></a></li>
+                </foreach>
             </ul>
               
             <div class="btn btn_l">&lt;</div>
             <div class="btn btn_r">&gt;</div>
             <ul class="num">
-                <li class="on"></li>
+                <foreach name="lunbos" item="vo" >
                 <li></li>
-                <li></li>
-                <li></li>
+                </foreach>
             </ul>
         </div>
 <!-- </div> -->
@@ -440,7 +443,7 @@
 </ul>
 <div class="page">
     <em></em>
-    <div><span class="pg-prev">上一页</span><span>1</span><a href="/?page=2">2</a><a href="/?page=3">3</a><i>...</i><a  href="/?page=5">5</a><a class="pg-next" href="/?page=2">下一页</a>
+    <div><span class="pg-prev" style="width:80px">上一页</span><span>1</span><a href="/?page=2">2</a><a href="/?page=3">3</a><i>...</i><a  href="/?page=5">5</a><a class="pg-next" href="/?page=2" style="width:80px">下一页</a>
 </div>
 <!-- 广告 -->
 <!-- <div class="ad">
@@ -493,7 +496,7 @@
 
 
         <!-- /主体 -->
-
+</block>
         <!-- 页脚 -->
 <div class="foot">
     <div class="white_bg">

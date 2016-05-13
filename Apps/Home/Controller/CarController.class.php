@@ -3,13 +3,6 @@ namespace Home\Controller;
 use Think\Controller;
 class CarController extends Controller {
     public function car(){
-<<<<<<< HEAD
-        //解析模板
-        $this->display();
-
-    }
-  
-=======
         $uid = $_SESSION['user']['id'];
         $gid = $_POST['goods_id'];
         $qty = $_POST['amount'];
@@ -43,6 +36,4 @@ class CarController extends Controller {
     public function del(){
     	$res = M('car')->delete($_GET['id']);
     }
-
->>>>>>> 458eab0b3f3d087a1c23d0dfedb6b9634395dd4a
 }
