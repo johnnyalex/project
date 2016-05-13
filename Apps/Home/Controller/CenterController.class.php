@@ -13,53 +13,8 @@ class CenterController extends Controller {
 		// user的pic 存session
 		$_SESSION['user']['pic']=$user['pic'];
 		//实例化
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		$this->assign('title','用户中心-卷皮网');
 		$this->assign('user',$user);
-=======
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-		var_dump($_SESSION);
-		var_dump($user);
-		$this->assign('title','用户中心-卷皮网');
-		$this->assign('user',$user);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
-=======
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-		// var_dump($_SESSION);
-		// var_dump($user);
-		$this->assign('title','用户中心-卷皮网');
-		$this->assign('user',$user);
-
-<<<<<<< HEAD
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-=======
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-=======
-		$this->assign('title','用户中心-卷皮网');
-		$this->assign('user',$user);
->>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
 		$this->display();
 	}
 	//个人信息后台 账户设置
@@ -71,53 +26,9 @@ class CenterController extends Controller {
 		$time = $users['birthday'];
 		$users['year'] = substr($time,0,4);
 		$users['month'] = substr($time,4,2)['0'] == 0 ? substr($time,5,1) : substr($time,4,2);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		$users['day'] = substr($time,6,2)['0'] == 0 ? substr($time,7,1) : substr($time,6,2);
 		$this->assign('user',$users);
 		$this->assign('title','账户设置-卷皮网');
-=======
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-=======
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-		$users['day'] = substr($time,6,2)['0'] == 0 ? substr($time,5,1) : substr($time,4,2);
-=======
-		$users['day'] = substr($time,6,2)['0'] == 0 ? substr($time,7,1) : substr($time,6,2);
->>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
-		$this->assign('user',$users);
-		$this->assign('title','账户设置-卷皮网');
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-=======
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-=======
->>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
 		$this->display();
 	}
 	//安全中心
@@ -334,33 +245,6 @@ class CenterController extends Controller {
 	}
 	// 修改密码
  	public function repass(){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- 		dump($_SESSION);
->>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
-=======
- 		dump($_SESSION);
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
- 		dump($_SESSION);
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
- 		dump($_SESSION);
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
- 		dump($_SESSION);
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-=======
- 		dump($_SESSION);
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-=======
->>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
 		$this->assign('title','修改密码-卷皮网');
 
 		$this->display();
@@ -381,28 +265,12 @@ class CenterController extends Controller {
 	    // sendMail('13701383017@139.com','这是一个神奇的网站','您的验证码lamp123');
 	    sendMail('yetyao@sina.com','这是一个神奇的网站','点击以下链接完成注册<a href="http://yny.cn/Home/Index/index">点击完成验证</a>');
 	}
-	// public function verify(){
-	//     var_dump($_GET);
-	//     echo '完成注册';
-	// }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
 	public function check_question(){
 		$id = $_SESSION['user']['id'];
 		$res = M('question')->find($id);
 		$this->assign('res',$res);
 		$this->display();
 	}
-<<<<<<< HEAD
-
 	public function do_check_question(){
 		$id = $_SESSION['user']['id'];
 		$res = M('question')->find($id);
@@ -411,50 +279,6 @@ class CenterController extends Controller {
 		else
 			$this->success('密保错误',U('Home/Center/check_question'));
 	}
-
-	public function do_repass(){
-		if($_POST['npassword'] != $_POST['password'])
-			$this->error('两次密码不一致',U('Home/Center/repass'));
-		$_POST['id'] = $_SESSION['user']['id'];
-		unset($_POST['npassword'],$_POST['code']);
-		M('user')->create();
-		$res = M('user')->save();
-		if($res)
-			$this->success('修改成功',U('Home/Center/userinfo'));
-		else
-			$this->error('修改失败',U('Home/Center/repass'));
-	}
-=======
-
->>>>>>> 63ae030da0217a7c0d631f2723fab83f282abfcd
-=======
-
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
-
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
-
->>>>>>> 70b7732ff0a7c8bcdd46c85df31deedde9064982
-=======
-
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-=======
-
->>>>>>> e4f34d0e1f20f1b37c059a3b940567e2687b44ec
-=======
-
-	public function do_check_question(){
-		$id = $_SESSION['user']['id'];
-		$res = M('question')->find($id);
-		if($_POST['a1'] == $res['a1'] && $_POST['a2'] == $res['a2'] && $_POST['a3'] == $res['a3'])
-			$this->success('验证成功',U('Home/Center/repass'));
-		else
-			$this->success('密保错误',U('Home/Center/check_question'));
-	}
-	
->>>>>>> 454dd08e740492e4c83fa9985b90ba43e42e0345
-
 	public function do_repass(){
 		if($_POST['npassword'] != $_POST['password'])
 			$this->error('两次密码不一致',U('Home/Center/repass'));
@@ -468,8 +292,4 @@ class CenterController extends Controller {
 			$this->error('修改失败',U('Home/Center/repass'));
 	}
 }
-
-
-
-
   ?>
