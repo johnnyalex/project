@@ -104,21 +104,21 @@
         <ul>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
-                            <input type="radio" checked="" data-type="支付宝支付" class="zhifubao check" name="" value="2" autocomplete="off">
+                            <input type="radio" checked="" data-type="支付宝支付" class="zhifubao check" name="sss" value="2" autocomplete="off">
                             <p class="img"><img src="__PUBLIC__/Home/Images/Alipay.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl"></span>
                     </li>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
-                            <input type="radio" data-type="微信支付" class="weixin check" name="" value="9" autocomplete="off">
+                            <input type="radio" data-type="微信支付" class="weixin check" name="sss" value="9" autocomplete="off">
                             <p class="img"><img src="__PUBLIC__/Home/Images/weixin.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl">（推荐）</span>
                     </li>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
-                            <input type="radio" data-type="银联支付" class="yinlian check" name="" value="3" autocomplete="off">
+                            <input type="radio" data-type="银联支付" class="yinlian check" name="sss" value="3" autocomplete="off">
                             <p class="img"><img src="__PUBLIC__/Home/Images/yinlian.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl"></span>
@@ -198,11 +198,11 @@
             <div class="detail">
                 <p><label>商品金额：</label><span class="normal"> <em class="u-yen">¥</em><span class="confirm_order_spje">{$total}</span></span></p>
                 <p><label>合计运费：</label><span class="normal"> <em class="u-yen">¥</em><span class="confirm_order_yun">0.00</span></span></p>
-                <p><label>活动优惠：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_hdyh">0.00</span></span></p>
+                <p><label>积分抵现：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_hdyh">{$pts}</span></span></p>
                 <p><label>优惠券抵扣：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_liquan">0.00</span></span></p>
             </div>
             <div class="pay-all">
-                <span class="wait_pay"><b>待支付：</b><span><em>￥</em><label class="confirm_order_waitpay">{$total}</label></span></span>
+                <span class="wait_pay"><b>待支付：</b><span><em>￥</em><label class="confirm_order_waitpay">{$ttp}</label></span></span>
             </div>
             <em class="line-cur cur-top"></em>
             <em class="line-cur cur-bottom"></em>

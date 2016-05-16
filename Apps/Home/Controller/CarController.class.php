@@ -33,7 +33,7 @@ class CarController extends Controller {
        		$goods[$key]['total'] = $value['price']*$value['qty'];
        		$count = $count + $goods[$key]['total'];
        	}
-       	$all = count($goods);
+        $all = count($goods);
        	$this->assign('all',$all);
        	$this->assign('goods',$goods);
        	$this->assign('count',$count);

@@ -7,12 +7,12 @@
                             <span class="order_t">
                             <form action="{:U('Home/Center/allOrder')}" method="post">
                                <select class="state-select" name="status" id="orderStatus" style="margin-top:10px;">
-                                   <option value="all" data-msg="订单状态">订单状态</option>
-                                   <option value="0" data-msg="待付款">待付款</option>
-                                   <option value="1" data-msg="待发货">待发货</option>
-                                   <option value="2" data-msg="运送中">运送中</option>
-                                   <option value="3" data-msg="已送达">已送达</option>
-                                   <option value="4" data-msg="已关闭">已关闭</option>
+                                   <option value="" data-msg="订单状态">订单状态</option>
+                                   <option value="1" data-msg="待付款" <?php if($_GET['status'] == 1) echo 'selected'; ?>>待付款</option>
+                                   <option value="2" data-msg="待发货" <?php if($_GET['status'] == 2) echo 'selected'; ?>>待发货</option>
+                                   <option value="3" data-msg="运送中" <?php if($_GET['status'] == 3) echo 'selected'; ?>>运送中</option>
+                                   <option value="4" data-msg="已送达" <?php if($_GET['status'] == 4) echo 'selected'; ?>>已送达</option>
+                                   <option value="5" data-msg="已关闭" <?php if($_GET['status'] == 5) echo 'selected'; ?>>已关闭</option>
                                </select>
                             </form>
                            </span>
@@ -71,11 +71,11 @@
                                     <p>
                                         <b class="wait-pay">
                                             <switch name="v1.status" >
-                                            <case value="0">待付款</case>
-                                            <case value="1">待发货</case>
-                                            <case value="2">运送中</case>
-                                            <case value="3">已送达</case>
-                                            <case value="4">已关闭</case>
+                                            <case value="1">待付款</case>
+                                            <case value="2">待发货</case>
+                                            <case value="3">运送中</case>
+                                            <case value="4">已送达</case>
+                                            <case value="5">已关闭</case>
                                             </switch>
                                         </b>
                                     </p>
@@ -97,6 +97,11 @@
     </div>  
     <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
-
+        $(function(){
+            $('#orderStatus').change(function(){
+                var v = $(this).val();
+                location.href = "{:U('Home/Center/allOrder/status/"+v+"')}"
+            })
+        })
     </script>  
 </block>

@@ -15,8 +15,21 @@ class PaymentController extends Controller {
         foreach ($goods as $key => $value) {
             $arr['price_total'] = $arr['price_total'] + $value['price']*$value['qty'];
         }
-        $arr['price_true'] = $arr['price_total'];
-        $arr['status'] = 0;
+        $o_points = M('userinfo')->field('points')->where('uid='.$uid)->find()['points'];
+        $t_points = $o_points/10;
+        var_dump($o_points);
+        if($o_points >= $arr['price_total']/10)
+            $t_points = $arr['price_total']/10*9;
+        else
+            $t_points = $arr['price_total']-$t_points;
+        $n_points = $o_points - ($t_points*10);
+        $jian = $arr['price_total'] - $t_points;
+        $jia = $arr['price_total']/10;
+        var_dump($t_points);
+        var_dump($jian);
+        var_dump($jia);
+        $arr['price_true'] = $t_points;
+        $arr['status'] = 1;
         $arr['time'] = date('Y-m-d H:i:s',time());
         M('order')->create();
         $order_id = M('order')->add($arr);
@@ -29,6 +42,18 @@ class PaymentController extends Controller {
             M('order_goods')->add($arr);
         }
         M('car')->where('uid='.$uid)->delete();
+        $this->assign('id',$order_id);
+        $this->display();
+    }
+
+    public function dopay(){
+        $_POST['status'] = 2;
+        M('order')->create();
+        $res = M('order')->save();
+        if($res)
+            $this->success('付款成功',U('Home/Center/allOrder'));
+        else
+            $this->success('付款失败',U('Home/Center/allOrder'));
     }
 
 }
