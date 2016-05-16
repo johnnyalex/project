@@ -1,0 +1,36 @@
+<extend name="./Public/public" />
+<block name="show">
+<div class="main pr mt20 clear">
+        <ul class="goods-list clear ">
+            <foreach name="goods" item="vo">
+            <li class="" id="41" re="" g_type="3" gtype="3">
+                <div class="list-good buy">
+                    <div class="good-pic">
+                        <a href="{:U('Home/goods/show',['gid'=>$vo['id']])}" target="_blank" class="pic-img">
+                            <img alt="2016夏季热卖男装休闲潮流短袖T恤" style="display: inline;" src="__PUBLIC__{$vo.pic}" class="lazy good-pic">
+                                 <span class="new-icon">新品</span>
+                        </a>
+                    </div>
+                    <h3 class="good-title">
+                        【包邮】<a href="{:U('Home/goods/show',['gid'=>$vo['id']])}" target="_blank">{$vo.name}</a>
+                        <div class="icon-all" style="display:none;">
+                          </div>
+                        <!-- <span class="sold">已售<em>0</em></span> -->
+                        <span class="sold">新品上架</span>
+                    </h3>
+                    <div class="good-price">
+                        <span class="price-current"><em>￥</em>{$vo.price}</span>
+                        <span class="des-other"><strong></strong>
+                            <span class="price-old"><em>￥</em>{$vo.price}</span>
+                            <span class="discount">(<em></em>折)</span>
+                        </span>
+                           <div class="btn buy j-buy">
+                                <a href="/BB/project/Home/goods/show/gid/41.html" target="_blank"><em class="j-icon"></em><span>特卖</span></a>
+                            </div>
+                    </div>
+                </div>
+            </li>  
+            </foreach>      
+         </ul>
+    </div>
+</block>

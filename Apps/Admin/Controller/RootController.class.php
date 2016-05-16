@@ -9,11 +9,7 @@ class RootController extends CommonController {
     		$p = 1;
     	if(empty($_GET['show'])&&empty($_GET['search'])){
 	    	$show = 5;
-<<<<<<< HEAD
-	    	$start = $p*$show;
-=======
 	    	$start = ($p-1)*$show;
->>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
 	    	$res = $think->limit($start.','.$show)->select();
 	    	$count = $think->field('id')->count();
     	}
@@ -160,8 +156,6 @@ class RootController extends CommonController {
         if($res)
             echo 1;   
     }
-<<<<<<< HEAD
-=======
     public function update_root(){
         $id = I('get.id');
         $rules = M('think_auth_rule')->find($id);
@@ -176,5 +170,4 @@ class RootController extends CommonController {
         else
             $this->error('修改失败',U('Admin/Root/index'));
     }
->>>>>>> 1e177447aacbab8d44bd01755f7d7a9a104723f1
 }
