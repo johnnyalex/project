@@ -3,19 +3,20 @@
     <div class="order-lists">
                     <div class="all-orders">
                         <div class="all-orders-top">
-                            <span><strong>全部订单</strong>(最近三个月订单)</span>
+                            <span ><strong>全部订单</strong>(最近三个月订单)</span>
                             <span class="order_t">
-                               <select class="state-select" name="status" id="orderStatus">
-                                   <option value="all" data-msg="订单状态">订单状态</option>
-                                   <option value="1" data-msg="待付款">待付款</option>
-                                   <option value="3" data-msg="待发货">待发货</option>
-                                   <option value="4" data-msg="运送中">运送中</option>
-                                   <option value="5" data-msg="已送达">已送达</option>
-                                   <option value="6" data-msg="已关闭">已关闭</option>
-                                   <!-- <option value="20"  data-msg="售后处理中">售后处理中</option>-->
+                            <form action="{:U('Home/Center/allOrder')}" method="post">
+                               <select class="state-select" name="status" id="orderStatus" style="margin-top:10px;">
+                                   <option value="" data-msg="订单状态">订单状态</option>
+                                   <option value="1" data-msg="待付款" <?php if($_GET['status'] == 1) echo 'selected'; ?>>待付款</option>
+                                   <option value="2" data-msg="待发货" <?php if($_GET['status'] == 2) echo 'selected'; ?>>待发货</option>
+                                   <option value="3" data-msg="运送中" <?php if($_GET['status'] == 3) echo 'selected'; ?>>运送中</option>
+                                   <option value="4" data-msg="已送达" <?php if($_GET['status'] == 4) echo 'selected'; ?>>已送达</option>
+                                   <option value="5" data-msg="已关闭" <?php if($_GET['status'] == 5) echo 'selected'; ?>>已关闭</option>
                                </select>
+                            </form>
                            </span>
-                            <a href="###.juanpi.com/order/index/flag/1">查看所有订单&gt;&gt;</a>
+                            <a href="{:U('Home/Center/allOrder')}">查看所有订单&gt;&gt;</a>
                         </div>
                         <!-- 防诈骗BANNER图片BEGIN -->
                                                 <div class="fraud-banner">
@@ -23,27 +24,36 @@
                             </div>
                                             <!-- 防诈骗BANNER图片END -->
                     </div>
-                
-                                        <div class="order-infolist mb20">
+
+<foreach name="orders" item="v1">
+
+        <div class="order-infolist mb20">
             <div class="order-info-hd">
-                <span class="order-time">2016-03-11 18:55:05</span>
-                                <span class="order-no" _soid_no="314576937049262" _order_no="314576937049262" orderback="0"><b>订单号：</b>314576937049262</span>
-                                            <span class="seller">商家：山予味道</span>
-                                                                    <span class="bin closebtn closebtnAction" href="javascript:;" _soid_no="314576937049262"></span>
-                        </div>
+                <span class="order-time">{$v1.time}</span>
+                    <span class="order-no" _soid_no="314576937049262" _order_no="314576937049262" orderback="0"><b>订单号：</b>{$v1.order_num}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>总价：</b>{$v1.price_total} <br></span>
+                                            <!-- <span class="seller">商家：山予味道</span> -->
+                                            <br>
+                    </div>
+            <div class="order-info-hd">
+                <span class="order-time">收件地址:&nbsp;&nbsp;&nbsp;{$v1.address}</span>
+                    <span class="order-no" _soid_no="314576937049262" _order_no="314576937049262" orderback="0"><b>收件人：</b>{$v1.username}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>电话：</b>{$v1.tel} <br></span>
+                    </div>
+ 
+    <foreach name="v1.goods" item="v2">
+
             <dl class="my-order-list">
                 <dd>
                                                         <!-- class="last-goods" -->
                             <ul class="last-goods">
                             <li class="oi-goods">
                                 <a class="aimg" target="_blank" href="http://shop.juanpi.com/deal/6937042">
-                                    <img width="60px" height="60px" src="//s2.juancdn.com/bao/151203/b/6/565fb95592be59335d8b457b_800x800.jpg?iopcmd=thumbnail&amp;type=8&amp;width=100&amp;height=100%7Ciopcmd=convert&amp;Q=88&amp;dst=jpg">
+                                    <img width="60px" height="60px" src="__PUBLIC__{$v2.pic}">
                                 </a>
                                 <div class="con">
-                                    <a target="_blank" href="http://shop.juanpi.com/deal/6937042">
-                                        <div class="good-name">山予闽南荔枝干(500g)</div>
+                                    <a target="_blank" href="{:U('Home/Goods/show',array('gid',$v2['id']))}">
+                                        <div class="good-name">{$v2.name}</div>
                                     </a>
-                                    <div class="other"></div>
+                                    <div class="other"></div>数量:&nbsp;&nbsp;&nbsp;{$v2.qty}<br>单价:&nbsp;&nbsp;&nbsp;{$v2.price}
                                 </div>
                             </li>
                             <li class="oi-price"></li>
@@ -54,14 +64,22 @@
 
                                 <!-- <a>退货/退款</a> <p>售后完成</p> -->
                             <li class="oi-count">
-                                    <p class="all"><em class="u-yen">¥</em><span>10.80</span></p>
+                                    <p class="all"><em class="u-yen">¥</em><span><?php echo $v2['qty']*$v2['price'] ?></span></p>
                                     <div class="mobile_order"><i></i>手机订单<div></div></div>
                             </li>
                             <li class="oi-status">
                                     <p>
-                                       <b class="wait-pay">已送达</b>
+                                        <b class="wait-pay">
+                                            <switch name="v1.status" >
+                                            <case value="1">待付款</case>
+                                            <case value="2">待发货</case>
+                                            <case value="3">运送中</case>
+                                            <case value="4">已送达</case>
+                                            <case value="5">已关闭</case>
+                                            </switch>
+                                        </b>
                                     </p>
-                                    <p><a href="###.juanpi.com/order/detail/orderId/314576937049262" target="_blank">订单详情</a></p>
+                                    <!-- <p><a href="###.juanpi.com/order/detail/orderId/314576937049262" target="_blank">订单详情</a></p> -->
                                     <p><a href="###.juanpi.com/order/detail/orderId/314576937049262#logistics" target="_blank">订单跟踪</a></p>
                             </li>
                             <li class="oi-button">
@@ -69,6 +87,21 @@
                         </ul>
                     </dd>
             </dl>
+
+    </foreach>
+
         </div>
-    </div>
+    
+</foreach>
+
+    </div>  
+    <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#orderStatus').change(function(){
+                var v = $(this).val();
+                location.href = "{:U('Home/Center/allOrder/status/"+v+"')}"
+            })
+        })
+    </script>  
 </block>

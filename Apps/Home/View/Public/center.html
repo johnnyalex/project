@@ -104,14 +104,7 @@
             <!-- 二级导航 -->
 <div class="sider-bar">
     <ul>
-    <li class="noboder"><a href="">我的订单</a></li>
-    <li class="sub-menu">
-        <ul>
-            <li><a href="{:U('Home/Center/allOrder')}">全部订单</a></li>
-            <li><a href="{:U('Home/Center/noPayOrder')}">待付款</a><span>0</span></li>
-            <li><a href="{:U('Home/Center/inWayOrder')}">运送中</a><span>0</span></li>
-        </ul>
-    </li>
+    <li><a href="{:U('Home/Center/allOrder')}">我的订单</a></li>
     <li><a href="{:U('Home/Center/backList')}">我的售后</a></li>
     <li><a href="{:U('Home/Center/beans')}">我的积分</a></li>
     <li><a href="{:U('Home/Center/coupon')}">我的优惠券</a></li>
@@ -149,81 +142,11 @@
                     </div>
                 </div>
                 <ul>
-                    <li><div class="credit"><a href="{:U('Home/Center/beans')}">我的积分：642</a></div></li>
+                    <li><div class="credit"><a href="{:U('Home/Center/beans')}">我的积分：{$user.points}</a></div></li>
                     <li><div class="ticket"><a href="{:U('Home/Center/coupon')}">我的优惠券：0</a></div></li>
                     <li><div class="base-info"><a href="{:U('Home/Center/userinfo')}">基本资料</a></div></li>
                     <li><div class="addr"><a href="{:U('Home/Center/address')}">收货地址</a></div></li>
                 </ul></div>
-        <div class="order-lists">
-                <div class="all-orders">
-                    <div class="all-orders-top">
-                        <span><strong>全部订单</strong>(最近三个月订单)</span>
-                        <span class="order_t">
-                           <select id="orderStatus" name="status" class="state-select">
-                               <option data-msg="订单状态" value="all">订单状态</option>
-                               <option data-msg="待付款" value="1">待付款</option>
-                               <option data-msg="待发货" value="3">待发货</option>
-                               <option data-msg="运送中" value="4">运送中</option>
-                               <option data-msg="已送达" value="5">已送达</option>
-                               <option data-msg="已关闭" value="6">已关闭</option>
-                               <!-- <option value="20"  data-msg="售后处理中">售后处理中</option>-->
-                           </select>
-                       </span>
-                        <a href="###.juanpi.com/order/index/flag/1">查看所有订单&gt;&gt;</a>
-                    </div>
-                    <!-- 防诈骗BANNER图片BEGIN -->
-                                            <div class="fraud-banner">
-                            <span> </span>
-                        </div>
-                                        <!-- 防诈骗BANNER图片END -->
-                </div>
-            
-                                    <div class="order-infolist mb20">
-        <div class="order-info-hd">
-            <span class="order-time">2016-03-11 18:55:05</span>
-                            <span orderback="0" _order_no="314576937049262" _soid_no="314576937049262" class="order-no"><b>订单号：</b>314576937049262</span>
-                                        <span class="seller">商家：山予味道</span>
-                                                                <span _soid_no="314576937049262" href="javascript:;" class="bin closebtn closebtnAction"></span>
-                    </div>
-        <dl class="my-order-list">
-            <dd>
-                                                    <!-- class="last-goods" -->
-                        <ul class="last-goods">
-                        <li class="oi-goods">
-                            <a href="http://shop.juanpi.com/deal/6937042" target="_blank" class="aimg">
-                                <img width="60px" height="60px" src="//s2.juancdn.com/bao/151203/b/6/565fb95592be59335d8b457b_800x800.jpg?iopcmd=thumbnail&amp;type=8&amp;width=100&amp;height=100%7Ciopcmd=convert&amp;Q=88&amp;dst=jpg">
-                            </a>
-                            <div class="con">
-                                <a href="http://shop.juanpi.com/deal/6937042" target="_blank">
-                                    <div class="good-name">山予闽南荔枝干(500g)</div>
-                                </a>
-                                <div class="other"></div>
-                            </div>
-                        </li>
-                        <li class="oi-price"></li>
-                        <li class="oi-price-paid"></li>
-                        <li class="oi-other">
-                            <a target="_blank" href="###.juanpi.com/refund?giOrderId=52570392&amp;boid=&amp;botype="></a> 
-                        </li>
-
-                            <!-- <a>退货/退款</a> <p>售后完成</p> -->
-                        <li class="oi-count">
-                                <p class="all"><em class="u-yen">¥</em><span>10.80</span></p>
-                                <div class="mobile_order"><i></i>手机订单<div></div></div>
-                        </li>
-                        <li class="oi-status">
-                                <p>
-                                   <b class="wait-pay">已送达</b>
-                                </p>
-                                <p><a target="_blank" href="###.juanpi.com/order/detail/orderId/314576937049262">订单详情</a></p>
-                                <p><a target="_blank" href="###.juanpi.com/order/detail/orderId/314576937049262#logistics">订单跟踪</a></p>
-                        </li>
-                        <li class="oi-button">
-                        </li>
-                    </ul>
-                </dd>
-        </dl>
-    </div>
 </div></div></div>  
 </block>
 </block>

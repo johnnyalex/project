@@ -51,8 +51,9 @@
 <div class="confirm-order">
 <!-- 收货信息 -->
 <div class="order-address clear">
-<form action="{:U('Home/Pay/">
+<form action="{:U('Home/Payment/payment')}" method="post">
         <input class="addrnum" type="hidden" value="" name="addrnum">
+    
     <h2><span class="fl">选择收货地址</span><a style="display:none" href="javascript:void(0)" class="manage_links write_links fl"><i class="icons icons-tips fl"></i><span class="fl">请填写收货地址</span></a></h2>
 
         <ul style="min-height: 224px;" data-flag="address" id="myAddress" class="list pd_3">
@@ -99,21 +100,21 @@
         <ul>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
-                            <input type="radio" checked="" data-type="支付宝支付" class="zhifubao check" name="choose_pay" value="2" autocomplete="off">
+                            <input type="radio" checked="" data-type="支付宝支付" class="zhifubao check" name="sss" value="2" autocomplete="off">
                             <p class="img"><img src="__PUBLIC__/Home/Images/Alipay.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl"></span>
                     </li>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
-                            <input type="radio" data-type="微信支付" class="weixin check" name="choose_pay" value="9" autocomplete="off">
+                            <input type="radio" data-type="微信支付" class="weixin check" name="sss" value="9" autocomplete="off">
                             <p class="img"><img src="__PUBLIC__/Home/Images/weixin.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl">（推荐）</span>
                     </li>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
-                            <input type="radio" data-type="银联支付" class="yinlian check" name="choose_pay" value="3" autocomplete="off">
+                            <input type="radio" data-type="银联支付" class="yinlian check" name="sss" value="3" autocomplete="off">
                             <p class="img"><img src="__PUBLIC__/Home/Images/yinlian.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl"></span>
@@ -166,7 +167,7 @@
                         <tr>
                             <td colspan="4" class="bgc">
                                 <div class="message"><label class="hd">留言：</label>
-                                    <div class="inputmask"><textarea title="选填：对本次交易的补充说明，最多不超过50字" name="u_note[1127444]" data-sellerid="1127444" id="u_note" data-maxlength="50" class="txt" autocomplete="off" placeholder="选填：对本次交易的补充说明，最多不超过50字"></textarea>
+                                    <div class="inputmask"><textarea title="选填：对本次交易的补充说明，最多不超过50字" name="message" data-sellerid="1127444" id="u_note" data-maxlength="50" class="txt" autocomplete="off" placeholder="选填：对本次交易的补充说明，最多不超过50字"></textarea>
                                     </div></div>
                             </td>
                             <td class="bgc" colspan="2">
@@ -191,46 +192,24 @@
             <div class="detail">
                 <p><label>商品金额：</label><span class="normal"> <em class="u-yen">¥</em><span class="confirm_order_spje">{$total}</span></span></p>
                 <p><label>合计运费：</label><span class="normal"> <em class="u-yen">¥</em><span class="confirm_order_yun">0.00</span></span></p>
-                <p><label>活动优惠：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_hdyh">0.00</span></span></p>
+                <p><label>积分抵现：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_hdyh">{$pts}</span></span></p>
                 <p><label>优惠券抵扣：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_liquan">0.00</span></span></p>
             </div>
             <div class="pay-all">
-                <span class="wait_pay"><b>待支付：</b><span><em>￥</em><label class="confirm_order_waitpay">{$total}</label></span></span>
+                <span class="wait_pay"><b>待支付：</b><span><em>￥</em><label class="confirm_order_waitpay">{$ttp}</label></span></span>
             </div>
             <em class="line-cur cur-top"></em>
             <em class="line-cur cur-bottom"></em>
         </div>
     </div>
 </div>
-<form target="_blank" method="post" action="//user.juanpi.com/pay/action_order" id="payFormNew" name="payFormNew" accept-charset="UTF-8">
-    <input type="hidden" value="" name="orderPay">
-    <input type="hidden" value="" name="token">
-    <input type="hidden" value="2" name="paytype">
-</form>
-<form method="post" action="//user.juanpi.com/pay/create_order" id="post_order" name="post_order" accept-charset="UTF-8">
-    <input type="hidden" value="" name="token" id="token">
-    <!--邮费-->
-    <input type="hidden" value="0.00" name="postage" id="postage">
-    <!--购买方式-->
-    <input type="hidden" value="2" name="pay_type" id="pay_type">
-    <!--总价-->
-    <input type="hidden" value="15.90" name="cprice" id="cprice">
-    <input type="hidden" value="15.90" name="pay_amount" id="pay_amount">
-    <!--用户收获地址-->
-    <input type="hidden" value="835346" name="address_id" id="address_id" data-address_id="835346">
-    <!--优惠券激活码-->
-    <input type="hidden" value="" name="coupon_code" id="coupon_code">
-    <input type="hidden" value="" name="actids" id="actids">
-    <input type="hidden" value="" name="order_no" id="order_no">
-</form>
-<input type="hidden" value="0" name="coupon_amount" id="coupon_amount">
 </div>
 <div class="orders-pay-fixed">
     <div class="orders-total-pay">
         <div class="pay-type fl">
             <p> 支付方式：<label class="zffs" id="ck">支付宝支付</label></p>
         </div>
-        <input type="button" class="fr" value="去结算" style="font-size:25px; margin-top:5px; margin-right:5px; color:white; width:130px; height:60px; border:0px; background:#ff464E; border-radius:5px">
+        <input type="submit" class="fr" value="去结算" style="font-size:25px; margin-top:5px; margin-right:5px; color:white; width:130px; height:60px; border:0px; background:#ff464E; border-radius:5px">
 
 </form>
         <em class="pay-bg bg_l"></em>

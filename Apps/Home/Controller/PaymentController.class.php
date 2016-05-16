@@ -1,25 +1,59 @@
 <?php 
 namespace Home\Controller;
 use Think\Controller;
-class PayController extends Controller {
+class PaymentController extends Controller {
 	
-    public function pay(){
-    	$id = $_SESSION['user']['id'];
-    	$address = M('address')->where(['uid'=>$id])->select();
-    	$address_true = M('address')->where(['uid'=>$id,'pri'=>'1'])->find();
-        $goods = M('car')->where(['uid'=>$id])->select();
+    public function payment(){
+        $arr['uid'] = $_SESSION['user']['id'];
+        $uid = $arr['uid'];
+        if(!$_POST['addrnum'])
+            $arr['address_id'] = M('address')->field('id')->where('pri=1')->find()['id'];
+        else
+            $arr['address_id'] = I('post.addrnum');
+        $arr['order_num'] = date('Ymdhis').mt_rand(0,9999);
+        $goods = M('car')->where('uid='.$arr['uid'])->select();
         foreach ($goods as $key => $value) {
-            $goods[$key]['count'] = $value['qty']*$value['price'];
-            $goods[$key]['pic'] = M('goods')->field('pic')->where('id='.$value['gid'])->find()['pic'];
-            $total = $total + $value['qty']*$value['price'];
+            $arr['price_total'] = $arr['price_total'] + $value['price']*$value['qty'];
         }
-        $count = count($goods);
-    	$this->assign('addr',$address);
-    	$this->assign('addr_t',$address_true);
-        $this->assign('goods',$goods);
-        $this->assign('count',$count);
-        $this->assign('total',$total);
-    	$this->display();
+        $o_points = M('userinfo')->field('points')->where('uid='.$uid)->find()['points'];
+        $t_points = $o_points/10;
+        var_dump($o_points);
+        if($o_points >= $arr['price_total']/10)
+            $t_points = $arr['price_total']/10*9;
+        else
+            $t_points = $arr['price_total']-$t_points;
+        $n_points = $o_points - ($t_points*10);
+        $jian = $arr['price_total'] - $t_points;
+        $jia = $arr['price_total']/10;
+        var_dump($t_points);
+        var_dump($jian);
+        var_dump($jia);
+        $arr['price_true'] = $t_points;
+        $arr['status'] = 1;
+        $arr['time'] = date('Y-m-d H:i:s',time());
+        M('order')->create();
+        $order_id = M('order')->add($arr);
+        $arr = array();
+        foreach ($goods as $key => $value) {
+            $arr['goods_id'] = $value['gid'];
+            $arr['qty'] = $value['qty'];
+            $arr['order_id'] = $order_id;
+            M('order_goods')->create();
+            M('order_goods')->add($arr);
+        }
+        M('car')->where('uid='.$uid)->delete();
+        $this->assign('id',$order_id);
+        $this->display();
+    }
+
+    public function dopay(){
+        $_POST['status'] = 2;
+        M('order')->create();
+        $res = M('order')->save();
+        if($res)
+            $this->success('付款成功',U('Home/Center/allOrder'));
+        else
+            $this->success('付款失败',U('Home/Center/allOrder'));
     }
 
 }

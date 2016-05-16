@@ -12,6 +12,7 @@ class CenterController extends Controller {
 		$user=$use->where(' id = '.$id)->find();
 		// user的pic 存session
 		$_SESSION['user']['pic']=$user['pic'];
+		$user['points'] = M('userinfo')->field('points')->where('uid='.$id)->find()['points'];
 		//实例化
 		$this->assign('title','用户中心-卷皮网');
 		$this->assign('user',$user);
@@ -206,8 +207,20 @@ class CenterController extends Controller {
 	}
 	// 所有订单
 	public function allOrder(){
-		$user['pic']=$_SESSION['user']['pic'];
-		$this->assign('user',$user);
+		$uid = $_SESSION['user']['id'];
+		$status = I('get.status');
+		if($status)
+			$orders = M('order')->where('uid='.$uid.' AND status='.$status)->order('id desc')->select();
+		else
+			$orders = M('order')->where('uid='.$uid)->order('id desc')->select();
+		foreach ($orders as $key => $value) {
+			$address = M('address')->where(['id'=>$value['address_id']])->find();
+			$orders[$key]['address'] = $address['pro'].' '.$address['city'].' '.$address['area'].' '.$address['addr'];
+			$orders[$key]['username'] = $address['name'];
+			$orders[$key]['tel'] = $address['tel'];
+			$orders[$key]['goods'] = M()->table(array('order_goods'=>'A','goods'=>'B'))->where("A.order_id=".$value['id']." AND A.goods_id=B.id")->select();
+		}
+		$this->assign('orders',$orders);
 		$this->assign('title','订单管理-卷皮网');
 		$this->display();
 	}
@@ -234,8 +247,9 @@ class CenterController extends Controller {
 	}
 	// 我的积分
 	public function beans(){
-		$user['pic']=$_SESSION['user']['pic'];
-		$this->assign('user',$user);
+		$uid = $_SESSION['user']['id'];
+		$points = M('userinfo')->field('points')->where('uid='.$uid)->find()['points'];
+		$this->assign('points',$points);
 		$this->assign('title','积分管理-卷皮网');
 		$this->display();
 	}
