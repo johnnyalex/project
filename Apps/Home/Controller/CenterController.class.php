@@ -12,6 +12,7 @@ class CenterController extends Controller {
 		$user=$use->where(' id = '.$id)->find();
 		// user的pic 存session
 		$_SESSION['user']['pic']=$user['pic'];
+		$user['points'] = M('userinfo')->field('points')->where('uid='.$id)->find()['points'];
 		//实例化
 		$this->assign('title','用户中心-卷皮网');
 		$this->assign('user',$user);
@@ -34,14 +35,14 @@ class CenterController extends Controller {
 	//安全中心
 	public function security(){
 		$this->assign('title','安全中心-卷皮网');
-
 		$this->display();
 	}
 	public function question (){
 		$arr2=['您的母亲名字','您的父亲名字','您的爱人名字','您的孩子名字','您的小学名字','您的中学名字','您的大学名字','自定义问题',];
 		$arr1=['您最喜欢的动物','您最喜欢的花','您最喜欢的食物','您最喜欢的地方','您最喜欢的季节','您最喜欢的颜色','你最喜欢的书','你最热爱的运动','自定义问题'];
 		$arr3=['您最喜欢的歌曲','您的偶像是谁','您最喜欢的电影','您最喜欢的电视剧','您最喜欢的餐厅','您最喜欢的车','您最喜欢的周几','自定义问题',];
-		// var_dump($arr);
+		$user['pic']=$_SESSION['user']['pic'];
+		$this->assign('user',$user);
 		$this->assign('arr1',$arr1);
 		$this->assign('arr2',$arr2);
 		$this->assign('arr3',$arr3);
@@ -63,14 +64,17 @@ class CenterController extends Controller {
 	}
 	//三方绑定
 	public function binding(){
+		$user['pic']=$_SESSION['user']['pic'];
+		$this->assign('user',$user);
 		$this->assign('title','绑定网站-卷皮网');
 
 		$this->display();
 	}
 	//兑现
 	public function bank(){
+		$user['pic']=$_SESSION['user']['pic'];
+		$this->assign('user',$user);
 		$this->assign('title','提现账户-卷皮网');
-
 		$this->display();
 	}
 	//收货地址
@@ -83,6 +87,8 @@ class CenterController extends Controller {
 			$addr[$key]['address'] = $value['pro'].' '.$value['city'].' '.$value['area'].' '.$value['addr'];
 			$addr[$key]['tel'] = substr_replace($addr[$key]['tel'],'****',3,4);
 		}
+		$user['pic']=$_SESSION['user']['pic'];
+		$this->assign('user',$user);
 		$this->assign('addr',$addr);
 		$this->assign('count',$count);
 		$this->assign('title','收货地址-卷皮网');
@@ -140,16 +146,7 @@ class CenterController extends Controller {
 		else
 			$this->error('添加失败',U("Home/Center/address"));
 	}
-	// 个人基本信息
-	// public function setting(){
-		// $this->display();
-
-	// }
 	public function do_set(){
-		// var_dump($_FILES);
-		// var_dump($_POST);
-		// die();
-		//
 		$arr = array();
 		// id
 		$arr['uid'] = $_SESSION['user']['id'];
@@ -210,56 +207,108 @@ class CenterController extends Controller {
 	}
 	// 所有订单
 	public function allOrder(){
+		$uid = $_SESSION['user']['id'];
+		$status = I('get.status');
+		if($status)
+			$orders = M('order')->where('uid='.$uid.' AND status='.$status)->order('id desc')->select();
+		else
+			$orders = M('order')->where('uid='.$uid)->order('id desc')->select();
+		foreach ($orders as $key => $value) {
+			$address = M('address')->where(['id'=>$value['address_id']])->find();
+			$orders[$key]['address'] = $address['pro'].' '.$address['city'].' '.$address['area'].' '.$address['addr'];
+			$orders[$key]['username'] = $address['name'];
+			$orders[$key]['tel'] = $address['tel'];
+			$orders[$key]['goods'] = M()->table(array('order_goods'=>'A','goods'=>'B'))->where("A.order_id=".$value['id']." AND A.goods_id=B.id")->select();
+		}
+		$this->assign('orders',$orders);
 		$this->assign('title','订单管理-卷皮网');
 		$this->display();
 	}
 	// 待付款订单
 	public function noPayOrder(){
+		$user['pic']=$_SESSION['user']['pic'];
+		$this->assign('user',$user);
 		$this->assign('title','订单管理-卷皮网');
-
 		$this->display();
 	}
 	// 运送订单
 	public function inWayOrder(){
+		$user['pic']=$_SESSION['user']['pic'];
+		$this->assign('user',$user);
 		$this->assign('title','订单管理-卷皮网');
-
 		$this->display();
 	}
 	// 我的售后
 	public function backList(){
+		$user['pic']=$_SESSION['user']['pic'];
+		$this->assign('user',$user);
 		$this->assign('title','售后管理-卷皮网');
-
 		$this->display();
 	}
 	// 我的积分
 	public function beans(){
+		$uid = $_SESSION['user']['id'];
+		$points = M('userinfo')->field('points')->where('uid='.$uid)->find()['points'];
+		$this->assign('points',$points);
 		$this->assign('title','积分管理-卷皮网');
-
 		$this->display();
 	}
 	// coupon 优惠券
  	public function coupon(){
+ 		$user['pic']=$_SESSION['user']['pic'];
+ 		$this->assign('user',$user);
 		$this->assign('title','优惠券-卷皮网');
-
 		$this->display();
 	}
 	// 修改密码
  	public function repass(){
+ 		$user['pic']=$_SESSION['user']['pic'];
+ 		$this->assign('user',$user);
 		$this->assign('title','修改密码-卷皮网');
-
 		$this->display();
 	}
 	// 修改邮箱
  	public function rephone(){
+ 		$user['pic']=$_SESSION['user']['pic'];
+ 		$this->assign('user',$user);
 		$this->assign('title','手机绑定-卷皮网');
-
 		$this->display();
 	}
 	// 修改手机号
  	public function reemail(){
-		$this->assign('title','邮箱管理-卷皮网');
- 		
+ 		$user['pic']=$_SESSION['user']['pic'];
+ 		$this->assign('user',$user);
+		$this->assign('title','邮箱管理-卷皮网');		
 		$this->display();
+	}
+	public function favorite(){
+		$uid = $_SESSION['user']['id'];
+		if ($uid=='') {
+			$this->display('Home/Login/index');
+		}
+		// 实例化
+		$use=M('user');
+		// 查询
+		$user=$use->where(' id = '.$uid)->find();
+		// user的pic 存session
+		$_SESSION['user']['pic']=$user['pic'];
+		// var_dump($uid);
+		$info = M('userinfo');//
+		$res = $info->where(['uid'=>$uid])->find();
+		$arr = explode(',',$res['like_id']);//获取商品id
+		$kong = array_pop($arr);//去最后一个
+		$num = count($arr);//获取收藏数量
+		$str = "'".implode("','", $arr)."'";//拼接 str
+		$goods = M('goods');
+		$goodslike = $goods->where(' id in ('.$str.')')->select();
+		$user['pic']=$_SESSION['user']['pic'];
+		$this->assign('user',$user);
+		$this->assign('title','个人收藏-卷皮网');
+		$this->assign('num',$num);
+		$this->assign('user',$user);
+		$this->assign('goodslike',$goodslike);
+		$this->display();
+
 	}
 	public function testMail(){
 	    // sendMail('13701383017@139.com','这是一个神奇的网站','您的验证码lamp123');
@@ -292,4 +341,4 @@ class CenterController extends Controller {
 			$this->error('修改失败',U('Home/Center/repass'));
 	}
 }
-  ?>
+?>

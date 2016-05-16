@@ -4,17 +4,37 @@ use Think\Controller;
 class IndexController extends Controller {
     public function index(){
         $uid = $_SESSION['user']['id'];//用户id
-
         $goods = M('goods');//实例化商品
         $goodsList=$goods->where(['is_new'=>1])->select();//查
-        $sql = $goods->_sql();
-        // var_dump($sql);
-        // var_dump($goodsList);
-        // die();
-
+        $lunbo = M('lunbo');//  实例化 轮播
+        $lunbos = $lunbo->where(['status'=>'1'])->select(); 
+        $category = M('category');//  实例化 轮播
+        $categorys = $category->where(['pid'=>'0'])->select(); 
+        $lunbo_width=(count($lunbos)+1)*700;
+        $brand = M('brand');// 品牌
+        $brand_2 = $brand->where(['status'=>'1','level'=>'2'])->select();
+        $brand_3 = $brand->where(['status'=>'1','level'=>'3'])->find();
+        $brand_4 = $brand->where(['status'=>'1','level'=>'4'])->select();
+        $brand_1 = $brand->where(['status'=>'1','level'=>'1'])->select();
         $this->assign('goodsList',$goodsList);
-        $this->assign('id',$uid);
+        $this->assign('uid',$uid);
+        $this->assign('lunbos',$lunbos);
+        $this->assign('brand_2',$brand_2);
+        $this->assign('brand_3',$brand_3);
+        $this->assign('brand_4',$brand_4);
+        $this->assign('brand_1',$brand_1);
+        $this->assign('categorys',$categorys);
+        $this->assign('lunbo_width',$lunbo_width);
         $this->assign('title','卷皮网首页');
+        $this->display();
+    }
+    public function more(){
+        $cate_id = I('get.cid');
+        $good = M('goods');
+        $goods = $good->where(['cate_id'=>$cate_id])->select();
+        $this->assign('title','分类详情');
+        // var_dump($goods);
+        $this->assign('goods',$goods);
         $this->display();
     }
     public function jifen(){

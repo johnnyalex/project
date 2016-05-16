@@ -51,7 +51,9 @@
 <div class="confirm-order">
 <!-- 收货信息 -->
 <div class="order-address clear">
+<form action="{:U('Home/Payment/payment')}" method="post">
         <input class="addrnum" type="hidden" value="" name="addrnum">
+    
     <h2><span class="fl">选择收货地址</span><a style="display:none" href="javascript:void(0)" class="manage_links write_links fl"><i class="icons icons-tips fl"></i><span class="fl">请填写收货地址</span></a></h2>
 
         <ul style="min-height: 224px;" data-flag="address" id="myAddress" class="list pd_3">
@@ -91,84 +93,28 @@
             <li class="add"><a class="add" href="{:U('Home/Center/add_address')}" target="_blank">
             <em class="icons icons-add"></em>新增地址</a></li>
         </ul>
-   
-
-    <div uadid="0" style="display: none;" id="addrform" class="new-address">
-        <div class="panel-box" style="">
-            <div class="adr" id="adr">
-                <ul>
-                    <li>
-                        <label><!-- <span class="import">*</span> -->收货人：</label>
-                        <input type="text" class="text w195" value="" name="name" id="truename" size="16" maxlength="16" tabindex="1">
-                        <p style="display:none;" class="s13"></p>
-                        <p class="s12">只包含汉字、数字和字母,长度不超过16个字</p>
-                    </li>
-                    <li>
-                        <label><!-- <span class="import">*</span> -->手机号码：</label>
-                        <input type="text" value="" name="mobile" id="mobile" size="11" maxlength="11" tabindex="2" class="text w195">
-                        <p style="display:none;" class="s13"></p>
-                    </li>
-                    <li>
-                        <label> <!-- <span class="import">*</span> -->所在地区：</label>
-                        <select class="w200" name="province" id="province" tabindex="3"><option value="0">选择省份</option><option value="110000">北京市</option><option value="120000">天津市</option><option value="130000">河北省</option><option value="140000">山西省</option><option value="150000">内蒙古自治区</option><option value="210000">辽宁省</option><option value="220000">吉林省</option><option value="230000">黑龙江省</option><option value="310000">上海市</option><option value="320000">江苏省</option><option value="330000">浙江省</option><option value="340000">安徽省</option><option value="350000">福建省</option><option value="360000">江西省</option><option value="370000">山东省</option><option value="410000">河南省</option><option value="420000">湖北省</option><option value="430000">湖南省</option><option value="440000">广东省</option><option value="450000">广西壮族自治区</option><option value="460000">海南省</option><option value="500000">重庆市</option><option value="510000">四川省</option><option value="520000">贵州省</option><option value="530000">云南省</option><option value="540000">西藏自治区</option><option value="610000">陕西省</option><option value="620000">甘肃省</option><option value="630000">青海省</option><option value="640000">宁夏回族自治区</option><option value="650000">新疆维吾尔自治区</option></select>
-                        <select class="w200" name="city" id="city" tabindex="4"><option value="0">选择城市</option></select>
-                        <select class="w200" name="town" id="town" tabindex="5"><option value="0">选择区域</option></select>
-                        <p style="display:none;" class="s13"></p>
-                    </li>
-                    <li>
-                        <label> <!-- <span class="import">*</span> -->街道地址：</label>
-                        <input type="text" value="" name="addr" id="addr" size="40" maxlength="40" tabindex="6" class="text addr-long">
-                        <p style="display:none;" class="s13"></p>
-                        <!-- <p class="s12">请填写详细地址信息</p> -->
-                    </li>
-                    <li style="display:none">
-                        <label>座机号码：</label>
-                        <input type="text" value="" name="tel" id="tel" size="30" maxlength="30" tabindex="7" class="text">
-                        <p style="display:none;" class="s13"></p>
-                        <p class="s12">027-xxxxxxx</p>
-                    </li>
-                    <!-- <li>
-                        <label>邮编：</label>
-                        <input type="text" class="text" tabindex="6" maxlength="6" size="30" id="postcode" name="postcode" value="">
-                    </li> -->
-                    <li>
-                        <label></label>
-                        <input type="checkbox" value="1" id="J_SetDefault" name="primary" class="set-check">
-                        <label for="J_SetDefault" class="set">设置为默认收货地址</label>
-                    </li>
-                    <li>
-                        <label></label>
-                        <input type="hidden" value="" name="addr_token" id="addr_token">
-                        <input type="button" class="smt smt1 baocun" value="保 存" tabindex="8">
-                        <input type="button" class="smt smt2 quxiao" value="取 消" tabindex="9">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>
 <div class="order-payment">
-    <!--选择支付方式-->
     <h2>选择支付方式</h2>
     <div class="pay-method">
         <ul>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
-                            <input type="radio" checked="" data-type="支付宝支付" class="check" name="choose_pay" value="2" autocomplete="off">
+                            <input type="radio" checked="" data-type="支付宝支付" class="zhifubao check" name="sss" value="2" autocomplete="off">
                             <p class="img"><img src="__PUBLIC__/Home/Images/Alipay.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl"></span>
                     </li>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
-                            <input type="radio" data-type="微信支付" class="check" name="choose_pay" value="9" autocomplete="off">
+                            <input type="radio" data-type="微信支付" class="weixin check" name="sss" value="9" autocomplete="off">
                             <p class="img"><img src="__PUBLIC__/Home/Images/weixin.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl">（推荐）</span>
                     </li>
                                     <li>
                         <a class="fl" href="javascript:;"><label>
-                            <input type="radio" data-type="银联支付" class="check" name="choose_pay" value="3" autocomplete="off">
+                            <input type="radio" data-type="银联支付" class="yinlian check" name="sss" value="3" autocomplete="off">
                             <p class="img"><img src="__PUBLIC__/Home/Images/yinlian.jpg"></p>
                         </label></a>
                         <span style="color:#f36; line-height: 42px;margin-left: 5px" class="fl"></span>
@@ -183,8 +129,7 @@
     <div class="orders clear">
         <div class="orders-hd">
             <ul>
-                <li data-goodsnums="1" class="product-item"><span>共（1）件商品</span></li>
-                <li class="price-item"><span class="text">规格</span></li>
+                <li data-goodsnums="1" class="product-item"><span>共（{$count}）件商品</span></li>
                 <li class="quantity-item"><span class="text">单价</span></li>
                 <li class="subtotal-item"><span class="text">数量</span></li>
                 <li class="actions-item"><span class="text">小计</span></li>
@@ -192,43 +137,41 @@
         </div>
 
                     <div class="order-list other-list">
-                <div class="table-box"><span class="name">店铺：</span><span>博来美居日用专营店</span></div>
+                <!-- <div class="table-box"><span class="name">店铺：</span><span>博来美居日用专营店</span></div> -->
                 <div class="orders-bd">
                     <table class="tbl-main">
                         <tbody>
+
+                    <foreach name="goods" item="vo">
+
                             <tr data-goodid="23202797" data-undeliveryarea="" class="posttr no mz_padding1" ispost="0">
                                 <td class="product-item">
-                                    <div class="pic"><a target="_blank" href="http://shop.juanpi.com/deal/9469150"><img d-src="//s2.juancdn.com/bao/151215/c/9/566fc1e892be59c8878b457b_800x800.jpg?iopcmd=thumbnail&amp;type=8&amp;width=60&amp;height=60%7Ciopcmd=convert&amp;Q=88&amp;dst=jpg" class="lazy" src="//s2.juancdn.com/bao/151215/c/9/566fc1e892be59c8878b457b_800x800.jpg?iopcmd=thumbnail&amp;type=8&amp;width=60&amp;height=60%7Ciopcmd=convert&amp;Q=88&amp;dst=jpg" style="display: inline;"></a></div>
+                                    <div class="pic"><img src="__PUBLIC__{$vo.pic}" style="display: inline;"></div>
                                     <div class="detail">
-                                        <div class="title"><a target="_blank" href="http://shop.juanpi.com/deal/9469150">大容量超轻防水收纳包</a></div>
+                                        <div class="title"><a target="_blank" href="{:U('Home/Goods/show',array('gid'=>$vo['gid']))}">{$vo.name}</a></div>
                                     </div>
                                 </td>
-                                <td class="price-item cell-center">
-                                    <p class="type">
-                                        <span class="color">藏青色</span> 
-                                    </p>
-                                </td>
                                 <td class="quantity-item cell-center">
-                                    <p class="price"><em class="u-yen">¥</em><span>15.90</span></p>
-                                    <p style="display: none" class="oprice"><em class="u-yen">¥</em><span>218.00</span></p>
+                                    <p class="price"><em class="u-yen">¥</em><span>{$vo.price}</span></p>
                                 </td>
                                 <td class="subtotal-item cell-center">
-                                    <p class="number">1</p>
+                                    <p class="number">{$vo.qty}</p>
                                 </td>
                                 <td class="actions-item cell-center">
-                                    <p class="count"><em class="u-yen">¥</em><span>15.90</span></p>
+                                    <p class="count"><em class="u-yen">¥</em><span>{$vo.count}</span></p>
                                 </td>
                             </tr>
+                    </foreach>
                         </tbody>
                         <tfoot>
                         <tr>
                             <td colspan="4" class="bgc">
                                 <div class="message"><label class="hd">留言：</label>
-                                    <div class="inputmask"><textarea title="选填：对本次交易的补充说明，最多不超过50字" name="u_note[1127444]" data-sellerid="1127444" id="u_note" data-maxlength="50" class="txt" autocomplete="off" placeholder="选填：对本次交易的补充说明，最多不超过50字"></textarea>
+                                    <div class="inputmask"><textarea title="选填：对本次交易的补充说明，最多不超过50字" name="message" data-sellerid="1127444" id="u_note" data-maxlength="50" class="txt" autocomplete="off" placeholder="选填：对本次交易的补充说明，最多不超过50字"></textarea>
                                     </div></div>
                             </td>
                             <td class="bgc" colspan="2">
-                                <p><span>合计：</span><span class="fr postage"><em class="u-yen">¥</em><i>15.90</i></span></p>
+                                <p><span>合计：</span><span class="fr postage"><em class="u-yen">¥</em><i>{$total}</i></span></p>
                             </td>
                         </tr>
                         </tfoot>
@@ -247,56 +190,28 @@
         </div>
         <div class="other fr">
             <div class="detail">
-                <p><label>商品金额：</label><span class="normal"> <em class="u-yen">¥</em><span class="confirm_order_spje">15.90</span></span></p>
+                <p><label>商品金额：</label><span class="normal"> <em class="u-yen">¥</em><span class="confirm_order_spje">{$total}</span></span></p>
                 <p><label>合计运费：</label><span class="normal"> <em class="u-yen">¥</em><span class="confirm_order_yun">0.00</span></span></p>
-                <p><label>活动优惠：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_hdyh">0.00</span></span></p>
+                <p><label>积分抵现：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_hdyh">{$pts}</span></span></p>
                 <p><label>优惠券抵扣：</label><span class="normal">-<em class="u-yen">¥</em><span class="confirm_order_liquan">0.00</span></span></p>
             </div>
             <div class="pay-all">
-                <span class="wait_pay"><b>待支付：</b><span><em>￥</em><label class="confirm_order_waitpay">15.90</label></span></span>
+                <span class="wait_pay"><b>待支付：</b><span><em>￥</em><label class="confirm_order_waitpay">{$ttp}</label></span></span>
             </div>
             <em class="line-cur cur-top"></em>
             <em class="line-cur cur-bottom"></em>
         </div>
     </div>
 </div>
-<form target="_blank" method="post" action="//user.juanpi.com/pay/action_order" id="payFormNew" name="payFormNew" accept-charset="UTF-8">
-    <input type="hidden" value="" name="orderPay">
-    <input type="hidden" value="" name="token">
-    <input type="hidden" value="2" name="paytype">
-</form>
-<form method="post" action="//user.juanpi.com/pay/create_order" id="post_order" name="post_order" accept-charset="UTF-8">
-    <input type="hidden" value="" name="token" id="token">
-    <!--邮费-->
-    <input type="hidden" value="0.00" name="postage" id="postage">
-    <!--购买方式-->
-    <input type="hidden" value="2" name="pay_type" id="pay_type">
-    <!--总价-->
-    <input type="hidden" value="15.90" name="cprice" id="cprice">
-    <input type="hidden" value="15.90" name="pay_amount" id="pay_amount">
-    <!--用户收获地址-->
-    <input type="hidden" value="835346" name="address_id" id="address_id" data-address_id="835346">
-    <!--优惠券激活码-->
-    <input type="hidden" value="" name="coupon_code" id="coupon_code">
-    <input type="hidden" value="" name="actids" id="actids">
-    <input type="hidden" value="" name="order_no" id="order_no">
-</form>
-<input type="hidden" value="0" name="coupon_amount" id="coupon_amount">
 </div>
 <div class="orders-pay-fixed">
     <div class="orders-total-pay">
         <div class="pay-type fl">
-            <p> 支付方式：<label id="ck">支付宝支付</label></p>
+            <p> 支付方式：<label class="zffs" id="ck">支付宝支付</label></p>
         </div>
-        <a class="go_pay fr" href="javascript:;">
-            <span class="go_pay_text">确认并支付</span>
-                <span class="t_box open" style="display:none;">
-                    <span></span> <em></em>
-                </span>
-        </a>
-        <p data-curtime="1463022000" data-time="1463023189" id="counDown" class="fr tips">
-            请在 <em id="countm">08</em><span class="org_1">分</span><em id="counts">36</em><span class="org_1">秒</span>内提交订单，下单后您会另有<em>30</em>分钟的支付时间
-        </p>
+        <input type="submit" class="fr" value="去结算" style="font-size:25px; margin-top:5px; margin-right:5px; color:white; width:130px; height:60px; border:0px; background:#ff464E; border-radius:5px">
+
+</form>
         <em class="pay-bg bg_l"></em>
         <em class="pay-bg bg_r"></em>
     </div>
@@ -363,22 +278,30 @@
 <script type="text/javascript">
     
 $(function(){
+    $('.zhifubao').bind("click",function(){
+        $('.zffs').html('支付宝支付');
+    })
 
+    $('.weixin').bind("click",function(){
+        $('.zffs').html('微信支付');
+    })
 
+    $('.yinlian').bind("click",function(){
+        $('.zffs').html('银联在线支付');
+    })
 
     $('.addr-edit').bind("click",function(event){
         event.stopPropagation();
     })
 
     $('.lll').bind("click",function(){
-        // alert($(this).find('.dis').val());
         $('.addrnum').val($(this).find('.dis').val());
         $(this).parents('.order-address').find('.slt-icon,.default-add').hide();
         $(this).parents('ul').find('.lll').removeClass('cur');
         $('.default-add').html('已选中');
         $(this).find('.slt-icon,.default-add').css('display','block');
         $(this).addClass('cur');
-        $('.address_info').html($('.province').html()+' '+$('.jp_addr_street').html()+'<br />'+$('.area-name').html()+' 收 '+$('.area-mobile').html());
+        $('.address_info').html($(this).find('.province').html()+' '+$(this).find('.jp_addr_street').html()+'<br />'+$(this).find('.area-name').html()+' 收 '+$(this).find('.area-mobile').html());
     })
 
 })

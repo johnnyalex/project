@@ -10,10 +10,13 @@
 
     <link href="__PUBLIC__/Admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/9245c5eeb79d45ea8fca9ffcd464f12f.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/41109579bcee494389f359ae0e914606.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/bb3e08540e584c09ac7578fd0213f369.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/680005b70b7b4c55b3971b8e37687505.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/09cbb6c851054bfd9d404c535089078d.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/41c422485c044ea79e03976147b975e9.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/fix.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/lunbo.css" />
     <script type="text/javascript" src="__PUBLIC__/Home/Js/jquery-1.8.3.min.js"></script>
@@ -126,23 +129,21 @@
     </div>
 </div>
                 <!-- /页头 -->
-
+<block name="show">
         <!-- 主体 -->
         <div class="banner">
           <ul class="img1">
-                <li><a href=""><img src="__PUBLIC__/Home/Picture/mao1.png"></a></li>
-                <li><a href=""><img src="__PUBLIC__/Home/Picture/kid2.png"></a></li>
-                <li><a href=""><img src="__PUBLIC__/Home/Picture/biao3.png"></a></li>
-                <li><a href=""><img src="__PUBLIC__/Home/Picture/bao4.png" ></a></li>
+                <foreach name="lunbos" item="vo" >
+                <li><a href="{$vo['web']}"><img src="__PUBLIC__{$vo['pic']}"></a></li>
+                </foreach>
             </ul>
               
             <div class="btn btn_l">&lt;</div>
             <div class="btn btn_r">&gt;</div>
             <ul class="num">
-                <li class="on"></li>
+                <foreach name="lunbos" item="vo" >
                 <li></li>
-                <li></li>
-                <li></li>
+                </foreach>
             </ul>
         </div>
 <!-- </div> -->
@@ -153,79 +154,79 @@
         <div class="banner_l">
             <dl>
                 <dd>
-                    <a href="###/nvzhuang">
+                    <a href="{:U('Home/Index/more',['cid'=>'2'])}">
                         <i class="ct-icon ct-icon-nvzhuang"></i> 女装
                         <em class="ct-line"></em>
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/nanzhuang">
+                    <a href="{:U('Home/Index/more',['cid'=>'1'])}">
                         <i class="ct-icon ct-icon-nanzhuang"></i> 男装
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/xiezi">
+                    <a href="{:U('Home/Index/more',['cid'=>'22'])}">
                         <i class="ct-icon ct-icon-xiezi"></i> 鞋子
                         <em class="ct-line"></em>
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/xiangbao">
+                    <a href="{:U('Home/Index/more',['cid'=>'23'])}">
                         <i class="ct-icon ct-icon-xiangbao"></i> 箱包
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/muying">
+                    <a href="{:U('Home/Index/more',['cid'=>'24'])}">
                         <i class="ct-icon ct-icon-muying"></i> 母婴
                         <em class="ct-line"></em>
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/meizhuang">
+                    <a href="{:U('Home/Index/more',['cid'=>'25'])}">
                         <i class="ct-icon ct-icon-meizhuang"></i> 美妆
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/jujia">
+                    <a href="{:U('Home/Index/more',['cid'=>'26'])}">
                         <i class="ct-icon ct-icon-jujia"></i> 居家
                         <em class="ct-line"></em>
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/jiafang">
+                    <a href="{:U('Home/Index/more',['cid'=>'27'])}">
                         <i class="ct-icon ct-icon-jiafang"></i> 家纺
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/wenti">
+                    <a href="{:U('Home/Index/more',['cid'=>'28'])}">
                         <i class="ct-icon ct-icon-wenti"></i> 文体
                         <em class="ct-line"></em>
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/meishi">
+                    <a href="{:U('Home/Index/more',['cid'=>'29'])}">
                         <i class="ct-icon ct-icon-meishi"></i> 美食
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/shuma">
+                    <a href="{:U('Home/Index/more',['cid'=>'30'])}">
                         <i class="ct-icon ct-icon-shuma"></i> 数码
                         <em class="ct-line"></em>
                     </a>
                 </dd>
                 <dd>
-                    <a href="###/dianqi">
+                    <a href="{:U('Home/Index/more',['cid'=>'31'])}">
                         <i class="ct-icon ct-icon-dianqi"></i> 电器
                     </a>
                 </dd>
                 <dd class="border-none">
-                    <a href="###/neiyi">
+                    <a href="{:U('Home/Index/more',['cid'=>'32'])}">
                         <i class="ct-icon ct-icon-neiyi"></i> 内衣
                         <em class="ct-line"></em>
                     </a>
                 </dd>
                 <dd class="border-none">
-                    <a href="###/peishi">
+                    <a href="{:U('Home/Index/more',['cid'=>'33'])}">
                         <i class="ct-icon ct-icon-peishi"></i> 配饰
                     </a>
                 </dd>
@@ -234,31 +235,17 @@
         
         <div class="banner_r" style="background:#f7f7f7;box-shadow:none">
         <dl>
+            <foreach name="brand_2" item='vo' >
             <dd>
-                <a class="'right" data-value="ad_banner_right#1_1" data-ga="迈克·菲恩" target="_blank" href="">
-                    <img src="__PUBLIC__/Home/Picture/a.jpg">
+                <a class="'right" data-value="ad_banner_right#1_1" data-ga="{$vo.name}" target="_blank" href="{$vo.web}">
+                    <img src="__PUBLIC__{$vo.pic}">
                 </a>
             </dd>
-            <dd>
-                <a class="'right" data-value="ad_banner_right#1_2" data-ga="迈克·菲恩" target="_blank" href="">
-                    <img src="__PUBLIC__/Home/Picture/b.jpg">
-                </a>
-            </dd>
-            <dd>
-                <a class="'right" data-value="ad_banner_right#1_3" data-ga="迈克·菲恩" target="_blank" href="">
-                    <img src="__PUBLIC__/Home/Picture/c.jpg">
-                </a>
-            </dd>
-            <dd>
-                <a class="'right" data-value="ad_banner_right#1_4" data-ga="迈克·菲恩" target="_blank" href="">
-                    <img src="__PUBLIC__/Home/Picture/d.jpg">
-                </a>
-            </dd>
+            </foreach>
             <dd class="last">
-                <a class="'right" data-value="ad_banner_right#1_5" data-ga="迈克·菲恩" target="_blank" href="">
-                    <img src="__PUBLIC__/Home/Picture/e.jpg">
+                <a class="'right" data-value="ad_banner_right#1_5" data-ga="{$brand_3['name']}" target="_blank" href="">
+                    <img src="__PUBLIC__{$brand_3['pic']}">
                 </a>
-
             </dd>
         </dl>
         </div>
@@ -290,10 +277,11 @@
         <div class="brand_index clear">
         <div class="brand_list">
             <ul class="brand_data clear">
+                <foreach name="brand_4" item="vo">
                 <li>
                     <div class="brand-status">
                         <a href="#xiangbao?id=1021608" class="link-box" target="_blank" data-value="brand#1_3">
-                            <div class="brand-pic"><img src="__PUBLIC__/Home/Picture/5723187092be592b068b4580_680x280.jpg">
+                            <div class="brand-pic"><img src="__PUBLIC__{$vo.pic}">
                                 <div class="brand_time" data-etime="1462845600" style="display:none">
                                     <p><span class="icon_time"></span><span class="brand-days"><em>00</em><i>天</i></span><span class="brand-hours"><em>00</em><i>时</i></span><span class="brand-minutes"><em>00</em><i>分</i></span><span class="brand-seconds"><em>00</em><i>秒</i></span></p>
                                     <div class="brand_time_bg"></div>
@@ -309,57 +297,13 @@
                         </a>
                     </div>
                 </li>
-                <li>
-                    <div class="brand-status">
-                        <a href="#xiezi?id=1021642" class="link-box" target="_blank" data-value="brand#1_2">
-                            <div class="brand-pic"><img src="__PUBLIC__/Home/Picture/5723385a92be59cc428b457c_680x280.jpg">
-                                <div class="brand_time" data-etime="1462845600" style="display:none">
-                                    <p><span class="icon_time"></span><span class="brand-days"><em>00</em><i>天</i></span><span class="brand-hours"><em>00</em><i>时</i></span><span class="brand-minutes"><em>00</em><i>分</i></span><span class="brand-seconds"><em>00</em><i>秒</i></span></p>
-                                    <div class="brand_time_bg"></div>
-                                </div>
-                            </div>
-                            <div class="card">
-                            <img class="brand-logo" src="__PUBLIC__/Home/Picture/56810ebe92be599b838b4579_180x90.png">
-                            <span class="discount discount1">
-                            <span>马上抢</span>
-                            </span>                                    
-                                <span class="title" >
-                                    1.4折起
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="brand-status">
-                        <a href="#xiangbao?id=1021608" class="link-box" target="_blank" data-value="brand#1_3">
-                            <div class="brand-pic"><img src="__PUBLIC__/Home/Picture/5723187092be592b068b4580_680x280.jpg">
-                                <div class="brand_time" data-etime="1462845600" style="display:none">
-                                    <p><span class="icon_time"></span><span class="brand-days"><em>00</em><i>天</i></span><span class="brand-hours"><em>00</em><i>时</i></span><span class="brand-minutes"><em>00</em><i>分</i></span><span class="brand-seconds"><em>00</em><i>秒</i></span></p>
-                                    <div class="brand_time_bg"></div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img class="brand-logo" src="__PUBLIC__/Home/Picture/5722cd0792be590e208b4581_180x90.png">
-                                <span class="discount discount1">
-                                <span>马上抢</span>
-                                </span>                                    
-                                <span class="title" >0.6折起</span>
-                            </div>
-                        </a>
-                    </div>
-                </li>
+                </foreach>
             </ul>
         <ul class="brand_logo clear">
             <li class="first">更多品牌特卖：</li>
-            <li><a href="#nvzhuang?id=1311676" target="_blank" data-value="brand#1_4"><img src="__PUBLIC__/Home/Picture/56d6978b92be5900468b4567_180x90.png"></a></li>
-            <li><a href="#nvzhuang?id=1511605" target="_blank" data-value="brand#1_5"><img src="__PUBLIC__/Home/Picture/56c677d392be59bd9b8b456a_180x90.png"></a></li>
-            <li><a href="#nvzhuang?id=1701689" target="_blank" data-value="brand#1_6"><img src="__PUBLIC__/Home/Picture/56e7cffb92be59657f8b4598_180x90.png"></a></li>
-            <li><a href="#nvzhuang?id=1601650" target="_blank" data-value="brand#1_7"><img src="__PUBLIC__/Home/Picture/57189bc092be599b838b457a_180x90.png"></a></li>
-            <li><a href="#nvzhuang?id=1080606" target="_blank" data-value="brand#1_8"><img src="__PUBLIC__/Home/Picture/571045c492be59326a8b456d_180x90.png"></a></li>
-            <li><a href="#xiezi?id=1931657" target="_blank" data-value="brand#1_9"><img src="__PUBLIC__/Home/Picture/56fa338392be597e8d8b4567_180x90.png"></a></li>
-            <li><a href="#xiezi?id=1331694" target="_blank" data-value="brand#1_10"><img src="__PUBLIC__/Home/Picture/568346da92be59bba88b456d_180x90.png"></a></li>
-            <li><a href="#xiezi?id=1441600" target="_blank" data-value="brand#1_11"><img src="__PUBLIC__/Home/Picture/5673c20292be59860c8b4581_180x90.png"></a></li>
+            <foreach name="brand_1" item="vo"> 
+            <li><a href="{$vo.web}" target="_blank" data-value="brand#1_4"><img src="__PUBLIC__{$vo.pic}"></a></li>
+            </foreach>
             <li class="last"><a href="http://brand.juanpi.com" target="_blank">查看全部》</a></li>
         </ul>
         </div>
@@ -378,20 +322,9 @@
             <div class="line-cate-nav-wrapper">
                 <ul class="line-cate-nav">
                     <li class="first"><a class="active" href="###">今日上新</a></li>
-                    <li><a class="" href="###/nvzhuang">女装</a></li>
-                    <li><a class="" href="###/nanzhuang">男装</a></li>
-                    <li><a class="" href="###/xiezi">鞋子</a></li>
-                    <li><a class="" href="###/xiangbao">箱包</a></li>
-                    <li><a class="" href="###/muying">母婴</a></li>
-                    <li><a class="" href="###/meizhuang">美妆</a></li>
-                    <li><a class="" href="###/jujia">居家</a></li>
-                    <li><a class="" href="###/jiafang">家纺</a></li>
-                    <li><a class="" href="###/wenti">文体</a></li>
-                    <li><a class="" href="###/meishi">美食</a></li>
-                    <li><a class="" href="###/shuma">数码</a></li>
-                    <li><a class="" href="###/dianqi">电器</a></li>
-                    <li><a class="" href="###/neiyi">内衣</a></li>
-                    <li><a class="" href="###/peishi">配饰</a></li>
+                    <foreach name = "categorys" item="vo">
+                    <li><a class="" href="Index/more/cid/{$vo['id']}.html">{$vo.name}</a></li>
+                    </foreach>
                     <li class="last"><a target="_blank" href="###/yugao">[明日预告]</a></li>
                 </ul>
             </div>
@@ -425,7 +358,7 @@
                 </div>
             </div>
             <!-- like -->
-            <a class="y-like my-like" data-gid="77432594" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
+            <a class="" data-gid="{$vo.id}" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
                 <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
             </a>
             <!-- end like -->
@@ -440,7 +373,7 @@
 </ul>
 <div class="page">
     <em></em>
-    <div><span class="pg-prev">上一页</span><span>1</span><a href="/?page=2">2</a><a href="/?page=3">3</a><i>...</i><a  href="/?page=5">5</a><a class="pg-next" href="/?page=2">下一页</a>
+    <div><span class="pg-prev" style="width:80px">上一页</span><span>1</span><a href="/?page=2">2</a><a href="/?page=3">3</a><i>...</i><a  href="/?page=5">5</a><a class="pg-next" href="/?page=2" style="width:80px">下一页</a>
 </div>
 <!-- 广告 -->
 <!-- <div class="ad">
@@ -493,12 +426,12 @@
 
 
         <!-- /主体 -->
-
+</block>
         <!-- 页脚 -->
 <div class="foot">
     <div class="white_bg">
-    <div class="foot-con">
-        <div class="con-box-n clear">
+    <div class="foot-con" style="padding-left: 0px; padding-right: 0px;">
+        <div class="con-box-n clear" style="width:100%;">
             <div class="app-side-box fl">
                 <p class="app-show"></p>
                 <p class="app-txt" style="text-align:center;font-size: 14px">随时逛 及时抢</p>

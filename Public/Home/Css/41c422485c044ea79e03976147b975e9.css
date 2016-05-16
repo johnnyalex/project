@@ -523,7 +523,7 @@ left:0; padding: 0 0 0 20px; display: none; z-index: 99;}
     height: 400px;
     overflow: hidden;
     vertical-align: middle;
-    width: 400px;
+    width: 400zpx;
     text-align:center;}
 .mall_item_info .deal-pic .pic img {
     display: block;
@@ -564,7 +564,7 @@ left:0; padding: 0 0 0 20px; display: none; z-index: 99;}
 
 /*deal-meta by mumian start*/
 .mall_item_info .deal-wrap{ width:520px; position:relative;}
-.w1200 .mall_item_info .deal-wrap{ width:660px;}
+.w1200 .mall_item_info .deal-wrap{ width:640px;padding:30px 70px;}
 .mall_item_info .deal-wrap h1{ color:#333; font-size:16px; height:24px; overflow:hidden;width: auto;}
 .mall_item_info .deal-wrap p{ color:#666; font-weight:normal; line-height:20px;max-height:40px; overflow:hidden;}
 .mall_item_info .deal-wrap .sector-info{

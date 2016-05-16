@@ -13,7 +13,6 @@ class GoodsController extends CommonController {
             $where = '';
          //获取每页显示的数量
        $num = !empty($_GET['show']) ? $_GET['show'] : 10;
-
         $goodlist = $goods->select();
         // var_dump($goodlist);
         
@@ -78,7 +77,6 @@ class GoodsController extends CommonController {
     public function image(){
         $goods_id = I('get.id');
         // var_dump($goods_id);
-     
         $images = M('image'); 
         $sql = "SELECT A.*,B.id gid FROM image A,goods B WHERE A.goods_id=B.id AND A.goods_id=".$goods_id;
       
@@ -125,7 +123,6 @@ class GoodsController extends CommonController {
             }else{// 上传成功       
                 // $this->success('上传成功！'); 
                 $str = $info['pic']['savepath']. $info['pic']['savename'];
-            
                 // var_dump($str);
                 $_POST['pic'] = $str;
             }

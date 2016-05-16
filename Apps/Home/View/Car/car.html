@@ -85,13 +85,11 @@
                         <span class="text">操作</span>
                     </li>
                 </ul>
-
             </div>
 
             <div class="order-list">
                 <div class="orders-bd normal activity no">
                     <table class="tbl-main">
-       
 <foreach name="goods" item="vo">
 
                         <tbody>
@@ -147,7 +145,6 @@
                         </tbody>
 
 </foreach>
-
                     </table>
                 </div>
             </div>
@@ -196,15 +193,14 @@
             <div class="orders-pay-fixed">
                 <div class="orders-total-pay">
                     <a class="go_shopping fl" href="{:U('Home/Index/index')}"><<继续购物</a>
-                    <a class="go_pay fr" href="javascript:;">去结算</a>
-                    <form id="cartConfirmForm" action="//user.juanpi.com/pay/confirm_order" method="post">
-                        <input type="hidden" name="couponcode">
-                        <input type="hidden" value="39.00 " name="totelPrice">
-                        <input type="hidden" value="18911" name="actIds">
-                        <input type="hidden" value="81782752d512c412c10c2d201ee66f30" name="token">
-                    </form>
+                    <a href="{:U('Home/Pay/pay')}"><input type="button" class="fr" value="去结算" style="font-size:25px; margin-top:5px; margin-right:5px; color:white; width:130px; height:60px; border:0px; background:#ff464E; border-radius:5px"></a>
                     <div class="other fr">
                         <p class="all">
+                        <input id="cle_al" type="button"  value="清空购物袋" style="font-size:15px; color:white; width:100px; height:30px; border:0px; background:#ff464E; border-radius:5px">
+                        </p>
+
+                        <p class="all">
+
                         活动优惠
                         <span>
                         -
@@ -330,6 +326,11 @@
     <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
     $(function(){
+        $('#cle_al').bind("click",function(){
+            $('.for_tr').remove();
+            $.get("{:U('Home/Car/remove')}");
+            $('.go_shopping').css('fontSize','25px');
+        })
         $('.del').bind("click",function(){
             var id = $(this).parents('.for_tr').find('.car_id').val();
             var $this = $(this);
@@ -342,6 +343,7 @@
         })
         $('#totalPrice').html({$count});
         $('.decrease').bind("click",function(){
+            var id = $(this).parents('.for_tr').find('.car_id').val();
             var val = $(this).parents('.num').find('.in_pu').val();
             var total = $(this).parents('tr').find('.to_tal').html();
             var price = $(this).parents('tr').find('.pr_ice').html();
@@ -350,12 +352,14 @@
             if(val != 0){
                 $(this).parents('tr').find('.to_tal').html(total-price);
                 $('#totalPrice').html(all-price);
+                $.get("{:U('Home/Car/sql_jian')}",{id:id});
             }
             if(val <= 1)
                 val = 1;
             $(this).parents('.num').find('.in_pu').val(val);
         })
         $('.increase').bind("click",function(){
+            var id = $(this).parents('.for_tr').find('.car_id').val();
             var val = $(this).parents('.num').find('.in_pu').val();
             var total = $(this).parents('tr').find('.to_tal').html()-0;
             var price = $(this).parents('tr').find('.pr_ice').html()-0;
@@ -365,6 +369,7 @@
             if(val != stock+1){
                 $('#totalPrice').html(all-0+price);
                 $(this).parents('tr').find('.to_tal').html(total+price);
+                $.get("{:U('Home/Car/sql_jia')}",{id:id});
             }
             if(val >= stock)
                 val = stock;
@@ -372,7 +377,6 @@
         })
     })
     </script>
-
             <!-- /页脚 -->
         
         <!--百分点-->
