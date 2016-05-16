@@ -20,7 +20,7 @@ class GoodsController extends Controller {
         // 实例化 用户信息
         $info = M('userinfo');
         // 找
-        $res = $info->where(['uid'=>$uid])->find();
+        $res = $info->find();
         // var_dump($res);
         $arr = explode(',',$res['like_id']);
         $kong = array_pop($arr);
@@ -81,12 +81,12 @@ class GoodsController extends Controller {
         $category = M('category');
         $categorys = $category->where(['pid'=>'0'])->select(); 
         $goods = M('goods');//实例化商品
-        $goodsListNan = $goods->where(['status'=>1,''=>''])->select();
-        $goodsListNv = $goods->where(['status'=>1,''=>''])->select();
+        $goodsListNan1 = $goods->where(['status'=>1,'sid'=>8])->limit(4)->select();
+        $goodsListNan2 = $goods->where(['status'=>1,'sid'=>9])->limit(4)->select();
 
         $this->assign('categorys',$categorys);
-        $this->assign('goodsListNan',$goodsListNan);
-        $this->assign('goodsListNv',$goodsListNv);
+        $this->assign('goodsListNan1',$goodsListNan1);
+        $this->assign('goodsListNan2',$goodsListNan2);
         // var_dump($goodsList);
         $this->assign('title','品牌列表');
         $this->display();
