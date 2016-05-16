@@ -19,6 +19,8 @@
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/41c422485c044ea79e03976147b975e9.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/fix.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/lunbo.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/brands.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/brands1.css" />
     <script type="text/javascript" src="__PUBLIC__/Home/Js/jquery-1.8.3.min.js"></script>
 
         </head>
@@ -84,7 +86,7 @@
                     <a style="" href="###" target="_blank">最新折扣</a>
                 </li>
                 <li >
-                    <a href="http://brand.juanpi.com" target="_blank">品牌折扣</a>
+                    <a href="{:U('Home/Goods/brands')}" target="_blank">品牌折扣</a>
                 </li>
                 <li  channel="25">
                     <a href="http://shop.juanpi.com" target="_blank">特卖精选</a>
@@ -371,10 +373,16 @@
  
 
 </ul>
-<div class="page">
+
+<div class = "page">
     <em></em>
-    <div><span class="pg-prev" style="width:80px">上一页</span><span>1</span><a href="/?page=2">2</a><a href="/?page=3">3</a><i>...</i><a  href="/?page=5">5</a><a class="pg-next" href="/?page=2" style="width:80px">下一页</a>
+    {$pages}
 </div>
+<script type="text/javascript">
+    $(function(){
+        $('.page').find('.num').removeClass('num');
+    })
+</script>
 <!-- 广告 -->
 <!-- <div class="ad">
 
@@ -630,27 +638,6 @@
 
 </block>
 <script type="text/javascript">
-
-    // 侧边
-        // $(function(){
-        //     $('.i-love').mouseover(function(e){
-        //         $(this).parent('.side-love').find('.tab-tips').addClass('display','block');
-        //         var x = e.clientX;
-        //         var y = e.clientY;
-        //         var p = $('<p class="addP">我的收藏</p>');
-        //         // p.show(1000);
-                
-        //     });
-        //     $('.i-love').mouseover(function(){
-        //         // alert(567);
-        //     });
-
-        // });
-    //top nav
-    // alert($);
-// 积分
-
-
 
 // 滚动
     $(window).scroll(function(){

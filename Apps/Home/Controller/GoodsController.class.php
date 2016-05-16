@@ -67,6 +67,20 @@ class GoodsController extends Controller {
 	    $res = $info -> where(['uid'=>$uid])->save(['like_id'=>$like_id]);
 	    echo $res;
     }
+    public function brands(){
+        $category = M('category');
+        $categorys = $category->where(['pid'=>'0'])->select(); 
+        $goods = M('goods');//实例化商品
+        $goodsListNan = $goods->where(['status'=>1,''=>''])->select();
+        $goodsListNv = $goods->where(['status'=>1,''=>''])->select();
+
+        $this->assign('categorys',$categorys);
+        $this->assign('goodsListNan',$goodsListNan);
+        $this->assign('goodsListNv',$goodsListNv);
+        // var_dump($goodsList);
+        $this->assign('title','品牌列表');
+        $this->display();
+    }
 }
 
  ?>
