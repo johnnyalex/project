@@ -210,6 +210,16 @@ class CenterController extends Controller {
 	}
 	// 所有订单
 	public function allOrder(){
+		$uid = $_SESSION['user']['id'];
+		$orders = M('order')->where('uid='.$uid)->select();
+		foreach ($orders as $key => $value) {
+			$address = M('address')->where(['id'=>$value['address_id']])->find();
+			$orders[$key]['address'] = $address['pro'].' '.$address['city'].' '.$address['area'].' '.$address['addr'];
+			$orders[$key]['username'] = $address['name'];
+			$orders[$key]['tel'] = $address['tel'];
+			$orders[$key]['goods'] = M()->table(array('order_goods'=>'A','goods'=>'B'))->where("A.order_id=".$value['id']." AND A.goods_id=B.id")->select();
+		}
+		$this->assign('orders',$orders);
 		$this->assign('title','订单管理-卷皮网');
 		$this->display();
 	}
