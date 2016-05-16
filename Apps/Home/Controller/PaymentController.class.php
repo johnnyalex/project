@@ -15,20 +15,13 @@ class PaymentController extends Controller {
         foreach ($goods as $key => $value) {
             $arr['price_total'] = $arr['price_total'] + $value['price']*$value['qty'];
         }
-        $o_points = M('userinfo')->field('points')->where('uid='.$uid)->find()['points'];
-        $t_points = $o_points/10;
-        var_dump($o_points);
-        if($o_points >= $arr['price_total']/10)
-            $t_points = $arr['price_total']/10*9;
+        $old_points = M('userinfo')->field('points')->where('uid='.$uid)->find()['points'];
+        if($old_points/10 >= $arr['price_total']/20)
+            $use_points = ($arr['price_total']/20)*10;
         else
-            $t_points = $arr['price_total']-$t_points;
-        $n_points = $o_points - ($t_points*10);
-        $jian = $arr['price_total'] - $t_points;
-        $jia = $arr['price_total']/10;
-        var_dump($t_points);
-        var_dump($jian);
-        var_dump($jia);
-        $arr['price_true'] = $t_points;
+            $use_points = $old_points;
+        $new_points = ($old_points-$use_points)+($arr['price_total']/10);
+        M('userinfo')->where('uid='.$uid)->data('points='.$new_points)->save();
         $arr['status'] = 1;
         $arr['time'] = date('Y-m-d H:i:s',time());
         M('order')->create();

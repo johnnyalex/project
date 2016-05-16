@@ -14,8 +14,8 @@ class PayController extends Controller {
             $total = $total + $value['qty']*$value['price'];
         }
         $points = M('userinfo')->field('points')->where('uid='.$id)->find()['points']/10;
-        if($points >= $total/10)
-            $points = $total/10;
+        if($points >= $total/20)
+            $points = $total/20;
         $ttp = $total-$points;
         $count = count($goods);
         $this->assign('pts',$points);
