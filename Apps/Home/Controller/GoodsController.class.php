@@ -9,6 +9,10 @@ class GoodsController extends Controller {
     public function show(){
     	$gid = I('get.gid');
         $goods = M('goods')->find($gid);
+
+        $goods['describe'] = htmlspecialchars_decode($goods['describe']);
+        // var_dump($goods['describe']);
+
         $goods_images = M('image')->where('goods_id='.$gid)->limit(5)->select();
     	$this->assign('gid',$gid);
         $this->assign('goods',$goods);
@@ -21,8 +25,7 @@ class GoodsController extends Controller {
     	die();
     	// $this->display();
     }
-
-
+  
 
 
 

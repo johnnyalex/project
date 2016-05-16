@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="jp-pc w1200">
     <head>
         <title>【卷皮1折】旅行隔脏防脏成人睡袋 折扣价28.8元包邮抢购-卷皮网</title>
@@ -7,6 +7,11 @@
         <meta name="mobile-agent" content="format=html5;url=http://m.juanpi.com/shop/9519108"/>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
         <script type="text/javascript" src="__PUBLIC__/Home/Js/jquery-1.8.3.min.js"></script>
+
+         <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/ueditor/ueditor.config.js"></script>
+        <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/ueditor/ueditor.all.min.js"> </script>
+        <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <div class="row">
         <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/680005b70b7b4c55b3971b8e37687505.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/09cbb6c851054bfd9d404c535089078d.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/41c422485c044ea79e03976147b975e9.css" />
@@ -105,8 +110,6 @@ $("#show-qcodes").hover(function(){
 
                 <!-- /页头 -->
         <!-- 主体 -->
-        
-
     <!-- 新版 -->
 <div class="main pr mt20 clear">
 <div class="mall_item_info">
@@ -126,10 +129,10 @@ $("#show-qcodes").hover(function(){
 <div class="goods-left-l fl">
                 <div id="small" class="goods-left-count">
     <!-- 遍历商品主图 -->
-                    <img width="100%" src="__PUBLIC__{$goods.pic}" id="simg">
-                    <div style="background: transparent url(&quot;/BBB/project/Public/Home/images/bg.png&quot;) repeat scroll 0% 0%; display: none; left: 244px; top: 0px; width: 176.4px; height: 176.4px;" id="move"></div>
+                    <img id="simg" width="100%" src="__PUBLIC__{$goods.pic}" >
+                    <div id="move" style="background:url('__PUBLIC__/Home/images/bg.png');width: 100px;height: 100px;position:absolute;left:40px;top:80px;display:none;"></div>
                 </div>
-                <div id="big" class="big" style="display: none;"><img src="/BBB/project/Public/Home/images/a.jpg" style="position: absolute; left: -580.952px; top: 0px;" id="bimg"></div>
+                <div class="big" id="big"><img id="bimg" style="position: absolute;left:460px;top:80px ;width:400px;height:400px;z-index: 10;display:none;"  src="__PUBLIC__{$goods.pic}"></div>
                 <div class="d">
                     <ul id="uimg">
                     <foreach name="goods_images" item="vo">
@@ -147,7 +150,7 @@ $("#show-qcodes").hover(function(){
                 <dl class="tm-price clear">
                     <dd class="price">
                         <span class="current fl">
-                            <i class="symbols">￥</i>28.8                        </span>
+                            <i class="symbols">￥</i>{$goods.price}</span>
                 </dl>
 
 
@@ -305,10 +308,14 @@ $("#show-qcodes").hover(function(){
                         
                     <div class="info-title" _tagname="产品展示"><span class="single-style">产品展示</span></div>
                     <div class="details-info">
-                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ac92be590b358b4567_750x465.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ad92be59b21b8b4586_750x1437.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b592be591d2e8b4570_750x599.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b492be59521c8b458a_750x640.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b392be59381f8b458c_750x1229.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b292be59d21b8b4588_750x799.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b192be597c1e8b459c_750x604.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
-                        <div class="info-title" _tagname="产品细节"><span class="single-style">产品细节</span></div>
+                        <div class="goods_desc">
+                        <script id="editor" name="describe" type="text/plain" style="width:750px;height:300px;">{$goods['describe']}</script>
+        
+                       {$goods['describe']}
+
+                       </div>                    </div>
                     <div class="details-info">
-                        <div class="goods_desc"><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b192be59391c8b4589_750x890.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628b092be5920198b4580_750x638.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628af92be59661d8b459f_750x657.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ae92be5926208b4594_750x297.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ab92be59cb268b4580_750x758.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628ab92be599f308b4571_750x643.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a992be595c1e8b459b_750x650.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a892be59bd1c8b4584_750x658.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a792be59b01d8b4592_750x688.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a692be59c0228b4583_750x566.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a592be59ff198b4593_750x615.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a592be599d348b4567_750x623.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /><img class="goods_desc_img lazy" d-src="__PUBLIC__/Home/Picture/56e628a492be59e2238b4588_750x750.jpg" src="__PUBLIC__/Home/Images/blank_big.png?ts=c3274e1b6f8212d9_1462936007" /></div>                    </div>
+                        <div class="goods_desc"></div>                    </div>
                                                     <div class="info-title"><span class="buy-guidelines">物流与售后</span></div>
             <div class="details-info guidelines-con">
                 <p><b>发货物流：</b>韵达快递，百世汇通，快捷快递</p>
@@ -571,7 +578,37 @@ $("#show-qcodes").hover(function(){
                 val = {$goods.stock};
             $(this).parents('.j_j_p').find('input').val(val);
         })
-    })    
+    }) 
+
+// 获取元素对象
+    var small = document.getElementById('small');
+    var move = document.getElementById('move');
+    var big = document.getElementById('big');
+    var bimg = document.getElementById('bimg');
+    var simg = document.getElementById('simg');
+    big.onclick = function(){
+        alert('111');
+    }
+
+    small.onmousemove=function(e){
+            //显示小div和右侧的图
+        move.style.display = 'block';
+        big.style.display = 'block';
+
+
+
+    }
+
+
+    //绑定鼠标离开事件
+        small.onmouseout = function(){
+            //隐藏小div和右侧的图
+            move.style.display = 'none';
+            big.style.display = 'none';
+        }
+
 </script>
+
+
     </body>
 </html>
