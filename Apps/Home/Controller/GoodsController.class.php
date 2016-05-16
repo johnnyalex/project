@@ -7,8 +7,14 @@ class GoodsController extends Controller {
         $this->display();
     }
     public function show(){
+
         // 商品id
         $gid = I('get.gid');
+        $goods = M('goods')->find($gid);
+        $goods['describe'] = htmlspecialchars_decode($goods['describe']);
+            // var_dump($goods['describe']);
+        $goods_images = M('image')->where('goods_id='.$gid)->limit(5)->select();
+        // var_dump($goods['describe']);
         // 用户id
         $uid = $_SESSION['user']['id'];
         // 实例化 用户信息
@@ -25,10 +31,13 @@ class GoodsController extends Controller {
         }
     	$this->assign('title','商品详情');
         $this->assign('gid',$gid); //商品id
+        $this->assign('goods',$goods);
+        $this->assign('goods_images',$goods_images);
         $this->assign('uid',$uid); //用户id
         $this->assign('aa',$aa); //like 否
         $this->assign('aaa',$aaa); //like是
         $this->display();
+
     }
     // 处理like
     public function like(){
@@ -67,6 +76,7 @@ class GoodsController extends Controller {
 	    $res = $info -> where(['uid'=>$uid])->save(['like_id'=>$like_id]);
 	    echo $res;
     }
+
     public function brands(){
         $category = M('category');
         $categorys = $category->where(['pid'=>'0'])->select(); 
