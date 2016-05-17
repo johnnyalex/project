@@ -1,0 +1,154 @@
+<extend name = "./Public/public"/>
+<block name="show">
+	<div class="line-cate-nav-wrapper" style="display:block;background:#fff; height:50px;">
+	    <ul class="line-cate-nav"  >
+	        <li class="first"><a style="line-height:50px;" class="active" href="###">今日上新</a></li>
+	        <foreach name = "categorys" item="vo">
+	        <li><a class="" style="line-height:50px;" href="Index/more/cid/{$vo['id']}.html">{$vo.name}</a></li>
+	        </foreach>
+	        <li class="last"><a style="line-height:50px;" target="_blank" href="###/yugao">[明日预告]</a></li>
+	    </ul>
+	</div>
+	<div class="brand_bar">
+	    <ul>
+	        <li style="background:url(__PUBLIC__/Home/Picture/banner_nanzhuang11.jpg) no-repeat;"></li>
+	    </ul>
+	</div>
+	<div class="main pr mt20 clear">
+		<div class="new-brand clear">
+			<div class="brand-normal clear">
+				<div class="brand-title clear">
+					<h3 class="name fl">
+						<em class="icon brand nanzhuang fl"></em>
+						<a target="_blank" href="http://brand.juanpi.com/1772562?shop_id=1632612&shoptype=1">
+						<span> 白灰楼男装专场 </span>
+						</a>
+					</h3>
+					<div class="time fl">
+						<em class="icon clock fl"></em>
+						<span class="fl left_time">
+						<i class="i_time" style="display: none">1463709600</i>
+						剩余
+						<i class="d">3</i>
+						天
+						<i class="h">14</i>
+						时
+						<i class="m">47</i>
+						分
+						<i class="s">8</i>
+						秒
+						</span>
+					</div>
+					<a class="see-more fr" target="_blank" href="http://brand.juanpi.com/1772562?shop_id=1632612&shoptype=1">
+						<em class="icon brand-other fl"></em>
+						<span>查看更多65款>></span>
+					</a>
+				</div>
+				<ul class="goods-list goods-list-8 clear" style="height: 400px;">
+					<foreach name='goodsListNan1' item='vo'>
+					    <li gtype="1" g_type="1"  re="" id="{$vo.id}" >
+					        <div class="list-good buy">
+					            <div class="good-pic">
+					                <a href="{:U('Home/Goods/show',array('gid'=>$vo[id]))}" class="pic-img" target="_blank" data-value="goods#1_1">
+					                    <img alt="{$vo.name}" src="__PUBLIC__{$vo.pic}" class="lazy" d-src="" width="285px" />
+					                    <span class="new-icon">新品</span>                    
+					                </a>
+					            </div>
+					            <h3 class="good-title">
+
+					                [包邮]<a href="{:U('Home/Goods/show',array('gid'=>$vo[id]))}" target="_blank">{$vo.name}</a>
+					                <div class="icon-all" style="display:none;">
+					            <span class="sold">剩4天</span>
+					            </h3>
+					            <div class="good-price">
+					                <span class="price-current" ><em>￥</em>{$vo.price}</span>
+					                <span class="des-other">
+					                    <strong></strong>
+					                    <span class="price-old"><em>￥</em></span>
+					                    <span class="discount">(<em>1</em>折)</span>
+					                </span>
+					                <div class="btn buy t-buy">
+					                    <a href="{:U('Home/Goods/show',array('gid'=>$vo[id]))}" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
+					                </div>
+					            </div>
+					            <!-- like -->
+					            <a class="" data-gid="{$vo.id}" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
+					                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
+					            </a>
+					            <!-- end like -->
+					            <div class="box-hd" style="display:block;clear:both;">
+					            </div>
+					        </div>
+					    </li>
+					</foreach>
+				</ul>
+				<div class="brand-title clear">
+					<h3 class="name fl">
+						<em class="icon brand nanzhuang fl"></em>
+						<a target="_blank" href="http://brand.juanpi.com/1772562?shop_id=1632612&shoptype=1">
+						<span> 白灰楼男装专场 </span>
+						</a>
+					</h3>
+					<div class="time fl">
+						<em class="icon clock fl"></em>
+						<span class="fl left_time">
+						<i class="i_time" style="display: none">1463709600</i>
+						剩余
+						<i class="d">3</i>
+						天
+						<i class="h">14</i>
+						时
+						<i class="m">47</i>
+						分
+						<i class="s">8</i>
+						秒
+						</span>
+					</div>
+					<a class="see-more fr" target="_blank" href="http://brand.juanpi.com/1772562?shop_id=1632612&shoptype=1">
+						<em class="icon brand-other fl"></em>
+						<span>查看更多65款>></span>
+					</a>
+				</div>
+				<ul class="goods-list goods-list-8 clear" style="height: 400px;">
+					<foreach name='goodsListNan2' item='vo'>
+					    <li gtype="1" g_type="1"  re="" id="{$vo.id}" >
+					        <div class="list-good buy">
+					            <div class="good-pic">
+					                <a href="{:U('Home/Goods/show',array('gid'=>$vo[id]))}" class="pic-img" target="_blank" data-value="goods#1_1">
+					                    <img alt="{$vo.name}" src="__PUBLIC__{$vo.pic}" class="lazy" d-src="" width="285px" />
+					                    <span class="new-icon">新品</span>                    
+					                </a>
+					            </div>
+					            <h3 class="good-title">
+
+					                [包邮]<a href="{:U('Home/Goods/show',array('gid'=>$vo[id]))}" target="_blank">{$vo.name}</a>
+					                <div class="icon-all" style="display:none;">
+					            <span class="sold">剩4天</span>
+					            </h3>
+					            <div class="good-price">
+					                <span class="price-current" ><em>￥</em>{$vo.price}</span>
+					                <span class="des-other">
+					                    <strong></strong>
+					                    <span class="price-old"><em>￥</em></span>
+					                    <span class="discount">(<em>1</em>折)</span>
+					                </span>
+					                <div class="btn buy t-buy">
+					                    <a href="{:U('Home/Goods/show',array('gid'=>$vo[id]))}" target="_blank" rel="nofollow"><em class="t-icon"></em><span>淘宝</span></a>
+					                </div>
+					            </div>
+					            <!-- like -->
+					            <a class="" data-gid="{$vo.id}" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
+					                <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
+					            </a>
+					            <!-- end like -->
+					            <div class="box-hd" style="display:block;clear:both;">
+					            </div>
+					        </div>
+					    </li>
+					</foreach>
+				</ul>
+			</div>
+		</div>
+	</div>
+	   
+</block>

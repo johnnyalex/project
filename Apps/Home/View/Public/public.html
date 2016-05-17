@@ -19,6 +19,8 @@
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/41c422485c044ea79e03976147b975e9.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/fix.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/lunbo.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/brands.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/brands1.css" />
     <script type="text/javascript" src="__PUBLIC__/Home/Js/jquery-1.8.3.min.js"></script>
 
         </head>
@@ -84,7 +86,7 @@
                     <a style="" href="###" target="_blank">最新折扣</a>
                 </li>
                 <li >
-                    <a href="http://brand.juanpi.com" target="_blank">品牌折扣</a>
+                    <a href="{:U('Home/Goods/brands')}" target="_blank">品牌折扣</a>
                 </li>
                 <li  channel="25">
                     <a href="http://shop.juanpi.com" target="_blank">特卖精选</a>
@@ -111,7 +113,9 @@
             <div class="state-show fr">
                 <a  id="jifen" class="normal-a dosign">
                     <em class="icon-normal icon-nosign"></em>
-                    <em class="text">签到领积分</em>
+                    <em id="ji_fen" class="text">
+                     {$register}
+                    </em>
                 </a>
                 <!-- 积分 ?? -->
                 <div id ='addjifen' style="width: 300px;height: 300px;background: #ff436e; position:absolute;display:none"></div>
@@ -371,10 +375,16 @@
  
 
 </ul>
-<div class="page">
+
+<div class = "page">
     <em></em>
-    <div><span class="pg-prev" style="width:80px">上一页</span><span>1</span><a href="/?page=2">2</a><a href="/?page=3">3</a><i>...</i><a  href="/?page=5">5</a><a class="pg-next" href="/?page=2" style="width:80px">下一页</a>
+    {$pages}
 </div>
+<script type="text/javascript">
+    $(function(){
+        $('.page').find('.num').removeClass('num');
+    })
+</script>
 <!-- 广告 -->
 <!-- <div class="ad">
 
@@ -629,6 +639,7 @@
     </block>
 
 </block>
+<script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
 
     // 侧边
@@ -649,7 +660,19 @@
     //top nav
     // alert($);
 // 积分
-
+    $(function(){
+       $('#ji_fen').bind("click",function(){
+            var v = $(this).html().trim();
+            var $this = $(this);
+            if(v == '签到领积分'){
+                $.get("{:U('Home/Index/regist_do')}",function(){
+                    $this.html('今日已签到');
+                })
+            }
+            if(v == '今日已签到')
+                return false;
+        })
+    }) 
 
 
 // 滚动

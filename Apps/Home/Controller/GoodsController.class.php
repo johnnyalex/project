@@ -20,7 +20,7 @@ class GoodsController extends Controller {
         // 实例化 用户信息
         $info = M('userinfo');
         // 找
-        $res = $info->where(['uid'=>$uid])->find();
+        $res = $info->find();
         // var_dump($res);
         $arr = explode(',',$res['like_id']);
         $kong = array_pop($arr);
@@ -34,6 +34,8 @@ class GoodsController extends Controller {
         $this->assign('goods',$goods);
         $this->assign('goods_images',$goods_images);
         $this->assign('uid',$uid); //用户id
+        $this->assign('goods',$goods);
+        $this->assign('goods_images',$goods_images);
         $this->assign('aa',$aa); //like 否
         $this->assign('aaa',$aaa); //like是
         $this->display();
@@ -77,6 +79,20 @@ class GoodsController extends Controller {
 	    echo $res;
     }
 
+    public function brands(){
+        $category = M('category');
+        $categorys = $category->where(['pid'=>'0'])->select(); 
+        $goods = M('goods');//实例化商品
+        $goodsListNan1 = $goods->where(['status'=>1,'sid'=>8])->limit(4)->select();
+        $goodsListNan2 = $goods->where(['status'=>1,'sid'=>9])->limit(4)->select();
+
+        $this->assign('categorys',$categorys);
+        $this->assign('goodsListNan1',$goodsListNan1);
+        $this->assign('goodsListNan2',$goodsListNan2);
+        // var_dump($goodsList);
+        $this->assign('title','品牌列表');
+        $this->display();
+    }
 }
 
  ?>

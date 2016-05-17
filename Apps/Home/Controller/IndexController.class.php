@@ -5,17 +5,26 @@ class IndexController extends Controller {
     public function index(){
         $uid = $_SESSION['user']['id'];//用户id
         $goods = M('goods');//实例化商品
-        $goodsList=$goods->where(['is_new'=>1])->select();//查
+        $goodsAll=$goods->where(['status'=>1])->select();//查
         $lunbo = M('lunbo');//  实例化 轮播
         $lunbos = $lunbo->where(['status'=>'1'])->select(); 
-        $category = M('category');//  实例化 轮播
-        $categorys = $category->where(['pid'=>'0'])->select(); 
         $lunbo_width=(count($lunbos)+1)*700;
         $brand = M('brand');// 品牌
         $brand_2 = $brand->where(['status'=>'1','level'=>'2'])->select();
         $brand_3 = $brand->where(['status'=>'1','level'=>'3'])->find();
         $brand_4 = $brand->where(['status'=>'1','level'=>'4'])->select();
         $brand_1 = $brand->where(['status'=>'1','level'=>'1'])->select();
+        $register = M('userinfo')->field('register')->where('uid='.$uid)->find()['register'];
+        if($register == date('Y-m-d'))
+            $this->assign('register','今日已签到');
+        else
+            $this->assign('register','签到领积分');
+        $num = 12;//每页显示的个数
+        $count = count($goodsAll);//统计总商品数
+        $Page = new \Think\Page($count,$num);//实例化分页 
+        $limit = $Page->firstRow.','.$Page->listRows;//获取limit
+        $pages = $Page->show();//分页显示输出
+        $goodsList = $goods->where(['status'=>1])->limit($limit)->select();
         $this->assign('goodsList',$goodsList);
         $this->assign('uid',$uid);
         $this->assign('lunbos',$lunbos);
@@ -25,6 +34,7 @@ class IndexController extends Controller {
         $this->assign('brand_1',$brand_1);
         $this->assign('categorys',$categorys);
         $this->assign('lunbo_width',$lunbo_width);
+        $this->assign('pages',$pages);
         $this->assign('title','卷皮网首页');
         $this->display();
     }
@@ -76,4 +86,12 @@ class IndexController extends Controller {
 		$Verify = new \Think\Verify($config);
 		$Verify->entry();
 	}
+    public function regist_do(){
+        $uid = $_SESSION['user']['id'];
+        $date = date('Y-m-d');
+        $sql = "UPDATE userinfo SET register='".$date."' WHERE uid=".$uid;
+        M('userinfo')->query($sql);
+        $sql = "UPDATE userinfo SET points=points+1 WHERE uid=".$uid;
+        M('userinfo')->query($sql);
+    }
 }
