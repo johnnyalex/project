@@ -1,4 +1,5 @@
-﻿@charset "utf-8";
+﻿
+@charset "utf-8";
 /** CSS Document 
 * Dec: mid-autumn style 
 * Date: 2014-12-01;
@@ -487,11 +488,11 @@ left:0; padding: 0 0 0 20px; display: none; z-index: 99;}
 	-webkit-box-shadow: 1px 1px 0px rgba(204, 204, 204, 0.7);
 	box-shadow: 1px 1px 0px rgba(204, 204, 204, 0.7);
 }
-.page a.pg-next{border-radius:0 20px 20px 0;box-shadow:1px 1px 3px rgba(204, 204, 204, 0.7);}
-.page a.pg-next:hover{cursor:pointer;}
-.page span.pg-prev{color:#bbb; font-weight:normal; background:#fff; border-radius: 20px 0 0 20px;box-shadow:1px 1px 3px rgba(204, 204, 204, 0.7);}
-.page span.pg-next{width:60px; border-radius:0 20px 20px 0;box-shadow: 2px 2px 3px #D0D0CD; background:#fff;  color:#bbb; font-weight:normal;}
-.page a.pg-prev{background:#FFFFFF;width:60px; border-radius: 20px 0 0 20px;box-shadow: 2px 2px 3px #D0D0CD;}
+.page a.next{border-radius:0 20px 20px 0;box-shadow:1px 1px 3px rgba(204, 204, 204, 0.7);}
+.page a.next:hover{cursor:pointer;}
+.page span.prev{color:#bbb; font-weight:normal; background:#fff; border-radius: 20px 0 0 20px;box-shadow:1px 1px 3px rgba(204, 204, 204, 0.7);}
+.page span.next{width:60px; border-radius:0 20px 20px 0;box-shadow: 2px 2px 3px #D0D0CD; background:#fff;  color:#bbb; font-weight:normal;}
+.page a.prev{background:#FFFFFF;width:60px; border-radius: 20px 0 0 20px;box-shadow: 2px 2px 3px #D0D0CD;}
 .page span {
     background: #ff464e;
 	border: medium none;
