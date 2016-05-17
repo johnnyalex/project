@@ -29,6 +29,7 @@ class GoodsController extends Controller {
             $aa = 'none';
             $aaa = 'block';
         }
+        $car_total = M('car')->where('uid='.$uid)->count();
     	$this->assign('title','商品详情');
         $this->assign('gid',$gid); //商品id
         $this->assign('goods',$goods);
@@ -38,6 +39,7 @@ class GoodsController extends Controller {
         $this->assign('goods_images',$goods_images);
         $this->assign('aa',$aa); //like 否
         $this->assign('aaa',$aaa); //like是
+        $this->assign('car_total',$car_total);
         $this->display();
 
     }

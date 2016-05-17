@@ -110,6 +110,9 @@ class CenterController extends Controller {
 			echo 1;
 	}
 	public function add_address(){
+		$uid = $_SESSION['user']['id'];
+		$count = M('address')->where('uid='.$uid)->count();
+		$this->assign('count',$count);
 		$this->display();
 	}
 	public function change_address(){
@@ -134,12 +137,15 @@ class CenterController extends Controller {
 			$this->error('修改失败',U("Home/Center/address"));
 	}
 	public function do_add_addr(){
-		$addr = M('address');
+		$addr = D('address');
 		if(I('post.pri'))
 			$addr->where('pri=1')->data(['pri'=>0])->save();
 		$_POST['uid'] = $_POST['id'];
 		unset($_POST['id']);
-		$addr->create();
+		if(!$addr->create()){
+			$info = $addr->getError();
+			$this->error($info,U("Home/Center/add_address"),1);
+		}
 		$res = $addr->add();
 		if($res)
 			$this->success('添加成功',U("Home/Center/address"));

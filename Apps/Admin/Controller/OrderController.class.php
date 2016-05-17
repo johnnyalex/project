@@ -22,14 +22,14 @@ class OrderController extends Controller {
 
         $pages =$Page->show();
 
-        $res =M()->table(array('order'=>'A','user'=>'B'))->where($where)->limit($limit)->select();
+        $res =M()->table(array('order'=>'A','user'=>'B'))->where($where)->limit($limit)->order('id desc')->select();
 
         if(!empty($_GET['keyword'])){
             $where = "order_num like '%".$_GET['keyword']."%' AND A.uid=B.id";
             $limit = '';
         }
 
-        $order_list = M()->table(array('order'=>'A','user'=>'B'))->field('A.*,B.username')->where($where)->limit($limit)->select();
+        $order_list = M()->table(array('order'=>'A','user'=>'B'))->field('A.*,B.username')->where($where)->limit($limit)->order('id desc')->select();
         
         foreach ($order_list as $key => $value) {
             $res = M()->table('address')->find($value['address_id']);

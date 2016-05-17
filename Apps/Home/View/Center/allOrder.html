@@ -88,9 +88,9 @@
                                         </b>
                                     </p>
                                     <if condition="$v1.status eq 4">
-                                        <p><a href="###.juanpi.com/order/detail/orderId/314576937049262#logistics" target="_blank">商品评价</a></p>
+                                        <p><a class="cl">商品评价</a></p>
                                     <else />
-                                        <p><a href="###.juanpi.com/order/detail/orderId/314576937049262#logistics" target="_blank">订单跟踪</a></p>
+                                        <p><a class="cl"></a></p>
                                     </if>
                             </li>
                             <li class="oi-button">
@@ -130,6 +130,7 @@
                     success = function(response){
                        if(response[0] == 1)
                             $this.parents('.order-infolist').find('.stat_u').html('已完成');
+                            $this.parents('.order-infolist').find('.cl').html('商品评价');
                             $this.remove();
                     }
                 }
