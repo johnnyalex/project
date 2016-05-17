@@ -94,4 +94,15 @@ class IndexController extends Controller {
         $sql = "UPDATE userinfo SET points=points+1 WHERE uid=".$uid;
         M('userinfo')->query($sql);
     }
+    public function search(){
+        $keywords = addslashes(I('post.keywords'));//
+        $good = M('goods');
+        $goods = $good->where(' name like "%'.$keywords.'%"')->select();
+        if ($goods && $keywords) {
+            $this->assign('goods',$goods);
+            $this->display('more');
+        }else{
+            $this->redirect('Home/Index/index');
+        }
+    }
 }
