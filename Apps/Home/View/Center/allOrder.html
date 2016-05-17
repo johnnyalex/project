@@ -11,7 +11,7 @@
                                    <option value="1" data-msg="待付款" <?php if($_GET['status'] == 1) echo 'selected'; ?>>待付款</option>
                                    <option value="2" data-msg="待发货" <?php if($_GET['status'] == 2) echo 'selected'; ?>>待发货</option>
                                    <option value="3" data-msg="运送中" <?php if($_GET['status'] == 3) echo 'selected'; ?>>运送中</option>
-                                   <option value="4" data-msg="已送达" <?php if($_GET['status'] == 4) echo 'selected'; ?>>已送达</option>
+                                   <option value="4" data-msg="已收货" <?php if($_GET['status'] == 4) echo 'selected'; ?>>已收货</option>
                                    <option value="5" data-msg="已关闭" <?php if($_GET['status'] == 5) echo 'selected'; ?>>已关闭</option>
                                </select>
                             </form>
@@ -26,17 +26,23 @@
                     </div>
 
 <foreach name="orders" item="v1">
-
         <div class="order-infolist mb20">
+        <input class="hidd" type="hidden" value="{$v1.id}">
+
             <div class="order-info-hd">
                 <span class="order-time">{$v1.time}</span>
                     <span class="order-no" _soid_no="314576937049262" _order_no="314576937049262" orderback="0"><b>订单号：</b>{$v1.order_num}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>总价：</b>{$v1.price_total} <br></span>
                                             <!-- <span class="seller">商家：山予味道</span> -->
+                    <switch name="v1.status" >
+                         <case value="1"><input class="fksh" type="button" value="付款" style="height:31px; width:53px; margin-left:297px"></case>
+                         <case value="3"><input class="fksh" type="button" value="收货" style="height:31px; width:53px; margin-left:290px"></case>
+                    </switch>
                                             <br>
                     </div>
             <div class="order-info-hd">
                 <span class="order-time">收件地址:&nbsp;&nbsp;&nbsp;{$v1.address}</span>
                     <span class="order-no" _soid_no="314576937049262" _order_no="314576937049262" orderback="0"><b>收件人：</b>{$v1.username}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>电话：</b>{$v1.tel} <br></span>
+
                     </div>
  
     <foreach name="v1.goods" item="v2">
@@ -70,17 +76,22 @@
                             <li class="oi-status">
                                     <p>
                                         <b class="wait-pay">
+                                        <span class="stat_u">
                                             <switch name="v1.status" >
                                             <case value="1">待付款</case>
                                             <case value="2">待发货</case>
                                             <case value="3">运送中</case>
-                                            <case value="4">已送达</case>
+                                            <case value="4">已收货</case>
                                             <case value="5">已关闭</case>
                                             </switch>
+                                        </span>
                                         </b>
                                     </p>
-                                    <!-- <p><a href="###.juanpi.com/order/detail/orderId/314576937049262" target="_blank">订单详情</a></p> -->
-                                    <p><a href="###.juanpi.com/order/detail/orderId/314576937049262#logistics" target="_blank">订单跟踪</a></p>
+                                    <if condition="$v1.status eq 4">
+                                        <p><a href="###.juanpi.com/order/detail/orderId/314576937049262#logistics" target="_blank">商品评价</a></p>
+                                    <else />
+                                        <p><a href="###.juanpi.com/order/detail/orderId/314576937049262#logistics" target="_blank">订单跟踪</a></p>
+                                    </if>
                             </li>
                             <li class="oi-button">
                             </li>
@@ -98,6 +109,33 @@
     <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
         $(function(){
+            $('.fksh').bind("click",function(){
+                var hl = $(this).val().trim();
+                var id = $(this).parents('.order-infolist').find('.hidd').val();
+                var $this = $(this);
+                var data = '';
+                var success = '';
+                if(hl == '付款'){
+                    data = {'id':id,'status':2};
+                    success = function(response){
+                        if(response[0] == 1){
+                            $this.parents('.order-infolist').find('.stat_u').html('待发货');
+                            $this.remove();
+                        }
+                    }
+                }
+                else if(hl == '收货')
+                {
+                    data = {'id':id,'status':4};
+                    success = function(response){
+                       if(response[0] == 1)
+                            $this.parents('.order-infolist').find('.stat_u').html('已完成');
+                            $this.remove();
+                    }
+                }
+                var url = "{:U('Home/Car/after_pay')}";
+                $.get(url,data,success,'json')
+            })
             $('#orderStatus').change(function(){
                 var v = $(this).val();
                 location.href = "{:U('Home/Center/allOrder/status/"+v+"')}"

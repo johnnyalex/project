@@ -332,6 +332,7 @@ class CenterController extends Controller {
 		if($_POST['npassword'] != $_POST['password'])
 			$this->error('两次密码不一致',U('Home/Center/repass'));
 		$_POST['id'] = $_SESSION['user']['id'];
+		$_POST['password'] = md5($_POST['password']);
 		unset($_POST['npassword'],$_POST['code']);
 		M('user')->create();
 		$res = M('user')->save();

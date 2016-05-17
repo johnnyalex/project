@@ -29,7 +29,6 @@ class CarController extends Controller {
     public function car(){
         $uid = $_SESSION['user']['id'];
        	$goods = M()->table(array('car'=>'A','goods'=>'B'))->field('A.*,B.pic,B.stock')->where('A.gid=B.id AND A.uid='.$uid)->select();
-
        	foreach ($goods as $key => $value) {
        		$goods[$key]['total'] = $value['price']*$value['qty'];
        		$count = $count + $goods[$key]['total'];
@@ -60,5 +59,10 @@ class CarController extends Controller {
       $sql = "UPDATE car SET qty=qty+1 WHERE id=".$id." AND uid=".$uid;
       M()->query($sql);
     }
-
+    public function after_pay(){
+      $res = M('order')->data($_GET)->save();
+      if($res)
+        $response[0] = 1;
+      echo json_encode($response);
+    }
 }

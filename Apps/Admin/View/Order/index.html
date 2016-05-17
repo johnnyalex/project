@@ -48,7 +48,6 @@
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 90px;" aria-label="Engine version: activate to sort column ascending">实收款</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">买家</th>
                                     <th tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 110px;" aria-label="Engine version: activate to sort column ascending">交易状态</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">评价</th>
        <!--                              <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 130px;" aria-label="Engine version: activate to sort column ascending">下单时间</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 155px;" aria-label="Engine version: activate to sort column ascending">订单状态</th> -->
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 70px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
@@ -59,27 +58,26 @@
                             <!-- z这是用户列表的遍历 -->
                             <foreach name="order_sel" item="vo" >    
                                 <tr class="gradeA odd" role="row">
-                                    <input type="hidden" value="{$vo.id}">
                                     <td colspan="10">订单号: {$vo.order_num}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     成交时间: {$vo.time}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <a href="{:U('Admin/Order/select',array('id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">查看商品</button></a></td>
                                 </tr>
                                 
                                 <tr class="gradeA odd" role="row">
+                                    <input class="hidd" type="hidden" value="{$vo.id}">
                                     <td class="center">{$vo.name}</td>
                                     <td class="center">{$vo.address}</td>
                                     <td class="center">{$vo.tel}</td>
                                     <td class="center">{$vo.price_total}</td>
                                     <td class="center">{$vo.price_true}</td>
                                     <td class="center">{$vo.username}</td>
-                                    <td class="center">{$vo.status}</td>
-                                   
                                     <td class="center">
-                                    <switch name="vo.status">    
-                                    <case value="1"><button type="button" class="btn btn-success disabled">已评</button></case>    
-                                    <case value="0"><button type="button" class="btn btn-info disabled">未评</button></case>    
+                                    <switch name="vo.status">
+                                        <case value="1">待付款</case>
+                                        <case value="2"><button class="fahuo update btn-update btn-sm btn-info" type="button">发货</button></case>
+                                        <case value="3">待收货</case>
+                                        <case value="4">已完成</case>
                                     </switch>
-                                    
                                     </td>
                                     <td class="center"><a href="{:U('Admin/Order/update',array('oid'=>$vo['id'],'uid'=>$vo['uid']))}"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a></td>
                                 </tr>
@@ -134,6 +132,17 @@
     <script type="text/javascript">
     // alert($);
     $(function(){
+        $('.fahuo').bind("click",function(){
+            var id = $(this).parents('tr').find('input[type="hidden"]').val();
+            var $this = $(this);
+            var url = "{:U('Admin/Order/fahuo')}";
+            var data = {'id':id,'status':3};
+            var success = function(response){
+                if(response[0] == 1)
+                    $this.parents('.center').html('待收货');
+            }
+            $.get(url,data,success,'json');
+        })
    //删除订单
         $('.delete').click(function(){
             var id= $(this).parents('tr').find('td:first').html();

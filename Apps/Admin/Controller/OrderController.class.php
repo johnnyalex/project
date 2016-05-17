@@ -5,6 +5,7 @@ class OrderController extends Controller {
 
     public function index(){
         if(!empty($_GET['keyword'])){
+            $_GET['keyword'] = trim($_GET['keyword']);
             $where = "where order_num like '%".$_GET['keyword']."%' AND A.uid=B.id";
             $w = "order_num like '%".$_GET['keyword']."%' AND A.uid=B.id";
         }else{
@@ -82,13 +83,14 @@ class OrderController extends Controller {
             //失败
             $this->error('修改失败',U('Admin/Order/index'));
         }
-}
+    }
 
-
-
-
-
-
+    public function fahuo(){
+        $res = M('order')->data($_GET)->save();
+        if($res)
+            $response[0] = 1;
+        echo json_encode($response);        
+    }
 }
 
 ?>
