@@ -16,6 +16,11 @@ class IndexController extends Controller {
         $brand_3 = $brand->where(['status'=>'1','level'=>'3'])->find();
         $brand_4 = $brand->where(['status'=>'1','level'=>'4'])->select();
         $brand_1 = $brand->where(['status'=>'1','level'=>'1'])->select();
+        $register = M('userinfo')->field('register')->where('uid='.$uid)->find()['register'];
+        if($register == date('Y-m-d'))
+            $this->assign('register','今日已签到');
+        else
+            $this->assign('register','签到领积分');
         $this->assign('goodsList',$goodsList);
         $this->assign('uid',$uid);
         $this->assign('lunbos',$lunbos);
@@ -76,4 +81,12 @@ class IndexController extends Controller {
 		$Verify = new \Think\Verify($config);
 		$Verify->entry();
 	}
+    public function regist_do(){
+        $uid = $_SESSION['user']['id'];
+        $date = date('Y-m-d');
+        $sql = "UPDATE userinfo SET register='".$date."' WHERE uid=".$uid;
+        M('userinfo')->query($sql);
+        $sql = "UPDATE userinfo SET points=points+1 WHERE uid=".$uid;
+        M('userinfo')->query($sql);
+    }
 }

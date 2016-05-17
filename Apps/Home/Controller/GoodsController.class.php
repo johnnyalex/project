@@ -26,6 +26,8 @@ class GoodsController extends Controller {
     	$this->assign('title','商品详情');
         $this->assign('gid',$gid); //商品id
         $this->assign('uid',$uid); //用户id
+        $this->assign('goods',$goods);
+        $this->assign('goods_images',$goods_images);
         $this->assign('aa',$aa); //like 否
         $this->assign('aaa',$aaa); //like是
         $this->display();

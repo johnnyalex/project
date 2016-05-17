@@ -111,7 +111,9 @@
             <div class="state-show fr">
                 <a  id="jifen" class="normal-a dosign">
                     <em class="icon-normal icon-nosign"></em>
-                    <em class="text">签到领积分</em>
+                    <em id="ji_fen" class="text">
+                     {$register}
+                    </em>
                 </a>
                 <!-- 积分 ?? -->
                 <div id ='addjifen' style="width: 300px;height: 300px;background: #ff436e; position:absolute;display:none"></div>
@@ -629,6 +631,7 @@
     </block>
 
 </block>
+<script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
 
     // 侧边
@@ -649,7 +652,19 @@
     //top nav
     // alert($);
 // 积分
-
+    $(function(){
+       $('#ji_fen').bind("click",function(){
+            var v = $(this).html().trim();
+            var $this = $(this);
+            if(v == '签到领积分'){
+                $.get("{:U('Home/Index/regist_do')}",function(){
+                    $this.html('今日已签到');
+                })
+            }
+            if(v == '今日已签到')
+                return false;
+        })
+    }) 
 
 
 // 滚动
