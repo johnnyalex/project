@@ -6,6 +6,7 @@ class ServiceController extends Controller {
         $service=M('service');
         $services=$service->select();
         // var_dump($services);die;
+        
         $this->assign('services',$services);
 
         $this->display();
@@ -17,6 +18,13 @@ class ServiceController extends Controller {
 
     	$this->display();
     }  
+
+
+    public function change(){
+
+
+        $this->display();
+    }
 
 }
 

@@ -341,5 +341,11 @@ class CenterController extends Controller {
 		else
 			$this->error('修改失败',U('Home/Center/repass'));
 	}
+
+	public function refund(){
+		
+
+		$this->display();
+	}
 }
 ?>
