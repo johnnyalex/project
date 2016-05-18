@@ -337,7 +337,7 @@
 <ul class="goods-list clear">
 
 <foreach name='goodsList' item='vo'>
-    <li gtype="1" g_type="1"  re="" id="{$vo.id}" >
+    <li  class='goodss' gtype="1" g_type="1"  re="" id="{$vo.id}" >
         <div class="list-good buy">
             <div class="good-pic">
                 <a href="{:U('Home/Goods/show',array('gid'=>$vo[id]))}" class="pic-img" target="_blank" data-value="goods#1_1">
@@ -363,7 +363,7 @@
                 </div>
             </div>
             <!-- like -->
-            <a class="" data-gid="{$vo.id}" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
+            <a class="likee" data-gid="{$vo.id}" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
                 <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
             </a>
             <!-- end like -->
@@ -551,12 +551,12 @@
                 </li>
                 <script type="text/javascript">
                     $(function(){
-                        var J_user = document.getElementById('J_user');
+ /*                       var J_user = document.getElementById('J_user');
                         // alert(J_user);
                         J_user.onMouseOver(function(){
 
                             alert(1);
-                        })
+                        })*/
                     })
                 </script>
                 <li class="normal side-cart">
@@ -653,6 +653,12 @@
 <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
     $(function(){
+// //单个商品的星
+//         $('.goodss').hover(function() {
+//             $(this).find('.likee').css('display','block');
+//         }, function() {
+//             console.log(2)
+//         })
 // 积分
        $('#ji_fen').bind("click",function(){
             var v = $(this).html().trim();

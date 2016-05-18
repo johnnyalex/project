@@ -9,26 +9,24 @@ class IndexController extends Controller {
         $lunbo = M('lunbo');//  实例化 轮播
         $lunbos = $lunbo->where(['status'=>'1'])->select(); 
         $lunbo_width=(count($lunbos)+1)*700;
+        $category = M('category');//实例化 类别
+        $categorys = $category->where(['pid'=>0])->select();
         $brand = M('brand');// 品牌
         $brand_2 = $brand->where(['status'=>'1','level'=>'2'])->select();
         $brand_3 = $brand->where(['status'=>'1','level'=>'3'])->find();
         $brand_4 = $brand->where(['status'=>'1','level'=>'4'])->select();
         $brand_1 = $brand->where(['status'=>'1','level'=>'1'])->select();
         $register = M('userinfo')->field('register')->where('uid='.$uid)->find()['register'];
-        if($_SESSION['user']){
-            if($register == date('Y-m-d'))
-                $this->assign('register','今日已签到');
-            else
-                $this->assign('register','签到领积分');
-        }
+        if($register == date('Y-m-d'))
+            $this->assign('register','今日已签到');
+        else
+            $this->assign('register','签到领积分');
         $num = 12;//每页显示的个数
         $count = count($goodsAll);//统计总商品数
         $Page = new \Think\Page($count,$num);//实例化分页 
         $limit = $Page->firstRow.','.$Page->listRows;//获取limit
         $pages = $Page->show();//分页显示输出
         $goodsList = $goods->where(['status'=>1])->limit($limit)->select();
-        $car_total = M('car')->where('uid='.$uid)->count();
-        $this->assign('car_total',$car_total);
         $this->assign('goodsList',$goodsList);
         $this->assign('uid',$uid);
         $this->assign('lunbos',$lunbos);
