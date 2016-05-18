@@ -70,12 +70,12 @@
             <a title="商品验货质检" class="check1" href="###/help/xiaobao#consumer04" target="_blank" rel="nofollow"></a>
         </div>
         <div class="search">
+            <form method="post" action="{:U('Home/Index/search')}">
             <span class="search-area fl">
-                <input type="text" name="keywords" id="keywords" class="txt" value="请输入想找的宝贝" title="请输入想找的宝贝" />
+            <input type="text" name="keywords" id="keywords" class="txt" placeholder="请输入想找的宝贝" title="请输入想找的宝贝" />
             </span>
-            <input type="submit" value="" class="smt fr" />
-            <input type="hidden" id="search_action" name="search_action" value="###/search">
-            <input type="hidden" id="search_from"   name="search_from" value="1">
+            <input type="submit" value="" id="search" class="smt fr" />
+            </form>
         </div>
         <img class="banner-right-code" style="display:block;" src="__PUBLIC__/Home/Picture/jp-app-index.png">
     </div>
@@ -333,6 +333,7 @@
                 </ul>
             </div>
         </div>
+
 <ul class="goods-list clear">
 
 <foreach name='goodsList' item='vo'>
@@ -548,10 +549,20 @@
                         <div class="arr-icon">◆</div>
                     </div>
                 </li>
+                <script type="text/javascript">
+                    $(function(){
+                        var J_user = document.getElementById('J_user');
+                        // alert(J_user);
+                        J_user.onMouseOver(function(){
+
+                            alert(1);
+                        })
+                    })
+                </script>
                 <li class="normal side-cart">
-                    <a class="links links-cart" id="J_cart" href="javascript:;">
+                    <a class="links links-cart" id="J_cart"  href="{:U('Home/Car/car')}">
                         <i class="normal-icon i-cart"></i>
-                        <em class="num cartnum">0</em>
+                        <em class="num cartnum">{$car_total}</em>
                     </a>
                     <div class="tab-tips tab-tag">
                         <div class="carttime"></div><div class="arr-icon">◆</div>
@@ -641,26 +652,8 @@
 </block>
 <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
-
-    // 侧边
-        // $(function(){
-        //     $('.i-love').mouseover(function(e){
-        //         $(this).parent('.side-love').find('.tab-tips').addClass('display','block');
-        //         var x = e.clientX;
-        //         var y = e.clientY;
-        //         var p = $('<p class="addP">我的收藏</p>');
-        //         // p.show(1000);
-                
-        //     });
-        //     $('.i-love').mouseover(function(){
-        //         // alert(567);
-        //     });
-
-        // });
-    //top nav
-    // alert($);
-// 积分
     $(function(){
+// 积分
        $('#ji_fen').bind("click",function(){
             var v = $(this).html().trim();
             var $this = $(this);
@@ -672,9 +665,8 @@
             if(v == '今日已签到')
                 return false;
         })
+       // alert($);
     }) 
-
-
 // 滚动
     $(window).scroll(function(){
         var top = $(document).scrollTop();
@@ -687,14 +679,6 @@
         }
     })
 
-    // $(function(){
-    //     var top = $(document).scrollTop();
-    //     if (top>600) {
-    //         $('.top_box').css('display','block');
-    //     } else {
-    //         $('.top_box').css('display','none');
-    //     }      
-    // })
     </script>
     </body>
 </html>

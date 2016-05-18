@@ -22,7 +22,7 @@ class LoginController extends Controller{
 		if ($res) {
 			$_SESSION['user']['id']=$res['id'];
 			$_SESSION['user']['username']=$res['username'];
-			$this->success('登录成功',U('Home/Index/index'));
+			$this->redirect("Home/Index/index");
 		}else{
 			$this->error('用户名或密码错误',U('Home/Login/index'));
 		}
@@ -33,7 +33,7 @@ class LoginController extends Controller{
 		unset($_SESSION['user']);
 		// var_dump($_SESSION);
 		// die();
-		$this->success('退出成功',U('Home/Index/index'));
+		$this->redirect('Home/Index/index');
 	}
 
 }

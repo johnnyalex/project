@@ -31,6 +31,8 @@ class PaymentController extends Controller {
             $arr['goods_id'] = $value['gid'];
             $arr['qty'] = $value['qty'];
             $arr['order_id'] = $order_id;
+            $stock = M('goods')->field('stock')->where('id='.$value['gid'])->find()['stock']-$value['qty'];
+            M('goods')->where('id='.$value['gid'])->data('stock='.$stock)->save();
             M('order_goods')->create();
             M('order_goods')->add($arr);
         }

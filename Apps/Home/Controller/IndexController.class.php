@@ -15,16 +15,20 @@ class IndexController extends Controller {
         $brand_4 = $brand->where(['status'=>'1','level'=>'4'])->select();
         $brand_1 = $brand->where(['status'=>'1','level'=>'1'])->select();
         $register = M('userinfo')->field('register')->where('uid='.$uid)->find()['register'];
-        if($register == date('Y-m-d'))
-            $this->assign('register','今日已签到');
-        else
-            $this->assign('register','签到领积分');
+        if($_SESSION['user']){
+            if($register == date('Y-m-d'))
+                $this->assign('register','今日已签到');
+            else
+                $this->assign('register','签到领积分');
+        }
         $num = 12;//每页显示的个数
         $count = count($goodsAll);//统计总商品数
         $Page = new \Think\Page($count,$num);//实例化分页 
         $limit = $Page->firstRow.','.$Page->listRows;//获取limit
         $pages = $Page->show();//分页显示输出
         $goodsList = $goods->where(['status'=>1])->limit($limit)->select();
+        $car_total = M('car')->where('uid='.$uid)->count();
+        $this->assign('car_total',$car_total);
         $this->assign('goodsList',$goodsList);
         $this->assign('uid',$uid);
         $this->assign('lunbos',$lunbos);
@@ -93,5 +97,16 @@ class IndexController extends Controller {
         M('userinfo')->query($sql);
         $sql = "UPDATE userinfo SET points=points+1 WHERE uid=".$uid;
         M('userinfo')->query($sql);
+    }
+    public function search(){
+        $keywords = addslashes(I('post.keywords'));//
+        $good = M('goods');
+        $goods = $good->where(' name like "%'.$keywords.'%"')->select();
+        if ($goods && $keywords) {
+            $this->assign('goods',$goods);
+            $this->display('more');
+        }else{
+            $this->redirect('Home/Index/index');
+        }
     }
 }
