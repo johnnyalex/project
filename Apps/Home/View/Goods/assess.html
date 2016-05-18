@@ -184,8 +184,8 @@
             <div class="slide-box-main" style="overflow: visible">
                 <div class="fl">
                     <ul class="goods">
-                        <li  class="active"><a href="#goodsdesc">商品详情</a></li>
-                        <li ><a class="ass" href="{:U('Home/Goods/assess',array('gid'=>$gid))}">商品评价</a></span></li>
+                        <li ><a href="{:U('Home/Goods/show',array('gid'=>$gid))}">商品详情</a></li>
+                        <li  class="active"><a class="ass" href="javascript:;">累计评价</a></span></li>
                         <li><a href="javascript:;">消费保障</a></span></li>
                         <li style="position: relative;z-index: 10">
                             <em class="icon-normal icon-phone-fen" style="margin-top: 12px;margin-left: 40px"></em><a id="show-qcode" style="padding-left:0 " href="####.juanpi.com/apps">手机购买</a></span>
@@ -193,64 +193,91 @@
                         </li>
                     </ul>
                 </div>
-                
-                <div class="fl" style="display: none;">
-                    <div class="seller" class="fl">
-                                        <div>
-                    售前客服：                                        <a title="点击这里给我发消息" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=452590869&amp;site=qq&amp;menu=yes">
-                    <img border="0" style="display: inline-block;" src="__PUBLIC__/Home/Picture/qq-icon.gif"></a>
-                                        </div>
-                                        </div>
-                </div>
-                
-                <div class="fr ">
-                    <a href="javascript:void(0);" class="btn" >加入购物袋</a> 
-                    <span class="g-post">/包邮</span><span class="p"><em>￥</em>28.80</span>
-                </div>
             </div>
-            <div class="slide-box-tab">
-                <ul> 
-                    <li><a href="javascript:;" _tagname="产品展示">产品展示</a></li>
-                    <li><a href="javascript:;" _tagname="产品细节">产品细节</a></li>
-                </ul>
+                
+                <div class="kg-rate-wd">
+                    <ul>
+                        <li class="left">
+                                <label style="boder:0px solid #fff">
+                                    <input id="reviews-t-all" type="radio" checked="" value="" name="J_KgRate_ReviewType">
+                                    全部
+                                </label>
+                        </li>
+                        <li class="left">
+                               <label >
+                                    <input id="reviews-t-val3" type="radio" value="3" name="J_KgRate_ReviewType">
+                                    图片
+                                    <span class="tb-tbcr-num">
+                                </label>
+                        </li>
+                        <li class="left">
+                               <label >
+                                    <input id="reviews-t-val3" type="radio" value="3" name="J_KgRate_ReviewType">
+                                    追评
+                                    <span class="tb-tbcr-num">
+                                </label>
+                        </li>
+                        <li class="left">
+                               <label >
+                                    <input id="reviews-t-val3" type="radio" value="3" name="J_KgRate_ReviewType">
+                                    好评
+                                    <span class="tb-tbcr-num">
+                                </label>
+                        </li>
+                        <li class="left">
+                               <label >
+                                    <input id="reviews-t-val3" type="radio" value="3" name="J_KgRate_ReviewType">
+                                    中评
+                                    <span class="tb-tbcr-num">
+                                </label>
+                        </li>
+                        <li class="left">
+                               <label >
+                                    <input id="reviews-t-val3" type="radio" value="3" name="J_KgRate_ReviewType">
+                                    差评
+                                    <span class="tb-tbcr-num">
+                                </label>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
             </div>
         </div>
 
     </div>
-        <div class="tm-goodsinfo">
-            <div class="info-title"><a name="sbtggcs"></a><span class="param">参数规格</span></div>
-                <div class="details-info">
-                    <table cellpadding="0" cellspacing="0" class="tb-param">
-                        <tr>
-                            <td width="33%">里料材质：纯棉</td><td width="33%">户外面料：纯棉</td>
-                                <td width="33%">睡袋分类：棉睡袋</td></tr>
-                                <td width="33%">填充物：羽棉混合(底部为棉，顶部为羽绒)</td>
-                                <td width="33%">适用对象：成人</td>
-                                <td width="33%">适用人数：单人</td></tr><td width="33%">商品系列：AVVU-B15</td> 
-                                <td width="33%">总重量：580g</td>
-                                <td width="33%">颜色分类：苹果绿 蔷薇紫 火焰橙</td>
-                            </tr>
-                                <td width="33%">极限温标：40</td> 
-                                <td width="33%">适用季节：夏季</td>
-                                <td width="33%">舒适温标：15℃以上</td>
-                            </tr>
-                                <td width="33%">款式：混合式/半长方形</td>
-                                <td width="33%">货号：6931611006881</td> 
-                        <table cellpadding="0" cellspacing="0" class="tb-param tb-nb">
-                    </table>
-                </div>
-                        
-                    <div class="info-title" _tagname="产品展示"><span class="single-style">产品展示</span></div>
-                    <div class="details-info">
-                        <div class="goods_desc">
-                        <script id="editor" name="describe" type="text/plain" style="width:750px;height:300px;">{$goods['describe']}</script>
-        
-                       {$goods['describe']}
+    <style type="text/css">
+    .left{margin-left:60px;border:0;}
+        .bg{width: 1120px;height: 100%;background:#fcfcfc;margin-top:20px;}
+        .kg-rate-wd{width: 1000px;height: 50px; margin:0 auto;}
+        .fl{float:left;}
+        .fr{float:right;}
+        li{display:block;}
+        .is-current{width: 30px;height: 20px;}
+        .la{width: 100px;}
+        .pin{width: 900px;height: 150px;border-bottom: 1px solid #d4d4d4;margin-left:120px;}
+        .mai{width: 130px;height: 120px;margin-left:5px;margin-top:5px;}
+        .center{margin-left:30px;margin-top:20px;}
+        .user{width: 130px;height: 20px;text-align: center;margin-top:5px;}
+        .pinglun{width: 730px;height: 110px;margin-top:20px;margin-left:10px;border:0px solid red;}
+        .shijian{width: 100px;height: 10px;border:0px solid red;}
+    </style>
+<div class="bg">
+    <div class="pin">
+        <ul>
+        <li>
+            <div class="mai fl">
+                <img src="" width="70px" class="center" >
+                <div class="user">这里是买家名称</div>
+            </div>
+            <div class="pinglun fl ">这里写评价内容</div>
 
-                       </div>                    </div>
-                    <div class="details-info">
-                        <div class="goods_desc"></div>                    </div>
-                                                    <div class="info-title"><span class="buy-guidelines">物流与售后</span></div>
+        </li>
+    </ul>
+    <div class="shijian"><p>评价时间:</p></div>
+    </div>
+</div>
+        <div class="tm-goodsinfo">
             <div class="details-info guidelines-con">
                 <p><b>发货物流：</b>韵达快递，百世汇通，快捷快递</p>
                 <p><b>配送范围：</b>全国（港澳台地区除外）。</p>
@@ -344,11 +371,11 @@
 <script type="text/javascript">
     $(function(){
 
-        // //商品描述和评价切换
-        //  $('.ass').click(function(){
-        //     // alert(11);
-        //     $(this).css({color:'red','border-bottom':'2px solid red','font-size':'14px','font-weight':'bold',});
-        //  })
+        //商品描述和评价切换
+         $('.ass').click(function(){
+            // alert(11);
+            $(this).css({color:'red','border-bottom':'2px solid red','font-size':'14px','font-weight':'bold',});
+         })
          //商品数量加减
         $('.decrease').bind("click",function(){
             var val = $(this).parents('.j_j_p').find('input').val();
