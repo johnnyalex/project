@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class LoginController extends Controller{
 	public function index(){
+		$this->assign('title','用户登录-卷皮网');
 		$this->display();
 	}
 	public function login(){

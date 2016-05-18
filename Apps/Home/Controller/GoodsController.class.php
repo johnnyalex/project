@@ -125,13 +125,6 @@ class GoodsController extends Controller {
         $this->display();
 }
 
-    public  function  seller(){
-        $goods = M('goods');
-        $goodsList = $goods->where(['sid'=>'7'])->select();
-        $this->assign('title','商家首页');
-        $this->assign('goodsList',$goodsList);
-        $this->display();
-    }
 
 }
 

@@ -4,6 +4,7 @@ use Think\Controller;
 class RegistController extends Controller{
 	//显示
 	public function index (){
+		$this->assign('title','用户注册-卷皮网');
 		$this->display();
 	}
 	//提交

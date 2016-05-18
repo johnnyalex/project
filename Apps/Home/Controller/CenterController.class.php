@@ -290,7 +290,7 @@ class CenterController extends Controller {
 	public function favorite(){
 		$uid = $_SESSION['user']['id'];
 		if ($uid=='') {
-			$this->display('Home/Login/index');
+			$this->redirect("Home/Login/index");
 		}
 		// 实例化
 		$use=M('user');
