@@ -1,6 +1,8 @@
+
 <extend name="./Public/public" />
 <block name="show">
 <!-- 新版 -->
+
 <div class="main pr mt20 clear">
 <div class="mall_item_info">
 <div class="place-show">
@@ -181,9 +183,9 @@
         <div class="slide-box" style="overflow: visible">
             <div class="slide-box-main" style="overflow: visible">
                 <div class="fl">
-                    <ul class="goods">
+                    <ul>
                         <li  class="active"><a href="#goodsdesc">商品详情</a></li>
-                        <li ><a class="ass" href="{:U('Home/Goods/assess',array('gid'=>$gid))}">商品评价</a></span></li>
+                        <li><a href="javascript:;">商品详情</a></span></li>
                         <li><a href="javascript:;">消费保障</a></span></li>
                         <li style="position: relative;z-index: 10">
                             <em class="icon-normal icon-phone-fen" style="margin-top: 12px;margin-left: 40px"></em><a id="show-qcode" style="padding-left:0 " href="####.juanpi.com/apps">手机购买</a></span>
@@ -341,13 +343,6 @@
 <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
     $(function(){
-
-        // //商品描述和评价切换
-        //  $('.ass').click(function(){
-        //     // alert(11);
-        //     $(this).css({color:'red','border-bottom':'2px solid red','font-size':'14px','font-weight':'bold',});
-        //  })
-         //商品数量加减
         $('.decrease').bind("click",function(){
             var val = $(this).parents('.j_j_p').find('input').val();
             val--;

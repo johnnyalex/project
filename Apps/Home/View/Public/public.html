@@ -17,11 +17,13 @@
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/680005b70b7b4c55b3971b8e37687505.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/09cbb6c851054bfd9d404c535089078d.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/41c422485c044ea79e03976147b975e9.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/cf4f9beb3fe44dbb971ce2a555991ebe.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/fix.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/lunbo.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/brands.css" />
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/Css/brands1.css" />
     <script type="text/javascript" src="__PUBLIC__/Home/Js/jquery-1.8.3.min.js"></script>
+    <script src="__PUBLIC__/Home/Js/ads.js"></script>
 
         </head>
         <body>
@@ -338,7 +340,7 @@
 <ul class="goods-list clear">
 
 <foreach name='goodsList' item='vo'>
-    <li gtype="1" g_type="1"  re="" id="{$vo.id}" >
+    <li  class='goodss' gtype="1" g_type="1"  re="" id="{$vo.id}" >
         <div class="list-good buy">
             <div class="good-pic">
                 <a href="{:U('Home/Goods/show',array('gid'=>$vo[id]))}" class="pic-img" target="_blank" data-value="goods#1_1">
@@ -364,7 +366,7 @@
                 </div>
             </div>
             <!-- like -->
-            <a class="" data-gid="{$vo.id}" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
+            <a class="likee" data-gid="{$vo.id}" data-gtype="1" lkid="77432594" lks="1"  gtype="1"  title="加入收藏">
                 <i class="like-ico"><span class="heart_left"></span><span class="heart_right"></span></i>
             </a>
             <!-- end like -->
@@ -388,11 +390,19 @@
     })
 </script>
 <!-- 广告 -->
-<!-- <div class="ad">
+  <div id="pop" style="display:none;">
+    <div id="popHead">
+        <a id="popClose" title="关闭">关闭</a>
+        <h2>今日推荐</h2>
+    </div>
+    <div id="popContent">
+    <a href="{:U('Home/Index/seller')}" target="_blank"><img src="__PUBLIC__/Home/Picture/ad_200x150.jpg"></a>
+    </div>
+  </div>
+  <script>
+var popad=new Pop();
+</script>
 
-    
-</div>
- -->
  <!-- 弹出提分框 -->
 
 </div>
@@ -513,7 +523,7 @@
             </li>
           </ul>
   </div>
-  <a href="###/about/links" class="more">更多&gt;&gt;</a>
+  <a href="{:U('Home/Index/san')}" class="more">更多&gt;&gt;</a>
 </div>
         <p class="ft-company">武汉奇米网络科技有限公司 鄂ICP备10209250号 | ICP许可证号：鄂B1-20150109 | 食品流通许可证 SP4201991510041888&#12288;&#12288;Copyright &copy; 2010 -2016 JuanPi.com All Rights Reserved</p>
                     <div class="logo">
@@ -552,9 +562,14 @@
                 </li>
                 <script type="text/javascript">
                     $(function(){
-                        var J_user = document.getElementById('J_user');
+ /*                       var J_user = document.getElementById('J_user');
                         // alert(J_user);
 
+<<<<<<< HEAD
+=======
+                            alert(1);
+                        })*/
+>>>>>>> eb81cdc777fb5c323a7be7df8773b7633fcbfee6
                     })
                 </script>
                 <li class="normal side-cart">

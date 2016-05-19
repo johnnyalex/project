@@ -104,7 +104,6 @@ class UserController extends CommonController {
             $this->success('添加成功',U('Admin/User/index'));
         }else{
             $this->error('添加成功',U('Admin/User/index'));
-
         }
 
     }
