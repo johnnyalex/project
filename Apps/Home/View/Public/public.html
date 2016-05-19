@@ -72,8 +72,9 @@
         <div class="search">
             <form method="post" action="{:U('Home/Index/search')}">
             <span class="search-area fl">
-            <input type="text" name="keywords" id="keywords" class="txt" placeholder="请输入想找的宝贝" title="请输入想找的宝贝" />
+            <input autocomplete="off" type="text" name="keywords" id="keywords" class="txt" placeholder="请输入想找的宝贝" title="请输入想找的宝贝" />
             </span>
+            <span><div id="se_key" style="width:200px; margin-top:35px; background:#EFEFEF; position:absolute; z-index:10000; font-size:17px;"></div></span>
             <input type="submit" value="" id="search" class="smt fr" />
             </form>
         </div>
@@ -553,16 +554,13 @@
                     $(function(){
                         var J_user = document.getElementById('J_user');
                         // alert(J_user);
-                        J_user.onMouseOver(function(){
 
-                            alert(1);
-                        })
                     })
                 </script>
                 <li class="normal side-cart">
                     <a class="links links-cart" id="J_cart"  href="{:U('Home/Car/car')}">
                         <i class="normal-icon i-cart"></i>
-                        <em class="num cartnum">{$car_total}</em>
+                        <em class="num cartnum">{$car_total|default="0"}</em>
                     </a>
                     <div class="tab-tips tab-tag">
                         <div class="carttime"></div><div class="arr-icon">◆</div>
@@ -653,6 +651,39 @@
 <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
     $(function(){
+        $('#keywords').focus(function(){
+            $(this).css('background','white');
+            $(this).css('color','black');
+        })
+        $('#keywords').blur(function(){
+            setTimeout(function(){
+                $('#se_key').html('');
+                $('#keywords').css('backgroundColor','#EFEFEF');
+            },333);
+        })
+        //搜索
+        $('#keywords').keyup(function(event){
+            if(event.keyCode == 18)
+                return false;
+            var val = $(this).val().trim();
+            var $this = $(this);
+            var url = "{:U('Home/Center/search_key')}";
+            var data = {data:val}
+            var success = function(response){
+                if(response[0] == 1){
+                    var res = response[1];
+                    var str = '';
+                    for (var i = 0; i < res.length; i++) {
+                        var id = parseInt(res[i]['id']);
+                        var href = "{:U('Home/goods/show/gid/"+id+"')}";
+                        str += '<a href="'+href+'">'+res[i]['name']+'</a><br/>';
+                    };
+                    console.log(str);
+                    $('#se_key').html(str);
+                }
+            }
+            $.get(url,data,success,'json');
+        })
 // 积分
        $('#ji_fen').bind("click",function(){
             var v = $(this).html().trim();
