@@ -28,7 +28,7 @@ class CountController extends CommonController {
 
     }
     public function sell(){
-        $orders = M('order')->where(['status'=>'4'])->order('price_total desc')->select();
+        $orders = M()->table(['order'=>'A','order_goods'=>'B',])->where(['status'=>'4'])->order('price_total desc')->select();
         var_dump($orders);
         $this->display();
     }
