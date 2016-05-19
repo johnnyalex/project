@@ -157,7 +157,6 @@ class GoodsController extends CommonController {
     public function is_face(){
         $images = M('image');
         $images->where('id!='.$_POST['id'])->data('is_face=0')->save();
-        echo $images->_sql();
         $images->create();
         $res = $images->save();
         if($res)
