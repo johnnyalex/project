@@ -115,5 +115,10 @@ class IndexController extends Controller {
         $this->assign('goodsList',$goodsList);
         $this->display();
     }
-   
+
+    public  function  aaa(){
+        $this->assign('title','测试');
+        $this->display();
+    }
+
 }

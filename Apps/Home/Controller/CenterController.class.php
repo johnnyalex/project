@@ -353,5 +353,27 @@ class CenterController extends Controller {
 
 		$this->display();
 	}
+
+	public function search_key(){
+		$data = I('get.data');
+		$res = M('goods')->field('name,id')->where('name like "%'.$data.'%"')->limit(5)->select();
+		if($res){
+			$response[0] = 1;
+			$response[1] = $res;
+		}
+		echo json_encode($response);
+	}
+
+	public function commit(){
+		$_GET['uid'] = $_SESSION['user']['id'];
+		$_GET['stu'] = 0;
+		if(!empty($_GET['val']))
+			$res = M('commit')->data($_GET)->add();
+		else
+			$res = true;
+		if($res)
+			$response[0] = 1;
+		echo json_encode($response);
+	}
 }
 ?>

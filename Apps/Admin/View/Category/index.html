@@ -35,8 +35,7 @@
                                     <td style="display:none">{$vo.path}</td>
                                     <td class="display center"><button type="button" class="btn_dis btn-info">{$vo.display}</button></td>
                                     <td class="center"><button class="btn" type="button">查看子分类</button>&nbsp;&nbsp;&nbsp;<button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;&nbsp;<a href="{:U('Admin/Category/update',array('id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a></td>
-                                </tr>
-                                
+                                </tr>                            
                             </foreach>
                             
 
@@ -85,29 +84,29 @@
             }
         })
         $('.btn').click(function(){
-            var table;
-            var cls = $(this).text();
+            var table;//
+            var cls = $(this).text();//文字
             if(cls == '查看子分类'){
-                $(this).addClass('close');
-                $(this).html('关闭');
-                var id = $(this).parents('.gradeA').find('td:first').html();
-                table = $(this).parents('.table');
-                var tr = $(this).parents('.gradeA');
+                $(this).addClass('close');//关闭的CSS
+                $(this).html('关闭');//替代文字
+                var id = $(this).parents('.gradeA').find('td:first').html();//取得类别id
+                table = $(this).parents('.table');//取得表
+                var tr = $(this).parents('.gradeA');//取得行
                 $.ajax({
                     url:"{:U('Admin/Category/parent')}",
                     data:{id:id},
                     datatype:'json',
                     type:'post',
                     success:function(data){
-                        var arr = eval(data);
+                        var arr = eval(data);//接受返回值
                         if(arr != null)
                         for (var i = 0; i < arr.length; i++) {
                             var td = $('<tr id="ax'+i+'" class="gradeA odd '+'add'+id+'" role="row" style="background:#EEEEEE"><td>'+arr[i]['id']+'</td><td>'+arr[i]['name']+'</td><td style="display:none">'+arr[i]['path']+'</td><td class="display center"><button type="button" class="btn_dia btn-info">'+arr[i]['display']+'</button></td><td class="center"><button class="btn btn_add" type="button">查看子分类</button>&nbsp;&nbsp;&nbsp;<button class="delete_a btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;&nbsp;<a href="alex"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a></td></tr>');
-                            $(table).find(tr).css('background','#D8D8D8').after(td);
+                            $(table).find(tr).css('background','#D8D8D8').after(td);//存入
                             var htma = $('table tr[class*="add'+id+'"]').find('td:first').html();
                             var href = "update/id/"+htma;
                             $('#ax'+i).find('a').attr('href',href);
-                        };
+                        };//循环添加
                         $('.btn_dia').bind("click",function(){
                             var display = $(this).html();
                             var id = $(this).parents('tr').find('td:first').html();

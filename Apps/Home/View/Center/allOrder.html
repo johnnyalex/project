@@ -46,11 +46,13 @@
                     </div>
  
     <foreach name="v1.goods" item="v2">
-
             <dl class="my-order-list">
                 <dd>
                                                         <!-- class="last-goods" -->
                             <ul class="last-goods">
+            <input class="hi_dn" type="hidden" value="{$v2.id}">
+        <input class="hidd" type="hidden" value="{$v1.id}">
+
                             <li class="oi-goods">
                                 <a class="aimg" target="_blank" href="http://shop.juanpi.com/deal/6937042">
                                     <img width="60px" height="60px" src="__PUBLIC__{$v2.pic}">
@@ -109,6 +111,29 @@
     <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
         $(function(){
+            $('.cl').bind("click",function(){
+                if($(this).html().trim() == '已评价')
+                    return;
+                var gid = $(this).parents('.last-goods').find('.hi_dn').val();
+                var oid = $(this).parents('.last-goods').find('.hidd').val();
+                $(this).html('<input id="sub" type="button" value="提交"/>');
+                $(this).parents('.last-goods').after('<textarea id="textarea" type="text" cols="120" rows="7" style="font-size:15px;"></textarea>');
+                var $this = $(this);
+                $('#sub').click(function(){
+                    var url = "{:U('Home/Center/commit')}";
+                    var val = $('#textarea').val();
+                    var data = {'val':val,'gid':gid,'oid':oid};
+                    var success = function(response){
+                        if(response[0] == 1){
+                            $this.html('商品评价');
+                            $('#sub').remove();
+                            $('#textarea').remove();
+                        }
+                    }
+                    $.get(url,data,success,'json');
+                    return false;
+                })
+            })
             $('.fksh').bind("click",function(){
                 var hl = $(this).val().trim();
                 var id = $(this).parents('.order-infolist').find('.hidd').val();
