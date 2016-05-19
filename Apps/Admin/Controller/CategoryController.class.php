@@ -26,14 +26,14 @@ class CategoryController extends CommonController {
         $id = I('post.id');
         $path = '0,'.$id.',';
         $cate = M('category');
-        $res = $cate->where("path='".$path."'")->select();
+        $res = $cate->where("path='".$path."'")->select();//取得path为父级的内容  遍历添加
         for($i = 0;$i < count($res);$i++){
             if($res[$i]['display'] == 1)
                 $res[$i]['display'] = '显示';
             else if($res[$i]['display'] == 0)
                 $res[$i]['display'] = '隐藏';
         }
-        $res = json_encode($res);
+        $res = json_encode($res);//转json格式
         echo $res;
     }
     public function parent_add(){

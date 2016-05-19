@@ -67,6 +67,8 @@ class BrandController extends CommonController {
         $brand = M('brand');//实例化一下
         $brand->create();
         $res = $brand->save();
+        $a  = $brand->_sql();
+        var_dump($a);die;
         if ($res) 
             echo 1;           
     }

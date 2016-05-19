@@ -43,9 +43,7 @@ class SellerController extends CommonController {
 //显示处理是否上架
         public function seller_status(){
             $sellers = M('seller');
-            $a = $sellers->create();
-            var_dump($a);
-            die();
+            $sellers->create();
             $res = $sellers->save();
             if($res)
                 echo 1; 
@@ -53,7 +51,6 @@ class SellerController extends CommonController {
 // 删除 商家
         public function delete(){
           $id = I('get.id');
-          // var_dump($id);die;
           $sellers = M('seller');
           $res =  $sellers->delete($id);
           if($res)
@@ -65,9 +62,9 @@ class SellerController extends CommonController {
     }
 // 编辑商家
     public function edit(){       
-        $seller = M('seller');//实例化一下
-        $seller->create();
-        $res = $seller->save();
+        $sellers = M('seller');//实例化一下
+        $a = $sellers->create();
+        $res = $sellers->save($a);
         if ($res) 
             echo 1;           
     }
@@ -94,7 +91,6 @@ class SellerController extends CommonController {
             $this->error('修改失败',U('Admin/Seller/index'));
         }     
     }
-
 // 执行 插入
     public function insert (){
         $_POST['pic']='/Home/Picture/'.$_FILES['pic']['name'];
@@ -107,6 +103,13 @@ class SellerController extends CommonController {
             $this->error('添加失败',U('Admin/Seller/index'));
         }
 
+    }
+//产看卖家的商品
+    public function goods(){
+        $sid = I('get.id');
+        $goodlist= M('goods')->where(['sid'=>$sid])->select();
+        $this->assign('goodlist',$goodlist);
+        $this->display();
     }
 
 }

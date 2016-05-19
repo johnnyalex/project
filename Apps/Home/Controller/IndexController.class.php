@@ -120,4 +120,8 @@ class IndexController extends Controller {
         $this->assign('title','友情链接');
         $this->display();
     }
+    public  function  aaa(){
+        $this->assign('title','测试');
+        $this->display();
+    }
 }

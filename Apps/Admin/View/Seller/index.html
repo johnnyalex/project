@@ -73,6 +73,9 @@
                                         <a href="{:U('Admin/Seller/edit1',['id'=>$vo['id']])}">
                                             <button class="edit btn-primary btn-sm btn-del" type="button">编辑图片</button>
                                         </a>
+                                        <a href="{:U('Admin/Seller/goods',['id'=>$vo['id']])}">
+                                            <button class="goods btn-primary btn-sm btn-del" type="button">查看商品</button>
+                                        </a>
                                     </td>
                                 </tr>
                             </foreach>
@@ -101,9 +104,7 @@
                       z-index: 2;
                     }
                   </style>
-
                             <div class="row">
-                                
                                     <div class="col-sm-6">
                                         <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
                                         <div class="pagination">
