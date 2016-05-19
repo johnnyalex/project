@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Css/add.css" />
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Css/add1.css" />
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Css/add2.css" />
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Css/san.css" />
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Css/pg-myjuanpi.css" />
     <!-- desc 商品 -->
         <link href="__PUBLIC__/Home/css/css.css" rel="stylesheet">
@@ -71,105 +70,62 @@
     <div class="mainNav">    
         <div class="nav">
             <ul class="navigation fl">
-                <li class="current"><a href="{:U('Home/Center/index')}">我的卷皮</a></li>
+                <li><a href="{:U('Home/Center/index')}">我的卷皮</a></li>
                 <li><a href="{:U('Home/Center/userinfo')}">账号设置</a></li>
-                <li><a href="{:U('Home/Message/index')}">消息中心</a></li>
+                <li class="current"><a href="{:U('Home/Message/index')}">消息中心</a></li>
             </ul>
             <div class="state-show fr"><a href="{:U('Home/Index/index')}" class="normal-h">卷皮首页&gt;&gt;</a></div>
         </div>
     </div>
 </div>
-<!--head end-->
-<!-- /导航 -->
-            <!-- /导航 -->
-        
-    
-        
-            <!-- 右边导航 -->
-            <!--右边导航 start-->        
 
-<!--右边导航 end-->
-            <!-- /右边导航 -->
-        
-    
-        <!-- 主体 -->
-        
-<!--main start -->
-    <block name="favorite"> 
-    <block name="goods"> 
 
-    <div class="main pr mt20 clear">
 
-        <div class="my-juanpi">
-            
-            <!-- 二级导航 -->
-<div class="sider-bar">
-    <ul>
-    <li><a href="{:U('Home/Center/allOrder')}">我的订单</a></li>
-    <li><a href="{:U('Home/Center/backList')}">我的售后</a></li>
-    <li><a href="{:U('Home/Center/beans')}">我的积分</a></li>
-    <li><a href="{:U('Home/Center/coupon')}">我的优惠券</a></li>
-    <li class="noboder"><a href="{:U('Home/Center/favorite')}" target="_blank">我的收藏</a></li>
-    </ul>
+<div style="height:20px;"></div>
+<div id="lgroup" style="float:left;margin-left:33px;">
+    <foreach name="groups" item="grp">
+    <div id="id{$grp.gid}" style="width:50px;height:23px;border:1px solid #E2E2E2;font-size:15px;overflow:hidden;">{$grp.name}</div>
+    </foreach>
 </div>
-            <!-- 二级导航 -->
-<block name="allOrder">
-<block name="noPayOrder">
-<block name="inWayOrder">
-<block name="backList">
-<block name="beans">
-<block name="coupon">
-        <div class="info-panel mb20">
-                <div class="account clear">
-                    <div class="ph"><img
-                    src="__PUBLIC__{$user.pic}"
-                    alt="头像" 
-                    >
-                        <a href="###.juanpi.com/setting">
-                            <div class="ph-layer"></div>
-                            <div class="ph-set" style="background-position: -138px -21px;"></div>
-                        </a>
-                    </div>
-                    <div class="account-info">
-                        <p><span>Hi~</span> <a href="###.juanpi.com/setting">{$user.username}</a>
-                                                    </p>
-                        <div class="tips"><span>账户安全级别：</span>
-                            <strong class="level-h">高</strong>                                                                                                                <a href="{:U('Home/Center/security')}">立即提升</a>
-                            <span style="color:#e2e2e2">|</span>
-                            <a href="/setting/security?method=verifyphone"><em class="active"><div class="mobile"></div></em></a>
-                            <a href="/setting/security?method=verifyemail"><em class="active"><div class="mail"></div></em></a>
-                            <a href="/setting/security?method=resetpwd"><em class="active"><div class="lock">&nbsp;</div></em></a>
-                        </div>
-                    </div>
-                </div>
-                <ul>
-                    <li><div class="credit"><a href="{:U('Home/Center/beans')}">我的积分：{$user.points}</a></div></li>
-                    <li><div class="ticket"><a href="{:U('Home/Center/coupon')}">我的优惠券：0</a></div></li>
-                    <li><div class="base-info"><a href="{:U('Home/Center/userinfo')}">基本资料</a></div></li>
-                    <li><div class="addr"><a href="{:U('Home/Center/address')}">收货地址</a></div></li>
-                </ul></div>
-</div></div></div>  
-</block>
-</block>
-</block>
-</block>
-</block>
-</block>
-</block>
-</block>
+<div style="width:300px;height:300px;background:white;border:1px solid #E2E2E2;float:left;">
+    <div style="height:279px;">
+        
 
 
-        </div>
-
-        </div>
     </div>
+    <div style="margin-bottom:10px;"><input type="text" style="width:260px;"><button style="width:40px;">发送</button></div>
+</div>
+<div id="group" style="width:300px;background:white;border:1px solid #E2E2E2;float:left;margin-left:100px;padding:10px;">
+    <div><input id="mk_name" type="text" style="width:133px;"><button id="mk_group">创建群</button>最多创建三个<br>我的群组:</div>
+    <foreach name="groups" item="grp">
+    <div id="gid{$grp.gid}">
+    {$grp.gid} <span style="font-size:15px;">{$grp.name}</span>
+    <span style="float:right;margin-right:33px;">
+    <if condition="$grp.own eq 1 ">
+    <a class="dr_group" gid="{$grp.gid}" href="" style="color:blue;">解散群</a>
+    <else/>
+    <a class="ex_group" gid="{$grp.gid}" href="" style="color:blue;">退出群</a>
+    </if></span>
+    </div>
+    </foreach> 
+</div>
+<div style="width:300px;height:200px;background:white;border:1px solid #E2E2E2;float:left;margin-left:100px;">
+    <div><input id="sh_grp" type="text" style="width:133px;"><button id="search">搜索群</button>
+    <div id="res" style="height:20px;"></div>
+    推荐群:</div>
+    <foreach name="ogrps" item="grp">
+    <div id="d{$grp.id}" style="margin-left:33px;">
+    <span style="font-size:15px;">{$grp.name}</span>
+    <span style="float:right;margin-right:33px;">
+    <a class="to_group" gid="{$grp.id}" href="" style="color:blue;">加入群</a>
+    </span>
+    </div>
+    </foreach> 
+</div>
 
 
 
-        <!-- /主体 -->        
-
-            <!-- 页脚 -->
-            <div class="foot">
+<div class="foot">
     <div class="white_bg">
     <div class="foot-con">
         <div class="con-box-n clear">
@@ -223,15 +179,100 @@
   <p class="btn_all"><a href="###.juanpi.com/favorite" target="_blank">马上查看</a></p>
   <a href="javascript:;" class="del">×</a>
 </div>
-            <!-- /页脚 -->
-        
-        <!-- 脚本 -->
-        <!--[if lt IE 9]>
-        <script type="text/javascript" src="//s.juancdn.com/common/js/json2.min.js?ts=910f4f921c356d6f_1462362350"></script>
-        <![endif]-->
-        
-        
         <div style="display:none" class="alert_fullbg"></div>
-        <!-- /脚本 -->
+</body>
+<script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
     
-</body></html>
+$(function(){
+    $('#mk_group').bind("click",function(){
+        var mk_name = $('#mk_name').val();
+        var url = "{:U('Home/Message/mk_group')}";
+        var data = {'name':mk_name};
+        var success = function(response){
+            if(response[0] == 1){
+                var gid = response[1];
+                $('#group').append('<div id="gid'+gid+'">'+gid+' <span style="font-size:15px;">'+mk_name+'</span><span style="float:right;margin-right:33px;"><a class="dr_group" gid="'+gid+'" href="" style="color:blue;">解散群</a></span></div>');
+                $('#lgroup').append('<div id="id'+gid+'" style="width:50px;height:23px;border:1px solid #E2E2E2;font-size:15px;overflow:hidden;">'+mk_name+'</div>')
+                $('.dr_group').bind("click",function(){
+                var gid = $(this).attr('gid');
+                var url = "{:U('Home/Message/dr_group')}";
+                var data = {'gid':gid};
+                var success = function(response){
+                    if(response[0] == 1)
+                        $('#gid'+gid).remove();
+                        $('#id'+gid).remove();        
+                }
+                $.get(url,data,success,'json');
+                return false;
+                })
+            }
+        }
+        $.post(url,data,success,'json');
+    })
+    $('.ex_group').bind("click",function(){
+        var gid = $(this).attr('gid');
+        var url = "{:U('Home/Message/ex_group')}";
+        var data = {'gid':gid};
+        var success = function(response){
+            if(response[0] == 1)
+                $('#gid'+gid).remove();
+                $('#id'+gid).remove();        
+        }
+        $.get(url,data,success,'json');
+        return false;
+    })
+    $('.dr_group').bind("click",function(){
+        var gid = $(this).attr('gid');
+        var url = "{:U('Home/Message/dr_group')}";
+        var data = {'gid':gid};
+        var success = function(response){
+            if(response[0] == 1)
+                $('#gid'+gid).remove();
+                $('#id'+gid).remove();        
+        }
+        $.get(url,data,success,'json');
+        return false;
+    })
+    $('.to_group').bind("click",function(){
+        var gid = $(this).attr('gid');
+        var url = "{:U('Home/Message/to_group')}";
+        var data = {'gid':gid};
+        var success = function(response){
+            if(response[0] == 1){
+                $('#d'+gid).remove();
+            }        
+        }
+        $.get(url,data,success,'json');
+    })
+    $('#search').bind("click",function(){
+        var gid = $('#sh_grp').val();
+        var url = "{:U('Home/Message/se_group')}";
+        var data = {'gid':gid};
+        var success = function(response){
+            if(response[0] == 1){
+                $('#res').html('<div id="seh'+gid+'" style="margin-left:33px;"><span style="font-size:15px;">'+response[1]+'</span><span style="float:right;margin-right:33px;"><a class="to_group" gid="'+gid+'" href="" style="color:blue;">加入群</a></span></div>');
+                    $('.to_group').bind("click",function(){
+                    var url = "{:U('Home/Message/to_group')}";
+                    var data = {'gid':gid};
+                    var success = function(response){
+                        if(response[0] == 1){
+                            $('#d'+gid).remove();
+                        }        
+                    }
+                    $.get(url,data,success,'json');
+                })
+            }
+            if(response[0] == 0){
+                $('#res').html('请确认群号');
+            }
+            if(response[0] == 2){
+                $('#res').html('已在该群中');
+            }
+        }
+        $.get(url,data,success,'json');
+    })
+})
+
+</script>
+</html>

@@ -22,6 +22,8 @@ class IndexController extends Controller {
             $this->assign('register','今日已签到');
         else
             $this->assign('register','签到领积分');
+        if(empty($_SESSION['user']))
+            $this->assign('register','');
         $num = 12;//每页显示的个数
         $count = count($goodsAll);//统计总商品数
         $Page = new \Think\Page($count,$num);//实例化分页 
@@ -117,13 +119,10 @@ class IndexController extends Controller {
         $this->assign('goodsList',$goodsList);
         $this->display();
     }
-    //三方链接
-    public  function  san(){
-        $this->assign('title','友情链接');
-        $this->display();
-    }
+
     public  function  aaa(){
         $this->assign('title','测试');
         $this->display();
     }
+
 }

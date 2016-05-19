@@ -263,20 +263,21 @@
         .shijian{width: 100px;height: 10px;border:0px solid red;}
     </style>
 <div class="bg">
+<foreach name="commits" item="vo">
     <div class="pin">
         <ul>
         <li>
             <div class="mai fl">
-                <img src="" width="70px" class="center" >
-                <div class="user">这里是买家名称</div>
+                <img src="__PUBLIC__{$vo.pic}" width="70px" class="center" >
+                <div class="user">{$vo.username}</div>
             </div>
-            <div class="pinglun fl ">这里写评价内容</div>
-
+            <div class="pinglun fl ">{$vo.val}</div>
         </li>
+    <div class=""><p>&nbsp;&nbsp;&nbsp;&nbsp;评价时间:{$vo.time}</p></div>
     </ul>
-    <div class="shijian"><p>评价时间:</p></div>
     </div>
-</div>
+</foreach>
+<br>
         <div class="tm-goodsinfo">
             <div class="details-info guidelines-con">
                 <p><b>发货物流：</b>韵达快递，百世汇通，快捷快递</p>

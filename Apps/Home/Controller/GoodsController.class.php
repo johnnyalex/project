@@ -117,6 +117,12 @@ class GoodsController extends Controller {
             $aa = 'none';
             $aaa = 'block';
         }
+        $commits = M()->table(array('commit'=>'A','user'=>'B'))
+        ->field('val,username,pic,time')
+        ->where('A.gid='.$gid.' AND A.uid=B.id')
+        ->order('A.id desc')
+        ->select();
+        $this->assign('commits',$commits);
         $this->assign('title','商品评价');
         $this->assign('gid',$gid); //商品id
         $this->assign('uid',$uid); //用户id
@@ -125,7 +131,7 @@ class GoodsController extends Controller {
         $this->assign('aa',$aa); //like 否
         $this->assign('aaa',$aaa); //like是
         $this->display();
-}
+    }
 
 
 }
