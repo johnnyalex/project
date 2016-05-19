@@ -20,6 +20,7 @@ class PaymentController extends Controller {
             $use_points = ($arr['price_total']/20)*10;
         else
             $use_points = $old_points;
+        $arr['price_true'] = $arr['price_total']-($use_points/10);
         $new_points = ($old_points-$use_points)+($arr['price_total']/10);
         M('userinfo')->where('uid='.$uid)->data('points='.$new_points)->save();
         $arr['status'] = 1;
