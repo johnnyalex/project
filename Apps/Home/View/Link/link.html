@@ -1,0 +1,62 @@
+<extend name="./Public/public" />
+<block name="show">
+<div class="main">
+    <div class="piece about">
+        <div class="white_top"><div class="white_top_left"></div><div class="white_top_middle"></div><div class="white_top_right"></div></div>
+        <div class="white_bg">
+            <!-- 导航 -->
+                        <div class="about_menu">
+    <ul>
+        <li class="about-one">
+            <dl>
+                <dt><a href="javascript:js_method();">关于卷皮</a></dt>
+                <dd>
+                    <a href="javascript:js_method();">关于卷皮<em class=""></em></a></dd>
+                <dd>
+                    <a href="javascript:js_method();">媒体报道<em class=""></em></a></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt class="cur"><a href="javascript:js_method();">携手卷皮</a></dt>
+                <dd>
+                    <a href="javascript:js_method();">诚聘英才<em class=""></em></a>
+                </dd>
+                <dd>
+                    <a class="active" href="javascript:js_method();">友情链接<em class="right-icon"></em></a>
+                </dd>
+                <dd>
+                    <a href="javascript:js_method();">商务合作<em class=""></em></a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><a target="_blank" href="javascript:js_method();">服务保障</a></dt>
+                <dd><a target="_blank" href="javascript:js_method();">消费保障<em class=""></em></a></dd>
+                <dd><a rel="nofollow" href="javascript:js_method();">在线客服<em class=""></em></a></dd>
+            </dl>
+        </li>
+        <li class="last">
+            <dt><a target="_blank" href="javascript:js_method();">帮助中心</a></dt>
+        </li>
+        <li class="menu-bg"></li>
+    </ul>
+</div>
+            <div class="about_contain">
+                <div class="about_tit"><em></em>友情链接 <font size="2px" color="#727272">友链合作QQ: 1279207548</font></div>
+                <div class="about_line"></div>
+                <div class="about_link">
+                    <ul>
+                     <foreach name="links" item="vo">
+                            <li><a target="_blank" href="{$vo.link}" style="font-size: 14px;">{$vo.name}</a></li>
+                            <li><a href="" ><img src="" alt=" "></a></li>
+                        </foreach>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="white_bottom"><div class="white_bottom_left"></div><div class="white_bottom_middle"></div><div class="white_bottom_right"></div></div>
+    </div>
+</div>
+</block>

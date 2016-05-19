@@ -1,6 +1,6 @@
 <extend name="./Public/public" />
 <block name="title">
-    <h3 class="page-header">商家列表</h3>
+    <h3 class="page-header">链接列表</h3>
 </block>
 <block name="content">
     <div class="row">
@@ -15,7 +15,7 @@
                         <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <form action="{:U(Admin/Goods/index)}" method="get">
+                                    <form action="{:U(Admin/Link/index)}" method="get">
                                     <div class="dataTables_length" id="dataTables-example_length">
                                         <label>显示 
                                             <select name="show" aria-controls="dataTables-example" class="form-control input-sm">
@@ -42,40 +42,32 @@
                             <thead>
                              <!-- <form action="{:U(Admin/Goods/index)}" method="post"> -->
                                 <tr role="row">
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:85px;" aria-label="Browser: activate to sort column ascending">商家Id</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:40px;" aria-label="Browser: activate to sort column ascending">编号</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Platform(s): activate to sort column ascending">商家名称</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 85px;" aria-label="Engine version: activate to sort column ascending">商家网址</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 65px;" aria-label="Engine version: activate to sort column ascending">商家LOGO</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 65px;" aria-label="Engine version: activate to sort column ascending">是否显示</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 210px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 150px;" aria-label="Platform(s): activate to sort column ascending">商家网址</th>
+                                      <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 85px;" aria-label="Engine version: activate to sort column ascending">商家LOGO</th>
+                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 50px;" aria-label="Platform(s): activate to sort column ascending">是否显示</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
                                 </tr>
                             <!-- </form> -->
                             </thead>
                             <tbody>
                             <!-- z这是用户列表的遍历 -->
-                            <foreach name="sellers" item="vo" >    
+                            <foreach name="links" item="vo" >    
                                 <tr class="gradeA odd" role="row">
                                     <td class="id">{$vo.id}</td>
                                     <td class="sname">{$vo.name}</td>
-                                    <td class="center sweb">{$vo.web}</td>
-                                    <td class="sorting_1"><img src="__PUBLIC__{$vo.pic}" width="50px"></td>
-                                    <td>
-                                        <!-- <button name='status'>{$vo['status']}</button> -->
-                                        <button type="button" class="btn_host btn-info">
-                                        <switch name="vo.status">    
-                                        <case value="上架">上线</case>    
-                                        <case value="下架">下线</case>    
-                                        </switch>
-                                        </button>
+                                    <td class="slink">{$vo.link}</td>
+                                    <td class="sorting_1"><img src="__PUBLIC__/{$vo.pic}" width="50px"></td>
+                                    <td class="center"><button type="button" class="btn_status btn-info">
+                                    <switch name="vo.dis">    
+                                    <case value="0">隐藏</case>    
+                                    <case value="1">显示</case>    
+                                    </switch>
+                                    </button>
                                     </td>
-                                    <td class="center">
-                                        <button class="delete btn-danger btn-sm btn-del" type="button">删除</button>
-                                        <a href="{:U('Admin/Seller/edit1',['id'=>$vo['id']])}">
-                                            <button class="edit btn-primary btn-sm btn-del" type="button">编辑图片</button>
-                                        </a>
-                                        <a href="{:U('Admin/Seller/goods',['id'=>$vo['id']])}">
-                                            <button class="goods btn-primary btn-sm btn-del" type="button">查看商品</button>
-                                        </a>
+                                    <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;
+                                    <a href="{:U('Admin/Link/update',array('id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a>
                                     </td>
                                 </tr>
                             </foreach>
@@ -104,7 +96,9 @@
                       z-index: 2;
                     }
                   </style>
+
                             <div class="row">
+                                
                                     <div class="col-sm-6">
                                         <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
                                         <div class="pagination">
@@ -134,11 +128,12 @@
 
     <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
+        //定义全局变量
+        var edit = true;
+
     // alert($);
     $(function(){
-//定义全局变量
-        var edit = true;
-//商家名字
+        //商家名称
         $('.sname').dblclick(function(){
             // 防止再次进入
             if(edit == false) 
@@ -159,18 +154,19 @@
             ipt.blur(function(){
                 //提交ajax  url
                 edit = true;
-                var url = '{:U("Admin/Seller/edit")}';
-                //获取轮播 id
-                var id = ipt.parents('.gradeA').find('.id').html();
+                var url = '{:U("Admin/Link/edit")}';
+                //获取id
+                var id = ipt.parents('.gradeA').find('td:first').html();
                 //获取新的值
                 var sname = ipt.val();
+
                 $.ajax({
                     url:url,
                     data:{'id':id,'name':sname,},
                     type:'post',
                     success:function(data){
                         if (data==1) {
-                            td.empty().append(sname).css('color','green');
+                            td.empty().append(sname);
                         }else{ 
                             ipt.replaceWith(sname);
                         }
@@ -178,80 +174,55 @@
                 });
             })
         })
-//商家网址
-        $('.sweb').dblclick(function(){
-            // 防止再次进入
-            if(edit == false) 
-                return;
-            // 关门
-            edit = false;
-            //声明 td
-            var td = $(this);
-            //获取原有的值
-            var v = $(this).html();
-            //新建input
-            var ipt = $('<input type="text" name="sweb" size="10" value="'+v+'">');
-            //清空input 后 在添加input
-            td.empty().append(ipt);
-            //设置文本选中
-            ipt.select();
-            //文本失去焦点后 发ajax 改数据库中的文件
-            ipt.blur(function(){
-                //提交ajax  url
-                edit = true;
-                var url = '{:U("Admin/Seller/edit")}';
-                //获取轮播 id
-                var id = ipt.parents('.gradeA').find('.id').html();
-                //获取新的值
-                var sweb = ipt.val();
-                $.ajax({
-                    url:url,
-                    data:{'id':id,'web':sweb,},
-                    type:'post',
-                    success:function(data){
-                        if (data==1) {
-                            td.empty().append(sweb).css('color','green');
-                        }else{ 
-                            ipt.replaceWith(sweb);
-                        }
-                    },
-                });
-            })
-        })
-//上下线
-        $('.btn_host').bind("click",function(){
-            var status = $(this).text();
+
+
+
+
+
+        //是否显示隐藏
+        $('.btn_status').bind("click",function(){
+            var display = $(this).text();
             var id = $(this).parents('tr').find('td:first').html();
+            // alert(id);
             var a = $(this);
-            status = status.trim();
-            if(status == '上线'){
-                $.post('{:U("Admin/Seller/seller_status")}',
-                    // 数据库中存储的是 0 1 html显示的是下线 上线
-                    {id:id,status:0},
+            display = display.trim();
+            // alert(display);
+            if(display == '显示'){
+                // alert('sss');
+                $.post('{:U("Admin/Link/link_dis")}',
+                    {id:id,dis:0},
                     function(data){
-                        // date返回的是 1 是save的success  0 是save的fail
                         if(data)
-                            a.html('下线');
+                            a.html('隐藏');
                     })
             }
-            else if(status == '下线'){
-                $.post('{:U("Admin/Seller/seller_status")}',
-                    {id:id,status:1},
+            else if(display == '隐藏'){
+                $.post('{:U("Admin/Link/link_dis")}',
+                    {id:id,dis:1},
                     function(data){
                         if(data)
-                            a.html('上线');
+                            a.html('显示');
                     })
             } 
         })
-//删除brand
+
+
+       
+
+
+//删除商家
         $('.delete').click(function(){
             var id= $(this).parents('tr').find('td:first').html();
+            // alert(id);
             var tr = $(this);
-            $.get('{:U("Admin/Seller/delete")}',{id:id},function(data){
+            $.get('{:U("Admin/Link/delete")}',{id:id},function(data){
                 if(data)
                     tr.parents('tr').remove();
             })
         }) 
+
+
+
     })
 
     </script>
