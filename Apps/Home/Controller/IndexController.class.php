@@ -14,6 +14,7 @@ class IndexController extends Controller {
         $brand = M('brand');// 品牌
         $brand_2 = $brand->where(['status'=>'1','level'=>'2'])->select();
         $brand_3 = $brand->where(['status'=>'1','level'=>'3'])->find();
+        $brand_5 = $brand->where(['status'=>'1','level'=>'5'])->find();
         $brand_4 = $brand->where(['status'=>'1','level'=>'4'])->select();
         $brand_1 = $brand->where(['status'=>'1','level'=>'1'])->select();
         $register = M('userinfo')->field('register')->where('uid='.$uid)->find()['register'];
@@ -32,6 +33,7 @@ class IndexController extends Controller {
         $this->assign('lunbos',$lunbos);
         $this->assign('brand_2',$brand_2);
         $this->assign('brand_3',$brand_3);
+        $this->assign('brand_5',$brand_5);//ad
         $this->assign('brand_4',$brand_4);
         $this->assign('brand_1',$brand_1);
         $this->assign('categorys',$categorys);
