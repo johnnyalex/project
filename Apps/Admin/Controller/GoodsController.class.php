@@ -230,6 +230,7 @@ class GoodsController extends CommonController {
         // var_dump($info);
         $info['describe'] = htmlspecialchars_decode($info['describe']);
         // echo $info['describe'];
+        // var_dump($info);die;
         $this->assign('info',$info);
         $this->display();
     }  
@@ -265,7 +266,8 @@ class GoodsController extends CommonController {
             unlink('./Public'.$pic);
         }
         // var_dump($_POST);die;
-
+         if(empty($_POST['name']))
+            $this->error('商品名称不能为空',U('Admin/Goods/index'));
         if($_POST['price']<=0){$_POST['price']=0;}
         if($_POST['freight']<=0){$_POST['freight']=0;}
         if($_POST['stock']<=0){$_POST['stock']=0;}

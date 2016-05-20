@@ -59,7 +59,7 @@ class LinkController extends CommonController {
     }
 //执行添加
     public function insert(){
-        // var_dump($_POST);
+        // var_dump($_POST);die();
         // var_dump($_FILES);
         $link = M('link');
       
@@ -81,9 +81,18 @@ class LinkController extends CommonController {
             }
         }
         
-        if(empty($_POST['name']))
+        if(empty($_POST['name'])) {
             $this->error('商家名称不能为空',U('Admin/Link/index'));
+        }
 
+//注意，这里把上面的正则表达式中的单引号用反斜杠转义了，不然没法放在字符串里
+$reg= '@(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:\'".,<>?«»“”‘’]))@';
+
+        $content=$_POST['link'];
+$res= preg_match($reg, $content) ;  
+
+        if($res!=1)
+            $this->error('请输入正规的网址类型',U('Admin/Link/index'));
         //创建数据
         $link->create();
         //执行添加
@@ -138,6 +147,15 @@ class LinkController extends CommonController {
 
         if(empty($_POST['name']))
             $this->error('商家名称不能为空',U('Admin/Link/index'));
+
+        $reg= '@(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:\'".,<>?«»“”‘’]))@';
+
+        $content=$_POST['link'];
+$res= preg_match($reg, $content) ;  
+
+        if($res!=1)
+            $this->error('请输入正规的网址类型',U('Admin/Link/index'));
+
          // 创建数据
         $a=$link->create();
         // dump($a);

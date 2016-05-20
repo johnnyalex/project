@@ -22,7 +22,7 @@
                     <img id="simg" width="100%" src="__PUBLIC__{$goods.pic}" >
                     <div id="move" style="background:url('__PUBLIC__/Home/images/bg.png');width: 100px;height: 100px;position:absolute;left:40px;top:80px;display:none;"></div>
                 </div>
-                <div class="big" id="big"><img id="bimg" style="position: absolute;left:460px;top:80px ;width:400px;height:400px;z-index: 10;display:none;"  src="__PUBLIC__{$goods.pic}"></div>
+                <div class="big" id="big"><img id="bimg" style="position: absolute;left:460px;top:280px ;width:400px;height:400px;z-index: 10;display:none;"  src="__PUBLIC__{$goods.pic}"></div>
                 <div class="d">
                     <ul id="uimg">
                     <foreach name="goods_images" item="vo">
@@ -33,6 +33,108 @@
                 </div>  
             </div>
     </div>
+    <script type="text/javascript">
+    jQuery.noConflict();
+    jQuery(document).ready(function(){
+        $("bimg").jqueryzoom();
+    });
+</script>
+<script type="text/javascript">
+    // 获取元素对象
+    var small = document.getElementById('small');
+    var move = document.getElementById('move');
+    var big = document.getElementById('big');
+    var bimg = document.getElementById('bimg');
+    var simg = document.getElementById('simg');
+    move.onclick = function(){
+        alert('111');
+    }
+
+    small.onmousemove=function(e){
+         //显示小div和右侧的图
+        move.style.display = 'block';
+        big.style.display = 'block';
+        //获取鼠标的位置
+        var x = e.pageX;
+        var y = e.pageY;
+        //获取small的x  y
+        var _l = small.offsetLeft;//40
+        var _t = small.offsetTop;//78
+        //计算小div的宽高的一半
+        var _w = move.offsetWidth/2;//50
+        // alert(_h);
+        var _h = move.offsetHeight/2;
+        //计算新的lefe和top
+        var newL = x - _l - _w;
+        var newT = y - _t - _h;
+
+        //检测越界
+        if(newL <= 0){newL = 0;}
+        //检测越界
+        if(newT <= 0){newT =0;}
+        //获取最大的left
+        var maxLeft = small.offsetWidth - move.offsetWidth;
+        if(newL >= maxLeft){newL = maxLeft;}
+        //获取最大的top
+        var maxTop = small.offsetHeight - move.offsetHeight;
+        if(newT >= maxTop){newT = maxTop;}
+
+        //设置left和top
+        move.style.left = newL + 'px';
+        move.style.top = newT + 'px';
+
+
+        //计算移动比例
+        var xp = newL/small.offsetWidth;
+        var yp = newT/small.offsetHeight;
+
+        //计算右侧图片移动距离
+        var nl = bimg.offsetWidth * xp;
+        var nt = bimg.offsetHeight * yp;
+
+        //设置移动
+            bimg.style.left = -nl+'px';
+            bimg.style.top = -nt+'px';
+            
+            //计算小图的宽高
+            var bp = big.offsetWidth/bimg.offsetWidth;
+            var bpp = big.offsetHeight/bimg.offsetHeight;
+
+            //计算小图的宽度
+            var mW = small.offsetWidth * bp;
+            var mH = small.offsetHeight * bpp;
+            //设置小图的宽度
+            move.style.width = mW + 'px';
+            move.style.height = mH + 'px';
+
+    }
+    //绑定鼠标离开事件
+        small.onmouseout = function(){
+            //隐藏小div和右侧的图
+            move.style.display = 'none';
+            big.style.display = 'none';
+        }
+
+//小图和大图(主图切换)
+        //获取元素
+        var ul = document.getElementById('uimg');
+        //从ul标签中获取img
+        var limg = ul.getElementsByTagName('img');
+        //遍历
+        for (var i = 0; i < limg.length; i++) {
+            limg[i].onclick = function(){
+                //获取当前src属性
+                var src = this.getAttribute('src');
+                // alert(src);
+                //设置src属性
+                bimg.src = src;
+                simg.src = src;
+            }
+        };
+
+</script>
+
+
     <div class="deal-wrap fr">
         <h1>{$goods.name}</h1>
         <div class="sector-info">
@@ -363,61 +465,6 @@
             $(this).parents('.j_j_p').find('input').val(val);
         })
     }) 
-
-// 获取元素对象
-    var small = document.getElementById('small');
-    var move = document.getElementById('move');
-    var big = document.getElementById('big');
-    var bimg = document.getElementById('bimg');
-    var simg = document.getElementById('simg');
-    big.onclick = function(){
-        alert('111');
-    }
-
-    small.onmousemove=function(e){
-            //显示小div和右侧的图
-        move.style.display = 'block';
-        big.style.display = 'block';
-        //获取鼠标的位置
-        var x = e.pageX;
-        var y = e.pageY;
-  
-        //获取small的x  y
-        var _l = small.offsetLeft;
-        var _t = small.offsetTop;
-
-
-
-
-
-    }
-    //绑定鼠标离开事件
-        small.onmouseout = function(){
-            //隐藏小div和右侧的图
-            move.style.display = 'none';
-            big.style.display = 'none';
-        }
-
-
-
-
-//小图和大图(主图切换)
-        //获取元素
-        var ul = document.getElementById('uimg');
-        //从ul标签中获取img
-        var limg = ul.getElementsByTagName('img');
-        //遍历
-        for (var i = 0; i < limg.length; i++) {
-            limg[i].onclick = function(){
-                //获取当前src属性
-                var src = this.getAttribute('src');
-                // alert(src);
-                //设置src属性
-                bimg.src = src;
-                simg.src = src;
-            }
-        };
-
 
 </script>
 
