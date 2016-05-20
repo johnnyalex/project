@@ -28,8 +28,20 @@ class CountController extends CommonController {
 
     }
     public function sell(){
-        $orders = M()->table(['order'=>'A','order_goods'=>'B',])->where(['status'=>'4'])->order('price_total desc')->select();
-        var_dump($orders);
+        $res = M()->table(['goods'=>'A'])->join('left join order_goods B on A.id = B.goods_id left join seller C on A.sid = C.id')->field(['B.goods_id'=>'gid','sum(B.qty)'=>'total','A.name'=>'gname','A.pic'=>'gpic','C.id'=>'sid','C.name'=>'sname'])->group('B.goods_id')->order('total DESC')->limit(10)->select();
+        for ($i=0; $i < count($res); $i++) { 
+            $res[$i]['count']=$f[$i];
+            $res[$i]['num']=$i+1;
+        }
+        $this->assign('res',$res);
+        $this->display();
+    }
+    public function click(){
+        $res = M()->table(['goods'=>'A','seller'=>'B'])->field(['A.id'=>'gid','A.name'=>'gname','A.clicktimes'=>'gclicktimes','A.pic'=>'gpic','A.sid'=>'sid','B.name'=>'sname'])->where(' A.sid = B.id ')->order('A.clicktimes DESC')->limit(10)->select();
+        for ($i=0; $i < count($res); $i++) { 
+            $res[$i]['num']=$i+1;
+        }
+        $this->assign('res',$res);
         $this->display();
     }
 
