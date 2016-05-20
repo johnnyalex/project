@@ -7,12 +7,12 @@ class GoodsController extends Controller {
         $this->display();
     }
     public function show(){
-
         // 商品id
         $gid = I('get.gid');
         $goods = M('goods')->find($gid);
+        M('goods')->save( ['id'=>$gid,'clicktimes'=>$goods['clicktimes']+1]);//访问数据
         $goods['describe'] = htmlspecialchars_decode($goods['describe']);
-            // var_dump($goods['describe']);
+        // var_dump($goods['describe']);
         $goods_images = M('image')->where('goods_id='.$gid)->limit(5)->select();
         // var_dump($goods['describe']);
         // 用户id
@@ -20,14 +20,16 @@ class GoodsController extends Controller {
         // 实例化 用户信息
         $info = M('userinfo');
         // 找
-        $res = $info->find();
-        // var_dump($res);
-        $arr = explode(',',$res['like_id']);
-        $kong = array_pop($arr);
-        // var_dump($arr);
-        if (in_array($gid, $arr)) {
-            $aa = 'none';
-            $aaa = 'block';
+        if ($uid) {
+            $res = $info->find($uid);
+            // var_dump($res);
+            $arr = explode(',',$res['like_id']);
+            $kong = array_pop($arr);
+            // var_dump($arr);
+            if (in_array($gid, $arr)) {
+                $aa = 'none';
+                $aaa = 'block';
+            }
         }
         $car_total = M('car')->where('uid='.$uid)->count();
     	$this->assign('title','商品详情');
@@ -115,6 +117,12 @@ class GoodsController extends Controller {
             $aa = 'none';
             $aaa = 'block';
         }
+        $commits = M()->table(array('commit'=>'A','user'=>'B'))
+        ->field('val,username,pic,time')
+        ->where('A.gid='.$gid.' AND A.uid=B.id')
+        ->order('A.id desc')
+        ->select();
+        $this->assign('commits',$commits);
         $this->assign('title','商品评价');
         $this->assign('gid',$gid); //商品id
         $this->assign('uid',$uid); //用户id
@@ -123,7 +131,7 @@ class GoodsController extends Controller {
         $this->assign('aa',$aa); //like 否
         $this->assign('aaa',$aaa); //like是
         $this->display();
-}
+    }
 
 
 }

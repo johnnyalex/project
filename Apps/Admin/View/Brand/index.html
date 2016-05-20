@@ -63,7 +63,13 @@
                                     <td class="center sweb">{$vo.web}</td>
                                     <td class="sorting_1"><img src="__PUBLIC__{$vo.pic}" width="50px"></td>
                                     <td class="sorting_1">
-                                        {$vo.level}
+                                        <switch name="vo.level">    
+                                        <case value="1">仅显示logo(180*90)</case>    
+                                        <case value="2">logo和照片(124*119)</case>    
+                                        <case value="3">大logo和照片(250*120)</case>    
+                                        <case value="4">导航logo和照片(680*280)</case>    
+                                        <case value="5">今日推荐(200*150)</case>    
+                                        </switch>
                                     </td>
                                     <td>
                                         <!-- <button name='status'>{$vo['status']}</button> -->

@@ -96,8 +96,9 @@ class CenterController extends Controller {
 	}
 	public function do_change_addr(){
 		$id = I('get.id');
+		$uid = $_SESSION['user']['id'];
 		$address = M('address');
-		$res = $address->where('')->data(['pri'=>0])->save();
+		$res = $address->where('uid='.$uid)->data(['pri'=>0])->save();
 		$res = $address->where(['id'=>$id])->data(['pri'=>1])->save();
 		if(!$res)
 			echo 1;		
@@ -125,8 +126,9 @@ class CenterController extends Controller {
 	}
 	public function do_change_address(){
 		$address = M('address');
+		$uid = $_SESSION['user']['id'];
 		if($_POST['pri'] == 1)
-			$address->where('')->data(['pri'=>0])->save();
+			$address->where('udi='.$uid)->data(['pri'=>0])->save();
 		if(!$_POST['pri'])
 			$_POST['pri'] = 0;
 		$address->create();
@@ -138,8 +140,9 @@ class CenterController extends Controller {
 	}
 	public function do_add_addr(){
 		$addr = D('address');
+		$uid = $_SESSION['user']['id'];
 		if(I('post.pri'))
-			$addr->where('pri=1')->data(['pri'=>0])->save();
+			$addr->where('pri=1 AND uid='.$uid)->data(['pri'=>0])->save();
 		$_POST['uid'] = $_POST['id'];
 		unset($_POST['id']);
 		if(!$addr->create()){
@@ -367,6 +370,7 @@ class CenterController extends Controller {
 	public function commit(){
 		$_GET['uid'] = $_SESSION['user']['id'];
 		$_GET['stu'] = 0;
+		$_GET['time'] = date('Y-m-d H:i:s',time());
 		if(!empty($_GET['val']))
 			$res = M('commit')->data($_GET)->add();
 		else

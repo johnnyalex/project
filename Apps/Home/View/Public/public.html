@@ -330,13 +330,13 @@
                 <ul class="line-cate-nav">
                     <li class="first"><a class="active" href="###">今日上新</a></li>
                     <foreach name = "categorys" item="vo">
-                    <li><a class="" href="Index/more/cid/{$vo['id']}.html">{$vo.name}</a></li>
+                    <li><a class="" href="{:U('Home/Index/more',['cid'=>$vo['id']])}">{$vo.name}</a></li>
                     </foreach>
                     <li class="last"><a target="_blank" href="###/yugao">[明日预告]</a></li>
                 </ul>
             </div>
         </div>
-
+    <!-- Index/more/cid/{$vo['id']}.html -->
 <ul class="goods-list clear">
 
 <foreach name='goodsList' item='vo'>
@@ -396,7 +396,7 @@
         <h2>今日推荐</h2>
     </div>
     <div id="popContent">
-    <a href="{:U('Home/Index/seller')}" target="_blank"><img src="__PUBLIC__/Home/Picture/ad_200x150.jpg"></a>
+    <a href="{:U('Home/Index/seller',['sid'=>$brand_5['sid']])}" target="_blank"><img src="__PUBLIC__{$brand_5['pic']}"></a>
     </div>
   </div>
   <script>
