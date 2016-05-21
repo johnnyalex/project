@@ -21,7 +21,13 @@ class ServiceController extends Controller {
     }     
 
     public function update(){
-
+          var_dump(I('get.id'));
+        $service = M('service');
+        $id = I('get.id');
+        $info = $service->find($id);
+        // var_dump($info);die;
+        $this->assign('info',$info);
+        $this->display();
         
 
     	$this->display();

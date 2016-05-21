@@ -1,6 +1,6 @@
 <extend name="./Public/public" />
 <block name="title">
-    <h3 class="page-header">链接列表</h3>
+    <h3 class="page-header">公告列表</h3>
 </block>
 <block name="content">
     <div class="row">
@@ -15,7 +15,7 @@
                         <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <form action="{:U(Admin/Link/index)}" method="get">
+                                    <form action="{:U(Admin/Notice/index)}" method="get">
                                     <div class="dataTables_length" id="dataTables-example_length">
                                         <label>显示 
                                             <select name="show" aria-controls="dataTables-example" class="form-control input-sm">
@@ -43,30 +43,23 @@
                              <!-- <form action="{:U(Admin/Goods/index)}" method="post"> -->
                                 <tr role="row">
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width:40px;" aria-label="Browser: activate to sort column ascending">编号</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Platform(s): activate to sort column ascending">商家名称</th>
-                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 150px;" aria-label="Platform(s): activate to sort column ascending">商家网址</th>
-                                      
-                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 50px;" aria-label="Platform(s): activate to sort column ascending">是否显示</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 200px;" aria-label="Platform(s): activate to sort column ascending">公告内容</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 200px;" aria-label="Platform(s): activate to sort column ascending">公告链接地址</th>
+                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Platform(s): activate to sort column ascending">公告时间</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 70px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
                                 </tr>
                             <!-- </form> -->
                             </thead>
                             <tbody>
                             <!-- z这是用户列表的遍历 -->
-                            <foreach name="links" item="vo" >    
+                            <foreach name="notices" item="vo" >    
                                 <tr class="gradeA odd" role="row">
                                     <td class="id">{$vo.id}</td>
-                                    <td class="sname">{$vo.name}</td>
-                                    <td class="slink">{$vo.link}</td>
-                                    <td class="center"><button type="button" class="btn_status btn-info">
-                                    <switch name="vo.dis">    
-                                    <case value="0">隐藏</case>    
-                                    <case value="1">显示</case>    
-                                    </switch>
-                                    </button>
-                                    </td>
+                                    <td class="sname">{$vo.title}</td>
+                                    <td class="url">{$vo.url}</td>
+                                    <td class="slink">{$vo.time}</td>
                                     <td class="center"><button class="delete btn-danger btn-sm btn-del" type="button">删除</button>&nbsp;&nbsp;
-                                    <a href="{:U('Admin/Link/update',array('id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a>
+                                    <a href="{:U('Admin/Notice/update',array('id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">修改</button></a>
                                     </td>
                                 </tr>
                             </foreach>
@@ -153,14 +146,14 @@
             ipt.blur(function(){
                 //提交ajax  url
                 edit = true;
-                var url = '{:U("Admin/Link/edit")}';
+                var url = '{:U("Admin/Notice/edit")}';
                 //获取id
                 var id = ipt.parents('.gradeA').find('td:first').html();
                 //获取新的值
                 var sname = ipt.val();
                 $.ajax({
                     url:url,
-                    data:{'id':id,'name':sname,},
+                    data:{'id':id,'title':sname,},
                     type:'post',
                     success:function(data){
                         if (data==1) {
@@ -173,47 +166,12 @@
             })
         })
 
-
-
-
-
-        //是否显示隐藏
-        $('.btn_status').bind("click",function(){
-            var display = $(this).text();
-            var id = $(this).parents('tr').find('td:first').html();
-            // alert(id);
-            var a = $(this);
-            display = display.trim();
-            // alert(display);
-            if(display == '显示'){
-                // alert('sss');
-                $.post('{:U("Admin/Link/link_dis")}',
-                    {id:id,dis:0},
-                    function(data){
-                        if(data)
-                            a.html('隐藏');
-                    })
-            }
-            else if(display == '隐藏'){
-                $.post('{:U("Admin/Link/link_dis")}',
-                    {id:id,dis:1},
-                    function(data){
-                        if(data)
-                            a.html('显示');
-                    })
-            } 
-        })
-
-
-       
-
-
 //删除商家
         $('.delete').click(function(){
             var id= $(this).parents('tr').find('td:first').html();
             // alert(id);
             var tr = $(this);
-            $.get('{:U("Admin/Link/delete")}',{id:id},function(data){
+            $.get('{:U("Admin/Notice/delete")}',{id:id},function(data){
                 if(data)
                     tr.parents('tr').remove();
             })

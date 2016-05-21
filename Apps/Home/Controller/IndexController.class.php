@@ -30,6 +30,9 @@ class IndexController extends Controller {
         $limit = $Page->firstRow.','.$Page->listRows;//获取limit
         $pages = $Page->show();//分页显示输出
         $goodsList = $goods->where(['status'=>1])->limit($limit)->select();
+        $notice = M('notice');
+        $notices = $notice->select();
+        $this->assign('notice',$notices);
         $this->assign('goodsList',$goodsList);
         $this->assign('uid',$uid);
         $this->assign('lunbos',$lunbos);

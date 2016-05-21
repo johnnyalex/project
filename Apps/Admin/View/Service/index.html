@@ -62,9 +62,11 @@
                                 </tr> -->
                                 <tr class="gradeA odd" role="row">
 
-                                    <td class="center">{$vo.service_num}</td>
-                                   <td class="center"{$vo.}>
-                                    <switch name="vo.status">    
+                                    <td class="center">{$vo.id}</td>
+                                    <td class="center">{$vo.order_id}</td>
+                                    <td class="center">{$vo.status}</td>
+                                   <td class="center"{$vo.cause}>
+                                    <switch name="vo.cause">    
                                     <case value="0"><button type="button" class="btn btn-success disabled">已收货</button></case>    
                                     <case value="1"><button type="button" class="btn btn-info disabled">未收货</button></case>    
                                     <case value="2"><button type="button" class="btn btn-info disabled"></button></case>    
@@ -72,12 +74,12 @@
                                     </switch>
                                     
                                     </td>
-                                    <td class="center">{$vo.cause}</td>
-                                    <td class="center">{$vo.status}</td>
+                                   
+                                    
                                     <td class="center">{$vo.service_time}</td>
                                    
                                     
-                                    <td class="center"><a href="{:U('Admin/Service/update',array('oid'=>$vo['id'],'uid'=>$vo['uid']))}"><button class="update btn-update btn-sm btn-del" type="button">处理</button></a></td>
+                                    <td class="center"><a href="{:U('Admin/Service/update',array('oid'=>$vo['id'],'id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">处理</button></a></td>
                                 </tr>
                                 
                             </foreach>
