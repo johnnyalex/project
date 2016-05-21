@@ -79,9 +79,9 @@ class CenterController extends Controller {
 	}
 	//收货地址
 	public function address(){
-		$address = M('address');
-		$count = $address->count();
 		$id = $_SESSION['user']['id'];
+		$address = M('address');
+		$count = $address->where('uid='.$id)->count();
 		$addr = $address->where(['uid'=>$id])->select();
 		foreach ($addr as $key => $value) {
 			$addr[$key]['address'] = $value['pro'].' '.$value['city'].' '.$value['area'].' '.$value['addr'];
