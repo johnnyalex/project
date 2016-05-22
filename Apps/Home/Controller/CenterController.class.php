@@ -250,7 +250,11 @@ class CenterController extends Controller {
 	// 我的售后
 	public function backList(){
 		$user['pic']=$_SESSION['user']['pic'];
+		$uid = $_SESSION['user']['id'];
+		$res = M()->table(['service'=>'A'])->join('left join `order` AS `B` on A.oid = B.id left join `goods` AS `C` on A.gid = C.id left join `seller` AS `D` on A.sid = D.id ')->field(['A.id'=>'ssid','B.order_num'=>'onum','D.name'=>'sname','C.name'=>'gname','C.pic'=>'gpic','A.reason'=>'ssreason','A.ctime'=>'ssctime','A.status'=>'ssstatus'])->where(['A.uid'=>$uid])->order('A.id DESC')->select();
+		// var_dump($res);
 		$this->assign('user',$user);
+		$this->assign('backlist',$res);
 		$this->assign('title','售后管理-卷皮网');
 		$this->display();
 	}

@@ -85,6 +85,7 @@
                                             <case value="3">运送中</case>
                                             <case value="4">已收货</case>
                                             <case value="5">已关闭</case>
+                                            <case value="6">售后处理</case>
                                             </switch>
                                         </span>
                                         </b>
@@ -96,11 +97,38 @@
                                     </if>
                             </li>
                             <li class="oi-button">
+                                <if condition="$v1.status eq 4">
+                                    <div class="reason1" style="display:block;">
+                                        <p>选择退货</p>
+                                        <select name="reason" class="reason">
+                                            <option value="0">请选择</option>
+                                            <option value="7">7天无理由退换</option>
+                                            <option value="1">质量问题</option>
+                                            <option value="2">尺寸问题</option>
+                                            <option value="3">色差问题</option>
+                                            <option value="4">不喜欢</option>
+                                            <option value="5">假冒品牌</option>
+                                            <option value="6">商品破损</option>
+                                        </select>
+                                        <button class = 'apply'><a href="" style="color:#ff436E;">申请退货</a></button>
+                                    </div>
+                                    <div class="reason2" style="display:none;">
+                                        <button  class = 'status'><a href="" style="color:#ff436E;">查看处理状态</a></button>
+                                    </div>
+
+                                <else />
+                                    <p><a class=""></a></p>
+                                </if>
+                                <if condition="$v1.status eq 6">
+                                    <div class="reason2" style="display:block;">
+                                        <button  class = 'status'><a href="" style="color:#ff436E;">查看处理状态</a></button>
+                                    </div>
+                                </if>
+
                             </li>
                         </ul>
                     </dd>
             </dl>
-
     </foreach>
 
         </div>
@@ -111,6 +139,26 @@
     <script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
         $(function(){
+            $('.apply').bind('click',function(){
+                var gid = $(this).parents('.last-goods').find('.hi_dn').val();
+                var oid = $(this).parents('.last-goods').find('.hidd').val();
+                var reason = $(this).parents('.oi-button').find('.reason').val();
+                if (reason!=0) {
+                    var url = '{:U("Home/Server/create_server")}';
+                    var tui = $(this);
+                    $.ajax({
+                        url:url,
+                        data:{'gid':gid,'oid':oid,'reason':reason},
+                        type:'post',
+                        success:function(data){
+                            if (data==1) {
+                                tui.parents('.reason1').css('display','none');
+                                tui.parents('.oi-button').find('.reason2').css('display','block');
+                            };
+                        }
+                    });
+                };
+            })
             $('.cl').bind("click",function(){
                 if($(this).html().trim() == '已评价')
                     return;

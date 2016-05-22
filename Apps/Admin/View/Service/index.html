@@ -41,45 +41,46 @@
                             <thead>
                             <tr role="row">
                                    
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Browser: activate to sort column ascending">售后编号</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 180px;" aria-label="Platform(s): activate to sort column ascending">订单编号</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 40px;" aria-label="Browser: activate to sort column ascending">售后ID</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Browser: activate to sort column ascending">订单编号</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Browser: activate to sort column ascending">用户ID</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 80px;" aria-label="Platform(s): activate to sort column ascending">订单ID</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 80px;" aria-label="Platform(s): activate to sort column ascending">商家ID</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 80px;" aria-label="Engine version: activate to sort column ascending">售后原因</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">状态</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 90px;" aria-label="Engine version: activate to sort column ascending">申请时间</th>
                                     
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 70px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 150px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
                                 </tr>
                             <!-- </form> -->
                             </thead>
                             <tbody>
                             <!-- z这是用户列表的遍历 -->
-                            <foreach name="services" item="vo" >    
-                               <!--  <tr class="gradeA odd" role="row">
-                                    <input type="hidden" value="{$vo.id}">
-                                    <td colspan="10">售后编号: {$vo.serve_num}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    成交时间: {$vo.time}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="{:U('Admin/Service/select',array('id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">查看商品</button></a></td>
-                                </tr> -->
+                            <foreach name="res" item="vo" >                           
                                 <tr class="gradeA odd" role="row">
-
-                                    <td class="center">{$vo.id}</td>
-                                    <td class="center">{$vo.order_id}</td>
-                                    <td class="center">{$vo.status}</td>
-                                   <td class="center"{$vo.cause}>
-                                    <switch name="vo.cause">    
-                                    <case value="0"><button type="button" class="btn btn-success disabled">已收货</button></case>    
-                                    <case value="1"><button type="button" class="btn btn-info disabled">未收货</button></case>    
-                                    <case value="2"><button type="button" class="btn btn-info disabled"></button></case>    
-                                    <case value="3"><button type="button" class="btn btn-info disabled">未收货</button></case>    
-                                    </switch>
-                                    
+                                    <td class="center id">{$vo.id}</td>
+                                    <td class="center">{$vo.onum}</td>
+                                    <td class="center">{$vo.uid}</td>
+                                    <td class="center">{$vo.oid}</td>
+                                    <td class="center">{$vo.sid}</td>
+                                    <td class="center">
+                                      <switch name='vo.reason' >
+                                        <case value="1">质量问题</case>
+                                        <case value="2">尺寸问题</case>
+                                        <case value="3">色差问题</case>
+                                        <case value="4">色差问题</case>
+                                        <case value="5">假冒品牌</case>
+                                        <case value="6">商品破损</case>
+                                        <case value="7">7天无理由退换</case>
+                                      </switch>
                                     </td>
-                                   
-                                    
-                                    <td class="center">{$vo.service_time}</td>
-                                   
-                                    
-                                    <td class="center"><a href="{:U('Admin/Service/update',array('oid'=>$vo['id'],'id'=>$vo['id']))}"><button class="update btn-update btn-sm btn-del" type="button">处理</button></a></td>
+                                   <td class="center status">{$vo.status}
+                                   </td>
+                                    <td class="center">{$vo.ctime}</td>
+                                    <td class="center btn">
+                                      <button  class="tongyi btn btn-primary">同意</button>
+                                      <button class="jujue btn btn-danger">拒绝</button>
+                                    </td>
                                 </tr>
                                 
                             </foreach>
@@ -128,24 +129,20 @@
         </div>
         <!-- /.col-lg-12 -->
     </div>
-<script src="__PUBLIC__/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="__PUBLIC__/Home/Js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript">
-    // alert($);
     $(function(){
-   //删除订单
-        $('.delete').click(function(){
-            var id= $(this).parents('tr').find('td:first').html();
-            // alert(id);
-            var $this = $(this);
-            $.get('{:U("Admin/Order/delete")}',{id:id},function(data){
-                if(data)
-                    $this.parents('tr').remove();
-            })
-        }) 
-
-
+      $('.tongyi').bind('click',function(){
+        var id = $(this).parents('.gradeA').find('.id').html();
+        var td = $(this);
+        $.get('{:U("Admin/Service/tongyi")}',{'id':id},function(data){
+            if(data){
+                td.parents('.btn').html('');
+                td.parents('.gradeA').find('.status').html('已同意');
+            }
+        })
+      })
 
     })
-
     </script>
 </block>

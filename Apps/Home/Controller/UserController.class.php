@@ -37,9 +37,9 @@ class UserController extends Controller {
     }
 
     public function addimage(){
-       var_dump($_POST);
-        var_dump($_FILES);
-        die;
+       // var_dump($_POST);
+       //  var_dump($_FILES);
+       //  die;
 
         $user = M('user');
         //处理图片上产

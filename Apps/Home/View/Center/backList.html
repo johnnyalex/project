@@ -2,11 +2,8 @@
 <block name="backList">
  <style type="text/css">
 .nocv{width: 800px;height: 30px;margin:0 auto;}
-.nocv li{display:block;float:left;margin-left: 20px;font-size:20px;background:#519cbc;width: 110px;border-radius:5px;}
 
-.shou:hover {cursor:pointer;color:#fff;}
-.kuan:hover {cursor:pointer;color:#fff;}
-.ser{width: 1200px;height: 100%;}
+.ser{width: 1200px;height: 100%; background: #fff;}
 .ser table th{text-align: center;color:#808080;font-size: 15px;}
 
  </style>
@@ -17,25 +14,52 @@
             <a href="//user.juanpi.com/refund/backList/flag/1">历史售后单&gt;&gt;</a>
         </div>
     </div>
-    <div class="nocv">
-    	<span><ul><li><a class="shou">我的售后</a></li>
-    		<li><a class="kuan">我的退款</a></li>
-		</ul>
-	</span>
-    </div>
    
 </div>
   <div class="ser">
 	<table>
 		<tr>
-			<th style="width: 160px;" >售后编号</th>
 			<th style="width: 160px;" >订单编号</th>
-			<th style="width: 120px;" >卖家</th>
+			<th style="width: 80px;" >卖家</th>
+			<th style="width: 160px;" >商品名</th>
+			<th style="width: 120px;" >商品图片</th>
 			<th style="width: 120px;" >售后原因</th>
-			<th style="width: 110px;" >状态</th>
-			<th style="width: 160px;" >申请时间</th>
-			<th style="width: 100px;" >操作</th>
+			<th style="width: 110px;" >处理状态</th>
+			<th style="width: 120px;" >申请时间</th>
+			<th style="width: 80px;" >操作</th>
+			<th style="width: 80px;" >查看退款</th>
 		</tr>
+		<foreach name='backlist' item="vo">
+			<tr>
+				<th style="width: 160px;" >{$vo.onum}</th>
+				<th style="width: 120px;" >{$vo.sname|default='卷皮自营'}</th>
+				<th style="width: 120px;" >{$vo.gname}</th>
+				<th style="width: 120px;" >
+				<img src="__PUBLIC__{$vo.gpic}" style="width: 50px;" alt="商品图片">
+				</th>
+				<th style="width: 120px;" >
+				<switch name='vo.ssreason' >
+					<case value="1">质量问题</case>
+					<case value="2">尺寸问题</case>
+					<case value="3">色差问题</case>
+					<case value="4">色差问题</case>
+					<case value="5">假冒品牌</case>
+					<case value="6">商品破损</case>
+					<case value="7">7天无理由退换</case>
+				</switch>
+				</th>
+				<th style="width: 110px;" >
+					<switch name ="vo.ssstatus">
+						<case value="0">未处理</case>
+						<case value="1">已同意</case>
+						<case value="2">已拒绝</case>
+					</switch>
+				</th>
+				<th style="width: 120px;" >{$vo.ssctime}</th>
+				<th style="width: 100px;" ><button class ='cui'>催催卖家</button></th>
+				<th style="width: 100px;" ><button class = 'money'>查看退款</button></th>
+			</tr>
+		</foreach>
 	</table>
 
 
