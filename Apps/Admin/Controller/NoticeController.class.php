@@ -54,7 +54,7 @@ class NoticeController extends CommonController {
         $notice = M('notice');
       
         if(empty($_POST['title'])) {
-            $this->error('商家名称不能为空',U('Admin/Notice/index'));
+            $this->error('公告名称不能为空',U('Admin/Notice/index'));
         }
 
 //注意，这里把上面的正则表达式中的单引号用反斜杠转义了，不然没法放在字符串里

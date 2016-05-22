@@ -255,15 +255,20 @@
         li{display:block;}
         .is-current{width: 30px;height: 20px;}
         .la{width: 100px;}
-        .pin{width: 900px;height: 150px;border-bottom: 1px solid #d4d4d4;margin-left:120px;}
+        .bao{width: 900px;height: 220px;border:0px solid red;
+            margin-left:120px;border-bottom: 1px solid #d4d4d4;
+            margin-top:3px;}
+        .pin{width: 900px;height: 150px;border-bottom: 0px solid #d4d4d4;margin-top:20px;margin-bottom: 15px;}
         .mai{width: 130px;height: 120px;margin-left:5px;margin-top:5px;}
         .center{margin-left:30px;margin-top:20px;}
         .user{width: 130px;height: 20px;text-align: center;margin-top:5px;}
         .pinglun{width: 730px;height: 110px;margin-top:20px;margin-left:10px;border:0px solid red;}
-        .shijian{width: 100px;height: 10px;border:0px solid red;}
+        .shijian{width: 100px;height: 10px;border:1px solid red;}
+        .huifu{width: 900px;height: 40px;border:0px solid red;}
     </style>
 <div class="bg">
 <foreach name="commits" item="vo">
+<div class="bao">
     <div class="pin">
         <ul>
         <li>
@@ -272,11 +277,17 @@
                 <div class="user">{$vo.username}</div>
             </div>
             <div class="pinglun fl ">{$vo.val}</div>
-        </li>
-    <div class=""><p>&nbsp;&nbsp;&nbsp;&nbsp;评价时间:{$vo.time}</p></div>
+        </li> 
+
+        
     </ul>
+    <div><p >&nbsp;&nbsp;&nbsp;&nbsp;评价时间:{$vo.time}</p></div>
+      
     </div>
+    <div class="huifu"><p style="color:#af874d;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回复:{$vo.reply}</p></div>
+</div>
 </foreach>
+
 <br>
         <div class="tm-goodsinfo">
             <div class="details-info guidelines-con">

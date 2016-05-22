@@ -118,7 +118,7 @@ class GoodsController extends Controller {
             $aaa = 'block';
         }
         $commits = M()->table(array('commit'=>'A','user'=>'B'))
-        ->field('val,username,pic,time')
+        ->field('val,username,pic,time,reply')
         ->where('A.gid='.$gid.' AND A.uid=B.id')
         ->order('A.id desc')
         ->select();
