@@ -41,16 +41,14 @@
                             <thead>
                             <tr role="row">
                                    
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 40px;" aria-label="Browser: activate to sort column ascending">售后ID</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Browser: activate to sort column ascending">售后ID</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Browser: activate to sort column ascending">订单编号</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Browser: activate to sort column ascending">用户ID</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 80px;" aria-label="Platform(s): activate to sort column ascending">订单ID</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 80px;" aria-label="Platform(s): activate to sort column ascending">商家ID</th>
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 80px;" aria-label="Engine version: activate to sort column ascending">售后原因</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 120px;" aria-label="Engine version: activate to sort column ascending">售后原因</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 75px;" aria-label="Engine version: activate to sort column ascending">状态</th>
                                     <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 90px;" aria-label="Engine version: activate to sort column ascending">申请时间</th>
                                     
-                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 150px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 120px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
                                 </tr>
                             <!-- </form> -->
                             </thead>
@@ -61,8 +59,6 @@
                                     <td class="center id">{$vo.id}</td>
                                     <td class="center">{$vo.onum}</td>
                                     <td class="center">{$vo.uid}</td>
-                                    <td class="center">{$vo.oid}</td>
-                                    <td class="center">{$vo.sid}</td>
                                     <td class="center">
                                       <switch name='vo.reason' >
                                         <case value="1">质量问题</case>
@@ -74,12 +70,21 @@
                                         <case value="7">7天无理由退换</case>
                                       </switch>
                                     </td>
-                                   <td class="center status">{$vo.status}
+                                   <td class="center status">
+                                    <switch name='vo.status'>
+                                      <case value="1">已同意</case>
+                                      <case value="2">已拒绝</case>
+                                      <case value="0">未处理</case>
+                                    </switch>
                                    </td>
                                     <td class="center">{$vo.ctime}</td>
                                     <td class="center btn">
-                                      <button  class="tongyi btn btn-primary">同意</button>
-                                      <button class="jujue btn btn-danger">拒绝</button>
+                                      <a href="{:U('Admin/Service/tongyi',array('id'=>$vo['id']))}">
+                                          同意
+                                      </a>|
+                                      <a href="{:U('Admin/Service/jujue',array('id'=>$vo['id']))}">
+                                          拒绝
+                                      </a>
                                     </td>
                                 </tr>
                                 
@@ -121,7 +126,6 @@
                             </div>
                     </div>
                     <!-- /.table-responsive -->
-                    
                 </div>
                 <!-- /.panel-body -->
             </div>
@@ -131,18 +135,28 @@
     </div>
 <script src="__PUBLIC__/Home/Js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript">
-    $(function(){
-      $('.tongyi').bind('click',function(){
-        var id = $(this).parents('.gradeA').find('.id').html();
-        var td = $(this);
-        $.get('{:U("Admin/Service/tongyi")}',{'id':id},function(data){
-            if(data){
-                td.parents('.btn').html('');
-                td.parents('.gradeA').find('.status').html('已同意');
-            }
-        })
-      })
+    // $(function(){
+    //   $('.tongyi').bind('click',function(){
+    //     var id = $(this).parents('.gradeA').find('.id').html();
+    //     var td = $(this);
+    //     $.get('{:U("Admin/Service/tongyi")}',{id:id},function(data){
+    //         if(data){
+    //             td.parents('.btn').html('');
+    //             td.parents('.gradeA').find('.status').html('已同意');
+    //         }
+    //     })
+    //   })
+    //   $('.jujue').bind('click',function(){
+    //     var id = $(this).parents('.gradeA').find('.id').html();
+    //     var td = $(this);
+    //     $.get('{:U("Admin/Service/tongyi")}',{id:id},function(data){
+    //         if(data){
+    //             td.parents('.btn').html('');
+    //             td.parents('.gradeA').find('.status').html('已拒绝');
+    //         }
+    //     })
+    //   })
 
-    })
+    // })
     </script>
 </block>
